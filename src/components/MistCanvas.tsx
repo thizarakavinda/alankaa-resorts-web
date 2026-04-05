@@ -127,7 +127,11 @@ const MistCanvas = () => {
 
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(240, 234, 214, ${safeOpacity})`;
+        
+        // Use soft glowing cream in dark mode, and elegant deep gold in light mode
+        const rgbColor = isDark ? '240, 234, 214' : '154, 122, 58';
+        ctx.fillStyle = `rgba(${rgbColor}, ${safeOpacity})`;
+        
         ctx.fill();
         ctx.closePath();
       });

@@ -2,37 +2,38 @@ import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 
 const shootCards = [
-  {
-    badge: "MOST POPULAR",
-    category: "WEDDING",
-    name: "Wedding Shoots",
-    desc: "Say 'I do' with the misty mountains as your witness. Intimate, dramatic, and timelessly beautiful.",
-    tags: "📍 Infinity Pool · Sunrise Point · Gardens",
-    img: "/images/Pool 07.jpg"
-  },
+ 
   {
     badge: "CULTURAL EXPERIENCE",
     category: "KANDYAN",
     name: "Kandyan Traditional",
     desc: "Celebrate Sri Lanka's rich cultural heritage draped in exquisite Kandyan attire against our breathtaking mountain vistas.",
-    tags: "📍 Heritage Gardens · Rock Formations",
-    img: "/images/kandiyan 1.jpg"
+    tags: "Heritage Gardens · Rock Formations",
+    img: "/images/kandiyan 4.jpg"
   },
   {
     badge: "CONTEMPORARY",
     category: "WESTERN",
     name: "Western Style",
     desc: "Clean lines, modern fashion, and the world's most dramatic natural backdrop. Contemporary shoots with a soul.",
-    tags: "📍 Pool Deck · Mountain Overlook · Interiors",
-    img: "/images/western shoot 1.jpg"
+    tags: "Pool Deck · Mountain Overlook · Interiors",
+    img: "/images/western shoot 2.jpg"
+  },
+   {
+    badge: "MOST POPULAR",
+    category: "WEDDING",
+    name: "Wedding Shoots",
+    desc: "Say 'I do' with the misty mountains as your witness. Intimate, dramatic, and timelessly beautiful.",
+    tags: "Infinity Pool · Sunrise Point · Gardens",
+    img: "/images/kandiyan 5.jpg"
   },
   {
     badge: "FOR EVERYONE",
     category: "LIFESTYLE",
     name: "Lifestyle Sessions",
     desc: "Candid, joyful, and real. Whether family portraits or solo travel content — our landscape elevates every frame.",
-    tags: "📍 Pool · Nature Trails · Sunrise Point",
-    img: "/images/western shoot 3.jpg"
+    tags: "Pool · Nature Trails · Sunrise Point",
+    img: "/images/western 6.jpg"
   }
 ];
 

@@ -354,6 +354,7 @@ a, button {
 [data-theme='light'] .card-label-on-image,
 [data-theme='light'] .card-text-on-image {
   color: #FFFFFF !important;
+  -webkit-text-fill-color: #FFFFFF !important;
   text-shadow: 0 1px 12px rgba(0,0,0,0.3);
 }
 

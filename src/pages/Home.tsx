@@ -93,8 +93,8 @@ export const Home = () => {
             ref={heroTextRef}
             className="hero-headline-on-image font-cormorant text-[max(48px,10vw)] leading-none tracking-tight mb-8 font-normal opacity-90 drop-shadow-xl"
           >
-            <span className="inline-block text-[#FFFFFF] select-none pb-2">Quiet</span> <span className="inline-block text-[#FFFFFF] select-none pb-2">Luxury.</span><br />
-            <span className="inline-block text-[#FFFFFF] select-none pb-2">Elevated.</span>
+            <span className="inline-block bg-gradient-to-b from-white via-[#FFF9EE] to-[#D4AF7A] text-transparent bg-clip-text select-none pb-2">Quiet</span> <span className="inline-block bg-gradient-to-b from-white via-[#FFF9EE] to-[#D4AF7A] text-transparent bg-clip-text select-none pb-2">Luxury.</span><br />
+            <span className="inline-block bg-gradient-to-b from-white via-[#FFF9EE] to-[#D4AF7A] text-transparent bg-clip-text select-none pb-2">Elevated.</span>
           </h1>
         </div>
 
