@@ -105,14 +105,14 @@ const Part1Hero = () => {
       <div className="absolute inset-x-0 bottom-0 p-[32px] lg:p-[56px_80px] flex flex-col lg:flex-row justify-between items-end gap-12">
         {/* Bottom Left */}
         <div className="w-full lg:w-auto">
-          <p className="font-jost text-gold text-[10px] uppercase tracking-[0.4em] mb-4">
+          <p className="gold-label-on-image font-jost text-gold text-[10px] uppercase tracking-[0.4em] mb-4">
             THE DESTINATION
           </p>
-          <div className="font-cormorant text-[clamp(40px,5vw,72px)] text-ivory font-light leading-[0.95]">
+          <div className="hero-headline-on-image font-cormorant text-[clamp(40px,5vw,72px)] text-ivory font-light leading-[0.95]">
             <h2 ref={el => { headingRefs.current[0] = el; }} className="pb-1">Perched above the world,</h2>
             <h2 ref={el => { headingRefs.current[1] = el; }} className="pb-1">hidden in the clouds.</h2>
           </div>
-          <p className="font-dmSans text-[15px] text-smoke max-w-[520px] leading-[1.9] mt-5">
+          <p className="hero-subtext-on-image font-dmSans text-[15px] text-smoke max-w-[520px] leading-[1.9] mt-5">
             Nestled at 1,000 metres above sea level on ancient volcanic rock in Haldummulla, Badulla — A'Lankaa is one of Sri Lanka's most dramatically situated luxury resorts. Surrounded by misty mountains, tea-country roads, and the silence of clouds.
           </p>
 
@@ -143,22 +143,22 @@ const Part1Hero = () => {
             <div className="flex gap-4">
               <Plane className="w-[14px] h-[14px] text-gold shrink-0 mt-1" />
               <div>
-                <p className="font-dmSans font-medium text-[13px] text-cream">Nearest Airport</p>
-                <p className="font-dmSans font-light text-[12px] text-smoke mt-1">Mattala Rajapaksa — ~96km</p>
+                <p className="card-heading-on-image font-dmSans font-medium text-[13px] text-cream">Nearest Airport</p>
+                <p className="card-text-on-image font-dmSans font-light text-[12px] text-smoke mt-1">Mattala Rajapaksa — ~96km</p>
               </div>
             </div>
             <div className="flex gap-4">
               <Car className="w-[14px] h-[14px] text-gold shrink-0 mt-1" />
               <div>
-                <p className="font-dmSans font-medium text-[13px] text-cream">By Road from Colombo</p>
-                <p className="font-dmSans font-light text-[12px] text-smoke mt-1">~5 hours via A4 highway</p>
+                <p className="card-heading-on-image font-dmSans font-medium text-[13px] text-cream">By Road from Colombo</p>
+                <p className="card-text-on-image font-dmSans font-light text-[12px] text-smoke mt-1">~5 hours via A4 highway</p>
               </div>
             </div>
             <div className="flex gap-4">
               <Train className="w-[14px] h-[14px] text-gold shrink-0 mt-1" />
               <div>
-                <p className="font-dmSans font-medium text-[13px] text-cream">Scenic Train to Badulla</p>
-                <p className="font-dmSans font-light text-[12px] text-smoke mt-1">Then 32km drive to resort</p>
+                <p className="card-heading-on-image font-dmSans font-medium text-[13px] text-cream">Scenic Train to Badulla</p>
+                <p className="card-text-on-image font-dmSans font-light text-[12px] text-smoke mt-1">Then 32km drive to resort</p>
               </div>
             </div>
           </div>
@@ -198,8 +198,8 @@ const StatsCounter = ({ number, label }: { number: string; label: string }) => {
       viewport={{ once: true }}
       className="flex flex-col gap-1"
     >
-      <span className="font-cormorant text-[36px] text-gold leading-none">{number}</span>
-      <span className="font-jost text-[9px] text-fog uppercase">{label}</span>
+      <span className="card-heading-on-image font-cormorant text-[36px] text-gold leading-none">{number}</span>
+      <span className="card-text-on-image font-jost text-[9px] text-fog uppercase">{label}</span>
     </motion.div>
   );
 };
@@ -312,21 +312,21 @@ const Part2Attractions = () => {
               </div>
 
               <div className="absolute inset-x-8 bottom-10 z-10 flex flex-col justify-end transition-transform duration-500 group-hover:-translate-y-2">
-                <span className="font-jost text-[9px] text-gold uppercase tracking-[0.2em] mb-2">
+                <span className="gold-label-on-image font-jost text-[9px] text-gold uppercase tracking-[0.2em] mb-2">
                   {attr.category}
                 </span>
-                <h3 className="font-cormorant text-[clamp(28px,3vw,40px)] text-ivory font-light leading-none">
+                <h3 className="card-heading-on-image font-cormorant text-[clamp(28px,3vw,40px)] text-ivory font-light leading-none">
                   {attr.title}
                 </h3>
-                <p className="font-dmSans font-light text-[12px] text-smoke/90 mt-1">
+                <p className="card-text-on-image font-dmSans font-light text-[12px] text-smoke/90 mt-1">
                   {attr.location}
                 </p>
                 
                 <div className="overflow-hidden h-0 group-hover:h-auto opacity-0 group-hover:opacity-100 transition-all duration-700 mt-0 group-hover:mt-3">
-                  <p className="font-dmSans font-light text-[13px] text-smoke/80 leading-relaxed mb-3">
+                  <p className="card-text-on-image font-dmSans font-light text-[13px] text-smoke/80 leading-relaxed mb-3">
                     {attr.desc}
                   </p>
-                  <a href="#" className="font-jost text-[10px] text-gold hover:text-gold-light inline-block relative after:content-[''] after:absolute after:w-0 after:h-px after:bottom-0 after:left-0 after:bg-gold-light hover:after:w-full after:transition-all after:duration-300">
+                  <a href="#" className="gold-label-on-image font-jost text-[10px] text-gold hover:text-gold-light inline-block relative after:content-[''] after:absolute after:w-0 after:h-px after:bottom-0 after:left-0 after:bg-gold-light hover:after:w-full after:transition-all after:duration-300">
                     Learn More →
                   </a>
                 </div>

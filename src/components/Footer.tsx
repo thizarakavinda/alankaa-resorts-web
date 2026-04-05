@@ -6,8 +6,8 @@ export const Footer = () => {
   return (
     <footer className="relative bg-void border-t border-[rgba(184,150,90,0.2)] overflow-hidden">
       {/* Background silhouette (simulated with a dark gradient) */}
-      <div className="absolute inset-0 pointer-events-none opacity-3 z-0" style={{
-        background: 'linear-gradient(to top, #1A2E18 0%, transparent 100%)'
+      <div className="absolute inset-0 pointer-events-none opacity-[0.07] z-0" style={{
+        background: 'linear-gradient(to top, var(--clr-moss) 0%, transparent 100%)'
       }} />
 
       <div className="relative z-10 max-w-[1920px] mx-auto">

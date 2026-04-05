@@ -64,12 +64,13 @@ export const Hero = () => {
         />
       </div>
 
-      {/* Layer 2: Dark gradient overlay */}
-      <div className="absolute inset-0 bg-hero-gradient mix-blend-multiply" style={{ background: 'var(--grad-hero)' }}></div>
+      {/* Layer 2: Dark gradient overlay always dark to protect image contrast */}
+      <div className="absolute inset-0 bg-black/30"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/80"></div>
 
       {/* Breadcrumb - Top Left */}
       <div className="relative z-10 p-10 lg:p-[40px]">
-        <p className="font-jost text-[10px] text-fog tracking-[0.2em] uppercase">
+        <p className="hero-subtext-on-image font-jost text-[10px] text-fog tracking-[0.2em] uppercase">
           Home / About Us
         </p>
       </div>
@@ -79,13 +80,13 @@ export const Hero = () => {
         ref={contentRef}
         className="relative z-10 p-10 lg:p-[80px]"
       >
-        <p className="font-jost text-[10px] text-gold tracking-[0.5em] uppercase mb-6 drop-shadow-sm">
+        <p className="gold-label-on-image font-jost text-[10px] text-gold tracking-[0.5em] uppercase mb-6 drop-shadow-sm">
           OUR STORY
         </p>
-        <h1 className="font-cormorant text-[clamp(48px,6vw,96px)] text-ivory font-light leading-none mb-6">
+        <h1 className="hero-headline-on-image font-cormorant text-[clamp(48px,6vw,96px)] text-ivory font-light leading-none mb-6">
           About A'Lankaa
         </h1>
-        <p className="font-dmSans font-light text-[15px] text-smoke/90 max-w-[600px] leading-[2] tracking-wide">
+        <p className="hero-subtext-on-image font-dmSans font-light text-[15px] text-smoke/90 max-w-[600px] leading-[2] tracking-wide">
           A singular vision. An extraordinary location.<br />
           A commitment to hospitality without compromise.
         </p>

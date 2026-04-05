@@ -2,11 +2,14 @@ import { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { AnimatePresence, motion } from 'framer-motion';
+import ThemeToggle from './ThemeToggle';
+import { useTheme } from '../context/ThemeContext';
 
 export const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
+  const { isDark } = useTheme();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -31,23 +34,29 @@ export const Navbar = () => {
     { name: 'Contact', path: '/contact' },
   ];
 
+  const isHeroVideoBackground = location.pathname === '/' && !isScrolled;
+
   return (
     <>
       <nav
         className={`fixed top-0 left-0 w-full z-[1000] px-6 md:px-12 py-4 md:py-6 transition-all duration-400 ease-in-out ${
           isScrolled
-            ? 'bg-[rgba(8,8,8,0.92)] backdrop-blur-[20px] backdrop-saturate-150 border-b border-[rgba(184,150,90,0.15)] py-4'
+            ? 'backdrop-blur-[20px] backdrop-saturate-150 py-4'
             : 'bg-transparent'
         }`}
+        style={{
+           backgroundColor: isScrolled ? 'var(--nav-bg)' : 'transparent',
+           boxShadow: isScrolled ? 'var(--shadow-nav)' : 'none',
+        }}
       >
         <div className="max-w-[1920px] mx-auto flex items-center justify-between">
           
           {/* Logo */}
           <Link to="/" className="flex flex-col hoverable group">
-            <h1 className="font-cormorant text-[22px] text-gold tracking-wide">
+            <h1 className="font-cormorant text-[22px] text-gold tracking-wide drop-shadow-sm">
               A'LANKAA
             </h1>
-            <span className="font-jost text-[8px] text-smoke uppercase tracking-[0.4em] mt-0.5 group-hover:text-gold transition-colors duration-300">
+            <span className={`font-jost text-[8px] uppercase tracking-[0.4em] mt-0.5 group-hover:text-gold transition-colors duration-300 ${isHeroVideoBackground ? 'text-white/90 drop-shadow-md' : 'text-smoke'}`}>
               Resorts & Spa
             </span>
           </Link>
@@ -59,7 +68,7 @@ export const Navbar = () => {
                 <li key={link.name}>
                   <Link
                     to={link.path}
-                    className="font-dmSans text-[13px] text-cream tracking-[0.05em] hover:text-gold transition-colors duration-300 relative group py-2 hoverable"
+                    className={`font-dmSans text-[13px] tracking-[0.05em] hover:text-gold transition-colors duration-300 relative group py-2 hoverable ${isHeroVideoBackground ? 'text-white drop-shadow-md' : 'text-cream'}`}
                   >
                     {link.name}
                     <span
@@ -72,13 +81,16 @@ export const Navbar = () => {
               ))}
             </ul>
             
-            {/* Book Now Button */}
-            <Link
-              to="/booking"
-              className="ml-4 border border-gold px-6 py-2.5 font-jost text-[11px] text-gold uppercase tracking-[0.15em] hover:bg-gold hover:text-void transition-all duration-300 hoverable hover:scale-105"
-            >
-              Book Now
-            </Link>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
+              <ThemeToggle />
+              {/* Book Now Button */}
+              <Link
+                to="/booking"
+                className="border border-gold px-6 py-2.5 font-jost text-[11px] text-gold uppercase tracking-[0.15em] hover:bg-gold hover:text-void transition-all duration-300 hoverable hover:scale-105"
+              >
+                Book Now
+              </Link>
+            </div>
           </div>
 
           {/* Mobile Menu Toggle */}
@@ -134,6 +146,25 @@ export const Navbar = () => {
                   >
                     Book Now
                   </Link>
+                  <div style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'space-between',
+                    padding: '16px 0',
+                    borderTop: '1px solid var(--clr-mist)',
+                    marginTop: '24px',
+                  }}>
+                    <span style={{
+                      fontFamily: 'Jost',
+                      fontSize: '11px',
+                      color: 'var(--clr-fog)',
+                      textTransform: 'uppercase',
+                      letterSpacing: '0.3em',
+                    }}>
+                      {isDark ? 'Dark Mode' : 'Light Mode'}
+                    </span>
+                    <ThemeToggle />
+                  </div>
               </motion.li>
             </ul>
           </motion.div>

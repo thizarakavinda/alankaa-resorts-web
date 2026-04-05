@@ -1,39 +1,131 @@
-:root {
-  /* Colors */
-  --clr-void: #080808;
-  --clr-obsidian: #0E0E0E;
-  --clr-charcoal: #161616;
-  --clr-stone: #1E1E1E;
-  --clr-mist: #2A2A2A;
+/* ============================================
+   GLOBAL SMOOTH TRANSITION
+   ============================================ */
+*,
+*::before,
+*::after {
+  transition:
+    background-color 0.4s ease,
+    color 0.4s ease,
+    border-color 0.4s ease,
+    box-shadow 0.4s ease,
+    opacity 0.4s ease;
+}
 
-  --clr-gold: #B8965A;
-  --clr-gold-light: #D4AF7A;
-  --clr-gold-dim: #7A6040;
+/* Exception — animations should not be slowed */
+*[class*="animate"],
+*[class*="gsap"],
+canvas,
+video {
+  transition: none !important;
+}
 
-  --clr-cream: #F0EAD6;
-  --clr-ivory: #FAF6EE;
-  --clr-smoke: #9A9590;
-  --clr-fog: #5A5550;
+/* ============================================
+   DARK THEME — DEFAULT (unchanged)
+   ============================================ */
+:root,
+[data-theme='dark'] {
+  --clr-void:           #080808;
+  --clr-obsidian:       #0E0E0E;
+  --clr-charcoal:       #161616;
+  --clr-stone:          #1E1E1E;
+  --clr-mist:           #2A2A2A;
 
-  --clr-forest: #1A2E18;
-  --clr-moss: #2C4A28;
-  --clr-sage: #4A6B44;
+  --clr-gold:           #B8965A;
+  --clr-gold-light:     #D4AF7A;
+  --clr-gold-dim:       #7A6040;
 
-  --clr-white: #FFFFFF;
-  --clr-black: #000000;
+  --clr-cream:          #F0EAD6;
+  --clr-ivory:          #FAF6EE;
+  --clr-smoke:          #9A9590;
+  --clr-fog:            #5A5550;
 
-  /* Gradients */
-  --grad-hero: linear-gradient(180deg, rgba(8,8,8,0) 0%, rgba(8,8,8,0.3) 50%, rgba(8,8,8,0.95) 100%);
-  --grad-gold: linear-gradient(135deg, #B8965A 0%, #D4AF7A 50%, #B8965A 100%);
-  --grad-forest: linear-gradient(180deg, #1A2E18 0%, #0E0E0E 100%);
+  --clr-forest:         #1A2E18;
+  --clr-moss:           #2C4A28;
+  --clr-sage:           #4A6B44;
 
-  /* Typography Scales */
-  --text-hero: clamp(72px, 10vw, 160px);
-  --text-display: clamp(48px, 6vw, 96px);
-  --text-h1: clamp(36px, 4vw, 64px);
-  --text-h2: clamp(28px, 3vw, 48px);
-  --text-h3: clamp(20px, 2vw, 32px);
-  --text-body: 16px;
-  --text-small: 13px;
-  --text-micro: 11px;
+  --clr-white:          #FFFFFF;
+  --clr-black:          #000000;
+
+  --grad-hero: linear-gradient(
+    180deg,
+    rgba(8,8,8,0) 0%,
+    rgba(8,8,8,0.3) 50%,
+    rgba(8,8,8,0.95) 100%
+  );
+  --grad-gold: linear-gradient(
+    135deg,
+    #B8965A 0%, #D4AF7A 50%, #B8965A 100%
+  );
+  --grad-forest: linear-gradient(
+    180deg, #1A2E18 0%, #0E0E0E 100%
+  );
+
+  --shadow-card:  0 8px 40px rgba(0,0,0,0.5);
+  --shadow-nav:   0 1px 0 rgba(184,150,90,0.15);
+  --shadow-modal: 0 24px 80px rgba(0,0,0,0.7);
+
+  --nav-bg:     rgba(8,8,8,0.92);
+  --nav-blur:   blur(20px);
+
+  --overlay-img:  rgba(8,8,8,0.55);
+  --overlay-hero: rgba(8,8,8,0.62);
+  --overlay-card: rgba(8,8,8,0.85);
+}
+
+/* ============================================
+   LIGHT THEME — WARM IVORY LUXURY
+   ============================================ */
+[data-theme='light'] {
+
+  /* Backgrounds */
+  --clr-void:           #F5F0E8;
+  --clr-obsidian:       #EDE8DE;
+  --clr-charcoal:       #E3DDD3;
+  --clr-stone:          #D8D2C6;
+  --clr-mist:           #C4BEB2;
+
+  /* Gold — deeper for light bg contrast */
+  --clr-gold:           #9A7A3A;
+  --clr-gold-light:     #B8963A;
+  --clr-gold-dim:       #C4A870;
+
+  /* Text — dark on light */
+  --clr-cream:          #2A2420;
+  --clr-ivory:          #1A1510;
+  --clr-smoke:          #524C44;
+  --clr-fog:            #8A8278;
+
+  /* Nature sections */
+  --clr-forest:         #E4EEE0;
+  --clr-moss:           #D0E2CA;
+  --clr-sage:           #4A6B44;
+
+  --clr-white:          #FFFFFF;
+  --clr-black:          #000000;
+
+  --grad-hero: linear-gradient(
+    180deg,
+    rgba(245,240,232,0) 0%,
+    rgba(245,240,232,0.2) 50%,
+    rgba(245,240,232,0.96) 100%
+  );
+  --grad-gold: linear-gradient(
+    135deg,
+    #9A7A3A 0%, #B8963A 50%, #9A7A3A 100%
+  );
+  --grad-forest: linear-gradient(
+    180deg, #E4EEE0 0%, #EDE8DE 100%
+  );
+
+  --shadow-card:  0 8px 40px rgba(0,0,0,0.08);
+  --shadow-nav:   0 1px 0 rgba(154,122,58,0.2);
+  --shadow-modal: 0 24px 80px rgba(0,0,0,0.15);
+
+  --nav-bg:     rgba(245,240,232,0.95);
+  --nav-blur:   blur(20px);
+
+  --overlay-img:  rgba(0,0,0,0.45);
+  --overlay-hero: rgba(0,0,0,0.50);
+  --overlay-card: rgba(0,0,0,0.70);
 }

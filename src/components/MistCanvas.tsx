@@ -1,7 +1,9 @@
 import { useEffect, useRef } from 'react';
+import { useTheme } from '../context/ThemeContext';
 
 const MistCanvas = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
+  const { isDark } = useTheme();
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -26,11 +28,16 @@ const MistCanvas = () => {
     window.addEventListener('resize', resize);
 
     // Warm/cool tones for the mist layers
-    const colorOptions = [
+    const colorOptions = isDark ? [
       'rgba(184, 150, 90, opacity)',  // warm gold
       'rgba(44, 74, 40, opacity)',    // deep forest green
       'rgba(255, 255, 255, opacity)', // cool white
       'rgba(100, 140, 180, opacity)'  // mountain blue
+    ] : [
+      'rgba(154, 122, 58, opacity)',
+      'rgba(80, 120, 70, opacity)',
+      'rgba(180, 170, 150, opacity)',
+      'rgba(120, 150, 170, opacity)',
     ];
 
     // Generate mist layers
@@ -136,7 +143,7 @@ const MistCanvas = () => {
       cancelAnimationFrame(animId);
       window.removeEventListener('resize', resize);
     };
-  }, []);
+  }, [isDark]);
 
   return (
     <>
@@ -161,11 +168,13 @@ const MistCanvas = () => {
           zIndex: 0,
           pointerEvents: 'none',
           willChange: 'transform',
+          opacity: isDark ? 1 : 0.35,
         }}
       />
 
       {/* Light sweep overlay */}
       <div
+        className="light-sweep-overlay"
         style={{
           position: 'fixed',
           top: 0,

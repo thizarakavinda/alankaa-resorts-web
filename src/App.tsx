@@ -12,6 +12,8 @@ import { Home } from './pages/Home';
 import { About } from './pages/About';
 import { PlaceholderPage } from './pages/PlaceholderPage';
 
+import { ThemeProvider } from './context/ThemeContext';
+
 import { useLenis } from './hooks/useLenis';
 import { useScrollTrigger } from './hooks/useScrollTrigger';
 import MistCanvas from './components/MistCanvas';
@@ -41,16 +43,18 @@ function App() {
   useScrollTrigger();
 
   return (
-    <Router>
-      <LoadingScreen />
-      <CustomCursor />
-      <ScrollProgress />
-      <Navbar />
-      <AnimatedRoutes />
-      <MistCanvas />
-      <Footer />
-      <FloatingBookBtn />
-    </Router>
+    <ThemeProvider>
+      <Router>
+        <LoadingScreen />
+        <CustomCursor />
+        <ScrollProgress />
+        <Navbar />
+        <AnimatedRoutes />
+        <MistCanvas />
+        <Footer />
+        <FloatingBookBtn />
+      </Router>
+    </ThemeProvider>
   );
 }
 

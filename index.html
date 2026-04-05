@@ -2,6 +2,23 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <script>
+      (function() {
+        try {
+          var theme = localStorage.getItem('alankaa-theme') 
+                      || 'dark';
+          var root = document.documentElement;
+          root.setAttribute('data-theme', theme);
+          root.classList.add(theme);
+          if (theme === 'dark') {
+            root.style.backgroundColor = '#080808';
+          } else {
+            root.style.backgroundColor = '#F5F0E8';
+          }
+        } catch(e) {}
+      })();
+    </script>
+    <meta name="theme-color" content="#080808">
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     

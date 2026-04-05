@@ -70,20 +70,19 @@ export const Home = () => {
     >
       {/* Hero Section */}
       <section className="relative h-screen flex flex-col items-center justify-center pt-20">
-        <div className="absolute inset-0 z-0 bg-void">
+        <div className="absolute inset-0 z-0 bg-black">
           <video
             autoPlay
             loop
             muted
             playsInline
-            className="w-full h-full object-cover opacity-60"
+            className="w-full h-full object-cover opacity-80"
           >
             <source src="/videos/backvid.mp4" type="video/mp4" />
           </video>
-          {/* Soft, premium ambient overlay */}
-          <div className="absolute inset-0 bg-black/30" />
-          {/* Dark gradient overlay */}
-          <div className="absolute inset-0 bg-[var(--grad-hero)]" />
+          {/* Always dark overlay for video contrast */}
+          <div className="absolute inset-0 bg-black/40" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent" />
         </div>
 
         <div className="relative z-10 max-w-[1920px] mx-auto px-6 text-center mt-20">
@@ -92,10 +91,10 @@ export const Home = () => {
           </h2>
           <h1
             ref={heroTextRef}
-            className="font-cormorant text-[max(48px,10vw)] leading-none tracking-tight mb-8 font-normal opacity-80"
+            className="hero-headline-on-image font-cormorant text-[max(48px,10vw)] leading-none tracking-tight mb-8 font-normal opacity-90 drop-shadow-xl"
           >
-            <span className="inline-block bg-gradient-to-b from-white via-ivory to-gold text-transparent bg-clip-text select-none pb-2">Quiet</span> <span className="inline-block bg-gradient-to-b from-white via-ivory to-gold text-transparent bg-clip-text select-none pb-2">Luxury.</span><br />
-            <span className="inline-block bg-gradient-to-b from-white via-ivory to-gold text-transparent bg-clip-text select-none pb-2">Elevated.</span>
+            <span className="inline-block text-[#FFFFFF] select-none pb-2">Quiet</span> <span className="inline-block text-[#FFFFFF] select-none pb-2">Luxury.</span><br />
+            <span className="inline-block text-[#FFFFFF] select-none pb-2">Elevated.</span>
           </h1>
         </div>
 
@@ -103,9 +102,9 @@ export const Home = () => {
           onClick={scrollToNext}
           className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-3 opacity-0 animate-[fadeIn_1s_ease_4s_forwards] group cursor-pointer hover:scale-105 transition-transform duration-500"
         >
-          <span className="font-jost text-[12px] text-fog group-hover:text-gold uppercase tracking-widest transition-colors duration-500">Scroll to Discover</span>
+          <span className="font-jost text-[12px] text-white/70 group-hover:text-gold uppercase tracking-widest transition-colors duration-500">Scroll to Discover</span>
           <div className="w-[1px] h-10 bg-gradient-to-b from-gold/50 to-transparent group-hover:from-gold transition-colors duration-500" />
-          <ChevronDown className="w-4 h-4 text-gold/80 group-hover:text-gold animate-bounce" strokeWidth={1} />
+          <ChevronDown className="w-4 h-4 text-white/50 group-hover:text-gold animate-bounce" strokeWidth={1} />
         </button>
       </section>
 

@@ -72,12 +72,12 @@ const ShootCardsSection = () => {
             </div>
 
             <div className="absolute bottom-0 left-0 right-0 p-10 z-10">
-              <span className="font-jost text-[9px] text-gold uppercase tracking-widest block mb-1">{card.category}</span>
-              <h3 className="font-cormorant text-[38px] text-ivory leading-none mb-3">{card.name}</h3>
-              <p className="font-dmSans text-[13px] text-smoke font-light leading-relaxed mb-4">{card.desc}</p>
+              <span className="gold-label-on-image font-jost text-[9px] text-gold uppercase tracking-widest block mb-1">{card.category}</span>
+              <h3 className="card-heading-on-image font-cormorant text-[38px] text-ivory leading-none mb-3">{card.name}</h3>
+              <p className="card-text-on-image font-dmSans text-[13px] text-smoke font-light leading-relaxed mb-4">{card.desc}</p>
               
               <div className="w-[40px] h-[1px] bg-gold mb-4 opacity-50" />
-              <p className="font-jost text-[10px] text-fog uppercase">{card.tags}</p>
+              <p className="card-text-on-image font-jost text-[10px] text-fog uppercase">{card.tags}</p>
 
               <div className="overflow-hidden mt-6 flex h-0 group-hover:h-[45px] transition-all duration-300">
                 <button className="w-full bg-gold text-void font-jost text-[11px] uppercase tracking-widest py-3 flex items-center justify-center gap-2 hover:bg-ivory transition-colors">
