@@ -3,6 +3,7 @@ import { gsap } from 'gsap';
 import { motion } from 'framer-motion';
 import { ChevronDown } from 'lucide-react';
 import PhotographyFeature from '../components/home/PhotographyFeature';
+import { LocationShowcase } from '../components/home/LocationShowcase';
 
 export const Home = () => {
   const heroTextRef = useRef<HTMLHeadingElement>(null);
@@ -109,15 +110,15 @@ export const Home = () => {
       </section>
 
       {/* Intro Section */}
-      <section 
+      <section
         className="py-32 px-6 md:px-20 relative bg-obsidian overflow-hidden group"
         onMouseMove={handleMouseMove}
       >
         {/* Antigravity-style Cursor Spotlight */}
         <div className="pointer-events-none absolute -inset-px opacity-0 transition duration-500 group-hover:opacity-100 mix-blend-screen"
-             style={{ background: 'radial-gradient(800px circle at var(--mouse-x) var(--mouse-y), rgba(184,150,90,0.06), transparent 40%)' }}
+          style={{ background: 'radial-gradient(800px circle at var(--mouse-x) var(--mouse-y), rgba(184,150,90,0.06), transparent 40%)' }}
         />
-        
+
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <h2 className="font-dmSerif text-[36px] md:text-[64px] text-ivory mb-12">
             A Sanctuary Above the Clouds.
@@ -129,45 +130,32 @@ export const Home = () => {
       </section>
 
       {/* Feature Section with Image Reveal */}
-      <section 
-        ref={sectionRef} 
+      <section
+        ref={sectionRef}
         className="py-24 px-6 md:px-20 bg-void max-w-[1920px] mx-auto min-h-screen flex items-center relative overflow-hidden group"
         onMouseMove={handleMouseMove}
       >
         {/* Antigravity-style Cursor Spotlight */}
         <div className="pointer-events-none absolute -inset-px opacity-0 transition duration-500 group-hover:opacity-100 mix-blend-screen"
-             style={{ background: 'radial-gradient(1000px circle at var(--mouse-x) var(--mouse-y), rgba(255,255,255,0.03), transparent 40%)' }}
+          style={{ background: 'radial-gradient(1000px circle at var(--mouse-x) var(--mouse-y), rgba(255,255,255,0.03), transparent 40%)' }}
         />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-8 items-center w-full relative z-10">
-          <div className="order-2 md:order-1 pr-0 md:pr-16">
-            <span className="font-jost text-[10px] text-gold uppercase tracking-[0.2em] mb-4 block">The Architecture</span>
-            <h3 className="font-cormorant text-[36px] md:text-[48px] text-ivory mb-6 leading-tight">
-              Crafted from the Earth.
-            </h3>
-            <p className="font-dmSans text-[16px] text-smoke mb-10 leading-relaxed">
-              Every space within A'Lankaa has been thoughtfully designed to disappear into its surroundings. We utilize locally sourced stone, aged timber, and vast expanses of glass to ensure that nature remains the ultimate centerpiece.
-            </p>
-            <button className="border-b border-gold pb-2 font-jost text-[11px] text-gold uppercase tracking-widest hoverable hover:text-cream transition-colors group">
-              Discover the Suites <span className="group-hover:pl-2 transition-all">→</span>
-            </button>
-          </div>
-
-          <div className="order-1 md:order-2 flex justify-center md:justify-end w-full">
-            <div ref={imageRef} className="w-full max-w-[480px] aspect-[4/3] relative rounded-[4px] overflow-hidden border border-gold/15 shadow-[0_0_30px_rgba(0,0,0,0.5)] group">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d247.63273998899263!2d80.878582!3d6.754749!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae47716d84e3dcd%3A0xf107acadc6ee0026!2sA&#39;Lankaa%20Resorts%20%26%20Spa!5e0!3m2!1sen!2ssg!4v1775301695025!5m2!1sen!2ssg"
-                className="w-full h-full grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-1000 ease-in-out"
-                style={{ border: 0 }}
-                allowFullScreen={false}
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              />
-              <div className="absolute inset-0 border border-gold/30 pointer-events-none scale-[0.96] opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
-            </div>
-          </div>
+        <div className="flex flex-col items-center max-w-3xl mx-auto w-full relative z-10 text-center">
+          <span className="font-jost text-[10px] text-gold uppercase tracking-[0.2em] mb-4 block">The Architecture</span>
+          <h3 className="font-cormorant text-[36px] md:text-[48px] text-ivory mb-6 leading-tight">
+            Crafted from the Earth.
+          </h3>
+          <p className="font-dmSans text-[16px] text-smoke mb-10 leading-relaxed">
+            Every space within A'Lankaa has been thoughtfully designed to disappear into its surroundings. We utilize locally sourced stone, aged timber, and vast expanses of glass to ensure that nature remains the ultimate centerpiece.
+          </p>
+          <button className="border-b border-gold pb-2 font-jost text-[11px] text-gold uppercase tracking-widest hover:text-cream transition-colors group">
+            Discover the Suites <span className="inline-block group-hover:translate-x-2 transition-transform">→</span>
+          </button>
         </div>
       </section>
+
+      {/* The Premium Destination Showcase (Replaces Google Maps) */}
+      <LocationShowcase />
 
       {/* spacer to allow scrolling */}
       <div className="h-[20vh] bg-void" />

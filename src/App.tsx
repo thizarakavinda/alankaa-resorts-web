@@ -14,6 +14,7 @@ import { PlaceholderPage } from './pages/PlaceholderPage';
 
 import { useLenis } from './hooks/useLenis';
 import { useScrollTrigger } from './hooks/useScrollTrigger';
+import MistCanvas from './components/MistCanvas';
 
 const AnimatedRoutes = () => {
   const location = useLocation();
@@ -45,9 +46,8 @@ function App() {
       <CustomCursor />
       <ScrollProgress />
       <Navbar />
-      
       <AnimatedRoutes />
-      
+      <MistCanvas />
       <Footer />
       <FloatingBookBtn />
     </Router>

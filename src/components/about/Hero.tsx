@@ -58,7 +58,7 @@ export const Hero = () => {
         className="absolute inset-0 w-full h-full bg-mist" 
       >
         <img 
-          src="/images/Sunrise View Suite 16.jpg"
+          src="/images/kandiyan 1.jpg"
           alt="A'Lankaa Resort Aerial View"
           className="w-full h-full object-cover"
         />
