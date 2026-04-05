@@ -41,13 +41,13 @@ export const Philosophy = () => {
                 initial={{ opacity: 0, y: 50 }}
                 animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
                 transition={{ duration: 0.8, delay: idx * 0.15, ease: [0.16, 1, 0.3, 1] }}
-                className="bg-white/[0.03] border border-gold/15 p-12 lg:p-[64px_48px] rounded-[2px]"
+                className="group bg-white/[0.02] hover:bg-white/[0.04] border border-gold/10 hover:border-gold/20 transition-all duration-700 p-12 lg:p-[64px_48px] rounded-[2px]"
               >
-                <Icon className="w-8 h-8 text-gold mb-8 stroke-[1.5]" />
-                <h3 className="font-cormorant text-[32px] text-ivory mb-6">
+                <Icon className="w-8 h-8 text-gold mb-8 stroke-[1]" />
+                <h3 className="font-cormorant font-light text-[32px] text-ivory mb-6">
                   {card.title}
                 </h3>
-                <p className="font-dmSans text-[16px] text-smoke leading-relaxed">
+                <p className="font-dmSans font-light text-[15px] text-smoke/90 leading-[2] tracking-wide">
                   {card.text}
                 </p>
               </motion.div>

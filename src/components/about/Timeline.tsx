@@ -39,7 +39,7 @@ export const Timeline = () => {
 
         <div className="relative">
           {/* Center Line */}
-          <div className="absolute left-[20px] md:left-1/2 top-0 bottom-0 w-[2px] bg-gold/80 -translate-x-1/2 rounded-full" />
+          <div className="absolute left-[20px] md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-gold/50 to-transparent -translate-x-1/2 rounded-full" />
 
           {/* Nodes */}
           <div className="space-y-16 lg:space-y-24">
@@ -62,7 +62,7 @@ const TimelineNode = ({ item, isEven }: { item: typeof milestones[0], isEven: bo
     <div ref={nodeRef} className="relative flex items-center w-full min-h-[100px]">
       
       {/* Node Dot */}
-      <div className="absolute left-[20px] md:left-1/2 top-8 md:top-1/2 w-[12px] h-[12px] bg-gold rounded-full -translate-x-1/2 md:-translate-y-1/2 shadow-[0_0_10px_rgba(184,150,90,0.5)] z-10" />
+      <div className="absolute left-[20px] md:left-1/2 top-8 md:top-1/2 w-[6px] h-[6px] bg-gold/80 rounded-full -translate-x-1/2 md:-translate-y-1/2 ring-[1px] ring-gold/40 ring-offset-4 ring-offset-obsidian z-10" />
 
       {/* Content Container (Mobile: shifts right, Desktop: alternates) */}
       <motion.div
@@ -75,13 +75,13 @@ const TimelineNode = ({ item, isEven }: { item: typeof milestones[0], isEven: bo
             : 'md:pl-[80px] md:translate-x-full md:text-left md:items-start self-start'
         }`}
       >
-        <div className="font-cormorant text-[48px] text-gold/40 leading-none mb-4 -mt-2 md:mt-0">
+        <div className="font-cormorant text-[48px] font-light text-gold/30 leading-none mb-4 -mt-2 md:mt-0">
           {item.year}
         </div>
-        <h4 className="font-dmSans font-medium text-[16px] text-cream mb-2">
+        <h4 className="font-dmSans font-light tracking-wide text-[17px] text-cream mb-2">
           {item.title}
         </h4>
-        <p className="font-dmSans font-light text-[14px] text-smoke leading-relaxed max-w-[320px]">
+        <p className="font-dmSans font-light text-[14px] text-smoke/80 leading-[2] max-w-[320px]">
           {item.text}
         </p>
       </motion.div>

@@ -91,10 +91,10 @@ export const OriginStory = () => {
           
           <div 
             ref={lineRef} 
-            className="h-px bg-gold w-[60px] mb-10" 
+            className="h-px bg-gold/60 w-[80px] mb-12" 
           />
           
-          <div className="font-dmSans text-[15px] text-smoke leading-[1.9] space-y-6 max-w-[540px]">
+          <div className="font-dmSans font-light text-[15px] text-smoke/90 leading-[2.2] tracking-wide space-y-8 max-w-[540px]">
             <p>
               It began with a singular vision. Our founders, guided by an unwavering appreciation for the dramatic landscapes of Sri Lanka's hill country, sought out the most extraordinary canvas. They found it here—on a solid granite peak at precisely 1,000 meters above the sea.
             </p>
@@ -108,19 +108,19 @@ export const OriginStory = () => {
         </div>
 
         {/* Right Images */}
-        <div ref={rightImagesRef} className="relative mt-12 lg:mt-0 pb-16 lg:pb-0 pr-8 lg:pr-0">
-          <div className="img-container relative w-full aspect-[4/3] border-[1px] border-gold/20 flex-shrink-0">
+        <div ref={rightImagesRef} className="relative mt-12 lg:mt-0 pb-16 lg:pb-0 pr-8 lg:pr-0 group">
+          <div className="img-container relative w-full aspect-[4/3] border-[1px] border-gold/15 flex-shrink-0 overflow-hidden">
             <img 
-              src="https://images.unsplash.com/photo-1582610116397-edb318620f90?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
+              src="/images/pool view.jpg" 
               alt="A'Lankaa Resort Architecture" 
-              className="w-full h-full object-cover scale-105"
+              className="w-full h-full object-cover scale-105 transition-transform duration-[3s] ease-out group-hover:scale-[1.1]"
             />
           </div>
-          <div className="img-container absolute -bottom-12 -right-4 lg:-bottom-20 lg:-right-10 w-[60%] aspect-[3/4] border-[1px] border-gold/20 z-10 bg-obsidian">
+          <div className="img-container absolute -bottom-12 -right-4 lg:-bottom-20 lg:-right-10 w-[60%] aspect-[3/4] border-[1px] border-gold/15 z-10 bg-obsidian overflow-hidden">
             <img 
-              src="https://images.unsplash.com/photo-1540541338287-41700207dee6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+              src="/images/Room 10.jpg" 
               alt="A'Lankaa Resort Interior Detail" 
-              className="w-full h-full object-cover scale-105"
+              className="w-full h-full object-cover scale-105 transition-transform duration-[3s] ease-out group-hover:scale-[1.12]"
             />
           </div>
         </div>

@@ -20,6 +20,15 @@ export const Hero = () => {
         }
       );
 
+      // Image scale effect
+      const img = imgRef.current?.querySelector('img');
+      if (img) {
+        gsap.fromTo(img, 
+          { scale: 1.1 }, 
+          { scale: 1, duration: 2.5, ease: 'power3.out', delay: 0.1 }
+        );
+      }
+
       // Content fade up
       gsap.fromTo(
         contentRef.current?.children ? Array.from(contentRef.current.children) : [],
@@ -49,7 +58,7 @@ export const Hero = () => {
         className="absolute inset-0 w-full h-full bg-mist" 
       >
         <img 
-          src="https://images.unsplash.com/photo-1542314831-c6a4d27ce66b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80"
+          src="/images/Sunrise View Suite 16.jpg"
           alt="A'Lankaa Resort Aerial View"
           className="w-full h-full object-cover"
         />
@@ -60,7 +69,7 @@ export const Hero = () => {
 
       {/* Breadcrumb - Top Left */}
       <div className="relative z-10 p-10 lg:p-[40px]">
-        <p className="font-jost text-[11px] text-fog tracking-wider uppercase">
+        <p className="font-jost text-[10px] text-fog tracking-[0.2em] uppercase">
           Home / About Us
         </p>
       </div>
@@ -70,13 +79,13 @@ export const Hero = () => {
         ref={contentRef}
         className="relative z-10 p-10 lg:p-[80px]"
       >
-        <p className="font-jost text-[10px] text-gold tracking-[0.4em] uppercase mb-4">
+        <p className="font-jost text-[10px] text-gold tracking-[0.5em] uppercase mb-6 drop-shadow-sm">
           OUR STORY
         </p>
         <h1 className="font-cormorant text-[clamp(48px,6vw,96px)] text-ivory font-light leading-none mb-6">
           About A'Lankaa
         </h1>
-        <p className="font-dmSans text-[16px] text-smoke max-w-[600px] leading-relaxed">
+        <p className="font-dmSans font-light text-[15px] text-smoke/90 max-w-[600px] leading-[2] tracking-wide">
           A singular vision. An extraordinary location.<br />
           A commitment to hospitality without compromise.
         </p>

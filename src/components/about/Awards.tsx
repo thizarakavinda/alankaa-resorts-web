@@ -42,11 +42,11 @@ export const Awards = () => {
                 {/* Visual Shimmer Layer for hover */}
                 <div className="absolute inset-0 z-0 bg-gradient-to-r from-transparent via-gold/10 to-transparent -translate-x-[150%] skew-x-[-20deg] opacity-0 group-hover:opacity-100 group-hover:animate-[shimmer_1.5s_infinite]" />
 
-                <Icon className="w-8 h-8 text-gold stroke-[1.5] mb-4 relative z-10" />
-                <h4 className="font-dmSans font-medium text-[13px] text-cream mb-1 relative z-10">
+                <Icon className="w-8 h-8 text-gold stroke-[1] mb-4 relative z-10 transition-transform duration-700 group-hover:scale-110" />
+                <h4 className="font-dmSans font-light tracking-wide text-[14px] text-cream mb-2 relative z-10">
                   {award.name}
                 </h4>
-                <p className="font-jost text-[10px] text-gold uppercase tracking-widest relative z-10">
+                <p className="font-jost text-[10px] text-gold uppercase tracking-[0.2em] opacity-90 relative z-10">
                   {award.source}
                 </p>
               </div>

@@ -19,7 +19,7 @@ export const Location = () => {
             {/* Pulsing Dot */}
             <div className="relative flex h-4 w-4 mb-4">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-gold opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-4 w-4 bg-gold shadow-[0_0_15px_rgba(184,150,90,0.8)]"></span>
+              <span className="relative inline-flex rounded-full h-4 w-4 bg-gold shadow-[0_0_20px_rgba(184,150,90,0.5)]"></span>
             </div>
             
             <div className="bg-charcoal/80 backdrop-blur-sm border border-gold/20 p-4 rounded text-center">
@@ -36,21 +36,21 @@ export const Location = () => {
           </h2>
 
           <div className="space-y-6 mb-12">
-            <div className="flex items-center gap-4">
-              <CarFront className="w-5 h-5 text-gold" />
-              <p className="font-dmSans text-[15px] text-smoke">32km from Badulla City</p>
+            <div className="flex items-center gap-4 group cursor-default">
+              <CarFront className="w-5 h-5 text-gold stroke-[1.5] transition-transform duration-500 group-hover:-translate-y-1" />
+              <p className="font-dmSans font-light tracking-wide text-[15px] text-smoke/90">32km from Badulla City</p>
             </div>
-            <div className="flex items-center gap-4">
-              <Train className="w-5 h-5 text-gold" />
-              <p className="font-dmSans text-[15px] text-smoke">36km from Nine Arch Bridge, Ella</p>
+            <div className="flex items-center gap-4 group cursor-default">
+              <Train className="w-5 h-5 text-gold stroke-[1.5] transition-transform duration-500 group-hover:-translate-y-1" />
+              <p className="font-dmSans font-light tracking-wide text-[15px] text-smoke/90">36km from Nine Arch Bridge, Ella</p>
             </div>
-            <div className="flex items-center gap-4">
-              <Mountain className="w-5 h-5 text-gold" />
-              <p className="font-dmSans text-[15px] text-smoke">46km from Horton Plains National Park</p>
+            <div className="flex items-center gap-4 group cursor-default">
+              <Mountain className="w-5 h-5 text-gold stroke-[1.5] transition-transform duration-500 group-hover:-translate-y-1" />
+              <p className="font-dmSans font-light tracking-wide text-[15px] text-smoke/90">46km from Horton Plains National Park</p>
             </div>
-            <div className="flex items-center gap-4">
-              <Plane className="w-5 h-5 text-gold" />
-              <p className="font-dmSans text-[15px] text-smoke">~60mi from Mattala Rajapaksa Airport</p>
+            <div className="flex items-center gap-4 group cursor-default">
+              <Plane className="w-5 h-5 text-gold stroke-[1.5] transition-transform duration-500 group-hover:-translate-y-1" />
+              <p className="font-dmSans font-light tracking-wide text-[15px] text-smoke/90">~60mi from Mattala Rajapaksa Airport</p>
             </div>
           </div>
 
@@ -58,7 +58,7 @@ export const Location = () => {
             <h4 className="font-jost text-[10px] text-gold tracking-widest uppercase mb-3">
               Address
             </h4>
-            <address className="font-dmSans text-[15px] text-smoke not-italic leading-relaxed">
+            <address className="font-dmSans font-light text-[15px] text-smoke/90 not-italic leading-[2] tracking-wide">
               A'Lankaa Resorts & Spa<br />
               1000m Summit Road<br />
               Haldummulla, Badulla District<br />
@@ -66,8 +66,8 @@ export const Location = () => {
             </address>
           </div>
 
-          <button className="inline-flex items-center justify-center font-jost text-[12px] uppercase tracking-widest text-gold border border-gold px-8 py-4 hover:bg-gold hover:text-void transition-colors duration-300">
-            Open in Google Maps &copy;
+          <button className="inline-flex items-center justify-center font-jost text-[11px] uppercase tracking-[0.2em] text-gold border border-gold/40 px-8 py-4 hover:border-gold hover:bg-gold/5 transition-colors duration-500 group">
+            Open in Google Maps <span className="ml-2 relative group-hover:translate-x-1 transition-transform duration-500">→</span>
           </button>
         </div>
       </div>
