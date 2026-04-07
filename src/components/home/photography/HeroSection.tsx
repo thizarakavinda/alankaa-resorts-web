@@ -22,14 +22,14 @@ const HeroSection = () => {
       });
 
       // Split text reveal manually using robust clip-path
-      gsap.fromTo(textRefs.current, 
+      gsap.fromTo(textRefs.current,
         { clipPath: 'inset(100% 0 0 0)', y: 30, opacity: 0 },
-        { 
-          clipPath: 'inset(0% 0 0 0)', 
-          y: 0, 
+        {
+          clipPath: 'inset(0% 0 0 0)',
+          y: 0,
           opacity: 1,
-          duration: 1.4, 
-          stagger: 0.15, 
+          duration: 1.4,
+          stagger: 0.15,
           ease: 'power4.out',
           scrollTrigger: {
             trigger: sectionRef.current,
@@ -54,21 +54,21 @@ const HeroSection = () => {
         <span className="gold-label-on-image font-jost text-[10px] text-gold uppercase tracking-[0.5em] mb-12" data-aos="fade-up">
           Photography Experiences
         </span>
-        
+
         <div className="hero-headline-on-image font-cormorant text-[clamp(52px,7vw,110px)] text-ivory font-light leading-[0.92] text-center mb-10 flex flex-col items-center">
           {["Your most beautiful", "moments deserve", "an extraordinary backdrop."].map((line, i) => (
-             <div key={i} className="overflow-hidden p-1">
-               <div ref={(el) => { textRefs.current[i] = el; }}>{line}</div>
-             </div>
+            <div key={i} className="overflow-hidden p-1">
+              <div ref={(el) => { textRefs.current[i] = el; }}>{line}</div>
+            </div>
           ))}
         </div>
 
-        <p className="hero-subtext-on-image font-dmSans text-[17px] text-smoke font-light max-w-[580px] mx-auto opacity-0 animate-[fadeIn_1s_ease_1s_forwards]" data-aos="fade-up" data-aos-delay="300">
+        <p className="hero-subtext-on-image font-dmSans text-[17px] text-smoke font-light max-w-[580px] mx-auto" data-aos="fade-up" data-aos-delay="300">
           At 1,000 metres above sea level, every frame is extraordinary. Every backdrop, unforgettable.
         </p>
       </div>
 
-      <div className="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4 opacity-0 animate-[fadeIn_1s_ease_2s_forwards]">
+      <div className="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4" data-aos="fade-up" data-aos-delay="600">
         <div className="w-[1px] h-12 bg-gradient-to-b from-fog to-transparent" />
         <span className="hero-subtext-on-image font-jost text-[9px] text-fog uppercase tracking-[0.4em]">Explore Shoots</span>
       </div>

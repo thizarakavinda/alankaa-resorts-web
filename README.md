@@ -71,3 +71,27 @@ export default defineConfig([
   },
 ])
 ```
+
+## Deploy To Netlify
+
+This project is configured for Netlify using `netlify.toml`.
+
+### Build settings
+
+- Build command: `npm run build`
+- Publish directory: `dist`
+- Node version: `20`
+
+### Important behavior already configured
+
+- SPA redirect fallback so deep links like `/rooms` or `/about` load correctly.
+- Asset caching for files in `/assets`.
+- No-cache policy for HTML so users get the latest app shell.
+
+### Deploy steps
+
+1. Push this repository to GitHub.
+2. In Netlify, select Add new site -> Import an existing project.
+3. Choose this repository and branch.
+4. Confirm build command and publish directory (auto-detected from `netlify.toml`).
+5. Deploy.

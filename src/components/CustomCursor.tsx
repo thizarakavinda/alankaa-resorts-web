@@ -14,6 +14,7 @@ export const CustomCursor = () => {
     }
 
     setIsVisible(true);
+    let rafId = 0;
 
     let mouseX = window.innerWidth / 2;
     let mouseY = window.innerHeight / 2;
@@ -38,11 +39,11 @@ export const CustomCursor = () => {
         ringRef.current.style.transform = `translate3d(${ringX}px, ${ringY}px, 0)`;
       }
 
-      requestAnimationFrame(render);
+      rafId = requestAnimationFrame(render);
     };
 
     window.addEventListener('mousemove', onMouseMove);
-    requestAnimationFrame(render);
+    rafId = requestAnimationFrame(render);
 
     // Hover logic
     const applyHover = (e: MouseEvent) => {
@@ -69,6 +70,7 @@ export const CustomCursor = () => {
     window.addEventListener('mouseover', applyHover);
 
     return () => {
+      cancelAnimationFrame(rafId);
       window.removeEventListener('mousemove', onMouseMove);
       window.removeEventListener('mouseover', applyHover);
     };
