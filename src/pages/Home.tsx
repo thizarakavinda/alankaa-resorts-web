@@ -3,6 +3,8 @@ import { gsap } from 'gsap';
 import { motion } from 'framer-motion';
 import { ChevronDown } from 'lucide-react';
 import PhotographyFeature from '../components/home/PhotographyFeature';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import { LocationShowcase } from '../components/home/LocationShowcase';
 
 export const Home = () => {
@@ -21,6 +23,8 @@ export const Home = () => {
   };
 
   useEffect(() => {
+    AOS.init({ once: true });
+    
     // Basic GSAP interactions
     if (heroTextRef.current) {
       gsap.fromTo(heroTextRef.current.children,
@@ -86,7 +90,7 @@ export const Home = () => {
         </div>
 
         <div className="relative z-10 max-w-[1920px] mx-auto px-6 text-center mt-20">
-          <h2 className="font-jost text-[14px] text-gold tracking-[0.4em] uppercase mb-6 opacity-0 animate-[fadeIn_1s_ease_3s_forwards]">
+          <h2 className="font-jost text-[14px] text-gold tracking-[0.4em] uppercase mb-6" data-aos="fade-down" data-aos-delay="2000">
             Welcome to the Edge of the World
           </h2>
           <h1
@@ -100,7 +104,8 @@ export const Home = () => {
 
         <button
           onClick={scrollToNext}
-          className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-3 opacity-0 animate-[fadeIn_1s_ease_4s_forwards] group cursor-pointer hover:scale-105 transition-transform duration-500"
+          className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-3 group cursor-pointer hover:scale-105 transition-transform duration-500"
+          data-aos="fade-up" data-aos-delay="2500"
         >
           <span className="font-jost text-[12px] text-white/70 group-hover:text-gold uppercase tracking-widest transition-colors duration-500">Scroll to Discover</span>
           <div className="w-[1px] h-10 bg-gradient-to-b from-gold/50 to-transparent group-hover:from-gold transition-colors duration-500" />
