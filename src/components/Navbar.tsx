@@ -34,7 +34,7 @@ export const Navbar = () => {
     { name: 'Contact', path: '/contact' },
   ];
 
-  const isHeroVideoBackground = location.pathname === '/' && !isScrolled;
+  const isDarkHero = !isScrolled;
 
   return (
     <>
@@ -56,7 +56,7 @@ export const Navbar = () => {
             <h1 className="font-cormorant text-[22px] text-gold tracking-wide drop-shadow-sm">
               A'LANKAA
             </h1>
-            <span className={`font-jost text-[8px] uppercase tracking-[0.4em] mt-0.5 group-hover:text-gold transition-colors duration-300 ${isHeroVideoBackground ? 'text-white/90 drop-shadow-md' : 'text-smoke'}`}>
+            <span className={`font-jost text-[8px] uppercase tracking-[0.4em] mt-0.5 group-hover:text-gold transition-colors duration-300 ${isDarkHero ? 'text-white/90 drop-shadow-md' : 'text-smoke'}`}>
               Resorts & Spa
             </span>
           </Link>
@@ -68,7 +68,7 @@ export const Navbar = () => {
                 <li key={link.name}>
                   <Link
                     to={link.path}
-                    className={`font-dmSans text-[13px] tracking-[0.05em] hover:text-gold transition-colors duration-300 relative group py-2 hoverable ${isHeroVideoBackground ? 'text-white drop-shadow-md' : 'text-cream'}`}
+                    className={`font-dmSans text-[13px] tracking-[0.05em] hover:text-gold transition-colors duration-300 relative group py-2 hoverable ${isDarkHero ? 'text-white drop-shadow-md' : 'text-cream'}`}
                   >
                     {link.name}
                     <span
