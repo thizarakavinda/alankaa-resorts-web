@@ -11,6 +11,8 @@ import { FloatingBookBtn } from './components/FloatingBookBtn';
 import { Home } from './pages/Home';
 import { About } from './pages/About';
 import { PlaceholderPage } from './pages/PlaceholderPage';
+import Rooms from './pages/Rooms';
+import Facilities from './pages/Facilities';
 
 import { ThemeProvider } from './context/ThemeContext';
 
@@ -26,8 +28,8 @@ const AnimatedRoutes = () => {
       <Routes location={location} key={location.pathname}>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="/rooms" element={<PlaceholderPage title="Rooms & Pricing" />} />
-        <Route path="/facilities" element={<PlaceholderPage title="Facilities" />} />
+        <Route path="/rooms" element={<Rooms />} />
+        <Route path="/facilities" element={<Facilities />} />
         <Route path="/gallery" element={<PlaceholderPage title="Gallery" />} />
         <Route path="/contact" element={<PlaceholderPage title="Contact" />} />
         <Route path="/booking" element={<PlaceholderPage title="Reservation" />} />
