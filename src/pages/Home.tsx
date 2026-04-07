@@ -1,4 +1,4 @@
-import { useRef, useEffect } from 'react';
+import { useRef, useEffect, useState } from 'react';
 import { gsap } from 'gsap';
 import { motion } from 'framer-motion';
 import { ChevronDown } from 'lucide-react';
@@ -11,6 +11,7 @@ export const Home = () => {
   const heroTextRef = useRef<HTMLHeadingElement>(null);
   const sectionRef = useRef<HTMLDivElement>(null);
   const imageRef = useRef<HTMLDivElement>(null);
+  const [saveDataMode, setSaveDataMode] = useState(false);
 
   // Spotlight effect for modern dynamic dark sections
   const handleMouseMove = (e: React.MouseEvent<HTMLElement>) => {
@@ -24,6 +25,14 @@ export const Home = () => {
 
   useEffect(() => {
     AOS.init({ once: true });
+
+    const connection = (navigator as Navigator & {
+      connection?: { saveData?: boolean; effectiveType?: string };
+    }).connection;
+
+    if (connection?.saveData || connection?.effectiveType === '2g') {
+      setSaveDataMode(true);
+    }
     
     // Basic GSAP interactions
     if (heroTextRef.current) {
@@ -76,10 +85,13 @@ export const Home = () => {
       <section className="relative h-screen flex flex-col items-center justify-center pt-20">
         <div className="absolute inset-0 z-0 bg-black">
           <video
-            autoPlay
+            autoPlay={!saveDataMode}
             loop
             muted
             playsInline
+            preload={saveDataMode ? 'none' : 'metadata'}
+            poster="/images/ella.png"
+            aria-hidden="true"
             className="w-full h-full object-cover opacity-80"
           >
             <source src="/videos/backvid.mp4" type="video/mp4" />

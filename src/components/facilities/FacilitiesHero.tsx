@@ -1,11 +1,13 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 
 const FacilitiesHero = () => {
+    const sectionRef = useRef<HTMLElement>(null);
     const labelRef = useRef<HTMLParagraphElement>(null);
     const headlineRef = useRef<HTMLHeadingElement>(null);
     const subtextRef = useRef<HTMLParagraphElement>(null);
     const lineRef = useRef<HTMLDivElement>(null);
+    const [shouldLoadVideo, setShouldLoadVideo] = useState(false);
 
     useEffect(() => {
         const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
@@ -39,8 +41,27 @@ const FacilitiesHero = () => {
             );
     }, []);
 
+    useEffect(() => {
+        const section = sectionRef.current;
+        if (!section) return;
+
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting) {
+                    setShouldLoadVideo(true);
+                    observer.disconnect();
+                }
+            },
+            { rootMargin: '300px 0px' }
+        );
+
+        observer.observe(section);
+
+        return () => observer.disconnect();
+    }, []);
+
     return (
-        <section className="relative h-[70vh] w-full flex items-end justify-center pb-[25vh] overflow-hidden">
+        <section ref={sectionRef} className="relative h-[70vh] w-full flex items-end justify-center pb-[25vh] overflow-hidden">
             {/* Video Background */}
             <div className="absolute inset-0 w-full h-full bg-[var(--clr-charcoal)]">
                 <video
@@ -48,9 +69,12 @@ const FacilitiesHero = () => {
                     loop
                     muted
                     playsInline
+                    preload="none"
+                    poster="/images/Swiming-Pool.png"
+                    aria-hidden="true"
                     className="w-full h-full object-cover opacity-60"
                 >
-                    <source src="/videos/gymspa.mp4" type="video/mp4" />
+                    {shouldLoadVideo && <source src="/videos/gymspa.mp4" type="video/mp4" />}
                 </video>
             </div>
             <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-black/10" />
