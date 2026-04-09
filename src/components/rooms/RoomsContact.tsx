@@ -4,7 +4,7 @@ const RoomsContact = () => {
   return (
     <section className="bg-[var(--clr-forest)] px-[24px] py-[60px] lg:px-[80px] lg:py-[100px] border-t border-[rgba(184,150,90,0.15)] flex flex-col lg:flex-row gap-12">
 
-      {/* LEFT */}
+      {/* left*/}
       <div className="w-full lg:w-[55%]" data-aos="fade-up" data-aos-once="true">
         <p className="font-['Jost'] text-[10px] text-[var(--clr-gold)] uppercase tracking-[0.4em] mb-[8px]">RESERVE YOUR SUITE</p>
         <h2 className="font-['Cormorant'] italic text-[clamp(36px,4vw,60px)] text-[var(--clr-ivory)] font-light leading-[1.1]">
@@ -32,7 +32,7 @@ const RoomsContact = () => {
         </div>
       </div>
 
-      {/* RIGHT */}
+      {/* right */}
       <div className="w-full lg:w-[45%] flex flex-col gap-[16px] justify-center" data-aos="fade-up" data-aos-delay="200" data-aos-once="true">
         <a href="/booking" className="inline-block w-full bg-[var(--clr-gold)] text-[var(--clr-void)] font-['Jost'] text-[12px] uppercase py-[20px] px-[48px] text-center tracking-[0.15em] hover:bg-[var(--clr-gold-light)] transition-colors">
           Book a Suite Online &rarr;

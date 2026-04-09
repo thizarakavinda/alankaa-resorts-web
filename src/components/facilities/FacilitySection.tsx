@@ -30,27 +30,27 @@ const FacilitySection = ({ facility }: FacilitySectionProps) => {
 
             const xFrom = reverse ? 40 : -40;
 
-            // Gold label
+
             tl.fromTo(
                 labelRef.current,
                 { x: xFrom, opacity: 0, letterSpacing: '0.5em' },
                 { x: 0, opacity: 1, letterSpacing: '0.2em', duration: 0.7 }
             )
-                // Title with lift + slight skew
+
                 .fromTo(
                     titleRef.current,
                     { y: 50, opacity: 0, skewY: 2 },
                     { y: 0, opacity: 1, skewY: 0, duration: 1 },
                     '-=0.4'
                 )
-                // Body copy
+
                 .fromTo(
                     bodyRef.current,
                     { y: 25, opacity: 0 },
                     { y: 0, opacity: 1, duration: 0.85 },
                     '-=0.6'
                 )
-                // List items stagger in one by one
+
                 .fromTo(
                     listRef.current ? Array.from(listRef.current.children) : [],
                     { x: xFrom * 0.5, opacity: 0 },
@@ -72,7 +72,7 @@ const FacilitySection = ({ facility }: FacilitySectionProps) => {
             ref={sectionRef}
             className={`flex flex-col ${reverse ? 'lg:flex-row-reverse' : 'lg:flex-row'} items-stretch w-full min-h-[70vh] bg-[var(--clr-void)]`}
         >
-            {/* Image Side */}
+            {/* img side */}
             <div className="w-full lg:w-1/2 p-6 md:p-10 lg:p-14 flex flex-col">
                 <div
                     className="relative w-full flex-1 min-h-[40vh] md:min-h-[50vh] overflow-hidden group facility-image-reveal"
@@ -87,7 +87,7 @@ const FacilitySection = ({ facility }: FacilitySectionProps) => {
                 </div>
             </div>
 
-            {/* Content Side */}
+            {/* cont part */}
             <div className="w-full lg:w-1/2 flex items-center justify-center p-8 py-16 md:p-16 lg:p-24 bg-[var(--clr-void)] relative">
                 <div className="absolute inset-0 opacity-[0.02] bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] pointer-events-none" />
 

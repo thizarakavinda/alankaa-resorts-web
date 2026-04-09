@@ -8,8 +8,8 @@ const ThemeToggle = () => {
   return (
     <motion.button
       onClick={toggleTheme}
-      aria-label={isDark 
-        ? 'Switch to light mode' 
+      aria-label={isDark
+        ? 'Switch to light mode'
         : 'Switch to dark mode'
       }
       whileHover={{ scale: 1.05 }}
@@ -31,7 +31,7 @@ const ThemeToggle = () => {
         outline: 'none',
       }}
     >
-      {/* Track background glow */}
+
       <motion.div
         animate={{ opacity: isDark ? 0 : 1 }}
         transition={{ duration: 0.3 }}
@@ -43,7 +43,7 @@ const ThemeToggle = () => {
         }}
       />
 
-      {/* Sliding knob */}
+
       <motion.div
         animate={{ x: isDark ? 0 : 22 }}
         transition={{
@@ -72,15 +72,15 @@ const ThemeToggle = () => {
               animate={{ opacity: 1, rotate: 0, scale: 1 }}
               exit={{ opacity: 0, rotate: 45, scale: 0.5 }}
               transition={{ duration: 0.15 }}
-              style={{ 
-                display: 'flex', 
-                alignItems: 'center' 
+              style={{
+                display: 'flex',
+                alignItems: 'center'
               }}
             >
-              <Moon 
-                size={11} 
-                color="#080808" 
-                strokeWidth={2.5} 
+              <Moon
+                size={11}
+                color="#080808"
+                strokeWidth={2.5}
               />
             </motion.span>
           ) : (
@@ -90,15 +90,15 @@ const ThemeToggle = () => {
               animate={{ opacity: 1, rotate: 0, scale: 1 }}
               exit={{ opacity: 0, rotate: -45, scale: 0.5 }}
               transition={{ duration: 0.15 }}
-              style={{ 
-                display: 'flex', 
-                alignItems: 'center' 
+              style={{
+                display: 'flex',
+                alignItems: 'center'
               }}
             >
-              <Sun 
-                size={11} 
-                color="#F5F0E8" 
-                strokeWidth={2.5} 
+              <Sun
+                size={11}
+                color="#F5F0E8"
+                strokeWidth={2.5}
               />
             </motion.span>
           )}

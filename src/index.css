@@ -13,13 +13,19 @@
 
 @layer utilities {
   @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
   }
 }
 
 /* === Lenis Smooth Scroll Overrides === */
-html.lenis, html.lenis body {
+html.lenis,
+html.lenis body {
   height: auto;
 }
 
@@ -43,22 +49,26 @@ html.lenis, html.lenis body {
 ::-webkit-scrollbar {
   display: none;
 }
+
 * {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
 
 /* Base link / button resets */
-a, button {
+a,
+button {
   @apply outline-none;
 }
+
 .hoverable {
-  cursor: pointer; /* fallback if JS cursor fails */
+  cursor: pointer;
+  /* fallback if JS cursor fails */
 }
 
-/* ============================================
+/*
    LIGHT THEME OVERRIDES
-   ============================================ */
+   */
 
 /* Body background */
 [data-theme='light'] body {
@@ -70,24 +80,23 @@ a, button {
 [data-theme='light'] ::-webkit-scrollbar {
   background: var(--clr-obsidian);
 }
+
 [data-theme='light'] ::-webkit-scrollbar-thumb {
   background: var(--clr-mist);
 }
 
 /* Selection color */
 [data-theme='light'] ::selection {
-  background: rgba(154,122,58,0.2);
+  background: rgba(154, 122, 58, 0.2);
   color: var(--clr-ivory);
 }
 
 /* Image overlays — lighter in light mode */
 [data-theme='light'] .hero-overlay {
-  background: linear-gradient(
-    180deg,
-    rgba(245,240,232,0.1) 0%,
-    rgba(245,240,232,0.5) 60%,
-    rgba(245,240,232,0.97) 100%
-  ) !important;
+  background: linear-gradient(180deg,
+      rgba(245, 240, 232, 0.1) 0%,
+      rgba(245, 240, 232, 0.5) 60%,
+      rgba(245, 240, 232, 0.97) 100%) !important;
 }
 
 /* Cards in light mode */
@@ -118,6 +127,7 @@ a, button {
 [data-theme='light'] .nav-link {
   color: var(--clr-smoke);
 }
+
 [data-theme='light'] .nav-link:hover {
   color: var(--clr-gold);
 }
@@ -125,7 +135,7 @@ a, button {
 /* Footer light mode */
 [data-theme='light'] footer {
   background: var(--clr-charcoal);
-  border-top-color: rgba(154,122,58,0.2);
+  border-top-color: rgba(154, 122, 58, 0.2);
 }
 
 /* Loading screen light mode */
@@ -140,8 +150,9 @@ a, button {
 
 /* Gallery lightbox */
 [data-theme='light'] .lightbox-overlay {
-  background: rgba(245,240,232,0.97);
+  background: rgba(245, 240, 232, 0.97);
 }
+
 [data-theme='light'] .lightbox-overlay .close-btn,
 [data-theme='light'] .lightbox-overlay .nav-btn {
   color: var(--clr-ivory);
@@ -156,15 +167,17 @@ a, button {
 [data-theme='light'] .hero-label {
   color: var(--clr-gold);
 }
+
 [data-theme='light'] .hero-headline {
   color: var(--clr-ivory);
-  text-shadow: 0 2px 20px rgba(245,240,232,0.3);
+  text-shadow: 0 2px 20px rgba(245, 240, 232, 0.3);
 }
 
 /* Section backgrounds alternate */
 [data-theme='light'] .section-dark {
   background: var(--clr-obsidian);
 }
+
 [data-theme='light'] .section-darker {
   background: var(--clr-charcoal);
 }
@@ -172,14 +185,14 @@ a, button {
 /* Booking form card */
 [data-theme='light'] .booking-card {
   background: var(--clr-obsidian);
-  border-color: rgba(154,122,58,0.2);
-  box-shadow: 0 20px 60px rgba(0,0,0,0.06);
+  border-color: rgba(154, 122, 58, 0.2);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.06);
 }
 
 /* Booking summary sidebar */
 [data-theme='light'] .booking-summary {
   background: var(--clr-charcoal);
-  border-color: rgba(154,122,58,0.2);
+  border-color: rgba(154, 122, 58, 0.2);
 }
 
 /* Room cards */
@@ -191,6 +204,7 @@ a, button {
 [data-theme='light'] .manifesto-section {
   background: var(--clr-forest);
 }
+
 [data-theme='light'] .manifesto-quote {
   color: var(--clr-ivory);
 }
@@ -205,6 +219,7 @@ a, button {
 [data-theme='light'] .stat-number {
   color: var(--clr-gold);
 }
+
 [data-theme='light'] .stat-label {
   color: var(--clr-fog);
 }
@@ -219,12 +234,15 @@ a, button {
 [data-theme='light'] .faq-item {
   border-bottom-color: var(--clr-mist);
 }
+
 [data-theme='light'] .faq-item.open {
   border-left-color: var(--clr-gold);
 }
+
 [data-theme='light'] .faq-question {
   color: var(--clr-cream);
 }
+
 [data-theme='light'] .faq-answer {
   color: var(--clr-smoke);
 }
@@ -237,7 +255,7 @@ a, button {
 
 /* Attraction cards */
 [data-theme='light'] .attraction-card:hover {
-  box-shadow: 0 20px 60px rgba(0,0,0,0.12);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
 }
 
 /* Journey timeline */
@@ -245,13 +263,14 @@ a, button {
   background: var(--clr-void);
   border-color: var(--clr-gold);
 }
+
 [data-theme='light'] .timeline-node.active {
   background: var(--clr-gold);
 }
 
-/* ============================================
-   LIGHT THEME — GLOBAL BASE
-   ============================================ */
+/* 
+   light theme global
+   */
 [data-theme='light'] {
   color-scheme: light;
 }
@@ -265,23 +284,25 @@ a, button {
 [data-theme='light'] ::-webkit-scrollbar-track {
   background: var(--clr-obsidian);
 }
+
 [data-theme='light'] ::-webkit-scrollbar-thumb {
   background: var(--clr-mist);
   border-radius: 4px;
 }
+
 [data-theme='light'] ::-webkit-scrollbar-thumb:hover {
   background: var(--clr-gold);
 }
 
 /* Text selection */
 [data-theme='light'] ::selection {
-  background: rgba(154,122,58,0.25);
+  background: rgba(154, 122, 58, 0.25);
   color: var(--clr-ivory);
 }
 
-/* ============================================
-   LIGHT THEME — NAVBAR
-   ============================================ */
+/* 
+   light theme navbar
+   */
 [data-theme='light'] .navbar-transparent {
   background: transparent;
 }
@@ -289,7 +310,7 @@ a, button {
 [data-theme='light'] .navbar-scrolled {
   background: var(--nav-bg) !important;
   backdrop-filter: var(--nav-blur) !important;
-  border-bottom: 1px solid rgba(154,122,58,0.15);
+  border-bottom: 1px solid rgba(154, 122, 58, 0.15);
   box-shadow: var(--shadow-nav);
 }
 
@@ -297,6 +318,7 @@ a, button {
 [data-theme='light'] .logo-name {
   color: var(--clr-gold) !important;
 }
+
 [data-theme='light'] .logo-sub {
   color: var(--clr-fog) !important;
 }
@@ -305,12 +327,15 @@ a, button {
 [data-theme='light'] .nav-link {
   color: var(--clr-smoke) !important;
 }
+
 [data-theme='light'] .nav-link:hover {
   color: var(--clr-gold) !important;
 }
+
 [data-theme='light'] .nav-link.active {
   color: var(--clr-gold) !important;
 }
+
 [data-theme='light'] .nav-link-underline {
   background: var(--clr-gold) !important;
 }
@@ -320,6 +345,7 @@ a, button {
   border-color: var(--clr-gold) !important;
   color: var(--clr-gold) !important;
 }
+
 [data-theme='light'] .nav-book-btn:hover {
   background: var(--clr-gold) !important;
   color: var(--clr-void) !important;
@@ -329,20 +355,20 @@ a, button {
 [data-theme='light'] .mobile-menu-overlay {
   background: var(--clr-void) !important;
 }
+
 [data-theme='light'] .mobile-nav-link {
   color: var(--clr-ivory) !important;
 }
+
 [data-theme='light'] .mobile-menu-bg-image {
   opacity: 0.03 !important;
 }
 
-/* ============================================
-   LIGHT THEME — HERO SECTION
-   TEXT ON IMAGES ALWAYS WHITE
-   ============================================ */
+/* 
+   light theme hero
+   */
 
-/* ALL text sitting on top of images 
-   stays WHITE in both themes */
+
 [data-theme='light'] .hero-label-on-image,
 [data-theme='light'] .hero-headline-on-image,
 [data-theme='light'] .hero-subtext-on-image,
@@ -355,7 +381,7 @@ a, button {
 [data-theme='light'] .card-text-on-image {
   color: #FFFFFF !important;
   -webkit-text-fill-color: #FFFFFF !important;
-  text-shadow: 0 1px 12px rgba(0,0,0,0.3);
+  text-shadow: 0 1px 12px rgba(0, 0, 0, 0.3);
 }
 
 /* Gold labels on images stay gold */
@@ -368,10 +394,12 @@ a, button {
   background: var(--clr-gold) !important;
   color: var(--clr-void) !important;
 }
+
 [data-theme='light'] .hero-btn-secondary {
-  border-color: rgba(255,255,255,0.5) !important;
+  border-color: rgba(255, 255, 255, 0.5) !important;
   color: #FFFFFF !important;
 }
+
 [data-theme='light'] .hero-btn-secondary:hover {
   border-color: var(--clr-gold) !important;
   color: var(--clr-gold) !important;
@@ -379,151 +407,184 @@ a, button {
 
 /* Scroll indicator on hero */
 [data-theme='light'] .scroll-indicator-text {
-  color: rgba(255,255,255,0.5) !important;
+  color: rgba(255, 255, 255, 0.5) !important;
 }
+
 [data-theme='light'] .scroll-indicator-line {
-  background: rgba(255,255,255,0.3) !important;
+  background: rgba(255, 255, 255, 0.3) !important;
 }
 
 /* Hero vertical text */
 [data-theme='light'] .hero-vertical-text {
-  color: rgba(255,255,255,0.4) !important;
+  color: rgba(255, 255, 255, 0.4) !important;
 }
 
-/* ============================================
-   LIGHT THEME — QUICK BOOKING BAR
-   ============================================ */
+/* 
+   light theme booking bar
+   */
 [data-theme='light'] .booking-bar {
-  background: rgba(237,232,222,0.98) !important;
-  border-top: 1px solid rgba(154,122,58,0.2);
-  border-bottom: 1px solid rgba(154,122,58,0.2);
+  background: rgba(237, 232, 222, 0.98) !important;
+  border-top: 1px solid rgba(154, 122, 58, 0.2);
+  border-bottom: 1px solid rgba(154, 122, 58, 0.2);
 }
+
 [data-theme='light'] .booking-bar-label {
   color: var(--clr-gold) !important;
 }
+
 [data-theme='light'] .booking-bar-value {
   color: var(--clr-cream) !important;
 }
+
 [data-theme='light'] .booking-bar-divider {
-  background: rgba(154,122,58,0.2) !important;
+  background: rgba(154, 122, 58, 0.2) !important;
 }
+
 [data-theme='light'] .booking-bar-btn {
   color: var(--clr-gold) !important;
 }
 
-/* ============================================
-   LIGHT THEME — SECTION BACKGROUNDS
-   ============================================ */
+/* 
+   light theme backgrounds
+   */
 [data-theme='light'] .section-void {
   background: var(--clr-void) !important;
 }
+
 [data-theme='light'] .section-obsidian {
   background: var(--clr-obsidian) !important;
 }
+
 [data-theme='light'] .section-charcoal {
   background: var(--clr-charcoal) !important;
 }
+
 [data-theme='light'] .section-forest {
   background: var(--clr-forest) !important;
 }
 
-/* ============================================
-   LIGHT THEME — TYPOGRAPHY ON PLAIN BACKGROUNDS
-   ============================================ */
+/* 
+   light theme typography
+   */
 [data-theme='light'] .section-label {
   color: var(--clr-gold) !important;
 }
+
 [data-theme='light'] .section-heading {
   color: var(--clr-ivory) !important;
 }
+
 [data-theme='light'] .section-subtext {
   color: var(--clr-smoke) !important;
 }
+
 [data-theme='light'] .section-body {
   color: var(--clr-smoke) !important;
 }
+
 [data-theme='light'] .gold-link {
   color: var(--clr-gold) !important;
 }
+
 [data-theme='light'] .muted-text {
   color: var(--clr-fog) !important;
 }
+
 [data-theme='light'] .gold-line {
   background: var(--clr-gold) !important;
   opacity: 0.5;
 }
+
 [data-theme='light'] .gold-divider {
-  border-color: rgba(154,122,58,0.2) !important;
+  border-color: rgba(154, 122, 58, 0.2) !important;
 }
 
-/* ============================================
-   LIGHT THEME — CARDS (general)
-   ============================================ */
+/* 
+   light theme cards
+   */
 [data-theme='light'] .card {
   background: var(--clr-charcoal) !important;
   border-color: var(--clr-mist) !important;
   box-shadow: var(--shadow-card) !important;
 }
+
 [data-theme='light'] .card-title {
   color: var(--clr-ivory) !important;
 }
+
 [data-theme='light'] .card-text {
   color: var(--clr-smoke) !important;
 }
+
 [data-theme='light'] .card-label {
   color: var(--clr-gold) !important;
 }
+
 [data-theme='light'] .card-border-gold {
-  border-color: rgba(154,122,58,0.15) !important;
+  border-color: rgba(154, 122, 58, 0.15) !important;
 }
+
 [data-theme='light'] .card-border-gold-top {
   border-top-color: var(--clr-gold) !important;
 }
 
-/* ============================================
-   LIGHT THEME — ROOMS PAGE
-   ============================================ */
+/* 
+   light theme rooms
+   */
 [data-theme='light'] .room-content-side {
   background: var(--clr-void) !important;
 }
+
 [data-theme='light'] .room-category {
   color: var(--clr-gold) !important;
 }
+
 [data-theme='light'] .room-name {
   color: var(--clr-ivory) !important;
 }
+
 [data-theme='light'] .room-description {
   color: var(--clr-smoke) !important;
 }
+
 [data-theme='light'] .room-spec-icon {
   color: var(--clr-gold) !important;
 }
+
 [data-theme='light'] .room-spec-label {
   color: var(--clr-smoke) !important;
 }
+
 [data-theme='light'] .room-amenity {
   color: var(--clr-smoke) !important;
 }
+
 [data-theme='light'] .room-amenity-check {
   color: var(--clr-gold) !important;
 }
+
 [data-theme='light'] .room-price-from {
   color: var(--clr-fog) !important;
 }
+
 [data-theme='light'] .room-price-amount {
   color: var(--clr-gold) !important;
 }
+
 [data-theme='light'] .room-price-per {
   color: var(--clr-fog) !important;
 }
+
 [data-theme='light'] .room-btn-primary {
   background: var(--clr-gold) !important;
   color: var(--clr-void) !important;
 }
+
 [data-theme='light'] .room-btn-secondary {
   border-color: var(--clr-gold) !important;
   color: var(--clr-gold) !important;
 }
+
 [data-theme='light'] .room-border {
   border-color: var(--clr-mist) !important;
 }
@@ -533,15 +594,18 @@ a, button {
   background: var(--clr-obsidian) !important;
   border-bottom-color: var(--clr-mist) !important;
 }
+
 [data-theme='light'] .filter-chip {
   border-color: var(--clr-mist) !important;
   color: var(--clr-smoke) !important;
 }
+
 [data-theme='light'] .filter-chip.active {
   background: var(--clr-gold) !important;
   color: var(--clr-void) !important;
   border-color: var(--clr-gold) !important;
 }
+
 [data-theme='light'] .filter-count {
   color: var(--clr-fog) !important;
 }
@@ -550,165 +614,201 @@ a, button {
 [data-theme='light'] .compare-table {
   border-color: var(--clr-mist) !important;
 }
+
 [data-theme='light'] .compare-header {
   background: var(--clr-charcoal) !important;
   color: var(--clr-gold) !important;
 }
+
 [data-theme='light'] .compare-row {
   border-bottom-color: var(--clr-mist) !important;
   color: var(--clr-smoke) !important;
 }
+
 [data-theme='light'] .compare-row:nth-child(even) {
-  background: rgba(0,0,0,0.02) !important;
-}
-[data-theme='light'] .compare-highlight-col {
-  background: rgba(154,122,58,0.04) !important;
-  border-color: rgba(154,122,58,0.3) !important;
+  background: rgba(0, 0, 0, 0.02) !important;
 }
 
-/* ============================================
-   LIGHT THEME — FACILITIES PAGE
-   ============================================ */
+[data-theme='light'] .compare-highlight-col {
+  background: rgba(154, 122, 58, 0.04) !important;
+  border-color: rgba(154, 122, 58, 0.3) !important;
+}
+
+/* 
+   light theme facilities
+   */
 [data-theme='light'] .facility-content-side {
   background: var(--clr-void) !important;
 }
+
 [data-theme='light'] .facility-label {
   color: var(--clr-gold) !important;
 }
+
 [data-theme='light'] .facility-title {
   color: var(--clr-ivory) !important;
 }
+
 [data-theme='light'] .facility-body {
   color: var(--clr-smoke) !important;
 }
+
 [data-theme='light'] .facility-detail-icon {
   color: var(--clr-gold) !important;
 }
+
 [data-theme='light'] .facility-detail-text {
   color: var(--clr-smoke) !important;
 }
+
 [data-theme='light'] .facility-service-card {
   background: var(--clr-charcoal) !important;
   border-color: var(--clr-mist) !important;
 }
+
 [data-theme='light'] .facility-service-icon {
   color: var(--clr-gold) !important;
 }
+
 [data-theme='light'] .facility-service-title {
   color: var(--clr-ivory) !important;
 }
+
 [data-theme='light'] .spa-card {
   background: var(--clr-charcoal) !important;
   border-color: var(--clr-mist) !important;
 }
+
 [data-theme='light'] .spa-card-title {
   color: var(--clr-ivory) !important;
 }
+
 [data-theme='light'] .spa-card-price {
   color: var(--clr-gold) !important;
 }
+
 [data-theme='light'] .spa-card-text {
   color: var(--clr-smoke) !important;
 }
 
-/* ============================================
-   LIGHT THEME — GALLERY PAGE
-   ============================================ */
+/* 
+   light theme gallery
+   */
 [data-theme='light'] .gallery-filter-bar {
   background: var(--clr-obsidian) !important;
   border-bottom-color: var(--clr-mist) !important;
 }
+
 [data-theme='light'] .gallery-count {
   color: var(--clr-fog) !important;
 }
+
 [data-theme='light'] .gallery-card {
   background: var(--clr-charcoal) !important;
 }
 
 /* Lightbox always dark — both themes */
 .lightbox-overlay {
-  background: rgba(0,0,0,0.97) !important;
+  background: rgba(0, 0, 0, 0.97) !important;
 }
+
 .lightbox-close,
 .lightbox-prev,
 .lightbox-next {
   color: #FFFFFF !important;
-  border-color: rgba(255,255,255,0.2) !important;
+  border-color: rgba(255, 255, 255, 0.2) !important;
 }
+
 .lightbox-counter {
-  color: rgba(255,255,255,0.5) !important;
+  color: rgba(255, 255, 255, 0.5) !important;
 }
+
 .lightbox-caption {
-  color: rgba(255,255,255,0.7) !important;
+  color: rgba(255, 255, 255, 0.7) !important;
 }
 
 /* Video cards */
 [data-theme='light'] .video-card {
   background: var(--clr-charcoal) !important;
 }
+
 [data-theme='light'] .video-label {
   color: #FFFFFF !important;
 }
+
 [data-theme='light'] .video-play-btn {
   background: var(--clr-gold) !important;
   color: var(--clr-void) !important;
 }
 
-/* ============================================
-   LIGHT THEME — ABOUT PAGE
-   ============================================ */
+/* 
+   light theme about
+   */
 [data-theme='light'] .about-story-section {
   background: var(--clr-obsidian) !important;
 }
+
 [data-theme='light'] .about-heading {
   color: var(--clr-ivory) !important;
 }
+
 [data-theme='light'] .about-label {
   color: var(--clr-gold) !important;
 }
+
 [data-theme='light'] .about-body {
   color: var(--clr-smoke) !important;
 }
+
 [data-theme='light'] .about-image-border {
-  border-color: rgba(154,122,58,0.25) !important;
+  border-color: rgba(154, 122, 58, 0.25) !important;
 }
 
 /* Philosophy cards */
 [data-theme='light'] .philosophy-section {
   background: var(--clr-forest) !important;
 }
+
 [data-theme='light'] .philosophy-card {
-  background: rgba(0,0,0,0.04) !important;
-  border-color: rgba(154,122,58,0.15) !important;
+  background: rgba(0, 0, 0, 0.04) !important;
+  border-color: rgba(154, 122, 58, 0.15) !important;
 }
+
 [data-theme='light'] .philosophy-icon {
   color: var(--clr-gold) !important;
 }
+
 [data-theme='light'] .philosophy-title {
   color: var(--clr-ivory) !important;
 }
+
 [data-theme='light'] .philosophy-text {
   color: var(--clr-smoke) !important;
 }
 
 /* Timeline */
 [data-theme='light'] .timeline-line {
-  background: rgba(154,122,58,0.3) !important;
+  background: rgba(154, 122, 58, 0.3) !important;
 }
+
 [data-theme='light'] .timeline-node {
   background: var(--clr-void) !important;
   border-color: var(--clr-gold) !important;
 }
+
 [data-theme='light'] .timeline-node.reached {
   background: var(--clr-gold) !important;
 }
+
 [data-theme='light'] .timeline-year {
   color: var(--clr-gold) !important;
   opacity: 0.3;
 }
+
 [data-theme='light'] .timeline-title {
   color: var(--clr-cream) !important;
 }
+
 [data-theme='light'] .timeline-text {
   color: var(--clr-smoke) !important;
 }
@@ -717,17 +817,21 @@ a, button {
 [data-theme='light'] .team-card {
   background: transparent !important;
 }
+
 [data-theme='light'] .team-name {
   color: var(--clr-cream) !important;
 }
+
 [data-theme='light'] .team-title {
   color: var(--clr-gold) !important;
 }
+
 [data-theme='light'] .team-bio {
   color: var(--clr-smoke) !important;
 }
+
 [data-theme='light'] .team-img-ring {
-  border-color: rgba(154,122,58,0.25) !important;
+  border-color: rgba(154, 122, 58, 0.25) !important;
 }
 
 /* Awards */
@@ -735,12 +839,15 @@ a, button {
   background: var(--clr-charcoal) !important;
   border-color: var(--clr-mist) !important;
 }
+
 [data-theme='light'] .award-icon {
   color: var(--clr-gold) !important;
 }
+
 [data-theme='light'] .award-name {
   color: var(--clr-cream) !important;
 }
+
 [data-theme='light'] .award-source {
   color: var(--clr-gold) !important;
 }
@@ -749,33 +856,40 @@ a, button {
 [data-theme='light'] .location-section {
   background: var(--clr-obsidian) !important;
 }
+
 [data-theme='light'] .location-map-placeholder {
   background: var(--clr-charcoal) !important;
   border-color: var(--clr-mist) !important;
 }
+
 [data-theme='light'] .location-heading {
   color: var(--clr-ivory) !important;
 }
+
 [data-theme='light'] .location-detail-icon {
   color: var(--clr-gold) !important;
 }
+
 [data-theme='light'] .location-detail-text {
   color: var(--clr-smoke) !important;
 }
+
 [data-theme='light'] .location-btn {
   border-color: var(--clr-gold) !important;
   color: var(--clr-gold) !important;
 }
 
-/* ============================================
-   LIGHT THEME — CONTACT PAGE
-   ============================================ */
+/* 
+   light theme contact
+   */
 [data-theme='light'] .contact-section {
   background: var(--clr-obsidian) !important;
 }
+
 [data-theme='light'] .contact-heading {
   color: var(--clr-ivory) !important;
 }
+
 [data-theme='light'] .contact-label {
   color: var(--clr-gold) !important;
 }
@@ -786,25 +900,32 @@ a, button {
   color: var(--clr-cream) !important;
   background: transparent !important;
 }
+
 [data-theme='light'] .form-field:focus {
   border-bottom-color: var(--clr-gold) !important;
 }
+
 [data-theme='light'] .form-label {
   color: var(--clr-fog) !important;
 }
+
 [data-theme='light'] .form-label.active {
   color: var(--clr-gold) !important;
 }
+
 [data-theme='light'] .form-submit-btn {
   background: var(--clr-gold) !important;
   color: var(--clr-void) !important;
 }
+
 [data-theme='light'] .form-submit-btn:hover {
   background: var(--clr-gold-light) !important;
 }
+
 [data-theme='light'] .form-checkbox-label {
   color: var(--clr-smoke) !important;
 }
+
 [data-theme='light'] .form-success-text {
   color: var(--clr-ivory) !important;
 }
@@ -812,24 +933,30 @@ a, button {
 /* Contact info card */
 [data-theme='light'] .contact-info-card {
   background: var(--clr-charcoal) !important;
-  border-color: rgba(154,122,58,0.15) !important;
+  border-color: rgba(154, 122, 58, 0.15) !important;
   border-left-color: var(--clr-gold) !important;
 }
+
 [data-theme='light'] .contact-info-title {
   color: var(--clr-gold) !important;
 }
+
 [data-theme='light'] .contact-detail-icon {
   color: var(--clr-gold) !important;
 }
+
 [data-theme='light'] .contact-detail-label {
   color: var(--clr-cream) !important;
 }
+
 [data-theme='light'] .contact-detail-value {
   color: var(--clr-smoke) !important;
 }
+
 [data-theme='light'] .contact-social-icon {
   color: var(--clr-fog) !important;
 }
+
 [data-theme='light'] .contact-social-icon:hover {
   color: var(--clr-gold) !important;
 }
@@ -838,13 +965,16 @@ a, button {
 [data-theme='light'] .map-placeholder {
   background: var(--clr-charcoal) !important;
 }
+
 [data-theme='light'] .map-pin {
   color: var(--clr-gold) !important;
 }
+
 [data-theme='light'] .map-label-card {
   background: var(--clr-charcoal) !important;
   color: var(--clr-cream) !important;
 }
+
 [data-theme='light'] .map-btn {
   border-color: var(--clr-gold) !important;
   color: var(--clr-gold) !important;
@@ -854,22 +984,28 @@ a, button {
 [data-theme='light'] .faq-section {
   background: var(--clr-void) !important;
 }
+
 [data-theme='light'] .faq-heading {
   color: var(--clr-ivory) !important;
 }
+
 [data-theme='light'] .faq-item {
   border-bottom-color: var(--clr-mist) !important;
 }
+
 [data-theme='light'] .faq-item.open {
   border-left-color: var(--clr-gold) !important;
-  background: rgba(154,122,58,0.03) !important;
+  background: rgba(154, 122, 58, 0.03) !important;
 }
+
 [data-theme='light'] .faq-question {
   color: var(--clr-cream) !important;
 }
+
 [data-theme='light'] .faq-icon {
   color: var(--clr-gold) !important;
 }
+
 [data-theme='light'] .faq-answer {
   color: var(--clr-smoke) !important;
 }
@@ -884,7 +1020,7 @@ a, button {
 /* Form card */
 [data-theme='light'] .booking-form-card {
   background: var(--clr-obsidian) !important;
-  border-color: rgba(154,122,58,0.15) !important;
+  border-color: rgba(154, 122, 58, 0.15) !important;
   border-top-color: var(--clr-gold) !important;
   box-shadow: var(--shadow-card) !important;
 }
@@ -893,26 +1029,32 @@ a, button {
 [data-theme='light'] .step-label {
   color: var(--clr-fog) !important;
 }
+
 [data-theme='light'] .step-label.active {
   color: var(--clr-gold) !important;
 }
+
 [data-theme='light'] .step-circle {
   border-color: var(--clr-mist) !important;
   color: var(--clr-fog) !important;
   background: var(--clr-obsidian) !important;
 }
+
 [data-theme='light'] .step-circle.active {
   border-color: var(--clr-gold) !important;
   color: var(--clr-gold) !important;
 }
+
 [data-theme='light'] .step-circle.done {
   background: var(--clr-gold) !important;
   border-color: var(--clr-gold) !important;
   color: var(--clr-void) !important;
 }
+
 [data-theme='light'] .step-line {
   background: var(--clr-mist) !important;
 }
+
 [data-theme='light'] .step-line.active {
   background: var(--clr-gold) !important;
 }
@@ -928,27 +1070,34 @@ a, button {
   color: var(--clr-cream) !important;
   background: transparent !important;
 }
+
 [data-theme='light'] .booking-input:focus {
   border-bottom-color: var(--clr-gold) !important;
 }
+
 [data-theme='light'] .booking-input-label {
   color: var(--clr-fog) !important;
 }
+
 [data-theme='light'] .booking-input-label.active {
   color: var(--clr-gold) !important;
 }
+
 [data-theme='light'] .booking-select-arrow {
   color: var(--clr-gold) !important;
 }
+
 [data-theme='light'] .booking-select-dropdown {
   background: var(--clr-charcoal) !important;
   border-color: var(--clr-mist) !important;
 }
+
 [data-theme='light'] .booking-select-option {
   color: var(--clr-cream) !important;
 }
+
 [data-theme='light'] .booking-select-option:hover {
-  background: rgba(154,122,58,0.1) !important;
+  background: rgba(154, 122, 58, 0.1) !important;
   color: var(--clr-gold) !important;
 }
 
@@ -957,16 +1106,20 @@ a, button {
   background: var(--clr-gold) !important;
   color: var(--clr-void) !important;
 }
+
 [data-theme='light'] .booking-btn-next:hover {
   background: var(--clr-gold-light) !important;
 }
+
 [data-theme='light'] .booking-btn-next:disabled {
   opacity: 0.4 !important;
 }
+
 [data-theme='light'] .booking-btn-back {
   border-color: var(--clr-mist) !important;
   color: var(--clr-smoke) !important;
 }
+
 [data-theme='light'] .booking-btn-back:hover {
   border-color: var(--clr-gold) !important;
   color: var(--clr-gold) !important;
@@ -976,26 +1129,33 @@ a, button {
 [data-theme='light'] .booking-review-label {
   color: var(--clr-fog) !important;
 }
+
 [data-theme='light'] .booking-review-value {
   color: var(--clr-cream) !important;
 }
+
 [data-theme='light'] .booking-review-divider {
   border-color: var(--clr-mist) !important;
 }
+
 [data-theme='light'] .booking-policy-box {
-  background: rgba(154,122,58,0.04) !important;
-  border-color: rgba(154,122,58,0.2) !important;
+  background: rgba(154, 122, 58, 0.04) !important;
+  border-color: rgba(154, 122, 58, 0.2) !important;
 }
+
 [data-theme='light'] .booking-policy-check {
   color: var(--clr-gold) !important;
 }
+
 [data-theme='light'] .booking-policy-text {
   color: var(--clr-smoke) !important;
 }
+
 [data-theme='light'] .booking-confirm-btn {
   background: var(--clr-gold) !important;
   color: var(--clr-void) !important;
 }
+
 [data-theme='light'] .booking-confirm-btn:hover {
   background: var(--clr-gold-light) !important;
 }
@@ -1004,9 +1164,11 @@ a, button {
 [data-theme='light'] .booking-price-label {
   color: var(--clr-fog) !important;
 }
+
 [data-theme='light'] .booking-price-amount {
   color: var(--clr-gold) !important;
 }
+
 [data-theme='light'] .booking-price-note {
   color: var(--clr-fog) !important;
 }
@@ -1015,9 +1177,11 @@ a, button {
 [data-theme='light'] .booking-success-title {
   color: var(--clr-ivory) !important;
 }
+
 [data-theme='light'] .booking-success-text {
   color: var(--clr-smoke) !important;
 }
+
 [data-theme='light'] .booking-ref {
   color: var(--clr-fog) !important;
 }
@@ -1025,29 +1189,37 @@ a, button {
 /* Summary sidebar */
 [data-theme='light'] .booking-summary-card {
   background: var(--clr-charcoal) !important;
-  border-color: rgba(154,122,58,0.15) !important;
+  border-color: rgba(154, 122, 58, 0.15) !important;
 }
+
 [data-theme='light'] .booking-summary-title {
   color: var(--clr-gold) !important;
 }
+
 [data-theme='light'] .booking-summary-label {
   color: var(--clr-fog) !important;
 }
+
 [data-theme='light'] .booking-summary-value {
   color: var(--clr-cream) !important;
 }
+
 [data-theme='light'] .booking-summary-divider {
   border-color: var(--clr-mist) !important;
 }
+
 [data-theme='light'] .booking-summary-price {
   color: var(--clr-gold) !important;
 }
+
 [data-theme='light'] .booking-help-label {
   color: var(--clr-fog) !important;
 }
+
 [data-theme='light'] .booking-contact-text {
   color: var(--clr-smoke) !important;
 }
+
 [data-theme='light'] .booking-contact-link {
   color: var(--clr-gold) !important;
 }
@@ -1056,37 +1228,45 @@ a, button {
 [data-theme='light'] .why-book-section {
   background: var(--clr-forest) !important;
 }
+
 [data-theme='light'] .why-book-heading {
   color: var(--clr-ivory) !important;
 }
+
 [data-theme='light'] .why-book-card {
-  background: rgba(0,0,0,0.04) !important;
-  border-color: rgba(154,122,58,0.1) !important;
+  background: rgba(0, 0, 0, 0.04) !important;
+  border-color: rgba(154, 122, 58, 0.1) !important;
 }
+
 [data-theme='light'] .why-book-icon {
   color: var(--clr-gold) !important;
 }
+
 [data-theme='light'] .why-book-title {
   color: var(--clr-ivory) !important;
 }
+
 [data-theme='light'] .why-book-text {
   color: var(--clr-smoke) !important;
 }
 
-/* ============================================
-   LIGHT THEME — HOME PAGE SPECIFIC
-   ============================================ */
+/* 
+   light theme home
+   */
 
 /* Editorial intro section */
 [data-theme='light'] .editorial-section {
   background: var(--clr-obsidian) !important;
 }
+
 [data-theme='light'] .editorial-heading {
   color: var(--clr-ivory) !important;
 }
+
 [data-theme='light'] .editorial-body {
   color: var(--clr-smoke) !important;
 }
+
 [data-theme='light'] .editorial-quote {
   border-left-color: var(--clr-gold) !important;
 }
@@ -1095,36 +1275,45 @@ a, button {
 [data-theme='light'] .stats-section {
   background: var(--clr-forest) !important;
 }
+
 [data-theme='light'] .stat-number {
   color: var(--clr-gold) !important;
 }
+
 [data-theme='light'] .stat-label {
   color: var(--clr-fog) !important;
 }
+
 [data-theme='light'] .stat-divider {
-  background: rgba(154,122,58,0.2) !important;
+  background: rgba(154, 122, 58, 0.2) !important;
 }
 
 /* Rooms carousel section */
 [data-theme='light'] .rooms-section {
   background: var(--clr-obsidian) !important;
 }
+
 [data-theme='light'] .room-slide-number {
   color: var(--clr-cream) !important;
   opacity: 0.06;
 }
+
 [data-theme='light'] .room-slide-category {
   color: var(--clr-gold) !important;
 }
+
 [data-theme='light'] .room-slide-name {
   color: #FFFFFF !important;
 }
+
 [data-theme='light'] .room-slide-details {
-  color: rgba(255,255,255,0.6) !important;
+  color: rgba(255, 255, 255, 0.6) !important;
 }
+
 [data-theme='light'] .carousel-arrow {
   color: var(--clr-gold) !important;
 }
+
 [data-theme='light'] .carousel-counter {
   color: var(--clr-fog) !important;
 }
@@ -1133,20 +1322,24 @@ a, button {
 [data-theme='light'] .manifesto-section {
   background: var(--clr-forest) !important;
 }
+
 [data-theme='light'] .manifesto-quote {
   color: var(--clr-ivory) !important;
 }
+
 [data-theme='light'] .manifesto-author {
   color: var(--clr-gold) !important;
 }
+
 [data-theme='light'] .manifesto-rule {
-  background: rgba(154,122,58,0.4) !important;
+  background: rgba(154, 122, 58, 0.4) !important;
 }
 
 /* Facilities bento grid */
 [data-theme='light'] .facilities-section {
   background: var(--clr-obsidian) !important;
 }
+
 [data-theme='light'] .facility-card-bg {
   background: var(--clr-charcoal) !important;
 }
@@ -1155,40 +1348,50 @@ a, button {
 [data-theme='light'] .photo-intro-label {
   color: var(--clr-gold) !important;
 }
+
 [data-theme='light'] .shoot-card-category {
   color: var(--clr-gold) !important;
 }
+
 [data-theme='light'] .shoot-card-enquire-btn {
   background: var(--clr-gold) !important;
   color: var(--clr-void) !important;
 }
+
 [data-theme='light'] .shoot-location-label {
   color: var(--clr-gold) !important;
 }
+
 [data-theme='light'] .shoot-location-heading {
   color: var(--clr-ivory) !important;
 }
+
 [data-theme='light'] .shoot-location-body {
   color: var(--clr-smoke) !important;
 }
+
 [data-theme='light'] .shoot-tag {
-  border-color: rgba(154,122,58,0.3) !important;
+  border-color: rgba(154, 122, 58, 0.3) !important;
   color: var(--clr-gold) !important;
 }
+
 [data-theme='light'] .shoot-tag:hover {
-  background: rgba(154,122,58,0.1) !important;
+  background: rgba(154, 122, 58, 0.1) !important;
 }
 
 /* Split screen pool/sunrise */
 [data-theme='light'] .split-label {
   color: var(--clr-gold) !important;
 }
+
 [data-theme='light'] .split-subdetails {
-  color: rgba(255,255,255,0.6) !important;
+  color: rgba(255, 255, 255, 0.6) !important;
 }
+
 [data-theme='light'] .split-divider {
-  background: rgba(154,122,58,0.3) !important;
+  background: rgba(154, 122, 58, 0.3) !important;
 }
+
 [data-theme='light'] .split-diamond {
   color: var(--clr-gold) !important;
 }
@@ -1197,25 +1400,32 @@ a, button {
 [data-theme='light'] .testimonials-section {
   background: var(--clr-void) !important;
 }
+
 [data-theme='light'] .testimonial-quote-mark {
   color: var(--clr-gold) !important;
   opacity: 0.15;
 }
+
 [data-theme='light'] .testimonial-text {
   color: var(--clr-cream) !important;
 }
+
 [data-theme='light'] .testimonial-name {
   color: var(--clr-cream) !important;
 }
+
 [data-theme='light'] .testimonial-detail {
   color: var(--clr-smoke) !important;
 }
+
 [data-theme='light'] .testimonial-star {
   color: var(--clr-gold) !important;
 }
+
 [data-theme='light'] .testimonial-dot {
   background: var(--clr-mist) !important;
 }
+
 [data-theme='light'] .testimonial-dot.active {
   background: var(--clr-gold) !important;
 }
@@ -1224,12 +1434,15 @@ a, button {
 [data-theme='light'] .instagram-section {
   background: var(--clr-void) !important;
 }
+
 [data-theme='light'] .instagram-heading {
   color: var(--clr-ivory) !important;
 }
+
 [data-theme='light'] .instagram-handle {
   color: var(--clr-gold) !important;
 }
+
 [data-theme='light'] .instagram-btn {
   border-color: var(--clr-gold) !important;
   color: var(--clr-gold) !important;
@@ -1238,15 +1451,18 @@ a, button {
 /* Final CTA strip */
 [data-theme='light'] .cta-strip {
   background: var(--clr-forest) !important;
-  border-color: rgba(154,122,58,0.2) !important;
+  border-color: rgba(154, 122, 58, 0.2) !important;
 }
+
 [data-theme='light'] .cta-heading {
   color: var(--clr-ivory) !important;
 }
+
 [data-theme='light'] .cta-btn-primary {
   background: var(--clr-gold) !important;
   color: var(--clr-void) !important;
 }
+
 [data-theme='light'] .cta-btn-secondary {
   border-color: var(--clr-gold) !important;
   color: var(--clr-gold) !important;
@@ -1260,6 +1476,7 @@ a, button {
 [data-theme='light'] .cursor-dot {
   background: var(--clr-gold) !important;
 }
+
 [data-theme='light'] .cursor-ring {
   border-color: var(--clr-gold) !important;
 }
@@ -1273,15 +1490,19 @@ a, button {
 [data-theme='light'] .loading-screen {
   background: var(--clr-void) !important;
 }
+
 [data-theme='light'] .loading-logo {
   color: var(--clr-ivory) !important;
 }
+
 [data-theme='light'] .loading-sub {
   color: var(--clr-gold) !important;
 }
+
 [data-theme='light'] .loading-line {
   background: var(--clr-gold) !important;
 }
+
 [data-theme='light'] .loading-counter {
   color: var(--clr-fog) !important;
 }
@@ -1289,11 +1510,13 @@ a, button {
 /* Floating book button */
 [data-theme='light'] .floating-book-btn {
   background: var(--clr-gold) !important;
-  box-shadow: 0 4px 24px rgba(154,122,58,0.35) !important;
+  box-shadow: 0 4px 24px rgba(154, 122, 58, 0.35) !important;
 }
+
 [data-theme='light'] .floating-book-btn:hover {
   background: var(--clr-gold-light) !important;
 }
+
 [data-theme='light'] .floating-book-tooltip {
   background: var(--clr-charcoal) !important;
   color: var(--clr-cream) !important;
@@ -1302,55 +1525,71 @@ a, button {
 /* Footer */
 [data-theme='light'] footer {
   background: var(--clr-charcoal) !important;
-  border-top-color: rgba(154,122,58,0.15) !important;
+  border-top-color: rgba(154, 122, 58, 0.15) !important;
 }
+
 [data-theme='light'] .footer-logo {
   color: var(--clr-gold) !important;
 }
+
 [data-theme='light'] .footer-logo-sub {
   color: var(--clr-fog) !important;
 }
+
 [data-theme='light'] .footer-tagline {
   color: var(--clr-smoke) !important;
 }
+
 [data-theme='light'] .footer-social-icon {
   color: var(--clr-fog) !important;
 }
+
 [data-theme='light'] .footer-social-icon:hover {
   color: var(--clr-gold) !important;
 }
+
 [data-theme='light'] .footer-heading {
   color: var(--clr-gold) !important;
 }
+
 [data-theme='light'] .footer-link {
   color: var(--clr-smoke) !important;
 }
+
 [data-theme='light'] .footer-link:hover {
   color: var(--clr-cream) !important;
 }
+
 [data-theme='light'] .footer-contact-text {
   color: var(--clr-smoke) !important;
 }
+
 [data-theme='light'] .footer-newsletter-input {
   border-bottom-color: var(--clr-mist) !important;
   color: var(--clr-cream) !important;
   background: transparent !important;
 }
+
 [data-theme='light'] .footer-newsletter-btn {
   color: var(--clr-gold) !important;
 }
+
 [data-theme='light'] .footer-bottom {
   border-top-color: var(--clr-mist) !important;
 }
+
 [data-theme='light'] .footer-copyright {
   color: var(--clr-fog) !important;
 }
+
 [data-theme='light'] .footer-policy-link {
   color: var(--clr-fog) !important;
 }
+
 [data-theme='light'] .footer-policy-link:hover {
   color: var(--clr-gold) !important;
 }
+
 [data-theme='light'] .footer-bg-image {
   opacity: 0.02 !important;
 }
@@ -1359,35 +1598,31 @@ a, button {
 [data-theme='light'] #mist-canvas {
   opacity: 0.35 !important;
 }
+
 [data-theme='light'] .light-sweep-overlay {
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(154,122,58,0.04),
-    transparent
-  ) !important;
+  background: linear-gradient(90deg,
+      transparent,
+      rgba(154, 122, 58, 0.04),
+      transparent) !important;
 }
 
 /* Image placeholder boxes */
 [data-theme='light'] .img-placeholder {
-  background: linear-gradient(
-    135deg,
-    var(--clr-charcoal) 0%,
-    var(--clr-stone) 100%
-  ) !important;
+  background: linear-gradient(135deg,
+      var(--clr-charcoal) 0%,
+      var(--clr-stone) 100%) !important;
 }
+
 [data-theme='light'] .img-placeholder span {
   color: var(--clr-fog) !important;
 }
 
 /* Gold shimmer on awards */
 [data-theme='light'] .award-badge::after {
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(154,122,58,0.2),
-    transparent
-  ) !important;
+  background: linear-gradient(90deg,
+      transparent,
+      rgba(154, 122, 58, 0.2),
+      transparent) !important;
 }
 
 /* Amenity strip */
@@ -1395,9 +1630,11 @@ a, button {
   background: var(--clr-obsidian) !important;
   border-color: var(--clr-mist) !important;
 }
+
 [data-theme='light'] .amenity-icon {
   color: var(--clr-gold) !important;
 }
+
 [data-theme='light'] .amenity-label {
   color: var(--clr-fog) !important;
 }
@@ -1406,19 +1643,24 @@ a, button {
 [data-theme='light'] .attractions-section {
   background: var(--clr-obsidian) !important;
 }
+
 [data-theme='light'] .attraction-heading {
   color: var(--clr-ivory) !important;
 }
+
 [data-theme='light'] .attraction-body {
   color: var(--clr-smoke) !important;
 }
+
 [data-theme='light'] .attraction-badge {
   background: var(--clr-gold) !important;
   color: var(--clr-void) !important;
 }
+
 [data-theme='light'] .attraction-category {
   color: var(--clr-gold) !important;
 }
+
 [data-theme='light'] .attraction-link {
   color: var(--clr-gold) !important;
 }
@@ -1427,20 +1669,25 @@ a, button {
 [data-theme='light'] .journey-section {
   background: var(--clr-void) !important;
 }
+
 [data-theme='light'] .journey-heading {
   color: var(--clr-gold) !important;
 }
+
 [data-theme='light'] .journey-place {
   color: var(--clr-cream) !important;
 }
+
 [data-theme='light'] .journey-detail {
   color: var(--clr-smoke) !important;
 }
+
 [data-theme='light'] .journey-badge {
-  background: rgba(154,122,58,0.08) !important;
-  border-color: rgba(154,122,58,0.2) !important;
+  background: rgba(154, 122, 58, 0.08) !important;
+  border-color: rgba(154, 122, 58, 0.2) !important;
   color: var(--clr-gold) !important;
 }
+
 [data-theme='light'] .journey-arrow {
   color: var(--clr-gold) !important;
   opacity: 0.5;

@@ -26,7 +26,7 @@ const RoomsPricingCalculator = () => {
       <div className="bg-[var(--clr-obsidian)] border border-[rgba(184,150,90,0.12)] border-t-[2px] border-t-[var(--clr-gold)] p-[32px] lg:p-[48px] rounded-[2px] max-w-[680px] mx-auto mt-[48px]">
 
         <div className="flex flex-col gap-6">
-          {/* ROW 1 — Suite selector */}
+          {/* r1 select suite */}
           <div>
             <p className="font-['Jost'] text-[10px] text-[var(--clr-gold)] uppercase mb-3">Select Suite Category</p>
             <div className="flex flex-wrap gap-2">
@@ -35,8 +35,8 @@ const RoomsPricingCalculator = () => {
                   key={opt.value}
                   onClick={() => setSelectedCalcSuite(opt.value)}
                   className={`font-['Jost'] text-[11px] uppercase tracking-wider px-[16px] py-[8px] border rounded-[2px] transition-colors duration-300 w-full sm:w-auto ${selectedCalcSuite === opt.value
-                      ? 'bg-[var(--clr-gold)] border-[var(--clr-gold)] text-[var(--clr-void)]'
-                      : 'bg-transparent border-[rgba(184,150,90,0.25)] text-[var(--clr-smoke)] hover:border-[var(--clr-gold)]'
+                    ? 'bg-[var(--clr-gold)] border-[var(--clr-gold)] text-[var(--clr-void)]'
+                    : 'bg-transparent border-[rgba(184,150,90,0.25)] text-[var(--clr-smoke)] hover:border-[var(--clr-gold)]'
                     }`}
                 >
                   {opt.label}
@@ -45,7 +45,7 @@ const RoomsPricingCalculator = () => {
             </div>
           </div>
 
-          {/* ROW 2 — Nights selector */}
+          {/* r2 night select */}
           <div>
             <p className="font-['Jost'] text-[10px] text-[var(--clr-gold)] uppercase mb-3">Number of Nights</p>
             <div className="flex items-center gap-4">
@@ -64,7 +64,7 @@ const RoomsPricingCalculator = () => {
 
         <div className="w-full h-[1px] bg-[var(--clr-mist)] my-[32px]"></div>
 
-        {/* ROW 3 — Breakdown */}
+        {/* r3 breakdown */}
         <div className="flex flex-col">
           <div className="flex justify-between items-center py-[12px] border-b border-[rgba(255,255,255,0.04)]">
             <span className="font-['DM_Sans'] text-[14px] text-[var(--clr-ivory)]">Base Rate (per night)</span>
@@ -96,7 +96,7 @@ const RoomsPricingCalculator = () => {
           </div>
         </div>
 
-        {/* TOTAL ROW */}
+        {/* totl row */}
         <div className="bg-[rgba(184,150,90,0.06)] p-[20px_24px] mx-[-24px] sm:mx-[-32px] lg:mx-[-48px] border-t border-[rgba(184,150,90,0.2)] mt-[4px]">
           <p className="font-['Jost'] text-[10px] text-[var(--clr-gold)] uppercase tracking-wider mb-2">
             TOTAL FOR {nights} NIGHT{nights > 1 ? 'S' : ''}

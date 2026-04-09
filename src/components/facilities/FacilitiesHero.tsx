@@ -10,27 +10,27 @@ const FacilitiesHero = () => {
     useEffect(() => {
         const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
 
-        // Animate decorative line
+
         tl.fromTo(
             lineRef.current,
             { scaleX: 0, transformOrigin: 'left center' },
             { scaleX: 1, duration: 0.8 }
         )
-            // Label slides up + fades
+
             .fromTo(
                 labelRef.current,
                 { y: 20, opacity: 0, letterSpacing: '0.5em' },
                 { y: 0, opacity: 1, letterSpacing: '0.2em', duration: 0.9 },
                 '-=0.3'
             )
-            // Headline word-by-word stagger
+
             .fromTo(
                 headlineRef.current,
                 { y: 60, opacity: 0, skewY: 3 },
                 { y: 0, opacity: 1, skewY: 0, duration: 1.1 },
                 '-=0.5'
             )
-            // Subtext fades in with slight blur
+
             .fromTo(
                 subtextRef.current,
                 { y: 24, opacity: 0, filter: 'blur(4px)' },
@@ -41,7 +41,7 @@ const FacilitiesHero = () => {
 
     return (
         <section className="relative h-[70vh] w-full flex items-end justify-center pb-[25vh] overflow-hidden">
-            {/* Video Background */}
+            {/* backg video */}
             <div className="absolute inset-0 w-full h-full bg-[var(--clr-charcoal)]">
                 <video
                     autoPlay
@@ -58,7 +58,7 @@ const FacilitiesHero = () => {
             <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-black/10" />
 
             <div className="relative z-10 text-center px-4 max-w-4xl">
-                {/* Decorative line */}
+
                 <div
                     ref={lineRef}
                     className="w-12 h-[1px] bg-[var(--clr-gold)] mx-auto mb-5"

@@ -3,7 +3,7 @@ import { Camera, MessageCircle } from 'lucide-react';
 const CTASection = () => {
   return (
     <section className="bg-forest px-6 py-24 md:p-[120px_80px] border-t border-gold/15 relative overflow-hidden">
-      {/* Rich gradient overlays to remove solid flatness */}
+     
       <div className="absolute inset-0 bg-gradient-to-br from-black/0 via-black/40 to-black/80 pointer-events-none" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(184,150,90,0.15)_0%,_transparent_60%)] pointer-events-none" />
       

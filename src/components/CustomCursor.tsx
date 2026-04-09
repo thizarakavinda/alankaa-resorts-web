@@ -8,7 +8,7 @@ export const CustomCursor = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    // Hide on touch devices
+
     if (window.matchMedia('(pointer: coarse)').matches) {
       return;
     }
@@ -24,14 +24,14 @@ export const CustomCursor = () => {
     const onMouseMove = (e: MouseEvent) => {
       mouseX = e.clientX;
       mouseY = e.clientY;
-      
+
       if (dotRef.current) {
         dotRef.current.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0)`;
       }
     };
 
     const render = () => {
-      // Lerp for the ring
+
       ringX += (mouseX - ringX) * 0.12;
       ringY += (mouseY - ringY) * 0.12;
 
@@ -45,17 +45,17 @@ export const CustomCursor = () => {
     window.addEventListener('mousemove', onMouseMove);
     rafId = requestAnimationFrame(render);
 
-    // Hover logic
+
     const applyHover = (e: MouseEvent) => {
       const target = e.target as HTMLElement;
       const hoverable = target.closest('a, button, .hoverable');
-      
+
       if (hoverable && ringRef.current && dotRef.current && textRef.current) {
         ringRef.current.style.width = '64px';
         ringRef.current.style.height = '64px';
         dotRef.current.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0) scale(0)`;
-        
-        // Context aware text
+
+
         const text = hoverable.getAttribute('data-cursor-text') || 'VIEW';
         textRef.current.innerText = text;
         textRef.current.style.opacity = '1';
@@ -80,7 +80,7 @@ export const CustomCursor = () => {
 
   return (
     <>
-      <div 
+      <div
         ref={ringRef}
         className="fixed top-0 left-0 w-[36px] h-[36px] border border-gold rounded-full pointer-events-none z-[9999] flex items-center justify-center transition-[width,height] duration-300 -translate-x-1/2 -translate-y-1/2 mix-blend-difference"
       >
@@ -88,7 +88,7 @@ export const CustomCursor = () => {
           VIEW
         </span>
       </div>
-      <div 
+      <div
         ref={dotRef}
         className="fixed top-0 left-0 w-[8px] h-[8px] bg-gold rounded-full pointer-events-none z-[10000] -translate-x-1/2 -translate-y-1/2 mix-blend-difference"
       />

@@ -10,10 +10,10 @@ const Part1Hero = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const imageRef = useRef<HTMLImageElement>(null);
   const headingRefs = useRef<Array<HTMLHeadingElement | null>>([]);
-  
+
   useEffect(() => {
     const ctx = gsap.context(() => {
-      // Parallax Image
+
       gsap.to(imageRef.current, {
         yPercent: 40,
         ease: 'none',
@@ -25,7 +25,7 @@ const Part1Hero = () => {
         }
       });
 
-      // Heading clip-path reveal
+
       if (headingRefs.current.length > 0) {
         gsap.fromTo(
           headingRefs.current,
@@ -48,36 +48,36 @@ const Part1Hero = () => {
 
   return (
     <section ref={containerRef} className="relative h-[90vh] overflow-hidden bg-void">
-      {/* Background Image */}
+      {/* back img */}
       <img
         ref={imageRef}
-        src="/images/pool view.jpg" // A majestic fallback available locally
+        src="/images/pool view.jpg"
         alt="A'Lankaa Resorts Aerial View"
         className="absolute inset-0 w-full h-[120%] object-cover object-center -top-[10%]"
       />
 
-      {/* Gradients */}
-      <div 
+
+      <div
         className="absolute inset-0 pointer-events-none"
         style={{
           background: 'linear-gradient(0deg, rgba(8,8,8,0.97) 0%, rgba(8,8,8,0.5) 40%, rgba(8,8,8,0.1) 70%, rgba(8,8,8,0) 100%)'
         }}
       />
-      <div 
+      <div
         className="absolute inset-0 pointer-events-none"
         style={{
           background: 'linear-gradient(90deg, rgba(8,8,8,0.6) 0%, rgba(8,8,8,0) 50%)'
         }}
       />
 
-      {/* Grain Texture */}
-      <div 
+
+      <div
         className="absolute inset-0 opacity-[0.03] pointer-events-none"
         style={{ backgroundImage: 'url("data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noiseFilter%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.65%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noiseFilter)%22/%3E%3C/svg%3E")' }}
       />
 
-      {/* Top Left */}
-      <motion.div 
+      {/* top left */}
+      <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ delay: 0.2, duration: 1 }}
@@ -89,8 +89,8 @@ const Part1Hero = () => {
         </p>
       </motion.div>
 
-      {/* Top Right */}
-      <motion.div 
+      {/* top right */}
+      <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ delay: 0.1, duration: 1 }}
@@ -101,9 +101,9 @@ const Part1Hero = () => {
         <p className="font-jost text-[11px] text-gold uppercase tracking-[0.3em] mt-1">1,000m ASL</p>
       </motion.div>
 
-      {/* Bottom Content Area */}
+      {/* bottom center part */}
       <div className="absolute inset-x-0 bottom-0 p-[32px] lg:p-[56px_80px] flex flex-col lg:flex-row justify-between items-end gap-12">
-        {/* Bottom Left */}
+        {/* bottom lft */}
         <div className="w-full lg:w-auto">
           <p className="gold-label-on-image font-jost text-gold text-[10px] uppercase tracking-[0.4em] mb-4">
             THE DESTINATION
@@ -116,7 +116,7 @@ const Part1Hero = () => {
             Nestled at 1,000 metres above sea level on ancient volcanic rock in Haldummulla, Badulla — A'Lankaa is one of Sri Lanka's most dramatically situated luxury resorts. Surrounded by misty mountains, tea-country roads, and the silence of clouds.
           </p>
 
-          {/* Stats */}
+          {/* stst */}
           <div className="flex gap-8 lg:gap-[48px] mt-8 overflow-hidden items-center">
             <StatsCounter number="1,000m" label="Elevation" />
             <div className="w-px h-[40px] bg-mist" />
@@ -126,8 +126,8 @@ const Part1Hero = () => {
           </div>
         </div>
 
-        {/* Bottom Right Floating Card */}
-        <motion.div 
+        {/* bottom right card */}
+        <motion.div
           initial={{ opacity: 0, x: 20 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.3, duration: 1, ease: 'easeOut' }}
@@ -138,7 +138,7 @@ const Part1Hero = () => {
             HOW TO REACH US
           </p>
           <div className="w-[32px] h-[1px] bg-gold my-4" />
-          
+
           <div className="space-y-6">
             <div className="flex gap-4">
               <Plane className="w-[14px] h-[14px] text-gold shrink-0 mt-1" />
@@ -164,21 +164,21 @@ const Part1Hero = () => {
           </div>
 
           <div className="h-px bg-mist w-full my-5" />
-          
+
           <a href="https://maps.google.com" target="_blank" rel="noreferrer" className="group flex items-center gap-2 font-jost text-[10px] text-gold uppercase hover:text-gold-light transition-colors duration-300">
             Get Directions <ArrowUpRight className="w-[14px] h-[14px]" />
           </a>
         </motion.div>
       </div>
 
-      {/* Scroll indicator */}
+
       <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4">
         <div className="w-[1px] h-10 overflow-hidden">
           <div className="w-full h-full bg-mist animate-[lineToBottom_2s_ease-in-out_infinite]" />
         </div>
         <span className="font-jost text-[9px] text-fog tracking-[0.4em] uppercase">EXPLORE NEARBY</span>
       </div>
-      
+
       <style>{`
         @keyframes lineToBottom {
           0% { transform: translateY(-100%); }
@@ -191,7 +191,7 @@ const Part1Hero = () => {
 
 const StatsCounter = ({ number, label }: { number: string; label: string }) => {
   return (
-    <motion.div 
+    <motion.div
       initial={{ opacity: 0, y: 10 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
@@ -268,8 +268,8 @@ const Part2Attractions = () => {
   return (
     <section className="bg-obsidian py-[80px] lg:py-[120px] px-[32px] lg:px-[80px]">
       <div className="max-w-[1440px] mx-auto">
-        
-        {/* Header */}
+
+        {/* header */}
         <div ref={headerRef} className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-end">
           <div>
             <p className="font-jost text-[10px] text-gold uppercase tracking-[0.4em] mb-6">
@@ -289,7 +289,7 @@ const Part2Attractions = () => {
 
         <div className="w-full h-px bg-mist my-[64px]" />
 
-        {/* Grid */}
+        {/* grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-[2px]">
           {attractions.map((attr, idx) => (
             <motion.div
@@ -300,13 +300,13 @@ const Part2Attractions = () => {
               viewport={{ once: true, margin: '-10%' }}
               className="relative h-[360px] lg:h-[480px] overflow-hidden group border border-transparent hover:border-gold/40 transition-colors duration-500"
             >
-              <img 
-                src={attr.image} 
-                alt={attr.title} 
+              <img
+                src={attr.image}
+                alt={attr.title}
                 className="w-full h-full object-cover transition-transform duration-[800ms] ease-out group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent bottom-0 h-full pointer-events-none" />
-              
+
               <div className="absolute top-6 left-6 inline-block bg-gold px-[14px] py-[6px] font-jost text-[9px] text-void tracking-[0.15em] font-medium z-10 transition-transform duration-500 group-hover:scale-105">
                 {attr.badge}
               </div>
@@ -321,7 +321,7 @@ const Part2Attractions = () => {
                 <p className="card-text-on-image font-dmSans font-light text-[12px] text-smoke/90 mt-1">
                   {attr.location}
                 </p>
-                
+
                 <div className="overflow-hidden h-0 group-hover:h-auto opacity-0 group-hover:opacity-100 transition-all duration-700 mt-0 group-hover:mt-3">
                   <p className="card-text-on-image font-dmSans font-light text-[13px] text-smoke/80 leading-relaxed mb-3">
                     {attr.desc}
@@ -379,9 +379,9 @@ const Part3Timeline = () => {
         </h2>
 
         <div ref={timelineRef} className="relative mt-8 md:mt-14 w-full h-[400px] md:h-auto flex flex-col md:flex-row justify-between pl-8 md:pl-0">
-          
-          {/* Timeline connecting line */}
-          <div 
+
+          {/* timeline connect */}
+          <div
             ref={lineRef}
             className="absolute top-0 bottom-0 left-[23px] w-[1px] md:top-[24px] md:bottom-auto md:left-[10%] md:right-[10%] md:w-auto md:h-[1px] origin-top md:origin-left"
             style={{
@@ -394,7 +394,7 @@ const Part3Timeline = () => {
               .journey-line { background: linear-gradient(to bottom, transparent, rgba(184,150,90,0.4) 20%, rgba(184,150,90,0.8) 50%, rgba(184,150,90,0.4) 80%, transparent) !important; }
             }
           `}</style>
-          <div 
+          <div
             className="journey-line absolute top-0 bottom-0 left-[23px] w-[1px] md:hidden"
             style={{
               background: 'linear-gradient(to bottom, transparent, rgba(184,150,90,0.4) 20%, rgba(184,150,90,0.8) 50%, rgba(184,150,90,0.4) 80%, transparent)'
@@ -404,7 +404,7 @@ const Part3Timeline = () => {
           {steps.map((step, idx) => {
             const Icon = step.icon;
             return (
-              <motion.div 
+              <motion.div
                 key={idx}
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
@@ -412,19 +412,19 @@ const Part3Timeline = () => {
                 viewport={{ once: true, margin: '-10%' }}
                 className="relative z-10 flex flex-row md:flex-col items-center group h-full md:h-auto gap-6 md:gap-0 w-full md:w-auto"
               >
-                {/* Node */}
+                {/* node */}
                 <div className={`w-[48px] h-[48px] rounded-full border border-gold flex items-center justify-center transition-all duration-500
                   ${step.isFinal ? 'bg-gold shadow-[0_0_30px_rgba(184,150,90,0.5)]' : 'bg-void group-hover:shadow-[0_0_20px_rgba(184,150,90,0.3)]'}`}
                 >
                   <Icon className={`w-[18px] h-[18px] ${step.isFinal ? 'text-void' : 'text-gold'}`} strokeWidth={1.5} />
                 </div>
-                
-                {/* Mobile line masking fix */}
+
+
                 <div className="hidden md:block absolute top-[24px] right-[-50%] w-[12px] h-[12px] text-gold/50 font-jost text-[14px]">
-                   {idx < steps.length - 1 && '›'}
+                  {idx < steps.length - 1 && '›'}
                 </div>
 
-                {/* Content */}
+                {/* cont */}
                 <div className="mt-0 md:mt-4 text-left md:text-center w-[200px]">
                   <p className="font-dmSans font-medium text-[14px] text-cream">{step.title}</p>
                   <p className="font-dmSans font-light text-[12px] text-smoke mt-1">{step.detail}</p>

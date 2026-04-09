@@ -6,13 +6,14 @@ import PhotographyFeature from '../components/home/PhotographyFeature';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { LocationShowcase } from '../components/home/LocationShowcase';
+import MistCanvas from '../components/MistCanvas';
 
 export const Home = () => {
   const heroTextRef = useRef<HTMLHeadingElement>(null);
   const sectionRef = useRef<HTMLDivElement>(null);
   const imageRef = useRef<HTMLDivElement>(null);
 
-  // Spotlight effect for modern dynamic dark sections
+
   const handleMouseMove = (e: React.MouseEvent<HTMLElement>) => {
     const { currentTarget, clientX, clientY } = e;
     const { left, top } = currentTarget.getBoundingClientRect();
@@ -24,8 +25,8 @@ export const Home = () => {
 
   useEffect(() => {
     AOS.init({ once: true });
-    
-    // Basic GSAP interactions
+
+
     if (heroTextRef.current) {
       gsap.fromTo(heroTextRef.current.children,
         { y: 60, opacity: 0 },
@@ -35,7 +36,7 @@ export const Home = () => {
           duration: 0.8,
           stagger: 0.08,
           ease: 'power3.out',
-          delay: 3 // Wait for loader
+          delay: 3
         }
       );
     }
@@ -72,8 +73,8 @@ export const Home = () => {
       transition={{ duration: 0.4 }}
       className="bg-void min-h-screen text-cream overflow-hidden"
     >
-      {/* Hero Section */}
-      <section className="relative h-screen flex flex-col items-center justify-center pt-20">
+      {/* hero sec */}
+      <section className="relative h-[100svh] flex flex-col items-center justify-center pt-20 overflow-hidden">
         <div className="absolute inset-0 z-0 bg-black">
           <video
             autoPlay
@@ -84,14 +85,17 @@ export const Home = () => {
             aria-hidden="true"
             className="w-full h-full object-cover opacity-80"
           >
-            <source src="/videos/backvid.mp4" type="video/mp4" />
+            <source src="/videos/backvid1.mp4" type="video/mp4" />
           </video>
-          {/* Always dark overlay for video contrast */}
-          <div className="absolute inset-0 bg-black/40" />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent" />
         </div>
 
-        <div className="relative z-10 max-w-[1920px] mx-auto px-6 text-center mt-20">
+        <MistCanvas />
+
+        {/* cinematic overlay */}
+        <div className="absolute inset-0 z-[2] bg-[var(--grad-hero)]" />
+        <div className="absolute inset-0 z-[2] bg-black/35" />
+
+        <div className="relative z-[3] max-w-[1920px] mx-auto px-6 text-center mt-20">
           <h2 className="font-jost text-[14px] text-gold tracking-[0.4em] uppercase mb-6" data-aos="fade-down" data-aos-delay="2000">
             Welcome to the Edge of the World
           </h2>
@@ -104,23 +108,25 @@ export const Home = () => {
           </h1>
         </div>
 
-        <button
-          onClick={scrollToNext}
-          className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-3 group cursor-pointer hover:scale-105 transition-transform duration-500"
-          data-aos="fade-up" data-aos-delay="2500"
-        >
-          <span className="font-jost text-[12px] text-white/70 group-hover:text-gold uppercase tracking-widest transition-colors duration-500">Scroll to Discover</span>
-          <div className="w-[1px] h-10 bg-gradient-to-b from-gold/50 to-transparent group-hover:from-gold transition-colors duration-500" />
-          <ChevronDown className="w-4 h-4 text-white/50 group-hover:text-gold animate-bounce" strokeWidth={1} />
-        </button>
+        <div className="absolute bottom-8 left-1/2 z-[3] -translate-x-1/2 flex justify-center w-full max-w-[200px]">
+          <button
+            onClick={scrollToNext}
+            className="flex flex-col items-center gap-3 group cursor-pointer hover:scale-105 transition-transform duration-500"
+            data-aos="fade-up" data-aos-delay="2500"
+          >
+            <span className="font-jost text-[12px] text-white/70 group-hover:text-gold uppercase tracking-widest transition-colors duration-500">Scroll to Discover</span>
+            <div className="w-[1px] h-10 bg-gradient-to-b from-gold/50 to-transparent group-hover:from-gold transition-colors duration-500" />
+            <ChevronDown className="w-4 h-4 text-white/50 group-hover:text-gold animate-bounce" strokeWidth={1} />
+          </button>
+        </div>
       </section>
 
-      {/* Intro Section */}
+      {/* info sec */}
       <section
         className="py-32 px-6 md:px-20 relative bg-obsidian overflow-hidden group"
         onMouseMove={handleMouseMove}
       >
-        {/* Antigravity-style Cursor Spotlight */}
+
         <div className="pointer-events-none absolute -inset-px opacity-0 transition duration-500 group-hover:opacity-100 mix-blend-screen"
           style={{ background: 'radial-gradient(800px circle at var(--mouse-x) var(--mouse-y), rgba(184,150,90,0.06), transparent 40%)' }}
         />
@@ -135,13 +141,13 @@ export const Home = () => {
         </div>
       </section>
 
-      {/* Feature Section with Image Reveal */}
+      {/* feat sec */}
       <section
         ref={sectionRef}
         className="py-24 px-6 md:px-20 bg-void max-w-[1920px] mx-auto min-h-screen flex items-center relative overflow-hidden group"
         onMouseMove={handleMouseMove}
       >
-        {/* Antigravity-style Cursor Spotlight */}
+
         <div className="pointer-events-none absolute -inset-px opacity-0 transition duration-500 group-hover:opacity-100 mix-blend-screen"
           style={{ background: 'radial-gradient(1000px circle at var(--mouse-x) var(--mouse-y), rgba(255,255,255,0.03), transparent 40%)' }}
         />
@@ -160,13 +166,12 @@ export const Home = () => {
         </div>
       </section>
 
-      {/* The Premium Destination Showcase (Replaces Google Maps) */}
       <LocationShowcase />
 
-      {/* spacer to allow scrolling */}
+
       <div className="h-[20vh] bg-void" />
 
-      {/* Photography & Shoots Massive Feature Block */}
+      {/* photography sec */}
       <PhotographyFeature />
 
     </motion.main>

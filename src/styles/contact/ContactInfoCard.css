@@ -1,0 +1,189 @@
+.contact-info-wrap {
+    position: sticky
+}
+
+.contact-info-card {
+    padding: 48px 40px;
+    background: var(--clr-charcoal);
+    border: 1px solid rgba(184, 150, 90, .15);
+    border-top: 1px solid rgba(184, 150, 90, .25);
+    border-left: 2px solid var(--clr-gold);
+    border-radius: 2px;
+    box-shadow: inset 0 1px 0 rgba(184, 150, 90, .08), var(--shadow-card)
+}
+
+.contact-info-title {
+    font: 10px 'Jost', sans-serif;
+    letter-spacing: .3em;
+    text-transform: uppercase;
+    color: var(--clr-gold);
+    margin-bottom: 8px
+}
+
+.contact-info-meta {
+    font: 12px 'DM Sans', sans-serif;
+    margin: 0 0 4px
+}
+
+.info-gold-line {
+    width: 0;
+    animation: grow-info-line .8s ease .2s forwards;
+    margin: 14px 0 8px
+}
+
+.info-list {
+    display: flex;
+    flex-direction: column
+}
+
+.info-row {
+    position: relative;
+    display: flex;
+    gap: 14px;
+    padding: 14px 0
+}
+
+.row-divider {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 1px;
+    background: rgba(184, 150, 90, .06)
+}
+
+.contact-detail-icon {
+    width: 36px;
+    height: 36px;
+    border: 1px solid rgba(184, 150, 90, .15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2px;
+    flex-shrink: 0;
+    transition: all .3s ease
+}
+
+.info-row:hover .contact-detail-icon {
+    border-color: rgba(184, 150, 90, .4);
+    background: rgba(184, 150, 90, .06)
+}
+
+.contact-detail-label {
+    font: 8px 'Jost', sans-serif;
+    color: var(--clr-fog);
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    margin: 0 0 3px
+}
+
+.contact-detail-value {
+    font: 14px/1.6 'DM Sans', sans-serif;
+    color: var(--clr-cream);
+    text-decoration: none;
+    transition: color .25s ease;
+    margin: 0
+}
+
+.contact-detail-value:hover {
+    color: var(--clr-gold)
+}
+
+.gold-divider {
+    height: 1px;
+    background: linear-gradient(90deg, rgba(184, 150, 90, .4), rgba(184, 150, 90, .1), transparent);
+    margin: 20px 0
+}
+
+.social-label {
+    font: 8px 'Jost', sans-serif;
+    color: var(--clr-fog);
+    letter-spacing: .3em;
+    text-transform: uppercase;
+    margin-bottom: 14px
+}
+
+.social-row {
+    display: flex;
+    gap: 12px
+}
+
+.contact-social-icon {
+    width: 40px;
+    height: 40px;
+    border: 1px solid rgba(184, 150, 90, .2);
+    color: var(--clr-fog);
+    border-radius: 2px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .3s ease
+}
+
+.contact-social-icon:hover {
+    border-color: var(--clr-gold);
+    color: var(--clr-gold);
+    background: rgba(184, 150, 90, .06);
+    transform: translateY(-2px)
+}
+
+.whatsapp-btn {
+    margin-top: 14px;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    align-items: center;
+    padding: 16px 20px;
+    background: #25d366;
+    border: 1px solid #25d366;
+    border-left: 3px solid #25d366;
+    color: var(--clr-white);
+    text-decoration: none;
+    font: 11px 'Jost', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: .15em;
+    transition: all .3s ease
+}
+
+.whatsapp-btn:hover {
+    background: rgba(37, 211, 102, .12);
+    color: #25d366;
+    border-color: rgba(37, 211, 102, .4)
+}
+
+@media (max-width:1200px) {
+    .contact-info-wrap {
+        position: static
+    }
+
+    .contact-info-card {
+        padding: 34px 24px
+    }
+}
+
+[data-theme='light'] .contact-info-card {
+    background: var(--clr-charcoal);
+    border-color: rgba(154, 122, 58, .22);
+    box-shadow: inset 0 1px 0 rgba(154, 122, 58, .15), var(--shadow-card)
+}
+
+[data-theme='light'] .contact-detail-icon {
+    border-color: rgba(154, 122, 58, .28)
+}
+
+[data-theme='light'] .contact-social-icon {
+    border-color: rgba(154, 122, 58, .3);
+    color: var(--clr-fog)
+}
+
+[data-theme='light'] .contact-social-icon:hover {
+    background: rgba(154, 122, 58, .12)
+}
+
+[data-theme='light'] .row-divider {
+    background: rgba(154, 122, 58, .14)
+}
+
+[data-theme='light'] .whatsapp-btn {
+    color: var(--clr-white)
+}

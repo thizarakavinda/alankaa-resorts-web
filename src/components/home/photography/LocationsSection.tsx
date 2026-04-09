@@ -25,10 +25,10 @@ const LocationsSection = () => {
 const LocationRow = ({ loc }: any) => {
   const rowRef = useRef<HTMLDivElement>(null);
   const imgRef = useRef<HTMLDivElement>(null);
-  
+
   useEffect(() => {
     let ctx = gsap.context(() => {
-      gsap.fromTo(imgRef.current, 
+      gsap.fromTo(imgRef.current,
         { clipPath: loc.reverse ? 'inset(0 0 0 100%)' : 'inset(0 100% 0 0)' },
         {
           clipPath: 'inset(0 0% 0 0)',
@@ -46,14 +46,14 @@ const LocationRow = ({ loc }: any) => {
 
   return (
     <div ref={rowRef} className={`flex flex-col md:flex-row h-auto min-h-[85vh] ${loc.reverse ? 'bg-obsidian' : 'bg-void'}`}>
-      {/* Image Panel */}
+      {/* img panel */}
       <div className={`w-full h-[50vh] md:h-auto md:w-[55%] relative flex items-center justify-center p-8 md:p-20 ${loc.reverse ? 'order-1 md:order-2' : 'order-1'}`}>
         <div ref={imgRef} className="relative w-full h-full max-h-[70vh] bg-transparent overflow-hidden shadow-2xl">
           <img src={loc.img} alt={loc.name} className="absolute inset-0 w-full h-full object-cover" />
         </div>
       </div>
 
-      {/* Content Panel */}
+      {/* cont panel */}
       <div className={`w-full md:w-[45%] p-10 md:p-[80px_64px] flex flex-col justify-center relative ${loc.reverse ? 'order-2 md:order-1 bg-obsidian' : 'order-2 bg-void'}`}>
         <span className="absolute top-10 right-10 font-cormorant text-[120px] text-gold opacity-5 leading-none pointer-events-none select-none hidden md:block">
           {loc.num}
@@ -63,7 +63,7 @@ const LocationRow = ({ loc }: any) => {
           <span className="font-jost text-[10px] text-gold uppercase tracking-[0.3em] block mb-4">Shoot Location</span>
           <h2 className="font-cormorant text-[clamp(36px,4vw,60px)] text-ivory leading-none mb-6">{loc.name}</h2>
           <div className="w-[48px] h-[1px] bg-gold/50 mb-6" />
-          
+
           <p className="font-dmSans text-[15px] font-light text-smoke leading-[1.9] mb-8 max-w-[440px]">
             {loc.desc}
           </p>
@@ -78,8 +78,8 @@ const LocationRow = ({ loc }: any) => {
 
           {loc.special && (
             <div className="bg-gold/5 border-l-2 border-gold p-[16px_20px] mb-10 max-w-[400px]">
-               <span className="font-jost text-[10px] text-fog uppercase block mb-1">BEST TIME:</span>
-               <span className="font-dmSans text-[14px] text-cream whitespace-pre-line">{loc.special.split(':\n')[1]}</span>
+              <span className="font-jost text-[10px] text-fog uppercase block mb-1">BEST TIME:</span>
+              <span className="font-dmSans text-[14px] text-cream whitespace-pre-line">{loc.special.split(':\n')[1]}</span>
             </div>
           )}
 

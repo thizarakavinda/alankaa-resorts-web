@@ -5,16 +5,16 @@ import { MapPin, Phone, Mail, Clock } from 'lucide-react';
 export const Footer = () => {
   return (
     <footer className="relative bg-void border-t border-[rgba(184,150,90,0.2)] overflow-hidden">
-      {/* Background silhouette (simulated with a dark gradient) */}
+
       <div className="absolute inset-0 pointer-events-none opacity-[0.07] z-0" style={{
         background: 'linear-gradient(to top, var(--clr-moss) 0%, transparent 100%)'
       }} />
 
       <div className="relative z-10 max-w-[1920px] mx-auto">
-        {/* Upper Footer */}
+        {/* upper foot */}
         <div className="px-6 md:px-20 py-16 md:py-24 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
-          
-          {/* Col 1 */}
+
+          {/* col 1 */}
           <div className="lg:col-span-1 pr-0 md:pr-12">
             <h2 className="font-cormorant text-[32px] text-gold mb-1">A'LANKAA</h2>
             <p className="font-jost text-[9px] text-fog uppercase tracking-widest mb-6">Resorts & Spa</p>
@@ -29,14 +29,14 @@ export const Footer = () => {
             </div>
           </div>
 
-          {/* Col 2 */}
+          {/* col 2 */}
           <div className="flex flex-col">
             <h3 className="font-jost text-[10px] text-gold uppercase tracking-[0.2em] mb-8">Explore</h3>
             <ul className="flex flex-col gap-4">
               {['Home', 'About Us', 'Rooms', 'Facilities', 'Gallery', 'Contact', 'Book Now'].map((link) => (
                 <li key={link}>
-                  <Link 
-                    to={link === 'Home' ? '/' : `/${link.toLowerCase().replace(' ', '-')}`} 
+                  <Link
+                    to={link === 'Home' ? '/' : `/${link.toLowerCase().replace(' ', '-')}`}
                     className="font-dmSans text-[14px] text-smoke hover:text-cream transition-all duration-300 hover:translate-x-1 block hoverable w-fit"
                   >
                     {link}
@@ -46,7 +46,7 @@ export const Footer = () => {
             </ul>
           </div>
 
-          {/* Col 3 */}
+          {/* col 3 */}
           <div className="flex flex-col">
             <h3 className="font-jost text-[10px] text-gold uppercase tracking-[0.2em] mb-8">Find Us</h3>
             <ul className="flex flex-col gap-5">
@@ -69,18 +69,18 @@ export const Footer = () => {
             </ul>
           </div>
 
-          {/* Col 4 */}
+          {/* col 4 */}
           <div className="flex flex-col">
             <h3 className="font-jost text-[10px] text-gold uppercase tracking-[0.2em] mb-2">Stay Connected</h3>
             <p className="font-dmSans text-[14px] text-smoke mb-6">Exclusive offers and resort stories.</p>
             <form className="flex flex-col gap-4" onSubmit={(e) => e.preventDefault()}>
-              <input 
-                type="email" 
-                placeholder="Enter your email address" 
+              <input
+                type="email"
+                placeholder="Enter your email address"
                 className="bg-transparent border-0 border-b border-gold pb-3 font-dmSans text-[14px] text-cream placeholder:text-fog focus:ring-0 focus:outline-none w-full hoverable"
               />
-              <button 
-                type="submit" 
+              <button
+                type="submit"
                 className="font-jost text-[11px] text-gold uppercase tracking-widest text-left mt-2 hover:text-cream transition-colors flex items-center gap-2 hoverable w-fit hover:translate-x-1"
               >
                 Subscribe <span className="text-lg leading-none">→</span>
@@ -90,7 +90,7 @@ export const Footer = () => {
 
         </div>
 
-        {/* Lower Footer */}
+        {/* lower foot */}
         <div className="border-t border-mist px-6 md:px-20 py-6 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="font-dmSans text-[12px] text-fog">
             © 2025 A'Lankaa Resorts & Spa. All rights reserved.

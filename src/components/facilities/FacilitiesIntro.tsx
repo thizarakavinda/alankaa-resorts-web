@@ -19,27 +19,27 @@ const FacilitiesIntro = () => {
             defaults: { ease: 'power3.out' },
         });
 
-        // Label
+
         tl.fromTo(
             labelRef.current,
             { x: -30, opacity: 0 },
             { x: 0, opacity: 1, duration: 0.7 }
         )
-            // Headline lines stagger using SplitText-style approach via chars wrapping
+
             .fromTo(
                 headlineRef.current,
                 { y: 50, opacity: 0, skewY: 2 },
                 { y: 0, opacity: 1, skewY: 0, duration: 1 },
                 '-=0.3'
             )
-            // Body copy
+
             .fromTo(
                 bodyRef.current,
                 { y: 30, opacity: 0 },
                 { y: 0, opacity: 1, duration: 0.9 },
                 '-=0.6'
             )
-            // Mosaic slides in from right
+
             .fromTo(
                 mosaicRef.current,
                 { x: 60, opacity: 0 },
@@ -56,7 +56,7 @@ const FacilitiesIntro = () => {
         <section className="bg-[var(--clr-obsidian)] py-[100px] px-6 md:px-[80px]">
             <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
-                {/* Left: Text */}
+                {/* left txt */}
                 <div>
                     <p
                         ref={labelRef}
@@ -78,7 +78,7 @@ const FacilitiesIntro = () => {
                     </p>
                 </div>
 
-                {/* Right: 2x2 Mosaic */}
+
                 <div
                     ref={mosaicRef}
                     className="grid grid-cols-2 gap-4 h-[400px] md:h-[500px] opacity-0"

@@ -46,7 +46,7 @@ const SuiteCard = ({ suite }: SuiteCardProps) => {
     >
       <div className={`flex flex-col lg:flex-row min-h-[680px]`}>
 
-        {/* IMAGE SIDE */}
+        {/* img side */}
         <div
           className={`w-full lg:w-[55%] relative overflow-hidden h-[400px] lg:h-auto ${!isImageLeft ? 'lg:order-2' : ''}`}
           data-aos={isImageLeft ? 'fade-left' : 'fade-right'}
@@ -72,7 +72,7 @@ const SuiteCard = ({ suite }: SuiteCardProps) => {
           </div>
         </div>
 
-        {/* CONTENT SIDE */}
+        {/* cont side */}
         <div
           className={`w-full lg:w-[45%] bg-[var(--clr-void)] p-[32px_24px] lg:p-[80px_72px] flex flex-col justify-center relative ${!isImageLeft ? 'lg:order-1' : ''}`}
           data-aos={isImageLeft ? 'fade-right' : 'fade-left'}
@@ -104,7 +104,7 @@ const SuiteCard = ({ suite }: SuiteCardProps) => {
               {suite.description}
             </p>
 
-            {/* SPECS ROW */}
+            {/* row spec */}
             <div className="flex flex-wrap gap-[24px] lg:gap-[32px] mb-[28px] items-center">
               <div className="flex flex-col gap-[4px]">
                 <LayoutGrid size={18} color="var(--clr-gold)" />
@@ -132,7 +132,7 @@ const SuiteCard = ({ suite }: SuiteCardProps) => {
               </div>
             </div>
 
-            {/* FEATURES */}
+            {/* featrs */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-[8px_24px] mb-[32px]">
               {suite.features.map((feature, i) => (
                 <div key={i} className="flex flex-row gap-[8px] items-center">
@@ -142,11 +142,11 @@ const SuiteCard = ({ suite }: SuiteCardProps) => {
               ))}
             </div>
 
-            {/* PRICE BLOCK */}
+            {/* price block */}
             <div className="bg-[rgba(184,150,90,0.04)] border border-[rgba(184,150,90,0.12)] border-l-[2px] border-l-[var(--clr-gold)] p-[24px_28px] rounded-[2px] mb-[28px] group cursor-default relative">
               <div className="flex flex-col xl:flex-row justify-between items-start xl:items-start gap-4">
 
-                {/* LEFT */}
+                {/* left */}
                 <div>
                   <p className="font-['Jost'] text-[9px] text-[var(--clr-fog)] uppercase">From</p>
                   <div className="flex items-baseline gap-[8px]">
@@ -159,7 +159,7 @@ const SuiteCard = ({ suite }: SuiteCardProps) => {
                   </p>
                 </div>
 
-                {/* RIGHT */}
+                {/* right */}
                 <div
                   className="bg-[rgba(184,150,90,0.08)] p-[12px_16px] rounded-[2px] w-full xl:w-auto relative"
                   onMouseEnter={(e) => {
@@ -176,7 +176,7 @@ const SuiteCard = ({ suite }: SuiteCardProps) => {
                     US${calculateTotal(suite.basePrice).total}
                   </p>
 
-                  {/* Hover Reveal Details */}
+
                   <div className="price-breakdown absolute top-full right-0 bg-[var(--clr-obsidian)] border border-[rgba(184,150,90,0.12)] p-3 mt-1 z-20 w-max opacity-0 transition-opacity duration-300 pointer-events-none shadow-xl">
                     <p className="font-['DM_Sans'] text-[11px] text-[var(--clr-fog)] leading-[1.8]">Base: US${suite.basePrice}</p>
                     <p className="font-['DM_Sans'] text-[11px] text-[var(--clr-fog)] leading-[1.8]">Tax (23%): US${calculateTotal(suite.basePrice).tax}</p>
@@ -195,7 +195,7 @@ const SuiteCard = ({ suite }: SuiteCardProps) => {
               </div>
             </div>
 
-            {/* BUTTON ROW */}
+            {/* btn row */}
             <div className="flex flex-col sm:flex-row gap-[16px]">
               <a href={`/booking?suite=${suite.id}`} className="inline-block bg-[var(--clr-gold)] text-[var(--clr-void)] font-['Jost'] text-[12px] uppercase tracking-[0.15em] px-[36px] py-[16px] text-center hover:bg-[var(--clr-gold-light)] hover:scale-[1.02] transition-all duration-300">
                 Book This Suite &rarr;

@@ -38,10 +38,10 @@ export const Timeline = () => {
         </h2>
 
         <div className="relative">
-          {/* Center Line */}
+
           <div className="absolute left-[20px] md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-gold/50 to-transparent -translate-x-1/2 rounded-full" />
 
-          {/* Nodes */}
+          {/* nodes */}
           <div className="space-y-16 lg:space-y-24">
             {milestones.map((item, idx) => {
               const isEven = idx % 2 === 0;
@@ -60,20 +60,19 @@ const TimelineNode = ({ item, isEven }: { item: typeof milestones[0], isEven: bo
 
   return (
     <div ref={nodeRef} className="relative flex items-center w-full min-h-[100px]">
-      
-      {/* Node Dot */}
+
+      {/* node dot */}
       <div className="absolute left-[20px] md:left-1/2 top-8 md:top-1/2 w-[6px] h-[6px] bg-gold/80 rounded-full -translate-x-1/2 md:-translate-y-1/2 ring-[1px] ring-gold/40 ring-offset-4 ring-offset-obsidian z-10" />
 
-      {/* Content Container (Mobile: shifts right, Desktop: alternates) */}
+      {/* content cont */}
       <motion.div
         initial={{ opacity: 0, x: isEven ? -50 : 50 }}
         animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: isEven ? -50 : 50 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
-        className={`w-full relative pl-[60px] md:pl-0 flex flex-col md:w-1/2 ${
-          isEven
+        className={`w-full relative pl-[60px] md:pl-0 flex flex-col md:w-1/2 ${isEven
             ? 'md:pr-[80px] md:text-right md:items-end self-start'
             : 'md:pl-[80px] md:translate-x-full md:text-left md:items-start self-start'
-        }`}
+          }`}
       >
         <div className="font-cormorant text-[48px] font-light text-gold/30 leading-none mb-4 -mt-2 md:mt-0">
           {item.year}
@@ -89,4 +88,4 @@ const TimelineNode = ({ item, isEven }: { item: typeof milestones[0], isEven: bo
   );
 };
 
-// Trigger TS update
+

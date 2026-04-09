@@ -1,0 +1,330 @@
+.contact-page {
+    background: var(--clr-void);
+    color: var(--clr-cream);
+    padding-top: 96px
+}
+
+.contact-layout {
+    padding: 120px 80px
+}
+
+.contact-grid {
+    max-width: 1520px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 58% 42%;
+    gap: 64px;
+    align-items: start
+}
+
+.contact-form-shell {
+    padding-right: 20px
+}
+
+.form-top-label {
+    margin-bottom: 16px
+}
+
+.contact-form-title {
+    font-size: 48px;
+    line-height: 1.05;
+    margin-bottom: 24px
+}
+
+.form-gold-line {
+    width: 0;
+    animation: grow-line .8s ease .3s forwards
+}
+
+.contact-form-subtext {
+    max-width: 480px;
+    margin: 20px 0 40px
+}
+
+.form-row {
+    margin-bottom: 30px
+}
+
+.form-row.two-col {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 30px
+}
+
+.floating-group {
+    position: relative
+}
+
+.form-field {
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid var(--clr-mist);
+    padding: 18px 0 14px;
+    font: 15px 'DM Sans', sans-serif;
+    color: var(--clr-cream);
+    outline: none;
+    transition: all .3s ease
+}
+
+.form-field:focus {
+    border-bottom-color: var(--clr-gold);
+    box-shadow: 0 1px 0 0 rgba(184, 150, 90, .3)
+}
+
+textarea.form-field {
+    resize: vertical;
+    min-height: 124px
+}
+
+.select-group {
+    position: relative
+}
+
+.select-chevron {
+    position: absolute;
+    right: 0;
+    top: 18px;
+    color: var(--clr-fog);
+    pointer-events: none
+}
+
+.form-field:required:invalid {
+    color: var(--clr-fog)
+}
+
+.form-field option {
+    background: var(--clr-charcoal);
+    color: var(--clr-cream)
+}
+
+.form-label {
+    position: absolute;
+    left: 0;
+    top: 18px;
+    color: var(--clr-fog);
+    font: 14px 'DM Sans', sans-serif;
+    transition: all .3s cubic-bezier(.4, 0, .2, 1);
+    pointer-events: none
+}
+
+.floating-group:focus-within .form-label,
+.floating-group.filled .form-label {
+    top: -2px;
+    color: var(--clr-gold);
+    font: 10px 'Jost', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: .12em
+}
+
+.form-footer-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px
+}
+
+.privacy-check {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font: 12px 'DM Sans', sans-serif;
+    color: var(--clr-smoke)
+}
+
+.privacy-check input {
+    accent-color: var(--clr-gold)
+}
+
+.form-submit-btn {
+    position: relative;
+    overflow: hidden;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 16px 48px;
+    background: var(--clr-gold);
+    color: var(--clr-void);
+    border: none;
+    font: 12px 'Jost', sans-serif;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+    cursor: pointer
+}
+
+.form-submit-btn::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    transform: translateX(-120%);
+    background: linear-gradient(100deg, transparent, rgba(255, 255, 255, .4), transparent)
+}
+
+.form-submit-btn:hover::after {
+    animation: shimmer .5s ease
+}
+
+.form-submit-btn:hover .btn-icon {
+    transform: translateX(4px)
+}
+
+.btn-icon {
+    transition: transform .25s ease
+}
+
+.contact-success {
+    padding: 64px 40px;
+    text-align: center;
+    border: 1px solid rgba(184, 150, 90, .25);
+    border-top: 2px solid var(--clr-gold);
+    background: rgba(184, 150, 90, .04)
+}
+
+.contact-success h3 {
+    margin: 22px 0 8px;
+    font: 40px 'Cormorant', serif;
+    color: var(--clr-ivory)
+}
+
+.contact-success p {
+    font: 15px 'DM Sans', sans-serif;
+    color: var(--clr-smoke)
+}
+
+.success-ref {
+    margin-top: 16px;
+    font: 10px 'Jost', sans-serif;
+    color: var(--clr-fog);
+    letter-spacing: .18em;
+    text-transform: uppercase
+}
+
+.return-home {
+    margin-top: 16px;
+    display: inline-flex;
+    gap: 6px;
+    align-items: center;
+    padding-bottom: 2px;
+    border-bottom: 1px solid var(--clr-gold);
+    font: 11px 'Jost', sans-serif;
+    color: var(--clr-gold);
+    text-transform: uppercase;
+    letter-spacing: .15em;
+    text-decoration: none
+}
+
+.success-check-wrap {
+    width: 84px;
+    height: 84px;
+    margin: 0 auto
+}
+
+.success-circle {
+    fill: none;
+    stroke: var(--clr-gold);
+    stroke-width: 1.5;
+    opacity: .35
+}
+
+.success-path {
+    fill: none;
+    stroke: var(--clr-gold-light);
+    stroke-width: 3;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-dasharray: 40;
+    stroke-dashoffset: 40;
+    animation: draw .8s ease .2s forwards
+}
+
+[data-theme='light'] .form-field {
+    color: var(--clr-cream);
+    border-bottom-color: var(--clr-mist)
+}
+
+[data-theme='light'] .form-field option {
+    background: var(--clr-stone);
+    color: var(--clr-cream)
+}
+
+@keyframes draw {
+    to {
+        stroke-dashoffset: 0
+    }
+}
+
+@keyframes shimmer {
+    to {
+        transform: translateX(120%)
+    }
+}
+
+@keyframes grow-line {
+    to {
+        width: 40px
+    }
+}
+
+@media (max-width:1200px) {
+    .contact-layout {
+        padding: 100px 40px
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr
+    }
+
+    .contact-form-shell {
+        padding-right: 0
+    }
+}
+
+@media (max-width:768px) {
+    .contact-page {
+        padding-top: 88px
+    }
+
+    .contact-layout {
+        padding: 80px 24px
+    }
+
+    .form-row.two-col {
+        grid-template-columns: 1fr;
+        gap: 20px
+    }
+
+    .form-footer-row {
+        flex-direction: column;
+        align-items: flex-start
+    }
+
+    .form-submit-btn {
+        width: 100%;
+        justify-content: center
+    }
+}
+
+[data-theme='light'] .contact-layout {
+    background: var(--clr-obsidian)
+}
+
+[data-theme='light'] .contact-form-subtext {
+    color: var(--clr-smoke)
+}
+
+[data-theme='light'] .form-label {
+    color: var(--clr-fog)
+}
+
+[data-theme='light'] .form-submit-btn {
+    color: var(--clr-void)
+}
+
+[data-theme='light'] .contact-success {
+    background: rgba(154, 122, 58, .06);
+    border-color: rgba(154, 122, 58, .3)
+}
+
+[data-theme='light'] .privacy-check {
+    color: var(--clr-smoke)
+}
