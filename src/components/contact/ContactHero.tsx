@@ -6,7 +6,7 @@ const ContactHero = () => {
       {/* back img */}
       <div
         className="absolute inset-0 w-full h-full bg-cover bg-center"
-        style={{ backgroundImage: "url('https://images.unsplash.com/photo-1542314831-c6a4d27ce66f?q=80&w=2600&auto=format&fit=crop')" }}
+        style={{ backgroundImage: "url('/images/pool view.jpg')" }}
       >
         {/* dark overlay */}
         <div className="absolute inset-0 bg-gradient-to-t from-void via-void/80 to-transparent" />
