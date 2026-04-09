@@ -18,7 +18,7 @@ const RoomsHero = () => {
 
   return (
     <section className="relative h-[80vh] overflow-hidden">
-      {/* Layer 1 — Image */}
+      {/* img in layer 1 */}
       <div className="absolute inset-0 z-0">
         <img
           ref={heroImageRef}
@@ -28,19 +28,19 @@ const RoomsHero = () => {
         />
       </div>
 
-      {/* Layer 2 — Overlay */}
+      {/* img lay 2*/}
       <div className="absolute inset-0 z-10" style={{
         background: 'linear-gradient(180deg, rgba(8,8,8,0.2) 0%, rgba(8,8,8,0.4) 50%, rgba(8,8,8,0.92) 100%)'
       }}></div>
 
-      {/* TOP RIGHT corner */}
+      {/* top right corner  */}
       <div className="absolute top-[40px] right-[80px] z-20">
         <p className="font-['Jost'] text-[11px] text-[var(--clr-fog)]">
           Home / Rooms & Suites
         </p>
       </div>
 
-      {/* Layer 3 — Content */}
+      {/* cont 3 */}
       <div className="absolute bottom-[80px] left-[80px] z-20">
         <p className="font-['Jost'] text-[10px] text-[var(--clr-gold)] uppercase tracking-[0.5em] mb-4 gold-label-on-image">
           WATTAGAMUWA · HALDUMMULLA · SRI LANKA
@@ -55,7 +55,7 @@ const RoomsHero = () => {
           <p>Each one, extraordinary.</p>
         </div>
 
-        {/* Stats row */}
+        {/* stat row*/}
         <div className="flex gap-[48px] mt-[32px]">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.8 }}>
             <p className="font-['Cormorant'] text-[48px] text-[var(--clr-gold)] leading-none gold-label-on-image">22</p>

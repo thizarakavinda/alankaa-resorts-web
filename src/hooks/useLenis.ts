@@ -29,7 +29,7 @@ export const useLenis = () => {
 
     rafId = requestAnimationFrame(raf);
 
-    // Optional: add lenis class to html
+  
     document.documentElement.classList.add('lenis');
 
     return () => {

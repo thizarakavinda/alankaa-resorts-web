@@ -1,0 +1,204 @@
+.contact-map-placeholder {
+    position: relative;
+    height: 520px;
+    overflow: hidden;
+    background: var(--clr-charcoal)
+}
+
+.map-depth,
+.map-grid,
+.map-vignette,
+.map-iframe {
+    position: absolute;
+    inset: 0
+}
+
+.map-iframe {
+    width: 100%;
+    height: 100%;
+    border: 0
+}
+
+.map-depth {
+    background: radial-gradient(ellipse at center, rgba(44, 74, 40, .08) 0%, transparent 70%)
+}
+
+.map-grid {
+    background-image: linear-gradient(to right, rgba(184, 150, 90, .08) 1px, transparent 1px), linear-gradient(to bottom, rgba(184, 150, 90, .06) 1px, transparent 1px), linear-gradient(to right, rgba(184, 150, 90, .03) 1px, transparent 1px), linear-gradient(to bottom, rgba(184, 150, 90, .03) 1px, transparent 1px);
+    background-size: 72px 72px, 72px 72px, 24px 24px, 24px 24px
+}
+
+.map-vignette {
+    background: radial-gradient(ellipse 100% 100% at 50% 50%, transparent 40%, rgba(8, 8, 8, .6) 100%)
+}
+
+.map-section-label {
+    position: absolute;
+    top: 32px;
+    left: 32px;
+    z-index: 2;
+    font: 9px 'Jost', sans-serif;
+    letter-spacing: .4em;
+    text-transform: uppercase;
+    color: rgba(184, 150, 90, .5)
+}
+
+.map-pin-wrap {
+    position: absolute;
+    left: 50%;
+    top: 52%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 2
+}
+
+.ripple {
+    position: absolute;
+    top: 8px;
+    left: 50%;
+    width: 18px;
+    height: 18px;
+    border: 1px solid rgba(184, 150, 90, .3);
+    border-radius: 999px;
+    transform: translateX(-50%);
+    animation: ripple 2.2s linear infinite
+}
+
+.r2 {
+    animation-delay: .6s
+}
+
+.r3 {
+    animation-delay: 1.2s
+}
+
+.map-connector {
+    width: 1px;
+    height: 20px;
+    background: rgba(184, 150, 90, .4);
+    margin: 8px 0
+}
+
+.map-label-card {
+    min-width: 260px;
+    padding: 18px 24px;
+    background: rgba(8, 8, 8, .92);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(184, 150, 90, .2);
+    border-top: 2px solid var(--clr-gold);
+    border-radius: 2px
+}
+
+.map-label-card p {
+    margin: 0 0 6px;
+    font: 11px 'Jost', sans-serif;
+    color: var(--clr-gold);
+    letter-spacing: .15em;
+    text-transform: uppercase
+}
+
+.map-label-card span {
+    display: block;
+    font: 13px/1.6 'DM Sans', sans-serif;
+    color: var(--clr-smoke)
+}
+
+.map-label-card em {
+    display: block;
+    margin-top: 8px;
+    font: 9px 'Jost', sans-serif;
+    color: var(--clr-fog);
+    letter-spacing: .14em
+}
+
+.open-map-btn {
+    position: absolute;
+    right: 32px;
+    bottom: 32px;
+    z-index: 2;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 24px;
+    background: rgba(8, 8, 8, .7);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(184, 150, 90, .35);
+    color: var(--clr-gold);
+    font: 11px 'Jost', sans-serif;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all .3s ease
+}
+
+.open-map-btn:hover {
+    background: rgba(184, 150, 90, .1);
+    border-color: var(--clr-gold);
+    color: var(--clr-gold-light)
+}
+
+[data-theme='light'] .contact-map-placeholder {
+    background: var(--clr-charcoal)
+}
+
+[data-theme='light'] .map-label-card {
+    background: var(--clr-charcoal);
+    color: var(--clr-cream)
+}
+
+[data-theme='light'] .map-label-card span {
+    color: var(--clr-smoke)
+}
+
+@keyframes ripple {
+    0% {
+        transform: translateX(-50%) scale(1);
+        opacity: .4
+    }
+
+    100% {
+        transform: translateX(-50%) scale(2);
+        opacity: 0
+    }
+}
+
+@media (max-width:768px) {
+    .contact-map-placeholder {
+        height: 400px
+    }
+
+    .map-section-label {
+        left: 16px;
+        top: 16px
+    }
+
+    .open-map-btn {
+        right: 16px;
+        bottom: 16px;
+        padding: 10px 14px
+    }
+}
+
+[data-theme='light'] .map-grid {
+    background-image: linear-gradient(to right, rgba(154, 122, 58, .14) 1px, transparent 1px), linear-gradient(to bottom, rgba(154, 122, 58, .12) 1px, transparent 1px), linear-gradient(to right, rgba(154, 122, 58, .06) 1px, transparent 1px), linear-gradient(to bottom, rgba(154, 122, 58, .06) 1px, transparent 1px)
+}
+
+[data-theme='light'] .map-vignette {
+    background: radial-gradient(ellipse 100% 100% at 50% 50%, transparent 44%, rgba(0, 0, 0, .2) 100%)
+}
+
+[data-theme='light'] .map-section-label {
+    color: rgba(154, 122, 58, .75)
+}
+
+[data-theme='light'] .open-map-btn {
+    background: rgba(237, 232, 222, .72);
+    color: var(--clr-gold);
+    border-color: rgba(154, 122, 58, .4)
+}
+
+[data-theme='light'] .open-map-btn:hover {
+    background: rgba(154, 122, 58, .12)
+}

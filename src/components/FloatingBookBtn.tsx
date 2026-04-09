@@ -31,7 +31,7 @@ export const FloatingBookBtn = () => {
           >
             <Calendar size={20} className="text-void" />
             
-            {/* Tooltip */}
+            {/* tooltip */}
             <div className="absolute right-[120%] top-1/2 -translate-y-1/2 px-4 py-2 bg-void border border-gold opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none whitespace-nowrap">
               <span className="font-jost text-[10px] text-gold uppercase tracking-[0.15em]">Book Now</span>
             </div>

@@ -14,12 +14,14 @@ const About = lazy(() => import('./pages/About').then((m) => ({ default: m.About
 const PlaceholderPage = lazy(() => import('./pages/PlaceholderPage').then((m) => ({ default: m.PlaceholderPage })));
 const Rooms = lazy(() => import('./pages/Rooms'));
 const Facilities = lazy(() => import('./pages/Facilities'));
+const Contact = lazy(() => import('./pages/Contact.tsx'));
+const Booking = lazy(() => import('./pages/Booking'));
+const Gallery = lazy(() => import('./pages/Gallery'));
 
 import { ThemeProvider } from './context/ThemeContext';
 
 import { useLenis } from './hooks/useLenis';
 import { useScrollTrigger } from './hooks/useScrollTrigger';
-import MistCanvas from './components/MistCanvas';
 
 const AnimatedRoutes = () => {
   const location = useLocation();
@@ -32,9 +34,9 @@ const AnimatedRoutes = () => {
           <Route path="/about" element={<About />} />
           <Route path="/rooms" element={<Rooms />} />
           <Route path="/facilities" element={<Facilities />} />
-          <Route path="/gallery" element={<PlaceholderPage title="Gallery" />} />
-          <Route path="/contact" element={<PlaceholderPage title="Contact" />} />
-          <Route path="/booking" element={<PlaceholderPage title="Reservation" />} />
+          <Route path="/gallery" element={<Gallery />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/booking" element={<Booking />} />
           <Route path="*" element={<PlaceholderPage title="404 Not Found" />} />
         </Routes>
       </AnimatePresence>
@@ -52,7 +54,7 @@ function App() {
     setEnableEnhancedFx(!prefersReducedMotion && !isCoarsePointer);
   }, []);
 
-  // Initialize global hooks
+  // global hooks init
   useLenis();
   useScrollTrigger();
 
@@ -60,11 +62,11 @@ function App() {
     <ThemeProvider>
       <Router>
         <LoadingScreen />
+
         {enableEnhancedFx && <CustomCursor />}
         <ScrollProgress />
         <Navbar />
         <AnimatedRoutes />
-        {enableEnhancedFx && <MistCanvas />}
         <Footer />
         <FloatingBookBtn />
       </Router>

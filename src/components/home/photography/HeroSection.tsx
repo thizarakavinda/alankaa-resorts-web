@@ -12,7 +12,7 @@ const HeroSection = () => {
 
   useEffect(() => {
     let ctx = gsap.context(() => {
-      // Pinning the section. Reduced from +=150% to +=60% so it doesnt feel stuck for long!
+
       ScrollTrigger.create({
         trigger: sectionRef.current,
         start: 'top top',
@@ -21,7 +21,7 @@ const HeroSection = () => {
         scrub: 1,
       });
 
-      // Split text reveal manually using robust clip-path
+
       gsap.fromTo(textRefs.current,
         { clipPath: 'inset(100% 0 0 0)', y: 30, opacity: 0 },
         {

@@ -8,7 +8,7 @@ export const Hero = () => {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      // Image clip-path reveal
+
       gsap.fromTo(
         imgRef.current,
         { clipPath: 'inset(0 0 100% 0)' },
@@ -16,20 +16,20 @@ export const Hero = () => {
           clipPath: 'inset(0 0 0% 0)',
           duration: 1.4,
           ease: 'power4.inOut',
-          delay: 0.1, // Small delay for rendering
+          delay: 0.1,
         }
       );
 
-      // Image scale effect
+
       const img = imgRef.current?.querySelector('img');
       if (img) {
-        gsap.fromTo(img, 
-          { scale: 1.1 }, 
+        gsap.fromTo(img,
+          { scale: 1.1 },
           { scale: 1, duration: 2.5, ease: 'power3.out', delay: 0.1 }
         );
       }
 
-      // Content fade up
+
       gsap.fromTo(
         contentRef.current?.children ? Array.from(contentRef.current.children) : [],
         { y: 30, opacity: 0 },
@@ -48,35 +48,35 @@ export const Hero = () => {
   }, []);
 
   return (
-    <section 
-      ref={containerRef} 
+    <section
+      ref={containerRef}
       className="relative h-[90vh] w-full overflow-hidden flex flex-col justify-between"
     >
-      {/* Background Image Placeholder */}
-      <div 
+      {/* back img placeholder */}
+      <div
         ref={imgRef}
-        className="absolute inset-0 w-full h-full bg-mist" 
+        className="absolute inset-0 w-full h-full bg-mist"
       >
-        <img 
+        <img
           src="/images/v1.jpg"
           alt="A'Lankaa Resort Aerial View"
           className="w-full h-full object-cover"
         />
       </div>
 
-      {/* Layer 2: Dark gradient overlay always dark to protect image contrast */}
+      {/* dark overlay for back img */}
       <div className="absolute inset-0 bg-black/30"></div>
       <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/80"></div>
 
-      {/* Breadcrumb - Top Left */}
+
       <div className="relative z-10 p-10 lg:p-[40px]">
         <p className="hero-subtext-on-image font-jost text-[10px] text-fog tracking-[0.2em] uppercase">
           Home / About Us
         </p>
       </div>
 
-      {/* Content - Bottom Left */}
-      <div 
+      {/* bottom left cont */}
+      <div
         ref={contentRef}
         className="relative z-10 p-10 lg:p-[80px]"
       >

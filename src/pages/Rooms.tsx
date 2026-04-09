@@ -22,7 +22,7 @@ const Rooms = () => {
     AOS.init({ once: true });
     document.title = "Rooms & Suites | A'Lankaa Resorts & Spa";
 
-    // Suite image reveal on scroll
+
     const suiteImages = document.querySelectorAll('.suite-image-reveal');
     suiteImages.forEach((img) => {
       gsap.fromTo(img,
@@ -39,7 +39,7 @@ const Rooms = () => {
       );
     });
 
-    // Gold line animations
+
     const lines = document.querySelectorAll('.gold-line-anim');
     lines.forEach((line) => {
       gsap.fromTo(line,

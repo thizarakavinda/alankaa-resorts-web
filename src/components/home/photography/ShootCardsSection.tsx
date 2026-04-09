@@ -88,7 +88,7 @@ const ShootCardsSection = () => {
             </div>
           </motion.div>
         ))}
-        {/* Empty block to allow last card to detach from right edge */}
+        
         <div className="w-[40px] shrink-0 pointer-events-none" />
       </div>
 

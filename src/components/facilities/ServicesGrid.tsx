@@ -20,13 +20,13 @@ const ServicesGrid = () => {
                 defaults: { ease: 'power3.out' },
             });
 
-            // Heading sweeps up
+
             tl.fromTo(
                 headingRef.current,
                 { y: 50, opacity: 0, skewY: 1.5 },
                 { y: 0, opacity: 1, skewY: 0, duration: 1 }
             )
-                // Cards stagger in
+
                 .fromTo(
                     gridRef.current ? Array.from(gridRef.current.children) : [],
                     { y: 40, opacity: 0, scale: 0.95 },

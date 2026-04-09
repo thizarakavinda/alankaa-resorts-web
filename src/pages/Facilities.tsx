@@ -18,7 +18,7 @@ const Facilities = () => {
     AOS.init({ once: true });
     document.title = "Facilities & Amenities | A'Lankaa Resorts & Spa";
 
-    // Facility image reveal on scroll
+
     const facilityImages = document.querySelectorAll('.facility-image-reveal');
     facilityImages.forEach((img) => {
       const isReverse = img.getAttribute('data-reverse') === 'true';
@@ -47,21 +47,21 @@ const Facilities = () => {
 
   return (
     <div className="bg-[var(--clr-void)] min-h-screen">
-      {/* SECTION 1 — HERO */}
+      {/* hero sec */}
       <FacilitiesHero />
 
-      {/* SECTION 2 — OVERVIEW INTRO */}
+      {/* intro */}
       <FacilitiesIntro />
 
-      {/* SECTIONS 3–8: SIX FACILITY SECTIONS */}
+      {/* six facility sections */}
       {facilitiesData.map((fac) => (
         <FacilitySection key={fac.id} facility={fac} />
       ))}
 
-      {/* SECTION 9 — SERVICES GRID */}
+      {/* services grid */}
       <ServicesGrid />
 
-      {/* SECTION 10 — SPA MENU HIGHLIGHT */}
+      {/* spa menu highlight */}
       <SpaTreatments />
     </div>
   );

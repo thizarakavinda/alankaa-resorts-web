@@ -14,14 +14,14 @@ export const LoadingScreen = () => {
       onComplete: () => setIsComplete(true),
     });
 
-    // t=0.0s : Thin horizontal gold line draws left to right
+
     tl.to(lineRef.current, {
       width: '60px',
       duration: 0.6,
       ease: 'power2.out',
     }, 0);
 
-    // t=0.6s : "A'LANKAA" fades up letter by letter
+
     tl.fromTo(logoRef.current, {
       opacity: 0,
       y: 20,
@@ -32,7 +32,7 @@ export const LoadingScreen = () => {
       ease: 'power3.out',
     }, 0.6);
 
-    // t=1.2s : "RESORTS & SPA" fades in below
+
     tl.fromTo(subtitleRef.current, {
       opacity: 0,
     }, {
@@ -41,7 +41,7 @@ export const LoadingScreen = () => {
       ease: 'fade',
     }, 1.2);
 
-    // t=1.8s : Number counter: 0% → 100%
+
     if (counterRef.current) {
       tl.to(counterRef.current, {
         innerHTML: 100,
@@ -56,7 +56,7 @@ export const LoadingScreen = () => {
       }, 1.8);
     }
 
-    // t=2.5s : Entire overlay slides UP and exits
+
     tl.to(containerRef.current, {
       yPercent: -100,
       duration: 0.8,
@@ -82,9 +82,9 @@ export const LoadingScreen = () => {
         >
           A'Lankaa
         </h1>
-        
+
         <div className="h-[1px] w-0 bg-gold" ref={lineRef}></div>
-        
+
         <p
           ref={subtitleRef}
           className="font-jost text-[11px] text-gold tracking-[0.5em] uppercase opacity-0"
@@ -92,7 +92,7 @@ export const LoadingScreen = () => {
           Resorts & Spa
         </p>
       </div>
-      
+
       <div
         ref={counterRef}
         className="absolute bottom-12 right-12 font-jost text-[13px] text-fog tracking-widest"
