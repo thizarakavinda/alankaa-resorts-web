@@ -1,4 +1,5 @@
-import { Camera, MessageCircle } from 'lucide-react';
+import { Camera } from 'lucide-react';
+import { FaWhatsapp } from 'react-icons/fa';
 
 const CTASection = () => {
   return (
@@ -24,7 +25,7 @@ const CTASection = () => {
              <Camera size={16} /> Book a Photography Session
            </button>
            <button className="w-full bg-[#25D366]/10 border border-[#25D366]/40 text-[#25D366] font-jost text-[11px] uppercase tracking-widest py-[18px] px-8 flex items-center justify-center gap-3 hover:bg-[#25D366]/20 transition-colors duration-300 font-medium group">
-             <MessageCircle size={16} className="group-hover:scale-110 transition-transform" /> Chat on WhatsApp
+             <FaWhatsapp size={16} className="group-hover:scale-110 transition-transform" /> Chat on WhatsApp
            </button>
            <p className="font-jost text-[9px] text-fog text-center mt-3 uppercase tracking-[0.2em] opacity-80">
              Our team responds within 2 hours
