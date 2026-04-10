@@ -3,8 +3,7 @@ import {
     Droplets, Wind, Waves, HeartHandshake, Sparkles, Activity,
     Utensils, Leaf, Wine, Map, PartyPopper,
     Dumbbell, Calendar, Bed, Users, Baby,
-    Compass, Sunrise, Bird, Bike, Car,
-    CircleDollarSign, Bell, Shirt, Wifi, ParkingCircle
+    Compass, Sunrise, Bird, Bike, Car
 } from 'lucide-react';
 import { createElement } from 'react';
 
