@@ -56,7 +56,7 @@ const HeroSection = () => {
         </span>
 
         <div className="hero-headline-on-image font-cormorant text-[clamp(52px,7vw,110px)] text-ivory font-light leading-[0.92] text-center mb-10 flex flex-col items-center">
-          {["Your most beautiful", "moments deserve", "an extraordinary backdrop."].map((line, i) => (
+          {["Your best moments", "deserve a", "stunning backdrop."].map((line, i) => (
             <div key={i} className="overflow-hidden p-1">
               <div ref={(el) => { textRefs.current[i] = el; }}>{line}</div>
             </div>
