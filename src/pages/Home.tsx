@@ -138,6 +138,29 @@ export const Home = () => {
           <p className="font-dmSans text-[16px] text-smoke leading-relaxed max-w-2xl mx-auto">
             Perched 1,000 meters above sea level in the misty mountains of Haldummulla, A'Lankaa Resorts & Spa is an immersive digital experience—a retreat where architectural elegance seamlessly blends with breathtaking natural panoramas.
           </p>
+
+          <div className="flex justify-center items-center gap-10 md:gap-20 mt-16 md:mt-24 pointer-events-auto">
+            {[
+              "/icons/clouds.png",
+              "/icons/sun.png",
+              "/icons/trees.png",
+              "/icons/moon.png"
+            ].map((iconPath, i) => (
+              <motion.img
+                key={i}
+                src={iconPath}
+                alt="Placeholder Icon"
+                animate={{ y: [0, -12, 0] }}
+                transition={{
+                  duration: 3.5,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                  delay: i * 0.4
+                }}
+                className="w-12 h-12 md:w-16 md:h-16 object-contain opacity-70 hover:opacity-100 transition-opacity cursor-pointer"
+              />
+            ))}
+          </div>
         </div>
       </section>
 

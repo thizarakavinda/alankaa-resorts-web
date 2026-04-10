@@ -68,12 +68,32 @@ const LocationRow = ({ loc }: any) => {
             {loc.desc}
           </p>
 
-          <div className="flex flex-wrap gap-3 mb-10 max-w-[400px]">
-            {loc.tags.map((t: string) => (
-              <span key={t} className="font-jost text-[10px] text-gold uppercase border border-gold/40 px-4 py-[6px] rounded-full bg-gold/5">
-                {t}
-              </span>
-            ))}
+          <div className="flex flex-wrap gap-6 lg:gap-8 mb-10 max-w-[480px]">
+            {loc.tags.map((t: string) => {
+              const tagIconMap: Record<string, string> = {
+                "Wedding": "/icons/wedding.png",
+                "Pre-shoot": "/icons/photoshoot.png",
+                "Western": "/icons/western.png",
+                "Lifestyle": "/icons/lifestyle.png",
+                "Kandyan": "/icons/kandyan.png",
+                "Editorial": "/icons/editorial.png",
+                "Family": "/icons/family.png",
+                "Solo": "/icons/solo.png"
+              };
+
+              return (
+                <div key={t} className="flex flex-col items-center gap-3 group">
+                  {tagIconMap[t] && (
+                    <div className="w-10 h-10 flex items-center justify-center opacity-70 group-hover:opacity-100 transition-opacity">
+                      <img src={tagIconMap[t]} alt={t} className="w-full h-full object-contain filter brightness-0 invert sepia-[1] hue-rotate-[10deg] saturate-[3] opacity-60" style={{ filter: "brightness(0) saturate(100%) invert(86%) sepia(21%) saturate(762%) hue-rotate(338deg) brightness(88%) contrast(85%)" }} />
+                    </div>
+                  )}
+                  <span className="font-jost text-[10px] text-gold uppercase tracking-wider">
+                    {t}
+                  </span>
+                </div>
+              );
+            })}
           </div>
 
           {loc.special && (

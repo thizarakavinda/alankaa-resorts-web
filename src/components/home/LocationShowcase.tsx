@@ -2,7 +2,7 @@ import { useRef, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { Plane, Car, Train, MapPin, ArrowUpRight, Star } from 'lucide-react';
+import { Plane, Car, Train, MapPin, ArrowUpRight, Star, ArrowRight } from 'lucide-react';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -335,6 +335,12 @@ const Part2Attractions = () => {
           ))}
         </div>
 
+        <div className="mt-16 lg:mt-20 flex justify-center" data-aos="fade-up">
+          <button className="font-jost text-[11px] text-ivory border border-gold/40 px-10 py-4 uppercase tracking-widest hover:bg-gold hover:border-gold hover:text-void transition-colors duration-300 inline-flex items-center gap-3">
+            Explore More Places <ArrowRight size={14} />
+          </button>
+        </div>
+
       </div>
     </section>
   );
@@ -374,7 +380,7 @@ const Part3Timeline = () => {
   return (
     <section className="bg-void py-[80px] px-[32px] lg:px-[80px] border-y border-gold/10">
       <div className="max-w-[1440px] mx-auto">
-        <h2 className="font-jost text-[10px] text-gold text-center uppercase tracking-[0.4em] mb-14">
+        <h2 className="font-jost text-[16px] text-gold text-center uppercase tracking-[0.4em] mb-14">
           YOUR JOURNEY TO A'LANKAA
         </h2>
 
@@ -413,10 +419,10 @@ const Part3Timeline = () => {
                 className="relative z-10 flex flex-row md:flex-col items-center group h-full md:h-auto gap-6 md:gap-0 w-full md:w-auto"
               >
                 {/* node */}
-                <div className={`w-[48px] h-[48px] rounded-full border border-gold flex items-center justify-center transition-all duration-500
+                <div className={`w-[60px] h-[60px] rounded-full border border-gold flex items-center justify-center transition-all duration-500
                   ${step.isFinal ? 'bg-gold shadow-[0_0_30px_rgba(184,150,90,0.5)]' : 'bg-void group-hover:shadow-[0_0_20px_rgba(184,150,90,0.3)]'}`}
                 >
-                  <Icon className={`w-[18px] h-[18px] ${step.isFinal ? 'text-void' : 'text-gold'}`} strokeWidth={1.5} />
+                  <Icon className={`w-[24px] h-[24px] ${step.isFinal ? 'text-void' : 'text-gold'}`} strokeWidth={1.5} />
                 </div>
 
 
@@ -428,7 +434,7 @@ const Part3Timeline = () => {
                 <div className="mt-0 md:mt-4 text-left md:text-center w-[200px]">
                   <p className="font-dmSans font-medium text-[14px] text-cream">{step.title}</p>
                   <p className="font-dmSans font-light text-[12px] text-smoke mt-1">{step.detail}</p>
-                  <div className="inline-block mt-3 px-3 py-1 bg-gold/10 border border-gold/20 rounded-sm">
+                  <div className="inline-block mt-3 px-3 py-1 bg-gold/10 rounded-sm">
                     <span className="font-jost text-[10px] text-gold font-medium uppercase tracking-wider">{step.badge}</span>
                   </div>
                 </div>

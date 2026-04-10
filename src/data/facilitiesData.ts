@@ -25,7 +25,7 @@ export interface FacilityItem {
 
 export interface ServiceItem {
     title: string;
-    icon: React.ReactNode;
+    icon: string; 
 }
 
 export interface SpaTreatmentItem {
@@ -132,14 +132,14 @@ export const facilitiesData: FacilityItem[] = [
 ];
 
 export const servicesData: ServiceItem[] = [
-    { title: "Car Hire", icon: createElement(Car, { size: 24 }) },
-    { title: "Currency Exchange", icon: createElement(CircleDollarSign, { size: 24 }) },
-    { title: "24-Hr Front Desk", icon: createElement(Bell, { size: 24 }) },
-    { title: "Laundry Service", icon: createElement(Shirt, { size: 24 }) },
-    { title: "In-Room Dining", icon: createElement(Utensils, { size: 24 }) },
-    { title: "Free WiFi", icon: createElement(Wifi, { size: 24 }) },
-    { title: "Free Parking", icon: createElement(ParkingCircle, { size: 24 }) },
-    { title: "Special Event Setup", icon: createElement(PartyPopper, { size: 24 }) }
+    { title: "Car Hire", icon: "/icons/car rent.png" },
+    { title: "Currency Exchange", icon: "/icons/currency exc.png" },
+    { title: "24-Hr Front Desk", icon: "/icons/24h service.png" },
+    { title: "Laundry Service", icon: "/icons/laundry.png" },
+    { title: "In-Room Dining", icon: "/icons/in room dining.png" },
+    { title: "Free WiFi", icon: "/icons/wifi.png" },
+    { title: "Free Parking", icon: "/icons/parking.png" },
+    { title: "Special Event Setup", icon: "/icons/event.png" }
 ];
 
 export const spaMenuData: SpaTreatmentItem[] = [
