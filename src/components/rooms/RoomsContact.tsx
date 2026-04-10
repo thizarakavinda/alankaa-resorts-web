@@ -1,4 +1,5 @@
 import { Phone, Mail, MapPin } from 'lucide-react';
+import { FaWhatsapp } from 'react-icons/fa';
 
 const RoomsContact = () => {
   return (
@@ -37,11 +38,11 @@ const RoomsContact = () => {
         <a href="/booking" className="inline-block w-full bg-[var(--clr-gold)] text-[var(--clr-void)] font-['Jost'] text-[12px] uppercase py-[20px] px-[48px] text-center tracking-[0.15em] hover:bg-[var(--clr-gold-light)] transition-colors">
           Book a Suite Online &rarr;
         </a>
-        <a href="https://wa.me/94707975975" target="_blank" rel="noopener noreferrer" className="inline-block w-full bg-[rgba(37,211,102,0.1)] border border-[rgba(37,211,102,0.3)] text-[#25D366] font-['Jost'] text-[12px] uppercase py-[20px] px-[48px] text-center hover:bg-[rgba(37,211,102,0.2)] transition-colors">
-          💬 WhatsApp Us
+        <a href="https://wa.me/94707975975" target="_blank" rel="noopener noreferrer" className="flex items-center w-full justify-center gap-2 bg-[rgba(37,211,102,0.1)] border border-[rgba(37,211,102,0.3)] text-[#25D366] font-['Jost'] text-[12px] uppercase py-[20px] px-[48px] text-center hover:bg-[rgba(37,211,102,0.2)] transition-colors">
+          <FaWhatsapp size={16} /> WhatsApp Us
         </a>
-        <a href="mailto:alankaasales@gmail.com" className="inline-block w-full bg-transparent border border-[rgba(184,150,90,0.3)] text-[var(--clr-gold)] font-['Jost'] text-[12px] uppercase py-[20px] px-[48px] text-center hover:bg-[rgba(184,150,90,0.05)] transition-colors">
-          ✉️ Email Enquiry
+        <a href="mailto:alankaasales@gmail.com" className="flex items-center w-full justify-center gap-2 bg-transparent border border-[rgba(184,150,90,0.3)] text-[var(--clr-gold)] font-['Jost'] text-[12px] uppercase py-[20px] px-[48px] text-center hover:bg-[rgba(184,150,90,0.05)] transition-colors">
+          <Mail size={16} /> Email Enquiry
         </a>
         <p className="font-['Jost'] text-[10px] text-[var(--clr-fog)] text-center mt-[8px]">
           Our team responds within 2 hours
