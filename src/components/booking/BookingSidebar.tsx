@@ -10,7 +10,8 @@ const BookingSidebar = ({ state }: { state: BookingState }) => {
     nights = Math.max(0, Math.ceil((d2.getTime() - d1.getTime()) / (1000 * 3600 * 24)));
   }
 
-  const estimatedTotal = nights > 0 && state.roomPrice ? state.roomPrice * nights * state.rooms : null;
+  const subtotal = nights > 0 && state.roomPrice ? state.roomPrice * nights * state.rooms : 0;
+  const estimatedTotal = subtotal > 0 ? subtotal + Number(state.additionalCharges || 0) - Number(state.discount || 0) : null;
 
   return (
     <div className="bg-charcoal border border-[rgba(184,150,90,0.15)] rounded-[2px] overflow-hidden flex flex-col">
@@ -27,7 +28,7 @@ const BookingSidebar = ({ state }: { state: BookingState }) => {
           <SummaryRow label="Check-out Date" value={state.checkOut || '—'} />
           <SummaryRow label="Nights" value={nights > 0 ? nights.toString() : '—'} />
           <SummaryRow label="Room Type" value={state.roomType ? state.roomType.replace(/🛏|🌿|🏔|♾|🌅|🏡 /, '') : '—'} />
-          <SummaryRow label="Guests" value={`${state.adults} Adults${state.children ? `, ${state.children} Children` : ''}`} />
+          <SummaryRow label="Guests" value={`${state.numberOfGuests} Guests`} />
           <SummaryRow label="Rooms" value={state.rooms.toString()} />
         </div>
 
@@ -36,7 +37,7 @@ const BookingSidebar = ({ state }: { state: BookingState }) => {
         <div className="mb-8">
           <span className="font-jost text-[10px] text-fog uppercase tracking-widest block mb-2">Estimated Cost</span>
           <div className="font-cormorant text-4xl text-gold mb-1">
-            {estimatedTotal ? `$${estimatedTotal}` : (state.roomPrice ? `$${state.roomPrice} / night` : '—')}
+            {estimatedTotal !== null ? `$${estimatedTotal}` : (state.roomPrice ? `$${state.roomPrice} / night` : '—')}
           </div>
           <span className="font-dmSans text-[11px] text-fog">* Confirmed by our team minimum 24h prior</span>
         </div>
