@@ -2,7 +2,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Check, ChevronDown, CalendarDays } from 'lucide-react';
 import type { BookingState } from './bookingTypes';
 import { useState } from 'react';
-
+import { ref, push, onValue, get } from "firebase/database";
+import { database } from "../../config/firebaseConfig";
 const roomOptions = [
   { id: 'standard', name: '🛏 Standard Room', price: 120 },
   { id: 'deluxe', name: '🌿 Deluxe Room', price: 150 },
@@ -40,11 +41,160 @@ const BookingForm = ({ state, setState }: Props) => {
   const isStep1Valid = state.checkIn && state.checkOut && state.roomType;
   const isStep2Valid = state.guestName && state.email;
 
+
+
+  // Check room availability for selected dates
+const checkRoomAvailability = async (roomType: string, checkIn: string, checkOut: string) => {
+  try {
+    const bookingsRef = ref(database, "bookings");
+    const snapshot = await get(bookingsRef);
+    
+    if (!snapshot.exists()) {
+      return true; // No bookings yet, room is available
+    }
+
+    const bookings = snapshot.val();
+    const checkInDate = new Date(checkIn);
+    const checkOutDate = new Date(checkOut);
+
+    // Find the room ID that matches our roomType
+    const roomsRef = ref(database, "rooms");
+    const roomsSnapshot = await get(roomsRef);
+    
+    if (!roomsSnapshot.exists()) {
+      return true; // No rooms in database yet
+    }
+
+    const rooms = roomsSnapshot.val();
+    const matchingRoom = Object.entries(rooms).find(([_, room]: [string, any]) => 
+      room.name === roomType
+    );
+
+    if (!matchingRoom) {
+      return true; // Room type not found in database, allow booking
+    }
+
+    const roomId = matchingRoom[0];
+
+    // Check if this room is already booked for these dates
+    for (const [_, booking] of Object.entries(bookings) as [string, any][]) {
+      // Skip cancelled bookings
+      if (booking.status === "Cancelled") continue;
+      
+      // Only check bookings for this specific room
+      if (booking.roomId !== roomId) continue;
+
+      const bookedCheckIn = new Date(booking.checkInDate);
+      const bookedCheckOut = new Date(booking.checkOutDate);
+
+      // Check for date overlap
+      if (
+        (checkInDate >= bookedCheckIn && checkInDate < bookedCheckOut) ||
+        (checkOutDate > bookedCheckIn && checkOutDate <= bookedCheckOut) ||
+        (checkInDate <= bookedCheckIn && checkOutDate >= bookedCheckOut)
+      ) {
+        return false; // Room is not available
+      }
+    }
+
+    return true; // Room is available
+  } catch (error) {
+    console.error("Error checking availability:", error);
+    return true; // On error, allow booking (fail open)
+  }
+};
   const handleNext = () => setVal('step', state.step + 1);
   const handlePrev = () => setVal('step', state.step - 1);
 
-  const handleConfirm = () => setVal('isSubmitted', true);
+const handleConfirm = async () => {
+  // First check if room is available
+  if (state.roomType && state.checkIn && state.checkOut) {
+    const isAvailable = await checkRoomAvailability(
+      state.roomType, 
+      state.checkIn, 
+      state.checkOut
+    );
 
+    if (!isAvailable) {
+      alert(`Sorry, ${state.roomType} is not available for these dates. Please select different dates or another room type.`);
+      return;
+    }
+  }
+
+  try {
+    // Calculate nights
+    const checkInDate = new Date(state.checkIn);
+    const checkOutDate = new Date(state.checkOut);
+    const nights = Math.max(1, Math.ceil((checkOutDate.getTime() - checkInDate.getTime()) / (1000 * 3600 * 24)));
+
+    // Find the matching room in database to get roomId
+    const roomsRef = ref(database, "rooms");
+    const roomsSnapshot = await get(roomsRef);
+    let roomId = "";
+    let roomPrice = state.roomPrice;
+
+    if (roomsSnapshot.exists()) {
+      const rooms = roomsSnapshot.val();
+      const matchingRoom = Object.entries(rooms).find(([_, room]: [string, any]) => 
+        room.name === state.roomType
+      );
+      if (matchingRoom) {
+        roomId = matchingRoom[0];
+        roomPrice = matchingRoom[1].price;
+      }
+    }
+
+    // Prepare booking data
+    const bookingData = {
+      // Guest Information
+      guestName: state.guestName,
+      guestEmail: state.email,
+      guestPhone: state.phone,
+      guestAddress: "",
+      guestIdNumber: "",
+      numberOfGuests: state.adults + state.children,
+
+      // Booking Details
+      roomId: roomId,
+      checkInDate: state.checkIn,
+      checkOutDate: state.checkOut,
+      numberOfNights: nights,
+
+      // Pricing
+      roomRate: roomPrice,
+      additionalCharges: 0,
+      discount: 0,
+      totalAmount: roomPrice * nights * state.rooms,
+      paidAmount: 0,
+
+      // Payment & Status
+      paymentMethod: "Pending",
+      paymentStatus: "Pending",
+      bookingSource: "Website",
+      status: "Confirmed",
+
+      // Additional
+      specialRequests: state.requests,
+      notes: "",
+      country: state.country,
+
+      // Metadata
+      createdAt: Date.now(),
+      createdBy: "website",
+      updatedAt: Date.now(),
+    };
+
+    // Save to Firebase
+    const bookingsRef = ref(database, "bookings");
+    await push(bookingsRef, bookingData);
+
+    // Mark as submitted
+    setVal('isSubmitted', true);
+  } catch (error) {
+    console.error("Error saving booking:", error);
+    alert("There was an error processing your booking. Please try again or contact us directly.");
+  }
+};
   const renderStepIndicator = () => {
     const steps = ["Stay Details", "Guest Info", "Confirm"];
     return (
@@ -83,6 +233,8 @@ const BookingForm = ({ state, setState }: Props) => {
       </div>
     );
   };
+
+
 
   if (state.isSubmitted) {
     return (
