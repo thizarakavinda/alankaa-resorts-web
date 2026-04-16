@@ -47,7 +47,7 @@ const Part1Hero = () => {
   }, []);
 
   return (
-    <section ref={containerRef} className="relative h-[90vh] overflow-hidden bg-void">
+    <section ref={containerRef} className="relative min-h-[100vh] lg:h-[90vh] overflow-hidden bg-void flex flex-col justify-end max-md:pb-32">
       {/* back img */}
       <img
         ref={imageRef}
@@ -82,9 +82,9 @@ const Part1Hero = () => {
         whileInView={{ opacity: 1 }}
         transition={{ delay: 0.2, duration: 1 }}
         viewport={{ once: true }}
-        className="absolute top-0 left-0 p-[32px] lg:p-[56px]"
+        className="absolute top-0 left-0 p-[24px] lg:p-[56px]"
       >
-        <p className="font-jost text-[10px] text-gold uppercase tracking-[0.5em]">
+        <p className="font-jost text-[10px] text-gold uppercase tracking-[0.5em] max-md:tracking-[0.3em]">
           SRI LANKA · BADULLA DISTRICT · HALDUMMULLA
         </p>
       </motion.div>
@@ -95,14 +95,14 @@ const Part1Hero = () => {
         whileInView={{ opacity: 1 }}
         transition={{ delay: 0.1, duration: 1 }}
         viewport={{ once: true }}
-        className="absolute top-0 right-0 p-[32px] lg:p-[56px] text-right"
+        className="absolute top-0 right-0 p-[24px] lg:p-[56px] text-right"
       >
         <p className="font-cormorant italic text-[18px] text-smoke opacity-60">6°N 80°E</p>
-        <p className="font-jost text-[11px] text-gold uppercase tracking-[0.3em] mt-1">1,000m ASL</p>
+        <p className="font-jost text-[11px] text-gold uppercase tracking-[0.3em] mt-1 hidden md:block">1,000m ASL</p>
       </motion.div>
 
       {/* bottom center part */}
-      <div className="absolute inset-x-0 bottom-0 p-[32px] lg:p-[56px_80px] flex flex-col lg:flex-row justify-between items-end gap-12">
+      <div className="relative lg:absolute lg:inset-x-0 lg:bottom-0 p-[24px] lg:p-[56px_80px] mt-[120px] lg:mt-0 flex flex-col lg:flex-row justify-between items-start lg:items-end gap-12 z-10 w-full">
         {/* bottom lft */}
         <div className="w-full lg:w-auto">
           <p className="gold-label-on-image font-jost text-gold text-[10px] uppercase tracking-[0.4em] mb-4">
@@ -112,16 +112,16 @@ const Part1Hero = () => {
             <h2 ref={el => { headingRefs.current[0] = el; }} className="pb-1">Perched above the world,</h2>
             <h2 ref={el => { headingRefs.current[1] = el; }} className="pb-1">hidden in the clouds.</h2>
           </div>
-          <p className="hero-subtext-on-image font-dmSans text-[15px] text-smoke max-w-[520px] leading-[1.9] mt-5">
+          <p className="hero-subtext-on-image font-dmSans text-[15px] max-md:text-[14px] text-smoke max-w-[520px] leading-[1.9] mt-5">
             Nestled at 1,000 metres above sea level on ancient volcanic rock in Haldummulla, Badulla — A'Lankaa is one of Sri Lanka's most dramatically situated luxury resorts. Surrounded by misty mountains, tea-country roads, and the silence of clouds.
           </p>
 
           {/* stst */}
-          <div className="flex gap-8 lg:gap-[48px] mt-8 overflow-hidden items-center">
+          <div className="flex gap-4 lg:gap-[48px] mt-8 overflow-hidden items-center">
             <StatsCounter number="1,000m" label="Elevation" />
-            <div className="w-px h-[40px] bg-mist" />
-            <StatsCounter number="32km" label="from Badulla City" />
-            <div className="w-px h-[40px] bg-mist" />
+            <div className="w-px h-[40px] bg-mist max-md:mx-2" />
+            <StatsCounter number="32km" label="from Badulla" />
+            <div className="w-px h-[40px] bg-mist max-md:mx-2" />
             <StatsCounter number="5 hrs" label="from Colombo" />
           </div>
         </div>
@@ -132,14 +132,14 @@ const Part1Hero = () => {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.3, duration: 1, ease: 'easeOut' }}
           viewport={{ once: true }}
-          className="w-full lg:w-[280px] bg-black/85 backdrop-blur-[20px] border border-gold/20 border-l-[2px] border-l-gold p-8 rounded-[2px]"
+          className="w-full lg:w-[280px] bg-black/85 backdrop-blur-[20px] border border-gold/20 border-l-[2px] border-l-gold p-8 max-md:p-6 rounded-[2px]"
         >
           <p className="font-jost text-[9px] text-gold uppercase tracking-[0.3em]">
             HOW TO REACH US
           </p>
           <div className="w-[32px] h-[1px] bg-gold my-4" />
 
-          <div className="space-y-6">
+          <div className="space-y-6 max-md:space-y-4">
             <div className="flex gap-4">
               <Plane className="w-[14px] h-[14px] text-gold shrink-0 mt-1" />
               <div>
@@ -150,14 +150,14 @@ const Part1Hero = () => {
             <div className="flex gap-4">
               <Car className="w-[14px] h-[14px] text-gold shrink-0 mt-1" />
               <div>
-                <p className="card-heading-on-image font-dmSans font-medium text-[13px] text-cream">By Road from Colombo</p>
-                <p className="card-text-on-image font-dmSans font-light text-[12px] text-smoke mt-1">~5 hours via A4 highway</p>
+                <p className="card-heading-on-image font-dmSans font-medium text-[13px] text-cream">Road from Colombo</p>
+                <p className="card-text-on-image font-dmSans font-light text-[12px] text-smoke mt-1">~5 hrs via A4 highway</p>
               </div>
             </div>
             <div className="flex gap-4">
               <Train className="w-[14px] h-[14px] text-gold shrink-0 mt-1" />
               <div>
-                <p className="card-heading-on-image font-dmSans font-medium text-[13px] text-cream">Scenic Train to Badulla</p>
+                <p className="card-heading-on-image font-dmSans font-medium text-[13px] text-cream">Train to Badulla</p>
                 <p className="card-text-on-image font-dmSans font-light text-[12px] text-smoke mt-1">Then 32km drive to resort</p>
               </div>
             </div>
