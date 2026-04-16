@@ -40,8 +40,8 @@ export const Navbar = () => {
     <>
       <nav
         className={`fixed top-0 left-0 w-full z-[1000] px-6 md:px-12 py-4 md:py-6 transition-all duration-400 ease-in-out ${isScrolled
-            ? 'backdrop-blur-[20px] backdrop-saturate-150 py-4'
-            : 'bg-transparent'
+          ? 'backdrop-blur-[20px] backdrop-saturate-150 py-4'
+          : 'bg-transparent'
           }`}
         style={{
           backgroundColor: isScrolled ? 'var(--nav-bg)' : 'transparent',
@@ -108,15 +108,15 @@ export const Navbar = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[999] bg-void flex flex-col items-center justify-center pointer-events-auto"
+            className="fixed inset-0 z-[999] bg-void flex flex-col items-center justify-start pt-[120px] pb-[40px] px-6 pointer-events-auto overflow-y-auto"
           >
 
             <div
-              className="absolute inset-0 opacity-5 bg-center bg-cover pointer-events-none"
+              className="absolute inset-0 opacity-5 bg-center bg-cover pointer-events-none fixed"
               style={{ backgroundImage: 'linear-gradient(to bottom, #1E1E1E, #0E0E0E)' }}
             />
 
-            <ul className="flex flex-col items-center gap-6 z-10">
+            <ul className="flex flex-col items-center gap-6 z-10 w-full max-w-[400px]">
               {navLinks.map((link, i) => (
                 <motion.li
                   key={link.name}
@@ -126,7 +126,8 @@ export const Navbar = () => {
                 >
                   <Link
                     to={link.path}
-                    className="font-cormorant text-[48px] text-ivory hover:text-gold transition-colors duration-300 hoverable"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="font-cormorant text-[40px] md:text-[48px] text-ivory hover:text-gold transition-colors duration-300 hoverable"
                   >
                     {link.name}
                   </Link>
@@ -136,11 +137,12 @@ export const Navbar = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4, duration: 0.4 }}
-                className="mt-8"
+                className="mt-8 w-full flex flex-col items-center"
               >
                 <Link
                   to="/booking"
-                  className="border border-gold px-12 py-4 font-jost text-[14px] text-gold uppercase tracking-[0.2em] hover:bg-gold hover:text-void transition-colors duration-300 hoverable"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="border border-gold px-12 py-4 font-jost text-[14px] text-gold uppercase tracking-[0.2em] hover:bg-gold hover:text-void transition-colors duration-300 hoverable inline-block text-center w-full max-w-[240px]"
                 >
                   Book Now
                 </Link>
@@ -150,7 +152,8 @@ export const Navbar = () => {
                   justifyContent: 'space-between',
                   padding: '16px 0',
                   borderTop: '1px solid var(--clr-mist)',
-                  marginTop: '24px',
+                  marginTop: '32px',
+                  width: '100%'
                 }}>
                   <span style={{
                     fontFamily: 'Jost',
