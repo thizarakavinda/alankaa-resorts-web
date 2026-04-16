@@ -34,45 +34,45 @@ const RoomsHero = () => {
       }}></div>
 
       {/* top right corner  */}
-      <div className="absolute top-[40px] right-[80px] z-20">
+      <div className="absolute top-[40px] right-[80px] max-md:top-[20px] max-md:right-[20px] z-20 hidden md:block">
         <p className="font-['Jost'] text-[11px] text-[var(--clr-fog)]">
           Home / Rooms & Suites
         </p>
       </div>
 
       {/* cont 3 */}
-      <div className="absolute bottom-[80px] left-[80px] z-20">
-        <p className="font-['Jost'] text-[10px] text-[var(--clr-gold)] uppercase tracking-[0.5em] mb-4 gold-label-on-image">
+      <div className="absolute bottom-[80px] left-[80px] w-full pr-8 max-md:bottom-[40px] max-md:left-[20px] max-md:pr-[20px] z-20">
+        <p className="font-['Jost'] text-[10px] max-md:text-[8px] text-[var(--clr-gold)] uppercase tracking-[0.5em] max-md:tracking-[0.3em] mb-4 gold-label-on-image">
           WATTAGAMUWA · HALDUMMULLA · SRI LANKA
         </p>
 
-        <h1 ref={headingRef} className="font-['Cormorant'] text-[clamp(56px,8vw,110px)] text-[var(--clr-ivory)] font-light leading-[0.9] hero-headline-on-image">
+        <h1 ref={headingRef} className="font-['Cormorant'] text-[clamp(40px,10vw,110px)] max-md:text-[44px] text-[var(--clr-ivory)] font-light leading-[0.9] hero-headline-on-image whitespace-normal w-full md:whitespace-nowrap">
           Rooms & Suites
         </h1>
 
-        <div className="mt-[20px] font-['DM_Sans'] text-[16px] text-[var(--clr-smoke)] hero-subtext-on-image">
+        <div className="mt-[20px] font-['DM_Sans'] text-[16px] max-md:text-[14px] text-[var(--clr-smoke)] hero-subtext-on-image">
           <p>Three categories of luxury suites.</p>
           <p>Each one, extraordinary.</p>
         </div>
 
         {/* stat row*/}
-        <div className="flex gap-[48px] mt-[32px]">
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.8 }}>
-            <p className="font-['Cormorant'] text-[48px] text-[var(--clr-gold)] leading-none gold-label-on-image">22</p>
+        <div className="flex gap-[48px] max-md:gap-6 max-md:flex-wrap mt-[32px] max-md:mt-6">
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.8 }} className="min-w-fit">
+            <p className="font-['Cormorant'] text-[48px] max-md:text-[36px] text-[var(--clr-gold)] leading-none gold-label-on-image">22</p>
             <p className="font-['Jost'] text-[9px] text-[var(--clr-fog)] uppercase mt-1 hero-subtext-on-image">Total Suites</p>
           </motion.div>
 
-          <div className="w-[1px] bg-[var(--clr-mist)] h-auto"></div>
+          <div className="w-[1px] bg-[var(--clr-mist)] h-auto max-md:hidden"></div>
 
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.9 }}>
-            <p className="font-['Cormorant'] text-[48px] text-[var(--clr-gold)] leading-none gold-label-on-image">3</p>
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.9 }} className="min-w-fit">
+            <p className="font-['Cormorant'] text-[48px] max-md:text-[36px] text-[var(--clr-gold)] leading-none gold-label-on-image">3</p>
             <p className="font-['Jost'] text-[9px] text-[var(--clr-fog)] uppercase mt-1 hero-subtext-on-image">Suite Categories</p>
           </motion.div>
 
-          <div className="w-[1px] bg-[var(--clr-mist)] h-auto"></div>
+          <div className="w-[1px] bg-[var(--clr-mist)] h-auto max-md:hidden"></div>
 
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 1.0 }}>
-            <p className="font-['Cormorant'] text-[48px] text-[var(--clr-gold)] leading-none gold-label-on-image">50–75</p>
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 1.0 }} className="min-w-fit">
+            <p className="font-['Cormorant'] text-[48px] max-md:text-[36px] text-[var(--clr-gold)] leading-none gold-label-on-image">50–75</p>
             <p className="font-['Jost'] text-[9px] text-[var(--clr-fog)] uppercase mt-1 hero-subtext-on-image">Square Metres</p>
           </motion.div>
         </div>
