@@ -11,7 +11,7 @@ const comparisonRows = [
   { label: 'Lunch/Dinner', values: [true, true, true] },
   { label: 'AC & Fan', values: [true, true, true] },
   { label: 'Hot Water', values: [true, true, true] },
-  { label: 'Availability', values: ['10 Suites', '6 Suites', '6 Suites'] },
+  { label: 'Availability', values: ['8 Suites', '6 Suites', '6 Suites'] },
 ];
 
 const RoomsComparisonTable = () => {

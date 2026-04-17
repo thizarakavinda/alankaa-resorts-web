@@ -58,7 +58,7 @@ const RoomsHero = () => {
         {/* stat row*/}
         <div className="flex gap-[48px] max-md:gap-6 max-md:flex-wrap mt-[32px] max-md:mt-6">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.8 }} className="min-w-fit">
-            <p className="font-['Cormorant'] text-[48px] max-md:text-[36px] text-[var(--clr-gold)] leading-none gold-label-on-image">22</p>
+            <p className="font-['Cormorant'] text-[48px] max-md:text-[36px] text-[var(--clr-gold)] leading-none gold-label-on-image">20</p>
             <p className="font-['Jost'] text-[9px] text-[var(--clr-fog)] uppercase mt-1 hero-subtext-on-image">Total Suites</p>
           </motion.div>
 

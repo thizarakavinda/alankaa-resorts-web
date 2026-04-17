@@ -3,7 +3,7 @@ import { Hero } from '../components/about/Hero';
 import { OriginStory } from '../components/about/OriginStory';
 import { Philosophy } from '../components/about/Philosophy';
 import { Timeline } from '../components/about/Timeline';
-import { Team } from '../components/about/Team';
+
 import { Awards } from '../components/about/Awards';
 import { Location } from '../components/about/Location';
 
@@ -20,7 +20,7 @@ export const About = () => {
       <OriginStory />
       <Philosophy />
       <Timeline />
-      <Team />
+      {/* <Team /> */}
       <Awards />
       <Location />
     </motion.main>
