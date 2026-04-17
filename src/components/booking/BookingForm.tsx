@@ -1,16 +1,14 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { Check, ChevronDown, CalendarDays } from 'lucide-react';
 import type { BookingState } from './bookingTypes';
-import { useState } from 'react';
-import { ref, push, onValue, get } from "firebase/database";
+import { useState , useEffect } from 'react';
+import { ref, push, get } from "firebase/database";
 import { database } from "../../config/firebaseConfig";
+import { getAvailableCount } from '../../utils/roomAvailability';
 const roomOptions = [
-  { id: 'standard', name: '🛏 Standard Room', price: 120 },
-  { id: 'deluxe', name: '🌿 Deluxe Room', price: 150 },
-  { id: 'mountain', name: '🏔 Mountain View Suite', price: 175 },
-  { id: 'pool', name: '♾ Infinity Pool Suite', price: 195 },
-  { id: 'indrajith', name: '🌅 Indrajith Sunrise Suite', price: 220 },
-  { id: 'villa', name: '🏡 Private Villa', price: 350 },
+  { id: 'sunrise', name: '🌅 Sunrise, Mountain & Valley View Suite', price: 230, maxRooms: 10 },
+  { id: 'sunset', name: '🌄 Sunset & Mountain View Suite', price: 160, maxRooms: 6 },
+  { id: 'garden', name: '🌿 Garden View Suite', price: 130, maxRooms: 6 },
 ];
 
 type Props = {
@@ -22,7 +20,7 @@ const inputClass = "w-full bg-transparent border-none border-b border-mist py-4 
 
 const BookingForm = ({ state, setState }: Props) => {
   const [focusedField, setFocusedField] = useState<string | null>(null);
-
+ const [availableRooms, setAvailableRooms] = useState<number>(10);
   const setVal = (key: keyof BookingState, val: string | number | boolean) => {
     setState(prev => ({ ...prev, [key]: val }));
   };
@@ -39,69 +37,35 @@ const BookingForm = ({ state, setState }: Props) => {
   };
 
   const isStep1Valid = state.guestName && state.email && state.phone && state.address && state.idNumber && state.numberOfGuests > 0;
-  const isStep2Valid = state.checkIn && state.checkOut && state.roomType && state.rooms > 0;
+const isStep2Valid = state.checkIn && state.checkOut && state.roomType && state.rooms > 0 && availableRooms > 0;
   const isStep3Valid = !!state.paymentMethod && !!state.paymentStatus && !!state.bookingSource;
 
 
+ 
+
+// Add this useEffect after existing ones:
+useEffect(() => {
+  if (state.roomType && state.checkIn && state.checkOut) {
+    const opt = roomOptions.find(o => o.name === state.roomType);
+    if (opt) {
+      getAvailableCount(opt.id, state.checkIn, state.checkOut).then(setAvailableRooms);
+    }
+  } else {
+    const opt = roomOptions.find(o => o.name === state.roomType);
+    setAvailableRooms(opt?.maxRooms ?? 10);
+  }
+}, [state.roomType, state.checkIn, state.checkOut]);
 
   // Check room availability for selected dates
 const checkRoomAvailability = async (roomType: string, checkIn: string, checkOut: string) => {
   try {
-    const bookingsRef = ref(database, "bookings");
-    const snapshot = await get(bookingsRef);
-    
-    if (!snapshot.exists()) {
-      return true; // No bookings yet, room is available
-    }
-
-    const bookings = snapshot.val();
-    const checkInDate = new Date(checkIn);
-    const checkOutDate = new Date(checkOut);
-
-    // Find the room ID that matches our roomType
-    const roomsRef = ref(database, "rooms");
-    const roomsSnapshot = await get(roomsRef);
-    
-    if (!roomsSnapshot.exists()) {
-      return true; // No rooms in database yet
-    }
-
-    const rooms = roomsSnapshot.val();
-    const matchingRoom = Object.entries(rooms).find(([_, room]: [string, any]) => 
-      room.name === roomType
-    );
-
-    if (!matchingRoom) {
-      return true; // Room type not found in database, allow booking
-    }
-
-    const roomId = matchingRoom[0];
-
-    // Check if this room is already booked for these dates
-    for (const [_, booking] of Object.entries(bookings) as [string, any][]) {
-      // Skip cancelled bookings
-      if (booking.status === "Cancelled") continue;
-      
-      // Only check bookings for this specific room
-      if (booking.roomId !== roomId) continue;
-
-      const bookedCheckIn = new Date(booking.checkInDate);
-      const bookedCheckOut = new Date(booking.checkOutDate);
-
-      // Check for date overlap
-      if (
-        (checkInDate >= bookedCheckIn && checkInDate < bookedCheckOut) ||
-        (checkOutDate > bookedCheckIn && checkOutDate <= bookedCheckOut) ||
-        (checkInDate <= bookedCheckIn && checkOutDate >= bookedCheckOut)
-      ) {
-        return false; // Room is not available
-      }
-    }
-
-    return true; // Room is available
+    const selectedOpt = roomOptions.find(o => o.name === roomType);
+    if (!selectedOpt) return true;
+    const available = await getAvailableCount(selectedOpt.id, checkIn, checkOut);
+    return available >= state.rooms; // check if enough rooms available
   } catch (error) {
     console.error("Error checking availability:", error);
-    return true; // On error, allow booking (fail open)
+    return true;
   }
 };
   const handleNext = () => setVal('step', state.step + 1);
@@ -130,21 +94,10 @@ const handleConfirm = async () => {
     const nights = Math.max(1, Math.ceil((checkOutDate.getTime() - checkInDate.getTime()) / (1000 * 3600 * 24)));
 
     // Find the matching room in database to get roomId
-    const roomsRef = ref(database, "rooms");
-    const roomsSnapshot = await get(roomsRef);
-    let roomId = "";
-    let roomPrice = state.roomPrice;
+    const selectedOpt = roomOptions.find(o => o.name === state.roomType);
+const roomId = selectedOpt?.id || "";
+const roomPrice = selectedOpt?.price || state.roomPrice;
 
-    if (roomsSnapshot.exists()) {
-      const rooms = roomsSnapshot.val();
-      const matchingRoom = Object.entries(rooms).find(([_, room]: [string, any]) => 
-        room.name === state.roomType
-      );
-      if (matchingRoom) {
-        roomId = matchingRoom[0];
-        roomPrice = matchingRoom[1].price;
-      }
-    }
 
     // Prepare booking data
     const bookingData = {
@@ -152,9 +105,9 @@ const handleConfirm = async () => {
       guestName: state.guestName,
       guestEmail: state.email,
       guestPhone: state.phone,
-      guestAddress: "",
-      guestIdNumber: "",
-      numberOfGuests: state.adults + state.children,
+     guestAddress: state.address || "",
+guestIdNumber: state.idNumber || "",
+numberOfGuests: state.numberOfGuests || 0,
 
       // Booking Details
       roomId: roomId,
@@ -178,7 +131,7 @@ const handleConfirm = async () => {
       // Additional
       specialRequests: state.requests,
       notes: "",
-      country: state.country,
+country: state.country || "",
 
       // Metadata
       createdAt: Date.now(),
@@ -426,8 +379,13 @@ const handleConfirm = async () => {
                     <label className="font-dmSans text-[12px] text-fog mb-2">Number of Rooms*</label>
                     <div className="relative">
                       <select value={state.rooms} onChange={(e) => setVal('rooms', Number(e.target.value))} className={`${inputClass} !py-2 appearance-none cursor-pointer pr-10 text-cream`}>
-                        {[...Array(10)].map((_, i) => <option key={i + 1} value={i + 1} className="bg-charcoal text-cream">{i + 1}</option>)}
-                      </select>
+{availableRooms === 0 ? (
+  <option value={0} disabled>No rooms available for these dates</option>
+) : (
+  [...Array(availableRooms)].map((_, i) => (
+    <option key={i + 1} value={i + 1} className="bg-charcoal text-cream">{i + 1}</option>
+  ))
+)}                    </select>
                       <ChevronDown className="absolute right-0 top-1/2 -translate-y-1/2 w-5 h-5 text-gold pointer-events-none" />
                     </div>
                   </div>
