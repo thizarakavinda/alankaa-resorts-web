@@ -7,6 +7,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { LocationShowcase } from '../components/home/LocationShowcase';
 import MistCanvas from '../components/MistCanvas';
+import ReviewsSection from '../components/home/ReviewsSection';
 
 export const Home = () => {
   const heroTextRef = useRef<HTMLHeadingElement>(null);
@@ -191,6 +192,7 @@ export const Home = () => {
 
       <LocationShowcase />
 
+      <ReviewsSection />
 
       <div className="h-[20vh] bg-void" />
 

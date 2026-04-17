@@ -93,7 +93,7 @@ export const Footer = () => {
         {/* lower foot */}
         <div className="border-t border-mist px-6 md:px-20 py-6 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="font-dmSans text-[12px] text-fog">
-            © 2025 A'Lankaa Resorts & Spa. All rights reserved.
+            © 2025 A'Lankaa Resorts & Spa. All rights reserved. | <a href="https://sysflicx.lk/" target="_blank" rel="noopener noreferrer" className="hover:text-gold transition-colors hoverable">Develop by Sysflicx</a>
           </p>
           <div className="flex items-center gap-4 font-dmSans text-[12px] text-fog">
             <Link to="/privacy" className="hover:text-gold transition-colors hoverable">Privacy Policy</Link>

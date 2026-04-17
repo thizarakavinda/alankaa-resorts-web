@@ -17,6 +17,7 @@ const Facilities = lazy(() => import('./pages/Facilities'));
 const Contact = lazy(() => import('./pages/Contact.tsx'));
 const Booking = lazy(() => import('./pages/Booking'));
 const Gallery = lazy(() => import('./pages/Gallery'));
+const Places = lazy(() => import('./pages/Places'));
 
 import { ThemeProvider } from './context/ThemeContext';
 
@@ -35,6 +36,7 @@ const AnimatedRoutes = () => {
           <Route path="/rooms" element={<Rooms />} />
           <Route path="/facilities" element={<Facilities />} />
           <Route path="/gallery" element={<Gallery />} />
+          <Route path="/places" element={<Places />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/booking" element={<Booking />} />
           <Route path="*" element={<PlaceholderPage title="404 Not Found" />} />

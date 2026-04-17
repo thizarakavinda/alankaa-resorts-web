@@ -29,7 +29,7 @@ export const suites = [
       make this the ultimate mountain escape.`,
     size: '75 sq m',
     view: 'Views of 5 Provinces',
-    available: 10,
+    available: 8,
     basePrice: 230,
     image: '/images/sunrise room 1.jpg',
     features: [
