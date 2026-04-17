@@ -12,6 +12,7 @@ export type BookingState = {
   checkIn: string;
   checkOut: string;
   rooms: number;
+  maxRooms: number;
   roomPrice: number;
 
   // 3 - pricing payment
