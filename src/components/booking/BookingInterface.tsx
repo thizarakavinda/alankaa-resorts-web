@@ -5,6 +5,7 @@ import type { BookingState } from './bookingTypes';
 
 const BookingInterface = () => {
   const [state, setState] = useState<BookingState>({
+    country: '',
     guestName: '',
     email: '',
     phone: '',
@@ -15,6 +16,7 @@ const BookingInterface = () => {
     checkIn: '',
     checkOut: '',
     rooms: 1,
+    maxRooms: 10,
     roomPrice: 0,
     additionalCharges: 0,
     discount: 0,

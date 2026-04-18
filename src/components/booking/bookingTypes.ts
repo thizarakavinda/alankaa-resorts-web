@@ -1,4 +1,5 @@
 export type BookingState = {
+  country: string;
   // 1- guets info
   guestName: string;
   email: string;
