@@ -38,10 +38,7 @@ const BookingForm = ({ state, setState }: Props) => {
 
   const isStep1Valid = state.guestName && state.email && state.phone && state.address && state.idNumber && state.numberOfGuests > 0;
 const isStep2Valid = state.checkIn && state.checkOut && state.roomType && state.rooms > 0 && availableRooms > 0;
-  const isStep3Valid = !!state.paymentMethod && !!state.paymentStatus && !!state.bookingSource;
-
-
- 
+  const isStep3Valid = !!state.bookingSource;
 
 // Add this useEffect after existing ones:
 useEffect(() => {
@@ -433,18 +430,6 @@ country: state.country || "",
                   </div>
 
                   <div className="relative">
-                    <label className={getLabelClass('additionalCharges', String(state.additionalCharges))}>Additional Charges ($)</label>
-                    <input type="number" min="0" value={state.additionalCharges} onChange={(e) => setVal('additionalCharges', Number(e.target.value))} onFocus={() => handleFocus('additionalCharges')} onBlur={handleBlur} className={inputClass} />
-                  </div>
-                </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-6">
-                  <div className="relative">
-                    <label className={getLabelClass('discount', String(state.discount))}>Discount ($)</label>
-                    <input type="number" min="0" value={state.discount} onChange={(e) => setVal('discount', Number(e.target.value))} onFocus={() => handleFocus('discount')} onBlur={handleBlur} className={inputClass} />
-                  </div>
-
-                  <div className="relative">
                     <label className="font-dmSans text-[12px] text-fog mb-2 block">Total Amount</label>
                     <div className={`${inputClass} !py-2 text-gold bg-[rgba(212,175,55,0.05)] px-3 rounded-sm font-medium`}>
                       ${totalAmount}
@@ -452,41 +437,7 @@ country: state.country || "",
                   </div>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
-                  <div className="relative">
-                    <label className={getLabelClass('amountPaid', String(state.amountPaid))}>Amount Paid ($)</label>
-                    <input type="number" min="0" value={state.amountPaid} onChange={(e) => setVal('amountPaid', Number(e.target.value))} onFocus={() => handleFocus('amountPaid')} onBlur={handleBlur} className={inputClass} />
-                  </div>
-                </div>
-
                 <div className="grid grid-cols-1 gap-8 mb-8">
-                  <div className="relative flex flex-col">
-                    <label className="font-dmSans text-[12px] text-fog mb-2">Payment Method*</label>
-                    <div className="relative">
-                      <select value={state.paymentMethod} onChange={(e) => setVal('paymentMethod', e.target.value)} className={`${inputClass} !py-2 appearance-none cursor-pointer pr-10 text-cream`}>
-                        <option value="pending" className="bg-charcoal text-cream">Pending</option>
-                        <option value="cash" className="bg-charcoal text-cream">Cash</option>
-                        <option value="credit_card" className="bg-charcoal text-cream">Credit Card</option>
-                        <option value="debit_card" className="bg-charcoal text-cream">Debit Card</option>
-                        <option value="bank_transfer" className="bg-charcoal text-cream">Bank Transfer</option>
-                        <option value="online_payment" className="bg-charcoal text-cream">Online Payment</option>
-                      </select>
-                      <ChevronDown className="absolute right-0 top-1/2 -translate-y-1/2 w-5 h-5 text-gold pointer-events-none" />
-                    </div>
-                  </div>
-
-                  <div className="relative flex flex-col">
-                    <label className="font-dmSans text-[12px] text-fog mb-2">Payment Status*</label>
-                    <div className="relative">
-                      <select value={state.paymentStatus} onChange={(e) => setVal('paymentStatus', e.target.value)} className={`${inputClass} !py-2 appearance-none cursor-pointer pr-10 text-cream`}>
-                        <option value="pending" className="bg-charcoal text-cream">Pending</option>
-                        <option value="partial" className="bg-charcoal text-cream">Partial</option>
-                        <option value="paid" className="bg-charcoal text-cream">Paid in Full</option>
-                      </select>
-                      <ChevronDown className="absolute right-0 top-1/2 -translate-y-1/2 w-5 h-5 text-gold pointer-events-none" />
-                    </div>
-                  </div>
-
                   <div className="relative flex flex-col">
                     <label className="font-dmSans text-[12px] text-fog mb-2">Booking Source*</label>
                     <div className="relative">
