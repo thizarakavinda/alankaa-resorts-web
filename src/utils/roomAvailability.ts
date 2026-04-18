@@ -1,7 +1,7 @@
 import { ref, get } from "firebase/database";
 import { database } from "../config/firebaseConfig";
 
-export const SUITE_CAPACITY = {
+export const SUITE_CAPACITY: Record<string, number> = {
   sunrise: 10,
   sunset: 6,
   garden: 6,
