@@ -1,8 +1,6 @@
 export const CATEGORIES = ["All", "Rooms", "Pool & Spa", "Dining", "Views", "Exterior"];
 
 const HEIGHTS = ["aspect-[4/3]", "aspect-[2/3]", "aspect-square"];
-const CATEGORIES_NO_ALL = ["Rooms", "Pool & Spa", "Dining", "Views", "Exterior"];
-
 export type GalleryImageType = {
   id: number;
   src: string;
@@ -11,19 +9,47 @@ export type GalleryImageType = {
   heightClass: string;
 };
 
-export const MOCK_IMAGES: GalleryImageType[] = Array.from({ length: 24 }).map((_, i) => ({
+const rawImages = [
+  // Rooms
+  { src: '/images/sunset room.jpg', category: 'Rooms' },
+  { src: '/images/sunrise room 1.jpg', category: 'Rooms' },
+  { src: '/images/room hero.png', category: 'Rooms' },
+  { src: '/images/garden view.jpg', category: 'Rooms' },
+  { src: '/images/view room.jpg', category: 'Rooms' },
+
+  // Pool & Spa
+  { src: '/images/pool view.jpg', category: 'Pool & Spa' },
+  { src: '/images/pool 8.jpg', category: 'Pool & Spa' },
+  { src: 'https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&q=80&w=1200', category: 'Pool & Spa' },
+  { src: '/images/pool 6.jpg', category: 'Pool & Spa' },
+  { src: 'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/30/b0/1e/0c/caption.jpg?w=1200&h=-1&s=1', category: 'Pool & Spa' },
+
+  // Dining
+  { src: '/images/rock 2.jpg', category: 'Dining' },
+  { src: '/images/rock 1.jpeg', category: 'Dining' },
+  { src: '/images/din 3.jpg', category: 'Dining' },
+  { src: '/images/nature dining.png', category: 'Dining' },
+  { src: '/images/bar 1.jpg', category: 'Dining' },
+
+  // Views
+  { src: '/images/sky view.jpg', category: 'Views' },
+  { src: '/images/view 2.jpg', category: 'Views' },
+  { src: '/images/view 3.jpg', category: 'Views' },
+  { src: '/images/view 6.jpg', category: 'Views' },
+  { src: '/images/view 5.jpg', category: 'Views' },
+
+  // Exterior
+  { src: '/images/ext 1.jpg', category: 'Exterior' },
+  { src: '/images/ext 2.jpg', category: 'Exterior' },
+  { src: '/images/ext 3.jpg', category: 'Exterior' },
+  { src: '/images/ext 4.jpg', category: 'Exterior' },
+  { src: '/images/ext 5.jpg', category: 'Exterior' },
+];
+
+export const MOCK_IMAGES: GalleryImageType[] = rawImages.map((img, i) => ({
   id: i,
-  src: `https://images.unsplash.com/photo-${[
-    '1582719478250-c89cae4dc85b', // room
-    '1520250497591-112f2f40a3f4', // poolI
-    '1517248135467-4c7edcad34c4', // dining
-    '1506929562872-bb421503ef21', // landscape
-    '1542314831-c6a4d27d66f6', // resort
-    '1572331165275-cd812ab5e1f0', // villa
-    '1571896349842-33c89424de2d', // bed
-    '1514933651103-005eec06c04b', // nature
-  ][i % 8]}?auto=format&fit=crop&q=80`,
-  category: CATEGORIES_NO_ALL[i % CATEGORIES_NO_ALL.length],
-  title: `A'Lankaa Collection · ${CATEGORIES_NO_ALL[i % CATEGORIES_NO_ALL.length]}`,
+  src: img.src,
+  category: img.category,
+  title: `A'Lankaa Collection · ${img.category}`,
   heightClass: HEIGHTS[i % HEIGHTS.length]
 }));

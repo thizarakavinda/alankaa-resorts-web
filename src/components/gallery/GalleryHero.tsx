@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 
 const images = [
-  "/images/room hero.png", // 0
+  "/images/pool 6.jpg", // 0
   "/images/sky view.jpg", // 1
   "/images/kandiyan 1.jpg", // 2
   "/images/rock 2.jpg", // 3

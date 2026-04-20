@@ -5,7 +5,7 @@ const GalleryDrone = () => {
     <section className="relative w-full h-[60vh] md:h-[70vh] bg-charcoal overflow-hidden border-t border-[rgba(255,255,255,0.03)] flex flex-col items-center justify-center">
       {/* back imgs */}
       <img
-        src="https://images.unsplash.com/photo-1506929562872-bb421503ef21?auto=format&fit=crop&q=80"
+        src="images/view 6.jpg"
         alt="Aerial Drone perspective"
         className="absolute inset-0 w-full h-full object-cover"
       />
