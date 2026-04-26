@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import {
-  Coffee, UtensilsCrossed, Waves,
+  Coffee, Waves,
   Wind, Droplets, Mountain,
   Home, Sparkles, Wifi
 } from 'lucide-react';

@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion';
 import { Check, BedDouble, Users, Eye, LayoutGrid } from 'lucide-react';
-import { calculateTotal } from '../../data/roomsData';
 
 interface SuiteSpec {
   size: string;
