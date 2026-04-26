@@ -15,7 +15,7 @@ const milestones = [
   {
     year: '2021',
     title: 'The First Stones',
-    text: "Foundation completed on ancient bedrock at exactly 1,000m above sea level"
+    text: "Foundation completed on ancient bedrock at exactly 1,200m above sea level"
   },
   {
     year: '2022',

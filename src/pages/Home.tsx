@@ -137,7 +137,7 @@ export const Home = () => {
             A Sanctuary Above the Clouds.
           </h2>
           <p className="font-dmSans text-[16px] text-smoke leading-relaxed max-w-2xl mx-auto">
-            Perched 1,000 meters above sea level in the misty mountains of Haldummulla, A'Lankaa Resorts & Spa is an immersive digital experience—a retreat where architectural elegance seamlessly blends with breathtaking natural panoramas.
+            Perched 1,200 meters above sea level in the misty mountains of Haldummulla, A'Lankaa Resorts & Spa is an immersive digital experience—a retreat where architectural elegance seamlessly blends with breathtaking natural panoramas.
           </p>
 
           <div className="flex justify-center items-center gap-10 md:gap-20 mt-16 md:mt-24 pointer-events-auto">

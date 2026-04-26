@@ -47,6 +47,9 @@ const RoomsContact = () => {
         <p className="font-['Jost'] text-[10px] text-[var(--clr-fog)] text-center mt-[8px]">
           Our team responds within 2 hours
         </p>
+        <p className="font-['Jost'] text-[10px] text-[var(--clr-fog)] text-center mt-[4px]">
+          Check-in 12pm | Check-out 10am
+        </p>
       </div>
 
     </section>

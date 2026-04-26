@@ -30,7 +30,7 @@ const GalleryDrone = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="font-cormorant text-4xl md:text-6xl text-ivory mb-10 leading-tight hero-headline-on-image"
         >
-          1,000 metres of <br className="hidden md:block" />
+          1,200 metres of <br className="hidden md:block" />
           pure perspective.
         </motion.h2>
 

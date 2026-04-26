@@ -1,9 +1,9 @@
 import { motion } from 'framer-motion';
 
 const images = [
-  "/images/pool 6.jpg", // 0
+  "/images/pool view.jpg", // 0
   "/images/sky view.jpg", // 1
-  "/images/kandiyan 1.jpg", // 2
+  "/images/infinity-pool-family.png", // 2
   "/images/rock 2.jpg", // 3
   "/images/kandiyan 2.jpg"  // 4
 ];

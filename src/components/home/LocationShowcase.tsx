@@ -99,7 +99,7 @@ const Part1Hero = () => {
         className="absolute top-0 right-0 p-[24px] lg:p-[56px] text-right"
       >
         <p className="font-cormorant italic text-[18px] text-smoke opacity-60">6°N 80°E</p>
-        <p className="font-jost text-[11px] text-gold uppercase tracking-[0.3em] mt-1 hidden md:block">1,000m ASL</p>
+        <p className="font-jost text-[11px] text-gold uppercase tracking-[0.3em] mt-1 hidden md:block">1,200m ASL</p>
       </motion.div>
 
       {/* bottom center part */}
@@ -380,7 +380,7 @@ const Part3Timeline = () => {
     { icon: Plane, title: "Bandaranaike Airport", detail: "Colombo, Sri Lanka", badge: "START" },
     { icon: Car, title: "Colombo to Badulla", detail: "Via A4 Highway", badge: "~5 hours" },
     { icon: MapPin, title: "Badulla City", detail: "Uva Province", badge: "32km left" },
-    { icon: Star, title: "A'Lankaa Resorts & Spa", detail: "Haldummulla · 1,000m ASL", badge: "ARRIVED ✦", isFinal: true }
+    { icon: Star, title: "A'Lankaa Resorts & Spa", detail: "Haldummulla · 1,200m ASL", badge: "ARRIVED ✦", isFinal: true }
   ];
 
   return (

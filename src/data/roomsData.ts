@@ -1,12 +1,9 @@
-// Pricing Calculation Helper
 export const calculateTotal = (baseUSD: number) => {
-  const tax = baseUSD * 0.23;        // 23% prevailing tax
-  const service = baseUSD * 0.10;   // 10% service charge
-  const total = baseUSD + tax + service;
+  const total = baseUSD;
   return {
     base: baseUSD,
-    tax: tax.toFixed(2),
-    service: service.toFixed(2),
+    tax: '0.00',
+    service: '0.00',
     total: total.toFixed(2),
   };
 };
@@ -22,7 +19,7 @@ export const suites = [
     name: 'Sunrise, Mountain & Valley View Suite',
     shortName: 'Sunrise Suite',
     tagline: 'Wake up inside the most spectacular sunrise in Sri Lanka.',
-    description: `Perched at 1,000 metres above sea level, 
+    description: `Perched at 1,200 metres above sea level, 
       our signature Sunrise Suites offer breathtaking views 
       spanning parts of five provinces. Floor-to-ceiling 
       panoramas, private balcony, and a luxurious jacuzzi 
@@ -30,7 +27,7 @@ export const suites = [
     size: '75 sq m',
     view: 'Views of 5 Provinces',
     available: 8,
-    basePrice: 230,
+    basePrice: 310,
     image: '/images/sunrise room 1.jpg',
     features: [
       'Panoramic views of 5 provinces',
@@ -39,7 +36,6 @@ export const suites = [
       'Hot water shower',
       'Air conditioning & ceiling fan',
       'Complimentary Breakfast (BB)',
-      'Complimentary Lunch or Dinner',
       'Daily housekeeping',
     ],
     specs: {
@@ -66,7 +62,7 @@ export const suites = [
     size: '55 sq m',
     view: 'Sunset & Mountain View',
     available: 6,
-    basePrice: 160,
+    basePrice: 215,
     image: '/images/sunset room.jpg',
     features: [
       'Sunset & mountain panoramic views',
@@ -75,7 +71,6 @@ export const suites = [
       'Hot water shower',
       'Air conditioning & ceiling fan',
       'Complimentary Breakfast (BB)',
-      'Complimentary Lunch or Dinner',
       'Daily housekeeping',
     ],
     specs: {
@@ -102,14 +97,13 @@ export const suites = [
     size: '50 sq m',
     view: 'Lush Garden View',
     available: 6,
-    basePrice: 130,
+    basePrice: 175,
     image: '/images/garden view.jpg',
     features: [
       'Lush tropical garden views',
       'Hot water shower',
       'Air conditioning & ceiling fan',
       'Complimentary Breakfast (BB)',
-      'Complimentary Lunch or Dinner',
       'Daily housekeeping',
     ],
     specs: {
