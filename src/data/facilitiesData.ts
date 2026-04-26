@@ -1,5 +1,5 @@
 import {
-    Clock, ThermometerSun, Sun, Coffee, Mountain,
+    Clock, Sun, Coffee, Mountain,
     Droplets, Wind, Waves, HeartHandshake, Sparkles, Activity,
     Utensils, Leaf, Wine, Map, PartyPopper,
     Dumbbell, Calendar, Bed, Users, Baby,
