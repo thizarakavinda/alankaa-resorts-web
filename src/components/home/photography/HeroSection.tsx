@@ -64,7 +64,7 @@ const HeroSection = () => {
         </div>
 
         <p className="hero-subtext-on-image font-dmSans text-[17px] text-smoke font-light max-w-[580px] mx-auto" data-aos="fade-up" data-aos-delay="300">
-          At 1,000 metres above sea level, every frame is extraordinary. Every backdrop, unforgettable.
+          At 1,200 metres above sea level, every frame is extraordinary. Every backdrop, unforgettable.
         </p>
       </div>
 
