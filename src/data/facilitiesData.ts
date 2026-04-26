@@ -24,7 +24,7 @@ export interface FacilityItem {
 
 export interface ServiceItem {
     title: string;
-    icon: string; 
+    icon: string;
 }
 
 export interface SpaTreatmentItem {
@@ -39,15 +39,14 @@ export const facilitiesData: FacilityItem[] = [
         id: 1,
         label: "SIGNATURE EXPERIENCE",
         title: "Infinity Pool & Sun Terrace",
-        body: "Our heated infinity pool at 1,000m appears to dissolve into the mountain skyline. Mornings here are unlike anything else on earth.",
+        body: "Our infinity pool at 1,200m appears to dissolve into the mountain skyline. Mornings here are unlike anything else on earth.",
         details: [
             { text: "Open daily 6:00 AM – 10:00 PM", icon: createElement(Clock, { size: 18 }) },
-            { text: "Heated pool available", icon: createElement(ThermometerSun, { size: 18 }) },
-            { text: "Sun loungers & parasols provided", icon: createElement(Sun, { size: 18 }) },
+            { text: "Sun loungers provided", icon: createElement(Sun, { size: 18 }) },
             { text: "Poolside refreshments available", icon: createElement(Coffee, { size: 18 }) },
             { text: "Mountain panorama from every angle", icon: createElement(Mountain, { size: 18 }) },
         ],
-        img: "/images/pool view.jpg",
+        img: "/images/pool 8.jpg",
         reverse: false
     },
     {
@@ -59,7 +58,6 @@ export const facilitiesData: FacilityItem[] = [
             { text: "Traditional Sri Lankan herbal massage", icon: createElement(HeartHandshake, { size: 18 }) },
             { text: "Aromatherapy & body scrubs", icon: createElement(Droplets, { size: 18 }) },
             { text: "Steam room & dry sauna", icon: createElement(Wind, { size: 18 }) },
-            { text: "Jacuzzi therapy pools", icon: createElement(Waves, { size: 18 }) },
             { text: "Daily yoga — sunrise & sunset sessions", icon: createElement(Activity, { size: 18 }) },
             { text: "Couples treatment suites available", icon: createElement(Sparkles, { size: 18 }) },
         ],
@@ -69,11 +67,11 @@ export const facilitiesData: FacilityItem[] = [
     {
         id: 3,
         label: "CULINARY JOURNEYS",
-        title: "The Summit Restaurant & Bar",
+        title: "The Ravana Rainforest Restaurant & Bar",
         body: "Cuisine that rivals the view. Our Executive Chef crafts seasonal menus celebrating Sri Lankan produce alongside international techniques — every meal a memory in itself.",
         details: [
-            { text: "Breakfast buffet (6:30 – 10:00 AM)", icon: createElement(Coffee, { size: 18 }) },
-            { text: "À la carte lunch & dinner", icon: createElement(Utensils, { size: 18 }) },
+            { text: "Breakfast A la carte /buffet (6.30 to 10.00am)", icon: createElement(Coffee, { size: 18 }) },
+            { text: "A la carte / buffet lunch & dinner", icon: createElement(Utensils, { size: 18 }) },
             { text: "Vegetarian, vegan & halal options", icon: createElement(Leaf, { size: 18 }) },
             { text: "Curated wine & cocktail menu", icon: createElement(Wine, { size: 18 }) },
             { text: "Full mountain panorama dining room", icon: createElement(Map, { size: 18 }) },
@@ -86,11 +84,11 @@ export const facilitiesData: FacilityItem[] = [
         id: 4,
         label: "MOVE & RESTORE",
         title: "Fitness Studio & Wellness Room",
-        body: "Maintain your rhythm surrounded by the most inspiring natural backdrop imaginable. Our modern studio features premium equipment with floor-to-ceiling mountain views.",
+        body: "Maintain your rhythm surrounded by the most inspiring natural backdrop imaginable. Our modern studio features premium equipment.",
         details: [
             { text: "Modern cardio & weight equipment", icon: createElement(Dumbbell, { size: 18 }) },
             { text: "Free weights & resistance machines", icon: createElement(Dumbbell, { size: 18 }) },
-            { text: "Dedicated yoga & stretching space", icon: createElement(Activity, { size: 18 }) },
+            { text: "Dedicated yoga & stretching space (roof)", icon: createElement(Activity, { size: 18 }) },
             { text: "Personal trainer (advance booking)", icon: createElement(Calendar, { size: 18 }) },
             { text: "Open 5:00 AM – 10:00 PM daily", icon: createElement(Clock, { size: 18 }) },
         ],
@@ -99,24 +97,35 @@ export const facilitiesData: FacilityItem[] = [
     },
     {
         id: 5,
-        label: "FAMILY MOMENTS",
-        title: "Kids Pool & Family Experiences",
-        body: "A'Lankaa is designed for families to reconnect. Our dedicated kids pool and family-focused experiences ensure every guest — at every age — feels completely at home.",
+        label: "FAMILY EXPERIENCES",
+        title: "Infinity Pool & Family Experiences",
+        body: "Our infinity pool features a dedicated kids section, so the whole family can enjoy the breathtaking mountain views together — safely and comfortably.",
         details: [
-            { text: "Dedicated shallow kids pool", icon: createElement(Waves, { size: 18 }) },
-            { text: "Crib & extra bed available on request", icon: createElement(Bed, { size: 18 }) },
-            { text: "Dedicated kids dining menu", icon: createElement(Utensils, { size: 18 }) },
-            { text: "Family room configurations available", icon: createElement(Users, { size: 18 }) },
-            { text: "All ages welcome", icon: createElement(Baby, { size: 18 }) },
+            {
+                text: "Infinity pool with dedicated kids section",
+                icon: createElement(Waves, { size: 18 })
+            },
+            {
+                text: "Crib & extra bed available on request",
+                icon: createElement(Bed, { size: 18 })
+            },
+            {
+                text: "Family room configurations available",
+                icon: createElement(Users, { size: 18 })
+            },
+            {
+                text: "All ages welcome",
+                icon: createElement(Baby, { size: 18 })
+            },
         ],
-        img: "/images/kids pool.png",
+        img: "/images/infinity-pool-family.png",
         reverse: false
     },
     {
         id: 6,
         label: "THE GREAT OUTDOORS",
         title: "Nature Trails & Outdoor Adventures",
-        body: "Step beyond the resort and into one of Sri Lanka's most spectacular natural landscapes. Guided trails, sunrise viewpoints, and adventure — all from your doorstep at 1,000m.",
+        body: "Step beyond the resort and into one of Sri Lanka's most spectacular natural landscapes. Guided trails, sunrise viewpoints, and adventure — all from your doorstep at 1,200m.",
         details: [
             { text: "Guided mountain hiking trails", icon: createElement(Compass, { size: 18 }) },
             { text: "Cycling tours through tea country", icon: createElement(Bike, { size: 18 }) },

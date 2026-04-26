@@ -7,13 +7,13 @@ const videos = [
     id: 1,
     title: "Resort Overview",
     duration: "3:42",
-    thumbnail: "https://images.unsplash.com/photo-1542314831-c6a4d27d66f6?auto=format&fit=crop&q=80"
+    thumbnail: ""
   },
   {
     id: 2,
     title: "Sunrise from the Indrajith Suite",
     duration: "1:15",
-    thumbnail: "https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&q=80"
+    thumbnail: ""
   }
 ];
 

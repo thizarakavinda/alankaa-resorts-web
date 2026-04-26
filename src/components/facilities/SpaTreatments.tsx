@@ -78,7 +78,7 @@ const SpaTreatments = () => {
                         ref={subRef}
                         className="font-dmSans text-[var(--clr-smoke)] text-lg opacity-0"
                     >
-                        Book in advance — spaces are limited.
+                        Please contact Reception for current prices. Book in advance — spaces are limited.
                     </p>
                 </div>
 
@@ -102,12 +102,9 @@ const SpaTreatments = () => {
                             />
 
                             <div>
-                                <h3 className="text-2xl md:text-3xl font-cormorant text-[var(--clr-ivory)] mb-3">
+                                <h3 className="text-2xl md:text-3xl font-cormorant text-[var(--clr-ivory)] mb-6">
                                     {spa.title}
                                 </h3>
-                                <div className="text-[var(--clr-gold)] font-dmSans text-sm tracking-[0.2em] font-semibold mb-6 flex items-center gap-2">
-                                    {spa.duration} <span className="opacity-50">•</span> {spa.price}
-                                </div>
                                 <p className="text-[var(--clr-smoke)] font-dmSans leading-relaxed mb-10">
                                     {spa.desc}
                                 </p>

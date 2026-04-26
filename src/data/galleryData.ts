@@ -28,7 +28,7 @@ const rawImages = [
   { src: '/images/rock 2.jpg', category: 'Dining' },
   { src: '/images/rock 1.jpeg', category: 'Dining' },
   { src: '/images/din 3.jpg', category: 'Dining' },
-  { src: '/images/nature dining.png', category: 'Dining' },
+  { src: '/images/nature dining.jpg', category: 'Dining' },
   { src: '/images/bar 1.jpg', category: 'Dining' },
 
   // Views

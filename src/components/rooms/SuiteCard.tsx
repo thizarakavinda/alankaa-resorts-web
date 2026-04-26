@@ -148,49 +148,17 @@ const SuiteCard = ({ suite }: SuiteCardProps) => {
 
                 {/* left */}
                 <div>
-                  <p className="font-['Jost'] text-[9px] text-[var(--clr-fog)] uppercase">From</p>
+                  <p className="font-['Jost'] text-[9px] text-[var(--clr-fog)] uppercase">Total per night</p>
                   <div className="flex items-baseline gap-[8px]">
                     <span className="font-['DM_Sans'] text-[18px] text-[var(--clr-gold)]">US$</span>
                     <span className="font-['Cormorant'] text-[64px] text-[var(--clr-gold)] font-light leading-none">{suite.basePrice}</span>
-                    <span className="font-['DM_Sans'] text-[13px] text-[var(--clr-fog)]">/night</span>
-                  </div>
-                  <p className="font-['DM_Sans'] text-[11px] text-[var(--clr-fog)] mt-[4px]">
-                    + 23% tax · + 10% service charge
-                  </p>
-                </div>
-
-                {/* right */}
-                <div
-                  className="bg-[rgba(184,150,90,0.08)] p-[12px_16px] rounded-[2px] w-full xl:w-auto relative"
-                  onMouseEnter={(e) => {
-                    const details = e.currentTarget.querySelector('.price-breakdown');
-                    if (details) (details as HTMLElement).style.opacity = '1';
-                  }}
-                  onMouseLeave={(e) => {
-                    const details = e.currentTarget.querySelector('.price-breakdown');
-                    if (details) (details as HTMLElement).style.opacity = '0';
-                  }}
-                >
-                  <p className="font-['Jost'] text-[8px] text-[var(--clr-fog)] uppercase">Total per night</p>
-                  <p className="font-['DM_Sans'] font-medium text-[18px] text-[var(--clr-cream)]">
-                    US${calculateTotal(suite.basePrice).total}
-                  </p>
-
-
-                  <div className="price-breakdown absolute top-full right-0 bg-[var(--clr-obsidian)] border border-[rgba(184,150,90,0.12)] p-3 mt-1 z-20 w-max opacity-0 transition-opacity duration-300 pointer-events-none shadow-xl">
-                    <p className="font-['DM_Sans'] text-[11px] text-[var(--clr-fog)] leading-[1.8]">Base: US${suite.basePrice}</p>
-                    <p className="font-['DM_Sans'] text-[11px] text-[var(--clr-fog)] leading-[1.8]">Tax (23%): US${calculateTotal(suite.basePrice).tax}</p>
-                    <p className="font-['DM_Sans'] text-[11px] text-[var(--clr-fog)] leading-[1.8]">Service (10%): US${calculateTotal(suite.basePrice).service}</p>
                   </div>
                 </div>
               </div>
 
               <div className="mt-[16px] flex flex-col gap-[6px]">
                 <p className="font-['DM_Sans'] text-[12px] text-[var(--clr-smoke)] flex items-center">
-                  <span className="text-[var(--clr-gold)] mr-2">✓</span> Complimentary Breakfast included
-                </p>
-                <p className="font-['DM_Sans'] text-[12px] text-[var(--clr-smoke)] flex items-center">
-                  <span className="text-[var(--clr-gold)] mr-2">✓</span> Complimentary Lunch or Dinner included
+                  <span className="text-[var(--clr-gold)] mr-2">✓</span> Breakfast (BB) included
                 </p>
               </div>
             </div>

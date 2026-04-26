@@ -3,12 +3,12 @@ import { FaInstagram } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 
 const instaPosts = [
-  { id: 1, src: "https://images.unsplash.com/photo-1542314831-c6a4d27d66f6?auto=format&fit=crop&q=80", likes: "1.2k" },
-  { id: 2, src: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&q=80", likes: "842" },
-  { id: 3, src: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&q=80", likes: "2.1k" },
-  { id: 4, src: "https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&q=80", likes: "956" },
-  { id: 5, src: "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&q=80", likes: "3.4k" },
-  { id: 6, src: "https://images.unsplash.com/photo-1506929562872-bb421503ef21?auto=format&fit=crop&q=80", likes: "1.8k" },
+  { id: 1, src: "images/post4.png", likes: "1.2k" },
+  { id: 2, src: "images/post5.png", likes: "842" },
+  { id: 3, src: "images/post6.png", likes: "2.1k" },
+  { id: 4, src: "images/post2.png", likes: "956" },
+  { id: 5, src: "images/post3.png", likes: "3.4k" },
+  { id: 6, src: "images/post1.png", likes: "1.8k" },
 ];
 
 const GalleryInstagram = () => {
@@ -18,7 +18,7 @@ const GalleryInstagram = () => {
 
         <div className="text-center mb-16" data-aos="fade-up">
           <h2 className="font-cormorant text-3xl md:text-4xl text-ivory mb-2">Follow Our Journey</h2>
-          <a href="https://instagram.com" target="_blank" rel="noreferrer" className="block font-dmSans text-[14px] text-gold hover:text-mist transition-colors duration-300">
+          <a href="https://www.instagram.com/alankaa_resorts?igsh=MW51N3o2ZHF3Ymk5dw==" target="_blank" rel="noreferrer" className="block font-dmSans text-[14px] text-gold hover:text-mist transition-colors duration-300">
             @alankaa_resorts
           </a>
         </div>
@@ -27,7 +27,7 @@ const GalleryInstagram = () => {
           {instaPosts.map((post, i) => (
             <motion.a
               key={post.id}
-              href="https://instagram.com"
+              href="https://www.instagram.com/alankaa_resorts?igsh=MW51N3o2ZHF3Ymk5dw=="
               target="_blank"
               rel="noreferrer"
               initial={{ opacity: 0, scale: 0.95 }}
@@ -54,7 +54,7 @@ const GalleryInstagram = () => {
         </div>
 
         <div className="text-center">
-          <a href="https://instagram.com" target="_blank" rel="noreferrer">
+          <a href="https://www.instagram.com/alankaa_resorts?igsh=MW51N3o2ZHF3Ymk5dw==" target="_blank" rel="noreferrer">
             <button className="px-10 py-4 border border-[rgba(184,150,90,0.6)] text-gold font-dmSans text-[12px] uppercase tracking-widest hover:bg-gold hover:text-void transition-colors duration-300">
               Follow on Instagram
             </button>

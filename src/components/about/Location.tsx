@@ -60,7 +60,7 @@ export const Location = () => {
             </h4>
             <address className="font-dmSans font-light text-[15px] text-smoke/90 not-italic leading-[2] tracking-wide">
               A'Lankaa Resorts & Spa<br />
-              1000m Summit Road<br />
+              1200m Summit Road<br />
               Haldummulla, Badulla District<br />
               Sri Lanka
             </address>

@@ -102,7 +102,7 @@ const FacilitiesIntro = () => {
                     <div className="flex flex-col gap-4 pb-12">
                         <div className="bg-[var(--clr-charcoal)] h-48 rounded-sm overflow-hidden">
                             <img
-                                src="/images/nature dining.png"
+                                src="/images/nature dining.jpg"
                                 className="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity duration-500"
                                 alt="Dining Detail"
                             />

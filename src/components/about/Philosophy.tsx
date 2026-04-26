@@ -6,7 +6,7 @@ const cards = [
   {
     icon: Mountain,
     title: 'The Place',
-    text: 'Perched on solid volcanic rock at 1,000m, our location is our most precious amenity.'
+    text: 'Perched on solid volcanic rock at 1,200m, our location is our most precious amenity.'
   },
   {
     icon: Heart,

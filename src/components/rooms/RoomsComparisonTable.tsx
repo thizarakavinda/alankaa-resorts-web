@@ -8,7 +8,6 @@ const comparisonRows = [
   { label: 'Garden View', values: [false, false, true] },
   { label: 'Views (Province)', values: ['5 Provs', 'Mountain', 'Garden'] },
   { label: 'Breakfast (BB)', values: [true, true, true] },
-  { label: 'Lunch/Dinner', values: [true, true, true] },
   { label: 'AC & Fan', values: [true, true, true] },
   { label: 'Hot Water', values: [true, true, true] },
   { label: 'Availability', values: ['8 Suites', '6 Suites', '6 Suites'] },
@@ -70,18 +69,15 @@ const RoomsComparisonTable = () => {
             <tr className="bg-[var(--clr-charcoal)] border-t border-[rgba(184,150,90,0.2)]">
               <td className="p-[20px_32px] font-['DM_Sans'] font-medium text-[14px] text-[var(--clr-cream)] sticky left-0 bg-[var(--clr-charcoal)] z-10">Starting From</td>
               <td className="p-[20px_32px] text-center">
-                <p className="font-['Cormorant'] text-[28px] text-[var(--clr-gold)] leading-none">US$230+</p>
-                <p className="font-['DM_Sans'] text-[11px] text-[var(--clr-fog)] mb-4">+taxes</p>
+                <p className="font-['Cormorant'] text-[28px] text-[var(--clr-gold)] leading-none mb-4">US$310</p>
                 <button className="bg-[var(--clr-gold)] text-[var(--clr-void)] font-['Jost'] text-[10px] uppercase px-[20px] py-[8px] hover:bg-[var(--clr-gold-light)] transition-colors">Book Now</button>
               </td>
               <td className="p-[20px_32px] text-center bg-[rgba(184,150,90,0.06)] border-l border-r border-[rgba(184,150,90,0.2)]">
-                <p className="font-['Cormorant'] text-[28px] text-[var(--clr-gold)] leading-none">US$160+</p>
-                <p className="font-['DM_Sans'] text-[11px] text-[var(--clr-fog)] mb-4">+taxes</p>
+                <p className="font-['Cormorant'] text-[28px] text-[var(--clr-gold)] leading-none mb-4">US$215</p>
                 <button className="bg-[var(--clr-gold)] text-[var(--clr-void)] font-['Jost'] text-[10px] uppercase px-[20px] py-[8px] hover:bg-[var(--clr-gold-light)] transition-colors">Book Now</button>
               </td>
               <td className="p-[20px_32px] text-center">
-                <p className="font-['Cormorant'] text-[28px] text-[var(--clr-gold)] leading-none">US$130+</p>
-                <p className="font-['DM_Sans'] text-[11px] text-[var(--clr-fog)] mb-4">+taxes</p>
+                <p className="font-['Cormorant'] text-[28px] text-[var(--clr-gold)] leading-none mb-4">US$175</p>
                 <button className="bg-[var(--clr-gold)] text-[var(--clr-void)] font-['Jost'] text-[10px] uppercase px-[20px] py-[8px] hover:bg-[var(--clr-gold-light)] transition-colors">Book Now</button>
               </td>
             </tr>

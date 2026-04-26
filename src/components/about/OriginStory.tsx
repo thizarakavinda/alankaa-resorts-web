@@ -96,7 +96,7 @@ export const OriginStory = () => {
 
           <div className="font-dmSans font-light text-[15px] text-smoke/90 leading-[2.2] tracking-wide space-y-8 max-w-[540px]">
             <p>
-              It began with a singular vision. Our founders, guided by an unwavering appreciation for the dramatic landscapes of Sri Lanka's hill country, sought out the most extraordinary canvas. They found it here—on a solid granite peak at precisely 1,000 meters above the sea.
+              It began with a singular vision. Our founders, guided by an unwavering appreciation for the dramatic landscapes of Sri Lanka's hill country, sought out the most extraordinary canvas. They found it here—on a solid granite peak at precisely 1,200 meters above the sea.
             </p>
             <p>
               Our philosophy at A'Lankaa is simple: nature is the ultimate luxury. The resort's architecture bows to the breathtaking 360-degree panoramas, where misty morning atmospheres seamlessly blend into the expansive, unhindered horizons.

@@ -7,7 +7,6 @@ import {
 
 const inclusions = [
   { icon: <Coffee size={28} />, title: "Complimentary Breakfast", desc: "Full breakfast included for all suite categories" },
-  { icon: <UtensilsCrossed size={28} />, title: "Lunch or Dinner", desc: "Complimentary lunch OR dinner included every day of your stay" },
   { icon: <Waves size={28} />, title: "Private Jacuzzi", desc: "Separate jacuzzi in Sunrise & Sunset suites" },
   { icon: <Wind size={28} />, title: "Air Conditioning", desc: "Individual AC unit and ceiling fan in every suite" },
   { icon: <Droplets size={28} />, title: "Hot Water", desc: "24-hour hot water supply in all suites" },
