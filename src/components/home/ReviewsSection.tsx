@@ -3,6 +3,18 @@ import { Quote } from 'lucide-react';
 
 const reviews = [
   {
+    initials: 'SS',
+    name: 'S. Skandakumar',
+    title: 'Former Group Chairman George Steuarts • Former High Commissioner to Australia • Feb 2022',
+    text: '“We took the turn at a crowded Haldumulla junction. Within five minutes we arrived at A‘Lankaa Hotel, and walked into a truly different world ! Adorned by innovative architecture with a touch of Bali, a wide spacious foyer tastefully furnished, complimented by attentive and courteous staff, we then proceeded on a tour of the hotel.”',
+  },
+  {
+    initials: 'NM',
+    name: 'Nalaka and Kamini Mendis',
+    title: 'Professors Emeritus, University of Colombo • Feb 2022',
+    text: '“Our impressions of the visit to A’Lankaa Resort in Haldumulla. A friend took us to this resort on the 3rd February, and within minutes of entering the lobby of the hotel we confronted a breathtaking view of the Haldumulla valley with and expansive dense forest cover below and an array of southern hills in the far background stretching towards the southern coast.”',
+  },
+  {
     initials: 'SK',
     name: 'S. Skandakumar',
     title: 'Former Group Chairman, George Steuarts • Former High Commissioner to Australia • Feb 2022',
