@@ -84,9 +84,6 @@ export const ReviewsSection = () => {
                   strokeWidth={1}
                 />
 
-                <p className="font-cormorant italic text-[20px] md:text-[24px] text-cream leading-relaxed mb-10 relative z-10 pr-6 pt-4">
-                  {review.text}
-                </p>
 
                 <div className="flex items-center gap-5 border-t border-white/5 pt-6 group-hover:border-gold/20 transition-colors duration-500 mt-auto shrink-0">
                   <div className="w-12 h-12 shrink-0 flex items-center justify-center font-jost font-medium text-[14px] bg-charcoal text-gold border border-gold/20 rounded-full">
@@ -101,12 +98,27 @@ export const ReviewsSection = () => {
                     </p>
                   </div>
                 </div>
+                <br />
+                <hr className="border-t border-white/5 group-hover:border-gold/20 transition-colors duration-500 mt-auto shrink-0" />
+
+                <p className="font-cormorant italic text-[20px] md:text-[24px] text-cream leading-relaxed mb-10 relative z-10 pr-6 pt-4">
+                  {review.text}
+                </p>
+
+
+
+
+
+
+
+
+
               </div>
             </motion.div>
           ))}
           <div className="w-[40px] shrink-0 pointer-events-none" />
         </div>
-        
+
         <div className="flex justify-center mt-4">
           <span className="font-jost text-[9px] text-fog tracking-[0.3em] uppercase animate-pulse">
             ← Drag to Explore →
