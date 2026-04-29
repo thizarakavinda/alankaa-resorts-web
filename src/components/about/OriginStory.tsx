@@ -111,14 +111,14 @@ export const OriginStory = () => {
         <div ref={rightImagesRef} className="relative mt-12 lg:mt-0 pb-16 lg:pb-0 pr-8 lg:pr-0 group">
           <div className="img-container relative w-full aspect-[4/3] border-[1px] border-gold/15 flex-shrink-0 overflow-hidden">
             <img
-              src="/images/rock 2.jpg"
+              src="/images/rock view 2.jpg"
               alt="A'Lankaa Resort Architecture"
               className="w-full h-full object-cover scale-105 transition-transform duration-[3s] ease-out group-hover:scale-[1.1]"
             />
           </div>
           <div className="img-container absolute -bottom-12 -right-4 lg:-bottom-20 lg:-right-10 w-[60%] aspect-[3/4] border-[1px] border-gold/15 z-10 bg-obsidian overflow-hidden">
             <img
-              src="/images/rock 1.jpeg"
+              src="/images/rock view 1.jpg"
               alt="A'Lankaa Resort Interior Detail"
               className="w-full h-full object-cover scale-105 transition-transform duration-[3s] ease-out group-hover:scale-[1.12]"
             />

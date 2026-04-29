@@ -15,7 +15,7 @@ const BookingSidebar = ({ state }: { state: BookingState }) => {
 
   return (
     <div className="bg-charcoal border border-[rgba(184,150,90,0.15)] rounded-[2px] overflow-hidden flex flex-col">
-      <div className="h-[200px] w-full bg-cover bg-center" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1571896349842-33c89424de2d?q=80&w=2600&auto=format&fit=crop')" }} />
+      <div className="h-[200px] w-full bg-cover bg-center" style={{ backgroundImage: "url('/images/rock view 2.jpg')" }} />
 
       <div className="p-8">
         <h3 className="font-jost text-[9px] text-gold uppercase tracking-[0.3em] mb-4">
