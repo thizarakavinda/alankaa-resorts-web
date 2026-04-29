@@ -70,7 +70,7 @@ export const facilitiesData: FacilityItem[] = [
         title: "The Ravana Rainforest Restaurant & Bar",
         body: "Cuisine that rivals the view. Our Executive Chef crafts seasonal menus celebrating Sri Lankan produce alongside international techniques — every meal a memory in itself.",
         details: [
-            { text: "Breakfast A la carte /buffet (6.30 to 10.00am)", icon: createElement(Coffee, { size: 18 }) },
+            { text: "Breakfast A la carte / buffet (6.30 to 10.00am)", icon: createElement(Coffee, { size: 18 }) },
             { text: "A la carte / buffet lunch & dinner", icon: createElement(Utensils, { size: 18 }) },
             { text: "Vegetarian, vegan & halal options", icon: createElement(Leaf, { size: 18 }) },
             { text: "Curated wine & cocktail menu", icon: createElement(Wine, { size: 18 }) },
@@ -110,7 +110,7 @@ export const facilitiesData: FacilityItem[] = [
                 icon: createElement(Bed, { size: 18 })
             },
             {
-                text: "Family room configurations available",
+                text: "Triple Suites available",
                 icon: createElement(Users, { size: 18 })
             },
             {

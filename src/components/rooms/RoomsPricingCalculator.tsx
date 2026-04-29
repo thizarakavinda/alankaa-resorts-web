@@ -19,7 +19,8 @@ const RoomsPricingCalculator = () => {
           Know exactly what you'll pay.
         </h2>
         <p className="font-['DM_Sans'] text-[14px] text-[var(--clr-smoke)] mt-[12px]">
-          All rates include 23% government tax and 10% service charge.
+          All rates include 23% government tax and 10% service charge.<br />
+          <span className="italic">*Subject to current exchange rates*</span>
         </p>
       </div>
 
