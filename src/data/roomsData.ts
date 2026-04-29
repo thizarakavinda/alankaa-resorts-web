@@ -16,7 +16,7 @@ export const suites = [
     category: 'SIGNATURE SUITE',
     badge: 'MOST POPULAR',
     tag: 'SUNRISE · MOUNTAIN & VALLEY VIEW',
-    name: 'Sunrise, Mountain & Valley View Suite',
+    name: 'Sunrise, Mountain & Valley View Suites',
     shortName: 'Sunrise Suite',
     tagline: 'Wake up inside the most spectacular sunrise in Sri Lanka.',
     description: `Perched at 1,200 metres above sea level, 
@@ -51,7 +51,7 @@ export const suites = [
     category: 'DELUXE SUITE',
     badge: 'BEST VALUE',
     tag: 'SUNSET · MOUNTAIN VIEW',
-    name: 'Sunset & Mountain View Suite',
+    name: 'Sunset & Mountain View Suites',
     shortName: 'Sunset Suite',
     tagline: 'Golden sunsets over the mountain horizon, every evening.',
     description: `Experience the magic of mountain sunsets 
@@ -86,7 +86,7 @@ export const suites = [
     category: 'GARDEN SUITE',
     badge: null,
     tag: 'GARDEN VIEW',
-    name: 'Garden View Suite',
+    name: 'Garden View Suites',
     shortName: 'Garden Suite',
     tagline: 'Surrounded by lush tropical gardens in complete serenity.',
     description: `Our Garden View Suites offer a peaceful 

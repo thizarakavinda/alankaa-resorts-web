@@ -16,8 +16,13 @@ export const Footer = () => {
 
           {/* col 1 */}
           <div className="lg:col-span-1 pr-0 md:pr-12">
-            <h2 className="font-cormorant text-[32px] text-gold mb-1">A'LANKAA</h2>
-            <p className="font-jost text-[9px] text-fog uppercase tracking-widest mb-6">Resorts & Spa</p>
+            <div className="flex items-center gap-3 mb-6">
+              <img src="/logo.png" alt="A'Lankaa Logo" className="w-16 h-auto" />
+              <div className="flex flex-col">
+                <h2 className="font-cormorant text-[32px] text-gold mb-1 leading-none">A'LANKAA</h2>
+                <p className="font-jost text-[9px] text-fog uppercase tracking-widest">Resorts & Spa</p>
+              </div>
+            </div>
             <div className="h-[1px] w-10 bg-gold mb-6" />
             <p className="font-cormorant italic text-[18px] text-smoke leading-relaxed mb-8">
               "Where the clouds kiss the mountains, and luxury finds its home."

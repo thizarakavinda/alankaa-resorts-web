@@ -86,7 +86,8 @@ export const Home = () => {
             aria-hidden="true"
             className="w-full h-full object-cover opacity-80"
           >
-            <source src="/videos/backvid1.mp4" type="video/mp4" />
+            <source src="/videos/backvid.webm" type="video/webm" />
+            {/* <source src="/videos/Backvid1.mp4" type="video/mp4" /> */}
           </video>
         </div>
 

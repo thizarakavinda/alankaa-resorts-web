@@ -52,7 +52,7 @@ const FacilitiesHero = () => {
                     aria-hidden="true"
                     className="w-full h-full object-cover opacity-60"
                 >
-                    <source src="/videos/gymspa.mp4" type="video/mp4" />
+                    <source src="/videos/gymspa.webm" type="video/webm" />
                 </video>
             </div>
             <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-black/10" />

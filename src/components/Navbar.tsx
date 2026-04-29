@@ -51,13 +51,16 @@ export const Navbar = () => {
         <div className="max-w-[1920px] mx-auto flex items-center justify-between">
 
           {/* logo */}
-          <Link to="/" className="flex flex-col hoverable group">
-            <h1 className="font-cormorant text-[22px] text-gold tracking-wide drop-shadow-sm">
-              A'LANKAA
-            </h1>
-            <span className={`font-jost text-[8px] uppercase tracking-[0.4em] mt-0.5 group-hover:text-gold transition-colors duration-300 ${isDarkHero ? 'text-white/90 drop-shadow-md' : 'text-smoke'}`}>
-              Resorts & Spa
-            </span>
+          <Link to="/" className="flex items-center gap-3 hoverable group">
+            <img src="/logo.png" alt="A'Lankaa Logo" className="w-15 h-10" />
+            <div className="flex flex-col">
+              <h1 className="font-cormorant text-[22px] text-gold tracking-wide drop-shadow-sm">
+                A'LANKAA
+              </h1>
+              <span className={`font-jost text-[8px] uppercase tracking-[0.4em] mt-0.5 group-hover:text-gold transition-colors duration-300 ${isDarkHero ? 'text-white/90 drop-shadow-md' : 'text-smoke'}`}>
+                Resorts & Spa
+              </span>
+            </div>
           </Link>
 
           {/* desk nav  */}

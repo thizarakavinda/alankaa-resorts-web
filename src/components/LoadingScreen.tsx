@@ -5,7 +5,8 @@ export const LoadingScreen = () => {
   const [isComplete, setIsComplete] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
   const lineRef = useRef<HTMLDivElement>(null);
-  const logoRef = useRef<HTMLHeadingElement>(null);
+  const imgRef = useRef<HTMLImageElement>(null);
+  const textRef = useRef<HTMLHeadingElement>(null);
   const subtitleRef = useRef<HTMLParagraphElement>(null);
   const counterRef = useRef<HTMLDivElement>(null);
 
@@ -15,14 +16,22 @@ export const LoadingScreen = () => {
     });
 
 
+    tl.fromTo(imgRef.current, {
+      opacity: 0,
+    }, {
+      opacity: 1,
+      duration: 0.8,
+      ease: 'power2.out',
+    }, 0);
+
     tl.to(lineRef.current, {
       width: '60px',
       duration: 0.6,
       ease: 'power2.out',
-    }, 0);
+    }, 0.4);
 
 
-    tl.fromTo(logoRef.current, {
+    tl.fromTo(textRef.current, {
       opacity: 0,
       y: 20,
     }, {
@@ -30,7 +39,7 @@ export const LoadingScreen = () => {
       y: 0,
       duration: 0.6,
       ease: 'power3.out',
-    }, 0.6);
+    }, 0.8);
 
 
     tl.fromTo(subtitleRef.current, {
@@ -76,12 +85,12 @@ export const LoadingScreen = () => {
       className="fixed inset-0 z-[10000] flex flex-col items-center justify-center bg-void"
     >
       <div className="flex flex-col items-center gap-4">
-        <h1
-          ref={logoRef}
-          className="font-cormorant text-[48px] text-ivory tracking-[0.3em] uppercase opacity-0 translate-y-5"
-        >
-          A'Lankaa
-        </h1>
+        <div className="flex flex-col items-center gap-2">
+          <img ref={imgRef} src="/logo.png" alt="A'Lankaa Logo" className="w-36 opacity-0" />
+          <h1 ref={textRef} className="font-cormorant text-[48px] text-ivory tracking-[0.3em] uppercase opacity-0 translate-y-5">
+            A'Lankaa
+          </h1>
+        </div>
 
         <div className="h-[1px] w-0 bg-gold" ref={lineRef}></div>
 
