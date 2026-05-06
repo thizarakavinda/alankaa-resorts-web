@@ -113,12 +113,12 @@ const Part1Hero = () => {
             <h2 ref={el => { headingRefs.current[0] = el; }} className="pb-1">Perched above the world,</h2>
             <h2 ref={el => { headingRefs.current[1] = el; }} className="pb-1">hidden in the clouds.</h2>
           </div>
-          <p className="hero-subtext-on-image font-dmSans text-[15px] max-md:text-[14px] text-smoke max-w-[520px] leading-[1.9] mt-5">
+          <p className="hero-subtext-on-image font-dmSans text-[15px] max-md:text-[14px] text-white/90 max-w-[520px] leading-[1.9] mt-5">
             Nestled at 1,200 metres above sea level on ancient volcanic rock in Haldummulla, Badulla — A'Lankaa is one of Sri Lanka's most dramatically situated luxury resorts. Surrounded by misty mountains, tea-country roads, and the silence of clouds.
           </p>
 
           {/* stst */}
-          <div className="flex gap-4 lg:gap-[48px] mt-8 overflow-hidden items-center">
+          <div className="flex gap-4 lg:gap-[48px] mt-8 overflow-hidden items-center bg-black/20 backdrop-blur-sm px-6 py-3 rounded-lg">
             <StatsCounter number="1,200m" label="Elevation" />
             <div className="w-px h-[40px] bg-mist max-md:mx-2" />
             <StatsCounter number="32km" label="from Badulla" />
@@ -200,7 +200,7 @@ const StatsCounter = ({ number, label }: { number: string; label: string }) => {
       className="flex flex-col gap-1"
     >
       <span className="card-heading-on-image font-cormorant text-[36px] text-gold leading-none">{number}</span>
-      <span className="card-text-on-image font-jost text-[9px] text-fog uppercase">{label}</span>
+      <span className="card-text-on-image font-jost text-[9px] text-white/80 uppercase">{label}</span>
     </motion.div>
   );
 };
@@ -340,7 +340,7 @@ const Part2Attractions = () => {
         {/* explore more button ---------------------------- */}
 
         <div className="mt-16 lg:mt-20 flex justify-center" data-aos="fade-up">
-          <button 
+          <button
             onClick={() => navigate('/places')}
             className="font-jost text-[11px] text-ivory border border-gold/40 px-10 py-4 uppercase tracking-widest hover:bg-gold hover:border-gold hover:text-void transition-colors duration-300 inline-flex items-center gap-3">
             Explore More Places <ArrowRight size={14} />
