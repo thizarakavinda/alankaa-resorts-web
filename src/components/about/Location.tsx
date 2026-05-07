@@ -5,28 +5,19 @@ export const Location = () => {
     <section className="bg-obsidian py-24 lg:py-[120px] px-8 lg:px-[80px]">
       <div className="max-w-[1440px] mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20 items-center">
 
-        {/* map placeholder */}
-        <div className="relative w-full h-[500px] bg-void border border-mist overflow-hidden flex items-center justify-center">
-          {/* Subtle Grid Background */}
-          <div className="absolute inset-0 opacity-10"
-            style={{
-              backgroundImage: 'linear-gradient(rgba(255, 255, 255, 0.2) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.2) 1px, transparent 1px)',
-              backgroundSize: '40px 40px'
-            }}
-          />
-
-          <div className="relative z-10 flex flex-col items-center">
-
-            <div className="relative flex h-4 w-4 mb-4">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-gold opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-4 w-4 bg-gold shadow-[0_0_20px_rgba(184,150,90,0.5)]"></span>
-            </div>
-
-            <div className="bg-charcoal/80 backdrop-blur-sm border border-gold/20 p-4 rounded text-center">
-              <p className="font-dmSans font-medium text-[16px] text-cream mb-1">A'Lankaa Resorts & Spa</p>
-              <p className="font-dmSans text-[13px] text-smoke">Haldummulla, Badulla</p>
-            </div>
-          </div>
+        {/* actual map embed */}
+        <div className="relative w-full h-[500px] border border-mist overflow-hidden shadow-2xl">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3962.1238766811343!2d80.87856239999999!3d6.754744499999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae47716d84e3dcd%3A0xf107acadc6ee0026!2sA&#39;Lankaa%20Resorts%20%26%20Spa!5e0!3m2!1sen!2slk!4v1778145566198!5m2!1sen!2slk" 
+            width="100%" 
+            height="100%" 
+            style={{ border: 0 }} 
+            allowFullScreen={true} 
+            loading="lazy" 
+            referrerPolicy="no-referrer-when-downgrade"
+            title="A'Lankaa Resorts & Spa Location"
+            className="filter grayscale-[0.2] contrast-[1.1] hover:grayscale-0 transition-all duration-700"
+          ></iframe>
         </div>
 
         {/* rght cont */}

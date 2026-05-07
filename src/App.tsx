@@ -8,6 +8,7 @@ import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
 import { ScrollProgress } from './components/ScrollProgress';
 import { FloatingBookBtn } from './components/FloatingBookBtn';
+import BackgroundMusic from './components/BackgroundMusic';
 
 const Home = lazy(() => import('./pages/Home').then((m) => ({ default: m.Home })));
 const About = lazy(() => import('./pages/About').then((m) => ({ default: m.About })));
@@ -64,6 +65,7 @@ function App() {
     <ThemeProvider>
       <Router>
         <LoadingScreen />
+        <BackgroundMusic />
 
         {enableEnhancedFx && <CustomCursor />}
         <ScrollProgress />

@@ -52,7 +52,7 @@ const Part1Hero = () => {
       {/* back img */}
       <img
         ref={imageRef}
-        src="/images/pool view.jpg"
+        src="/images/view 6.jpg"
         alt="A'Lankaa Resorts Aerial View"
         className="absolute inset-0 w-full h-[120%] object-cover object-center -top-[10%]"
       />

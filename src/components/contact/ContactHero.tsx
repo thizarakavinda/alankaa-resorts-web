@@ -8,8 +8,8 @@ const ContactHero = () => {
         className="absolute inset-0 w-full h-full bg-cover bg-center"
         style={{ backgroundImage: "url('/images/pool view.jpg')" }}
       >
-        {/* dark overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-void via-void/80 to-transparent" />
+        {/* dark overlay — hardcoded to stay dark in light mode */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
       </div>
 
       {/* cont */}
@@ -23,10 +23,10 @@ const ContactHero = () => {
           <span className="block font-jost text-[12px] uppercase tracking-[0.2em] text-gold mb-4">
             Reach Out
           </span>
-          <h1 className="font-cormorant text-5xl md:text-7xl text-ivory mb-6">
+          <h1 className="font-cormorant text-5xl md:text-7xl text-white mb-6">
             Contact Us
           </h1>
-          <p className="font-dmSans text-[16px] text-cream/90 max-w-md leading-relaxed">
+          <p className="font-dmSans text-[16px] text-white/90 max-w-md leading-relaxed">
             We're available 24 hours a day, 7 days a week.
           </p>
         </motion.div>

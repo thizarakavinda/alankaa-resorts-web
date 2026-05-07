@@ -50,7 +50,7 @@ const FacilitiesHero = () => {
                     playsInline
                     preload="auto"
                     aria-hidden="true"
-                    className="w-full h-full object-cover opacity-60"
+                    className="w-full h-full object-cover opacity-100"
                 >
                     <source src="/videos/gymspa.webm" type="video/webm" />
                 </video>

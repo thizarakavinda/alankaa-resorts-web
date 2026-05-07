@@ -4,23 +4,18 @@ const ContactMapSection = () => {
   return (
     <section className="w-full h-[500px] relative overflow-hidden bg-charcoal">
 
-      <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:100px_100px]" />
-      </div>
-
-      {/* center map */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 flex flex-col items-center">
-        {/* Floating Card */}
-        <div className="bg-white px-6 py-4 rounded-sm shadow-xl mb-4 text-center">
-          <h4 className="font-cormorant font-semibold text-void text-lg mb-1">A'Lankaa Resorts & Spa</h4>
-          <p className="font-dmSans text-[12px] text-charcoal/70">Haldummulla, Badulla</p>
-        </div>
-
-
-        <div className="relative">
-          <MapPin className="w-10 h-10 text-gold relative z-10" fill="var(--clr-void)" />
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-8 bg-gold/20 rounded-full animate-ping z-0" />
-        </div>
+      <div className="absolute inset-0 z-10">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3962.1238766811343!2d80.87856239999999!3d6.754744499999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae47716d84e3dcd%3A0xf107acadc6ee0026!2sA&#39;Lankaa%20Resorts%20%26%20Spa!5e0!3m2!1sen!2slk!4v1778145566198!5m2!1sen!2slk" 
+          width="100%" 
+          height="100%" 
+          style={{ border: 0 }} 
+          allowFullScreen={true} 
+          loading="lazy" 
+          referrerPolicy="no-referrer-when-downgrade"
+          title="A'Lankaa Resorts & Spa Location"
+          className="filter grayscale-[0.3] contrast-[1.1] brightness-[0.9] hover:grayscale-0 hover:brightness-100 transition-all duration-700"
+        ></iframe>
       </div>
 
       {/* embabed location link */}

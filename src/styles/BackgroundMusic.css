@@ -1,0 +1,127 @@
+/* ═══════════════════════════════════════════════════════════════════
+   BackgroundMusic.css — A'Lankaa Resorts & Spa
+   Music toggle button: bottom-left fixed, gold accent, glassmorphism
+   ═══════════════════════════════════════════════════════════════════ */
+
+/* ── Wrapper ──────────────────────────────────────────────────────── */
+.music-wrapper {
+  position: fixed;
+  bottom: 40px;
+  left: 40px;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ── Toggle button ───────────────────────────────────────────────── */
+.music-btn {
+  position: relative;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid var(--clr-gold);
+  background: rgba(184, 150, 90, 0.1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  color: var(--clr-gold);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  outline: none;
+  transition: box-shadow 0.25s ease, background 0.25s ease;
+}
+
+.music-btn:focus-visible {
+  box-shadow: 0 0 0 3px rgba(184, 150, 90, 0.4);
+}
+
+.music-btn:hover {
+  background: rgba(184, 150, 90, 0.18);
+  box-shadow: 0 4px 24px rgba(184, 150, 90, 0.18);
+}
+
+/* ── Light mode override ─────────────────────────────────────────── */
+[data-theme='light'] .music-btn {
+  background: rgba(154, 122, 58, 0.1);
+  border-color: var(--clr-gold);
+}
+
+[data-theme='light'] .music-btn:hover {
+  background: rgba(154, 122, 58, 0.18);
+}
+
+/* ── Icon container ──────────────────────────────────────────────── */
+.music-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+/* ── Pulse ring ──────────────────────────────────────────────────── */
+.music-pulse {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 1px solid var(--clr-gold);
+  pointer-events: none;
+}
+
+/* ── Sound wave bars ─────────────────────────────────────────────── */
+.music-bars {
+  position: absolute;
+  bottom: 7px;
+  right: 7px;
+  display: flex;
+  align-items: flex-end;
+  gap: 2px;
+  pointer-events: none;
+}
+
+.music-bar {
+  width: 2px;
+  border-radius: 1px;
+  background: var(--clr-gold);
+  animation: musicWave 0.9s ease-in-out infinite alternate;
+  transform-origin: bottom center;
+}
+
+.bar-1 {
+  height: 6px;
+  animation-delay: 0s;
+}
+
+.bar-2 {
+  height: 10px;
+  animation-delay: 0.2s;
+}
+
+.bar-3 {
+  height: 4px;
+  animation-delay: 0.4s;
+}
+
+@keyframes musicWave {
+  0%   { transform: scaleY(1);   opacity: 0.7; }
+  100% { transform: scaleY(1.8); opacity: 1;   }
+}
+
+/* ── Mobile ──────────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .music-wrapper {
+    bottom: 24px;
+    left: 24px;
+  }
+
+  .music-btn {
+    width: 40px;
+    height: 40px;
+  }
+
+  .music-bars {
+    display: none;
+  }
+}

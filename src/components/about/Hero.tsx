@@ -70,9 +70,7 @@ export const Hero = () => {
 
 
       <div className="relative z-10 p-10 lg:p-[40px]">
-        <p className="hero-subtext-on-image font-jost text-[10px] text-fog tracking-[0.2em] uppercase">
-          Home / About Us
-        </p>
+
       </div>
 
       {/* bottom left cont */}
