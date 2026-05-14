@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { FaFacebook, FaInstagram, FaTripadvisor } from 'react-icons/fa';
+import { FaFacebook, FaInstagram, FaPinterest, FaTiktok, FaTripadvisor } from 'react-icons/fa';
 import { MapPin, Phone, Mail, Clock } from 'lucide-react';
 
 export const Footer = () => {
@@ -28,9 +28,11 @@ export const Footer = () => {
               "Where the clouds kiss the mountains, and luxury finds its home."
             </p>
             <div className="flex items-center gap-4">
-              <a href="#" className="text-fog hover:text-gold transition-colors hoverable"><FaFacebook size={24} /></a>
-              <a href="#" className="text-fog hover:text-gold transition-colors hoverable"><FaInstagram size={24} /></a>
-              <a href="#" className="text-fog hover:text-gold transition-colors hoverable"><FaTripadvisor size={24} /></a>
+              <a href="https://www.facebook.com/ALankaaResortsandSpa/" className="text-fog hover:text-gold transition-colors hoverable"><FaFacebook size={24} /></a>
+              <a href="https://www.instagram.com/alankaa_resorts" className="text-fog hover:text-gold transition-colors hoverable"><FaInstagram size={24} /></a>
+              <a href="https://www.tiktok.com/@alankaaresorts" className="text-fog hover:text-gold transition-colors hoverable"><FaTiktok size={24} /></a>
+              <a href="https://www.pinterest.com/alankaa_resorts/" className="text-fog hover:text-gold transition-colors hoverable"><FaPinterest size={24} /></a>
+              <a href="https://www.tripadvisor.com/Hotel_Review-g27110123-d18397208-Reviews-A_lankaa_Resorts-Watagamuwa_Uva_Province.html" className="text-fog hover:text-gold transition-colors hoverable"><FaTripadvisor size={24} /></a>
             </div>
           </div>
 
@@ -38,13 +40,21 @@ export const Footer = () => {
           <div className="flex flex-col">
             <h3 className="font-jost text-[10px] text-gold uppercase tracking-[0.2em] mb-8">Explore</h3>
             <ul className="flex flex-col gap-4">
-              {['Home', 'About Us', 'Rooms', 'Facilities', 'Gallery', 'Contact', 'Book Now'].map((link) => (
-                <li key={link}>
+              {[
+                { label: 'Home', path: '/' },
+                { label: 'About Us', path: '/about' },
+                { label: 'Rooms', path: '/rooms' },
+                { label: 'Facilities', path: '/facilities' },
+                { label: 'Gallery', path: '/gallery' },
+                { label: 'Contact', path: '/contact' },
+                { label: 'Book Now', path: '/booking' },
+              ].map(({ label, path }) => (
+                <li key={label}>
                   <Link
-                    to={link === 'Home' ? '/' : `/${link.toLowerCase().replace(' ', '-')}`}
+                    to={path}
                     className="font-dmSans text-[14px] text-smoke hover:text-cream transition-all duration-300 hover:translate-x-1 block hoverable w-fit"
                   >
-                    {link}
+                    {label}
                   </Link>
                 </li>
               ))}
