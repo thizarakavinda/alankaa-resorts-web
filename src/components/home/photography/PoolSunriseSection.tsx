@@ -1,6 +1,8 @@
 import { ArrowRight } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 const PoolSunriseSection = () => {
+  const navigate = useNavigate();
   return (
     <section className="h-[200vh] md:h-[110vh] bg-void flex flex-col md:flex-row w-full overflow-hidden">
       {/* pool imgs split part */}
@@ -10,16 +12,16 @@ const PoolSunriseSection = () => {
 
         {/* center layout */}
         <div className="absolute inset-0 flex flex-col justify-center items-center text-center p-8 z-10 w-full max-w-[600px] mx-auto">
-          <span className="gold-label-on-image font-jost text-[10px] text-gold uppercase tracking-[0.5em] mb-6 transition-transform duration-500 group-hover:-translate-y-2">Pool Experience</span>
+          <span className="gold-label-on-image font-jost text-[12px] text-gold uppercase tracking-[0.5em] mb-6 transition-transform duration-500 group-hover:-translate-y-2">Pool Experience</span>
 
           <h2 className="section-heading-on-image font-cormorant text-[clamp(42px,5vw,80px)] text-ivory font-light leading-[1.0] mb-8 transition-transform duration-500 delay-75 group-hover:-translate-y-2">
             Swim above<br />the clouds.
           </h2>
 
-          <div className="section-subtext-on-image font-dmSans text-[14px] text-smoke leading-relaxed sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-500 delay-150 transform sm:translate-y-4 sm:group-hover:translate-y-0 flex flex-col items-center">
+          <div className="section-subtext-on-image font-dmSans text-[16px] text-smoke leading-relaxed sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-500 delay-150 transform sm:translate-y-4 sm:group-hover:translate-y-0 flex flex-col items-center">
             <p className="tracking-wide">Infinity Pool</p>
-            <p className="mt-2 text-fog">Open 6:00 AM – 10:00 PM daily</p>
-            <button className="hero-btn-secondary text-ivory bg-gold/10 border border-gold/30 px-8 py-3 font-jost text-[11px] uppercase tracking-widest mt-8 flex items-center gap-3 hover:bg-gold hover:text-void transition-colors duration-300">
+            <p className="mt-2 text-smoke">Open 6:00 AM – 10:00 PM daily</p>
+            <button onClick={() => navigate('/gallery')} className="hero-btn-secondary text-ivory bg-gold/10 border border-gold/30 px-8 py-3 font-jost text-[11px] uppercase tracking-widest mt-8 flex items-center gap-3 hover:bg-gold hover:text-void transition-colors duration-300">
               Explore Pool <ArrowRight size={14} />
             </button>
           </div>
@@ -42,16 +44,16 @@ const PoolSunriseSection = () => {
 
         {/* center layout */}
         <div className="absolute inset-0 flex flex-col justify-center items-center text-center p-8 z-10 w-full max-w-[600px] mx-auto">
-          <span className="gold-label-on-image font-jost text-[10px] text-gold uppercase tracking-[0.5em] mb-6 transition-transform duration-500 group-hover:-translate-y-2">Sunrise Experience</span>
+          <span className="gold-label-on-image font-jost text-[12px] text-gold uppercase tracking-[0.5em] mb-6 transition-transform duration-500 group-hover:-translate-y-2">Sunrise Experience</span>
 
           <h2 className="section-heading-on-image font-cormorant text-[clamp(42px,5vw,80px)] text-ivory font-light leading-[1.0] mb-8 transition-transform duration-500 delay-75 group-hover:-translate-y-2">
             Wake up inside<br />the sunrise.
           </h2>
 
-          <div className="section-subtext-on-image font-dmSans text-[14px] text-smoke leading-relaxed sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-500 delay-150 transform sm:translate-y-4 sm:group-hover:translate-y-0 flex flex-col items-center">
+          <div className="section-subtext-on-image font-dmSans text-[16px] text-smoke leading-relaxed sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-500 delay-150 transform sm:translate-y-4 sm:group-hover:translate-y-0 flex flex-col items-center">
             <p className="tracking-wide">Indrajith Sunrise Suite · Private viewpoint</p>
-            <p className="mt-2 text-fog">Daily from 5:30 AM</p>
-            <button className="hero-btn-secondary text-ivory bg-gold/10 border border-gold/30 px-8 py-3 font-jost text-[11px] uppercase tracking-widest mt-8 flex items-center gap-3 hover:bg-gold hover:text-void transition-colors duration-300">
+            <p className="mt-2 text-smoke">Daily from 5:30 AM</p>
+            <button onClick={() => navigate('/gallery')} className="hero-btn-secondary text-ivory bg-gold/10 border border-gold/30 px-8 py-3 font-jost text-[11px] uppercase tracking-widest mt-8 flex items-center gap-3 hover:bg-gold hover:text-void transition-colors duration-300">
               Experience Sunrise <ArrowRight size={14} />
             </button>
           </div>

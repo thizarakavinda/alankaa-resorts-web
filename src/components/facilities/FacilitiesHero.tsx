@@ -82,7 +82,7 @@ const FacilitiesHero = () => {
                     ref={subtextRef}
                     className="text-lg md:text-xl text-[var(--clr-cream)]/90 max-w-2xl mx-auto font-dmSans leading-relaxed drop-shadow-md hero-subtext-on-image opacity-0"
                 >
-                    Every facility, every experience —<br className="hidden md:block" /> designed with intention.
+                    Every facility, every experience<br className="hidden md:block" /> designed with intention.
                 </p>
             </div>
         </section>

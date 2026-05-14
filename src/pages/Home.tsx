@@ -1,4 +1,6 @@
 import { useRef, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
+import HeroSlider from '../components/home/HeroSlider';
 import { gsap } from 'gsap';
 import { motion } from 'framer-motion';
 import { ChevronDown } from 'lucide-react';
@@ -10,6 +12,7 @@ import MistCanvas from '../components/MistCanvas';
 import ReviewsSection from '../components/home/ReviewsSection';
 
 export const Home = () => {
+  const navigate = useNavigate();
   const heroTextRef = useRef<HTMLHeadingElement>(null);
   const sectionRef = useRef<HTMLDivElement>(null);
   const imageRef = useRef<HTMLDivElement>(null);
@@ -76,20 +79,7 @@ export const Home = () => {
     >
       {/* hero sec */}
       <section className="relative h-[100svh] flex flex-col items-center justify-center pt-20 overflow-hidden">
-        <div className="absolute inset-0 z-0 bg-black">
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            preload="auto"
-            aria-hidden="true"
-            className="w-full h-full object-cover opacity-80"
-          >
-            <source src="/videos/backvid.webm" type="video/webm" />
-            {/* <source src="/videos/Backvid1.mp4" type="video/mp4" /> */}
-          </video>
-        </div>
+        <HeroSlider />
 
         <MistCanvas />
 
@@ -137,8 +127,8 @@ export const Home = () => {
           <h2 className="font-dmSerif text-[36px] md:text-[64px] text-ivory mb-12">
             A Sanctuary Above the Clouds.
           </h2>
-          <p className="font-dmSans text-[16px] text-smoke leading-relaxed max-w-2xl mx-auto">
-            Perched 1,200 meters above sea level in the misty mountains of Haldummulla, A'Lankaa Resorts & Spa is an immersive digital experience—a retreat where architectural elegance seamlessly blends with breathtaking natural panoramas.
+          <p className="font-dmSans text-[19px] text-smoke leading-relaxed max-w-2xl mx-auto">
+            Perched 1,200 meters above sea level in the misty mountains of Haldummulla, A'Lankaa Resorts & Spa is an immersive digital experience a retreat where architectural elegance seamlessly blends with breathtaking natural panoramas.
           </p>
 
           <div className="flex justify-center items-center gap-10 md:gap-20 mt-16 md:mt-24 pointer-events-auto">
@@ -182,10 +172,10 @@ export const Home = () => {
           <h3 className="font-cormorant text-[36px] md:text-[48px] text-ivory mb-6 leading-tight">
             Crafted from the Earth.
           </h3>
-          <p className="font-dmSans text-[16px] text-smoke mb-10 leading-relaxed">
+          <p className="font-dmSans text-[19px] text-smoke mb-10 leading-relaxed">
             Every space within A'Lankaa has been thoughtfully designed to disappear into its surroundings. We utilize locally sourced stone, aged timber, and vast expanses of glass to ensure that nature remains the ultimate centerpiece.
           </p>
-          <button className="border-b border-gold pb-2 font-jost text-[11px] text-gold uppercase tracking-widest hover:text-cream transition-colors group">
+          <button onClick={() => navigate('/rooms')} className="border-b border-gold pb-2 font-jost text-[11px] text-gold uppercase tracking-widest hover:text-cream transition-colors group">
             Discover the Suites <span className="inline-block group-hover:translate-x-2 transition-transform">→</span>
           </button>
         </div>

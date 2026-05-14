@@ -113,8 +113,8 @@ const Part1Hero = () => {
             <h2 ref={el => { headingRefs.current[0] = el; }} className="pb-1">Perched above the world,</h2>
             <h2 ref={el => { headingRefs.current[1] = el; }} className="pb-1">hidden in the clouds.</h2>
           </div>
-          <p className="hero-subtext-on-image font-dmSans text-[15px] max-md:text-[14px] text-white/90 max-w-[520px] leading-[1.9] mt-5">
-            Nestled at 1,200 metres above sea level on ancient volcanic rock in Haldummulla, Badulla — A'Lankaa is one of Sri Lanka's most dramatically situated luxury resorts. Surrounded by misty mountains, tea-country roads, and the silence of clouds.
+          <p className="hero-subtext-on-image font-dmSans text-[18px] max-md:text-[14px] text-white/90 max-w-[520px] leading-[1.9] mt-5">
+            Nestled at 1,200 metres above sea level on ancient volcanic rock in Haldummulla, Badulla. A'Lankaa is one of Sri Lanka's most dramatically situated luxury resorts. Surrounded by misty mountains, tea-country roads, and the silence of clouds.
           </p>
 
           {/* stst */}
@@ -135,38 +135,38 @@ const Part1Hero = () => {
           viewport={{ once: true }}
           className="w-full lg:w-[280px] bg-black/85 backdrop-blur-[20px] border border-gold/20 border-l-[2px] border-l-gold p-8 max-md:p-6 rounded-[2px]"
         >
-          <p className="font-jost text-[9px] text-gold uppercase tracking-[0.3em]">
+          <p className="font-jost text-[12px] text-gold uppercase tracking-[0.3em]">
             HOW TO REACH US
           </p>
           <div className="w-[32px] h-[1px] bg-gold my-4" />
 
           <div className="space-y-6 max-md:space-y-4">
             <div className="flex gap-4">
-              <Plane className="w-[14px] h-[14px] text-gold shrink-0 mt-1" />
+              <Plane className="w-[18px] h-[18px] text-gold shrink-0 mt-1" />
               <div>
-                <p className="card-heading-on-image font-dmSans font-medium text-[13px] text-cream">Nearest Airport</p>
-                <p className="card-text-on-image font-dmSans font-light text-[12px] text-smoke mt-1">Mattala Rajapaksa — ~96km</p>
+                <p className="card-heading-on-image font-dmSans font-medium text-[18px] text-cream">Nearest Airport</p>
+                <p className="card-text-on-image font-dmSans font-light text-[14px] text-smoke mt-1">Mattala Rajapaksa - 96km</p>
               </div>
             </div>
             <div className="flex gap-4">
-              <Car className="w-[14px] h-[14px] text-gold shrink-0 mt-1" />
+              <Car className="w-[18px] h-[18px] text-gold shrink-0 mt-1" />
               <div>
-                <p className="card-heading-on-image font-dmSans font-medium text-[13px] text-cream">Road from Colombo</p>
-                <p className="card-text-on-image font-dmSans font-light text-[12px] text-smoke mt-1">~5 hrs via A4 highway</p>
+                <p className="card-heading-on-image font-dmSans font-medium text-[18px] text-cream">Road from Colombo</p>
+                <p className="card-text-on-image font-dmSans font-light text-[14px] text-smoke mt-1">5 hrs via A4 highway</p>
               </div>
             </div>
             <div className="flex gap-4">
-              <Train className="w-[14px] h-[14px] text-gold shrink-0 mt-1" />
+              <Train className="w-[18px] h-[18px] text-gold shrink-0 mt-1" />
               <div>
-                <p className="card-heading-on-image font-dmSans font-medium text-[13px] text-cream">Train to Badulla</p>
-                <p className="card-text-on-image font-dmSans font-light text-[12px] text-smoke mt-1">Then 32km drive to resort</p>
+                <p className="card-heading-on-image font-dmSans font-medium text-[18px] text-cream">Train to Badulla</p>
+                <p className="card-text-on-image font-dmSans font-light text-[14px] text-smoke mt-1">Then 32km drive to resort</p>
               </div>
             </div>
           </div>
 
           <div className="h-px bg-mist w-full my-5" />
 
-          <a href="https://maps.google.com" target="_blank" rel="noreferrer" className="group flex items-center gap-2 font-jost text-[10px] text-gold uppercase hover:text-gold-light transition-colors duration-300">
+          <a href="https://maps.app.goo.gl/Ne2z9PPA18kFDnVt5" target="_blank" rel="noreferrer" className="group flex items-center gap-2 font-jost text-[14px] text-gold uppercase hover:text-gold-light transition-colors duration-300">
             Get Directions <ArrowUpRight className="w-[14px] h-[14px]" />
           </a>
         </motion.div>
@@ -175,9 +175,9 @@ const Part1Hero = () => {
 
       <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4">
         <div className="w-[1px] h-10 overflow-hidden">
-          <div className="w-full h-full bg-mist animate-[lineToBottom_2s_ease-in-out_infinite]" />
+          <div className="w-full h-full bg-gold animate-[lineToBottom_2s_ease-in-out_infinite]" />
         </div>
-        <span className="font-jost text-[9px] text-fog tracking-[0.4em] uppercase">EXPLORE NEARBY</span>
+        <span className="font-jost text-[10px] text-gold tracking-[0.4em] uppercase">EXPLORE NEARBY</span>
       </div>
 
       <style>{`
@@ -200,7 +200,7 @@ const StatsCounter = ({ number, label }: { number: string; label: string }) => {
       className="flex flex-col gap-1"
     >
       <span className="card-heading-on-image font-cormorant text-[36px] text-gold leading-none">{number}</span>
-      <span className="card-text-on-image font-jost text-[9px] text-white/80 uppercase">{label}</span>
+      <span className="card-text-on-image font-jost text-[13px] text-white/80 uppercase">{label}</span>
     </motion.div>
   );
 };
@@ -239,7 +239,8 @@ const Part2Attractions = () => {
       title: "Nine Arch Bridge",
       location: "Ella, Badulla District",
       desc: "One of Sri Lanka's most photographed landmarks. A colonial-era stone railway viaduct surrounded by jungle and mist.",
-      image: "/images/ninearch.png"
+      image: "/images/ninearch.png",
+      mapLink: "https://maps.app.goo.gl/SZx3xwdB453TvuY86"
     },
     {
       badge: "46 KM AWAY",
@@ -247,7 +248,8 @@ const Part2Attractions = () => {
       title: "Horton Plains",
       location: "Nuwara Eliya District",
       desc: "A UNESCO World Heritage Site featuring dramatic cliffs, cloud forests, and Sri Lanka's highest plateau at 2,100m.",
-      image: "/images/hort.png"
+      image: "/images/hort.png",
+      mapLink: "https://maps.app.goo.gl/YvEwfA3QRAwnadkJ9"
     },
     {
       badge: "NEARBY",
@@ -255,7 +257,8 @@ const Part2Attractions = () => {
       title: "Bambarakanda Falls",
       location: "Kalupahana, Badulla",
       desc: "Sri Lanka's tallest waterfall at 263 metres, surrounded by pine forests and mist — a short scenic drive from A'Lankaa.",
-      image: "/images/bamba.png"
+      image: "/images/bamba.png",
+      mapLink: "https://maps.app.goo.gl/f4BWEa1JTeyRqjf7A"
     },
     {
       badge: "40 KM AWAY",
@@ -263,7 +266,8 @@ const Part2Attractions = () => {
       title: "Ella Rock",
       location: "Ella, Badulla",
       desc: "One of Sri Lanka's finest hikes — rewarding trekkers with 360° views of tea country, jungle valleys, and the ocean on clear days.",
-      image: "/images/ella.png"
+      image: "/images/ella.png",
+      mapLink: "https://maps.app.goo.gl/6Ck6U84r7Kjs18Ap9"
     }
   ];
 
@@ -274,7 +278,7 @@ const Part2Attractions = () => {
         {/* header */}
         <div ref={headerRef} className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-end">
           <div>
-            <p className="font-jost text-[10px] text-gold uppercase tracking-[0.4em] mb-6">
+            <p className="font-jost text-[12px] text-gold uppercase tracking-[0.4em] mb-6">
               DISCOVER THE REGION
             </p>
             <h2 className="font-cormorant text-[clamp(36px,4vw,60px)] text-ivory font-light leading-tight">
@@ -283,8 +287,8 @@ const Part2Attractions = () => {
             </h2>
           </div>
           <div>
-            <p className="font-dmSans text-[15px] text-smoke leading-[1.9] font-light max-w-[500px]">
-              A'Lankaa sits at the heart of Sri Lanka's most spectacular highland region. From ancient bridges to national parks — extraordinary experiences surround you in every direction.
+            <p className="font-dmSans text-[18px] text-smoke leading-[1.9] font-light max-w-[500px]">
+              A'Lankaa sits at the heart of Sri Lanka's most spectacular highland region. From ancient bridges to national parks, extraordinary experiences surround you in every direction.
             </p>
           </div>
         </div>
@@ -309,26 +313,26 @@ const Part2Attractions = () => {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent bottom-0 h-full pointer-events-none" />
 
-              <div className="absolute top-6 left-6 inline-block bg-gold px-[14px] py-[6px] font-jost text-[9px] text-void tracking-[0.15em] font-medium z-10 transition-transform duration-500 group-hover:scale-105">
+              <div className="absolute top-6 left-6 inline-block bg-gold px-[14px] py-[6px] font-jost text-[13px] text-void tracking-[0.15em] font-medium z-10 transition-transform duration-500 group-hover:scale-105">
                 {attr.badge}
               </div>
 
               <div className="absolute inset-x-8 bottom-10 z-10 flex flex-col justify-end transition-transform duration-500 group-hover:-translate-y-2">
-                <span className="gold-label-on-image font-jost text-[9px] text-gold uppercase tracking-[0.2em] mb-2">
+                <span className="gold-label-on-image font-jost text-[12px] text-gold uppercase tracking-[0.2em] mb-2">
                   {attr.category}
                 </span>
                 <h3 className="card-heading-on-image font-cormorant text-[clamp(28px,3vw,40px)] text-ivory font-light leading-none">
                   {attr.title}
                 </h3>
-                <p className="card-text-on-image font-dmSans font-light text-[12px] text-smoke/90 mt-1">
+                <p className="card-text-on-image font-dmSans font-light text-[17px] text-smoke/90 mt-1">
                   {attr.location}
                 </p>
 
                 <div className="overflow-hidden h-0 group-hover:h-auto opacity-0 group-hover:opacity-100 transition-all duration-700 mt-0 group-hover:mt-3">
-                  <p className="card-text-on-image font-dmSans font-light text-[13px] text-smoke/80 leading-relaxed mb-3">
+                  <p className="card-text-on-image font-dmSans font-light text-[16px] text-smoke/80 leading-relaxed mb-3">
                     {attr.desc}
                   </p>
-                  <a href="#" className="gold-label-on-image font-jost text-[10px] text-gold hover:text-gold-light inline-block relative after:content-[''] after:absolute after:w-0 after:h-px after:bottom-0 after:left-0 after:bg-gold-light hover:after:w-full after:transition-all after:duration-300">
+                 <a href={attr.mapLink} target="_blank" rel="noopener noreferrer" className="gold-label-on-image font-jost text-[20px] text-gold hover:text-gold-light inline-block relative after:content-[''] after:absolute after:w-0 after:h-px after:bottom-0 after:left-0 after:bg-gold-light hover:after:w-full after:transition-all after:duration-300">
                     Learn More →
                   </a>
                 </div>
@@ -378,7 +382,7 @@ const Part3Timeline = () => {
 
   const steps = [
     { icon: Plane, title: "Bandaranaike Airport", detail: "Colombo, Sri Lanka", badge: "START" },
-    { icon: Car, title: "Colombo to Badulla", detail: "Via A4 Highway", badge: "~5 hours" },
+    { icon: Car, title: "Colombo to Badulla", detail: "Via A4 Highway", badge: "5 hours" },
     { icon: MapPin, title: "Badulla City", detail: "Uva Province", badge: "32km left" },
     { icon: Star, title: "A'Lankaa Resorts & Spa", detail: "Haldummulla · 1,200m ASL", badge: "ARRIVED ✦", isFinal: true }
   ];
@@ -438,10 +442,10 @@ const Part3Timeline = () => {
 
                 {/* cont */}
                 <div className="mt-0 md:mt-4 text-left md:text-center w-[200px]">
-                  <p className="font-dmSans font-medium text-[14px] text-cream">{step.title}</p>
-                  <p className="font-dmSans font-light text-[12px] text-smoke mt-1">{step.detail}</p>
+                  <p className="font-dmSans font-medium text-[16px] text-cream">{step.title}</p>
+                  <p className="font-dmSans font-light text-[15px] text-smoke mt-1">{step.detail}</p>
                   <div className="inline-block mt-3 px-3 py-1 bg-gold/10 rounded-sm">
-                    <span className="font-jost text-[10px] text-gold font-medium uppercase tracking-wider">{step.badge}</span>
+                    <span className="font-jost text-[14px] text-gold font-medium uppercase tracking-wider">{step.badge}</span>
                   </div>
                 </div>
               </motion.div>

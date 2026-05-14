@@ -53,7 +53,7 @@ export const facilitiesData: FacilityItem[] = [
         id: 2,
         label: "RESTORATION & RITUAL",
         title: "Spa & Wellness Sanctuary",
-        body: "Step into a world of total restoration. From ancient Sri Lankan healing rituals to modern therapeutic treatments — your body and mind will leave renewed.",
+        body: "Step into a world of total restoration. From ancient Sri Lankan healing rituals to modern therapeutic treatments - your body and mind will leave renewed.",
         details: [
             { text: "Traditional Sri Lankan herbal massage", icon: createElement(HeartHandshake, { size: 18 }) },
             { text: "Aromatherapy & body scrubs", icon: createElement(Droplets, { size: 18 }) },
@@ -68,9 +68,9 @@ export const facilitiesData: FacilityItem[] = [
         id: 3,
         label: "CULINARY JOURNEYS",
         title: "The Ravana Rainforest Restaurant & Bar",
-        body: "Cuisine that rivals the view. Our Executive Chef crafts seasonal menus celebrating Sri Lankan produce alongside international techniques — every meal a memory in itself.",
+        body: "Cuisine that rivals the view. Our Executive Chef crafts seasonal menus celebrating Sri Lankan produce alongside international techniques - every meal a memory in itself.",
         details: [
-            { text: "Breakfast A la carte / buffet (6.30 to 10.00am)", icon: createElement(Coffee, { size: 18 }) },
+            { text: "Breakfast A la carte / Buffet (6.30 AM to 10.00 AM)", icon: createElement(Coffee, { size: 18 }) },
             { text: "A la carte / buffet lunch & dinner", icon: createElement(Utensils, { size: 18 }) },
             { text: "Vegetarian, vegan & halal options", icon: createElement(Leaf, { size: 18 }) },
             { text: "Curated wine & cocktail menu", icon: createElement(Wine, { size: 18 }) },
@@ -99,7 +99,7 @@ export const facilitiesData: FacilityItem[] = [
         id: 5,
         label: "FAMILY EXPERIENCES",
         title: "Infinity Pool & Family Experiences",
-        body: "Our infinity pool features a dedicated kids section, so the whole family can enjoy the breathtaking mountain views together — safely and comfortably.",
+        body: "Our infinity pool features a dedicated kids section, so the whole family can enjoy the breathtaking mountain views together - safely and comfortably.",
         details: [
             {
                 text: "Infinity pool with dedicated kids section",
@@ -125,7 +125,7 @@ export const facilitiesData: FacilityItem[] = [
         id: 6,
         label: "THE GREAT OUTDOORS",
         title: "Nature Trails & Outdoor Adventures",
-        body: "Step beyond the resort and into one of Sri Lanka's most spectacular natural landscapes. Guided trails, sunrise viewpoints, and adventure — all from your doorstep at 1,200m.",
+        body: "Step beyond the resort and into one of Sri Lanka's most spectacular natural landscapes. Guided trails, sunrise viewpoints, and adventure - all from your doorstep at 1,200m.",
         details: [
             { text: "Guided mountain hiking trails", icon: createElement(Compass, { size: 18 }) },
             { text: "Cycling tours through tea country", icon: createElement(Bike, { size: 18 }) },

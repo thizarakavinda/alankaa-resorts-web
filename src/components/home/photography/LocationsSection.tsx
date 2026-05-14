@@ -2,6 +2,7 @@ import { useRef, useEffect } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ArrowRight } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -23,6 +24,7 @@ const LocationsSection = () => {
 };
 
 const LocationRow = ({ loc }: any) => {
+  const navigate = useNavigate();
   const rowRef = useRef<HTMLDivElement>(null);
   const imgRef = useRef<HTMLDivElement>(null);
 
@@ -60,11 +62,11 @@ const LocationRow = ({ loc }: any) => {
         </span>
 
         <div data-aos="fade-up" data-aos-offset="100">
-          <span className="font-jost text-[10px] text-gold uppercase tracking-[0.3em] block mb-4">Shoot Location</span>
+          <span className="font-jost text-[13px] text-gold uppercase tracking-[0.3em] block mb-4">Shoot Location</span>
           <h2 className="font-cormorant text-[clamp(36px,4vw,60px)] text-ivory leading-none mb-6">{loc.name}</h2>
           <div className="w-[48px] h-[1px] bg-gold/50 mb-6" />
 
-          <p className="font-dmSans text-[15px] font-light text-smoke leading-[1.9] mb-8 max-w-[440px]">
+          <p className="font-dmSans text-[17px] font-light text-smoke leading-[1.9] mb-8 max-w-[440px]">
             {loc.desc}
           </p>
 
@@ -103,7 +105,7 @@ const LocationRow = ({ loc }: any) => {
             </div>
           )}
 
-          <button className="font-jost text-[11px] text-ivory border border-gold/40 px-8 py-4 uppercase tracking-widest hover:bg-gold hover:border-gold hover:text-void transition-colors duration-300 inline-flex items-center gap-3">
+          <button onClick={() => navigate('/booking')} className="font-jost text-[11px] text-ivory border border-gold/40 px-8 py-4 uppercase tracking-widest hover:bg-gold hover:border-gold hover:text-void transition-colors duration-300 inline-flex items-center gap-3">
             Book This Location <ArrowRight size={14} />
           </button>
         </div>

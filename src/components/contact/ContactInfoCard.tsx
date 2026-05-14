@@ -1,5 +1,5 @@
 import { MapPin, Phone, Mail, Clock, Globe } from 'lucide-react';
-import { FaFacebookF, FaInstagram, FaTripadvisor, FaWhatsapp } from 'react-icons/fa';
+import { FaFacebookF, FaInstagram, FaPinterest, FaTiktok, FaTripadvisor, FaWhatsapp } from 'react-icons/fa';
 
 const ContactInfoCard = () => {
   return (
@@ -44,7 +44,7 @@ const ContactInfoCard = () => {
 
           <div className="flex items-center gap-6">
             <Globe className="w-5 h-5 text-gold shrink-0" strokeWidth={1.5} />
-            <a href="https://www.alankaaresorts.com" target="_blank" rel="noopener noreferrer" className="font-dmSans text-[14px] text-smoke hover:text-gold transition-colors">
+            <a href="alankaaresorts.com" target="_blank" rel="noopener noreferrer" className="font-dmSans text-[14px] text-smoke hover:text-gold transition-colors">
               www.alankaaresorts.com
             </a>
           </div>
@@ -53,13 +53,19 @@ const ContactInfoCard = () => {
         <div className="w-full h-[1px] bg-mist mb-8"></div>
 
         <div className="flex items-center gap-8">
-          <a href="#" className="text-smoke hover:text-gold transition-colors duration-300">
+          <a href="https://www.facebook.com/ALankaaResortsandSpa/" target="_blank" rel="noopener noreferrer" className="text-smoke hover:text-gold transition-colors duration-300">
             <FaFacebookF size={20} />
           </a>
-          <a href="#" className="text-smoke hover:text-gold transition-colors duration-300">
+          <a href="https://www.instagram.com/alankaa_resorts" target="_blank" rel="noopener noreferrer" className="text-smoke hover:text-gold transition-colors duration-300">
             <FaInstagram size={20} />
           </a>
-          <a href="#" className="text-smoke hover:text-gold transition-colors duration-300">
+          <a href="https://www.tiktok.com/@alankaaresortsresorts" target="_blank" rel="noopener noreferrer" className="text-smoke hover:text-gold transition-colors duration-300">
+            <FaTiktok size={20} />
+          </a>
+          <a href="https://www.pinterest.com/alankaa_resorts/" target="_blank" rel="noopener noreferrer" className="text-smoke hover:text-gold transition-colors duration-300">
+            <FaPinterest size={20} />
+          </a>
+          <a href="https://www.tripadvisor.com/Hotel_Review-g27110123-d18397208-Reviews-A_lankaa_Resorts-Watagamuwa_Uva_Province.html" target="_blank" rel="noopener noreferrer" className="text-smoke hover:text-gold transition-colors duration-300">
             <FaTripadvisor size={24} />
           </a>
         </div>

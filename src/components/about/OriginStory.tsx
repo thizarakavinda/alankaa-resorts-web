@@ -79,7 +79,7 @@ export const OriginStory = () => {
 
         {/* left cont */}
         <div ref={leftContentRef} className="flex flex-col">
-          <p className="font-jost text-[10px] text-gold tracking-[0.3em] uppercase mb-6">
+          <p className="font-jost text-[13px] text-gold tracking-[0.3em] uppercase mb-6">
             HALDUMMULLA · SRI LANKA
           </p>
 
@@ -94,7 +94,7 @@ export const OriginStory = () => {
             className="h-px bg-gold/60 w-[80px] mb-12"
           />
 
-          <div className="font-dmSans font-light text-[15px] text-smoke/90 leading-[2.2] tracking-wide space-y-8 max-w-[540px]">
+          <div className="font-dmSans font-light text-[16px] text-smoke/90 leading-[2.2] tracking-wide space-y-8 max-w-[540px]">
             <p>
               It began with a singular vision. Our founders, guided by an unwavering appreciation for the dramatic landscapes of Sri Lanka's hill country, sought out the most extraordinary canvas. They found it here—on a solid granite peak at precisely 1,200 meters above the sea.
             </p>

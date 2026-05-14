@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 
 const suiteOptions = [
   { value: 230, label: 'Sunrise Suite $230' },
@@ -8,6 +9,7 @@ const suiteOptions = [
 ];
 
 const RoomsPricingCalculator = () => {
+  const navigate = useNavigate();
   const [selectedCalcSuite, setSelectedCalcSuite] = useState(230);
   const [nights, setNights] = useState(3);
 
@@ -18,9 +20,9 @@ const RoomsPricingCalculator = () => {
         <h2 className="font-['Cormorant'] text-[clamp(32px,4vw,52px)] text-[var(--clr-ivory)] font-light leading-tight">
           Know exactly what you'll pay.
         </h2>
-        <p className="font-['DM_Sans'] text-[14px] text-[var(--clr-smoke)] mt-[12px]">
+        <p className="font-['DM_Sans'] text-[16px] text-[var(--clr-smoke)] mt-[12px]">
           All rates include 23% government tax and 10% service charge.<br />
-          <span className="italic">*Subject to current exchange rates*</span>
+          <span className="italic">Subject to current exchange rates</span>
         </p>
       </div>
 
@@ -112,16 +114,16 @@ const RoomsPricingCalculator = () => {
               US${Math.round(selectedCalcSuite * nights * 1.33).toFixed(2)}
             </motion.p>
           </AnimatePresence>
-          <p className="font-['DM_Sans'] text-[11px] text-[var(--clr-fog)] mt-[4px]">
+          <p className="font-['DM_Sans'] text-[14 px] text-[var(--clr-fog)] mt-[4px]">
             Inclusive of all taxes and charges
           </p>
         </div>
 
-        <button className="w-full bg-[var(--clr-gold)] text-[var(--clr-void)] font-['Jost'] text-[12px] uppercase py-[16px] tracking-[0.15em] hover:bg-[var(--clr-gold-light)] transition-colors mt-[24px]">
+        <button onClick={() => navigate('/booking')} className="w-full bg-[var(--clr-gold)] text-[var(--clr-void)] font-['Jost'] text-[12px] uppercase py-[16px] tracking-[0.15em] hover:bg-[var(--clr-gold-light)] transition-colors mt-[24px]">
           Book This Suite &rarr;
         </button>
-        <p className="font-['DM_Sans'] text-[12px] text-[var(--clr-fog)] text-center mt-[12px]">
-          or call us: 070 797 5975
+        <p className="font-['DM_Sans'] text-[15px] text-smoke text-center mt-[12px]">
+          or call us: +94 70 797 5975
         </p>
       </div>
     </section>

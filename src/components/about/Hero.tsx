@@ -84,7 +84,7 @@ export const Hero = () => {
         <h1 className="hero-headline-on-image font-cormorant text-[clamp(48px,6vw,96px)] text-ivory font-light leading-none mb-6">
           About A'Lankaa
         </h1>
-        <p className="hero-subtext-on-image font-dmSans font-light text-[15px] text-smoke/90 max-w-[600px] leading-[2] tracking-wide">
+        <p className="hero-subtext-on-image font-dmSans font-light text-[18px] text-smoke/90 max-w-[600px] leading-[2] tracking-wide">
           A singular vision. An extraordinary location.<br />
           A commitment to hospitality without compromise.
         </p>

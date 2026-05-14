@@ -3,10 +3,12 @@ import { motion } from 'framer-motion';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { spaMenuData } from '../../data/facilitiesData';
+import { useNavigate } from 'react-router-dom';
 
 gsap.registerPlugin(ScrollTrigger);
 
 const SpaTreatments = () => {
+    const navigate = useNavigate();
     const sectionRef = useRef<HTMLElement>(null);
     const headingRef = useRef<HTMLHeadingElement>(null);
     const subRef = useRef<HTMLParagraphElement>(null);
@@ -78,7 +80,7 @@ const SpaTreatments = () => {
                         ref={subRef}
                         className="font-dmSans text-[var(--clr-smoke)] text-lg opacity-0"
                     >
-                        Please contact Reception for current prices. Book in advance — spaces are limited.
+                        Please contact Reception for current prices. Book in advance - spaces are limited.
                     </p>
                 </div>
 
@@ -110,12 +112,12 @@ const SpaTreatments = () => {
                                 </p>
                             </div>
 
-                            <a
-                                href="/contact"
+                            <button
+                                onClick={() => navigate('/contact')}
                                 className="text-[var(--clr-gold)] font-dmSans text-sm tracking-[0.1em] hover:text-[var(--clr-ivory)] transition-colors duration-300 w-fit uppercase flex items-center gap-2 mt-auto"
                             >
                                 Enquire <span className="text-lg">→</span>
-                            </a>
+                            </button>
                         </motion.div>
                     ))}
                 </div>

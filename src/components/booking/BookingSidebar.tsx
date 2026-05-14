@@ -18,7 +18,7 @@ const BookingSidebar = ({ state }: { state: BookingState }) => {
       <div className="h-[200px] w-full bg-cover bg-center" style={{ backgroundImage: "url('/images/rock view 2.jpg')" }} />
 
       <div className="p-8">
-        <h3 className="font-jost text-[9px] text-gold uppercase tracking-[0.3em] mb-4">
+        <h3 className="font-jost text-[16px] text-gold uppercase tracking-[0.3em] mb-4">
           Your Booking Summary
         </h3>
         <div className="w-[30px] h-[1px] bg-gold mb-6" />
@@ -35,11 +35,11 @@ const BookingSidebar = ({ state }: { state: BookingState }) => {
         <div className="h-[1px] w-full bg-mist mb-6" />
 
         <div className="mb-8">
-          <span className="font-jost text-[10px] text-fog uppercase tracking-widest block mb-2">Estimated Cost</span>
+          <span className="font-jost text-[14px] text-fog uppercase tracking-widest block mb-2">Estimated Cost</span>
           <div className="font-cormorant text-4xl text-gold mb-1">
             {estimatedTotal !== null ? `$${estimatedTotal}` : (state.roomPrice ? `$${state.roomPrice} / night` : '—')}
           </div>
-          <span className="font-dmSans text-[11px] text-fog">* Confirmed by our team minimum 24h prior</span>
+          <span className="font-dmSans text-[13px] text-fog">Confirmed by our team minimum 24h prior</span>
         </div>
 
         <div className="h-[1px] w-full bg-mist mb-8" />
@@ -71,7 +71,7 @@ const BookingSidebar = ({ state }: { state: BookingState }) => {
 
 const SummaryRow = ({ label, value }: { label: string, value: string }) => (
   <div className="flex items-start justify-between gap-4">
-    <span className="font-dmSans text-[12px] text-fog">{label}</span>
+    <span className="font-dmSans text-[14px] text-fog">{label}</span>
     <span className="font-dmSans text-[14px] text-cream text-right">{value}</span>
   </div>
 );

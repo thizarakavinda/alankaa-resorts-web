@@ -23,7 +23,7 @@ const RoomsInclusions = () => {
       <h2 className="font-['Cormorant'] text-[clamp(40px,5vw,68px)] text-[var(--clr-ivory)] font-light mt-2">
         Every suite includes.
       </h2>
-      <p className="font-['DM_Sans'] text-[15px] text-[var(--clr-smoke)] mt-[16px] max-w-2xl mx-auto">
+      <p className="font-['DM_Sans'] text-[18px] text-[var(--clr-smoke)] mt-[16px] max-w-2xl mx-auto">
         No hidden extras. No surprises.<br />
         Just pure luxury from the moment you arrive.
       </p>
@@ -46,8 +46,8 @@ const RoomsInclusions = () => {
             <div className="text-[var(--clr-gold)] mb-[20px] transition-transform duration-300 group-hover:-translate-y-1">
               {item.icon}
             </div>
-            <h3 className="font-['DM_Sans'] font-medium text-[15px] text-[var(--clr-cream)] mb-[8px]">{item.title}</h3>
-            <p className="font-['DM_Sans'] font-light text-[13px] text-[var(--clr-smoke)]">{item.desc}</p>
+            <h3 className="font-['DM_Sans'] font-medium text-[18px] text-[var(--clr-cream)] mb-[8px]">{item.title}</h3>
+            <p className="font-['DM_Sans'] font-light text-[16px] text-[var(--clr-smoke)]">{item.desc}</p>
           </motion.div>
         ))}
       </div>

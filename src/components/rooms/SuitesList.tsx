@@ -18,8 +18,8 @@ const SuitesList = ({ activeFilter }: SuitesListProps) => {
   return (
     <section className="bg-[var(--clr-void)]">
       <AnimatePresence>
-        {filteredSuites.map((suite) => (
-          <SuiteCard key={suite.id} suite={suite} />
+        {filteredSuites.map((suite, index) => (
+          <SuiteCard key={suite.id} suite={suite} index={index} />
         ))}
       </AnimatePresence>
     </section>

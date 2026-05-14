@@ -51,7 +51,7 @@ const HeroSection = () => {
       </div>
 
       <div className="relative z-10 w-full max-w-[900px] px-6 flex flex-col items-center text-center">
-        <span className="gold-label-on-image font-jost text-[10px] text-gold uppercase tracking-[0.5em] mb-12" data-aos="fade-up">
+        <span className="gold-label-on-image font-jost text-[13px] text-gold uppercase tracking-[0.5em] mb-12" data-aos="fade-up">
           Photography Experiences
         </span>
 
@@ -63,7 +63,7 @@ const HeroSection = () => {
           ))}
         </div>
 
-        <p className="hero-subtext-on-image font-dmSans text-[17px] text-smoke font-light max-w-[580px] mx-auto" data-aos="fade-up" data-aos-delay="300">
+        <p className="hero-subtext-on-image font-dmSans text-[20px] text-smoke font-light max-w-[580px] mx-auto" data-aos="fade-up" data-aos-delay="300">
           At 1,200 metres above sea level, every frame is extraordinary. Every backdrop, unforgettable.
         </p>
       </div>

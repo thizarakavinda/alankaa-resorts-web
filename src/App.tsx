@@ -30,7 +30,7 @@ const AnimatedRoutes = () => {
 
   return (
     <Suspense fallback={<div className="min-h-screen bg-void" />}>
-      <AnimatePresence mode="wait">
+      <AnimatePresence mode="wait" onExitComplete={() => window.scrollTo(0, 0)}>
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />

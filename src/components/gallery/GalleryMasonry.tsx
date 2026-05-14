@@ -82,15 +82,10 @@ const GalleryMasonry = ({ images }: GalleryMasonryProps) => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.4 }}
-            className="fixed inset-0 z-[100] flex items-center justify-center bg-[rgba(0,0,0,0.95)] backdrop-blur-sm"
+            className="fixed inset-0 z-[100] flex items-center justify-center bg-[rgba(0,0,0,0.95)] backdrop-blur-sm cursor-[zoom-out]"
+            onClick={closeLightbox}
           >
-            {/* top right close */}
-            <button
-              onClick={closeLightbox}
-              className="absolute top-6 right-6 md:top-10 md:right-10 z-50 p-2 text-smoke hover:text-gold transition-colors"
-            >
-              <X className="w-8 h-8" strokeWidth={1} />
-            </button>
+
 
             {/* nav arrows */}
             <button
@@ -113,14 +108,22 @@ const GalleryMasonry = ({ images }: GalleryMasonryProps) => {
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.95, opacity: 0 }}
               transition={{ duration: 0.4, ease: "easeOut" }}
-              className="relative w-full max-w-[85vw] md:max-w-[75vw] h-full max-h-[85vh] flex items-center justify-center p-4"
+              className="relative max-w-[85vw] md:max-w-[75vw] max-h-[85vh] cursor-default"
               onClick={(e) => e.stopPropagation()}
             >
               <img
                 src={images[selectedIndex].src}
                 alt={images[selectedIndex].title}
-                className="max-w-full max-h-full object-contain rounded-[2px]"
+                className="max-w-full max-h-[85vh] object-contain rounded-[2px] shadow-2xl"
               />
+              
+              {/* close button near image corner */}
+              <button
+                onClick={closeLightbox}
+                className="absolute -top-4 -right-4 md:-top-5 md:-right-5 z-50 p-2 md:p-3 bg-black/60 rounded-full text-white hover:text-gold hover:bg-black/90 transition-all backdrop-blur-md shadow-lg"
+              >
+                <X className="w-5 h-5 md:w-6 md:h-6" strokeWidth={2} />
+              </button>
             </motion.div>
 
             {/* bottom info bar */}

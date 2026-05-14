@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { Check, BedDouble, Users, Eye, LayoutGrid } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 interface SuiteSpec {
   size: string;
@@ -29,10 +30,12 @@ interface Suite {
 
 interface SuiteCardProps {
   suite: Suite;
+  index: number;
 }
 
-const SuiteCard = ({ suite }: SuiteCardProps) => {
-  const isImageLeft = suite.id % 2 !== 0;
+const SuiteCard = ({ suite, index }: SuiteCardProps) => {
+  const navigate = useNavigate();
+  const isImageLeft = index % 2 === 0;
 
   return (
     <motion.div
@@ -99,7 +102,7 @@ const SuiteCard = ({ suite }: SuiteCardProps) => {
               {suite.tagline}
             </p>
 
-            <p className="font-['DM_Sans'] font-light text-[14px] text-[var(--clr-smoke)] leading-[1.9] mb-[28px]">
+            <p className="font-['DM_Sans'] font-light text-[16px] text-[var(--clr-smoke)] leading-[1.9] mb-[28px]">
               {suite.description}
             </p>
 
@@ -107,26 +110,26 @@ const SuiteCard = ({ suite }: SuiteCardProps) => {
             <div className="flex flex-wrap gap-[24px] lg:gap-[32px] mb-[28px] items-center">
               <div className="flex flex-col gap-[4px]">
                 <LayoutGrid size={18} color="var(--clr-gold)" />
-                <p className="font-['DM_Sans'] font-medium text-[12px] text-[var(--clr-cream)]">{suite.specs.size}</p>
-                <p className="font-['DM_Sans'] font-light text-[11px] text-[var(--clr-fog)]">Floor Area</p>
+                <p className="font-['DM_Sans'] font-medium text-[14px] text-[var(--clr-cream)]">{suite.specs.size}</p>
+                <p className="font-['DM_Sans'] font-light text-[14px] text-smoke">Floor Area</p>
               </div>
               <div className="flex flex-col gap-[4px]">
                 <BedDouble size={18} color="var(--clr-gold)" />
-                <p className="font-['DM_Sans'] font-medium text-[12px] text-[var(--clr-cream)]">{suite.specs.bed}</p>
-                <p className="font-['DM_Sans'] font-light text-[11px] text-[var(--clr-fog)]">Bed Type</p>
+                <p className="font-['DM_Sans'] font-medium text-[14px] text-[var(--clr-cream)]">{suite.specs.bed}</p>
+                <p className="font-['DM_Sans'] font-light text-[14px] text-smoke">Bed Type</p>
               </div>
               <div className="flex flex-col gap-[4px]">
                 <Users size={18} color="var(--clr-gold)" />
-                <p className="font-['DM_Sans'] font-medium text-[12px] text-[var(--clr-cream)]">{suite.specs.guests}</p>
-                <p className="font-['DM_Sans'] font-light text-[11px] text-[var(--clr-fog)]">Capacity</p>
+                <p className="font-['DM_Sans'] font-medium text-[14px] text-[var(--clr-cream)]">{suite.specs.guests}</p>
+                <p className="font-['DM_Sans'] font-light text-[14px] text-smoke">Capacity</p>
               </div>
               <div className="flex flex-col gap-[4px]">
                 <Eye size={18} color="var(--clr-gold)" />
-                <p className="font-['DM_Sans'] font-medium text-[12px] text-[var(--clr-cream)]">{suite.specs.view}</p>
-                <p className="font-['DM_Sans'] font-light text-[11px] text-[var(--clr-fog)]">View</p>
+                <p className="font-['DM_Sans'] font-medium text-[14px] text-[var(--clr-cream)]">{suite.specs.view}</p>
+                <p className="font-['DM_Sans'] font-light text-[14px] text-smoke">View</p>
               </div>
 
-              <div className="flex items-center gap-1 font-['Jost'] text-[10px] text-[var(--clr-fog)] lg:ml-auto">
+              <div className="flex items-center gap-1 font-['Jost'] text-[14px] text-smoke lg:ml-auto">
                 <span className="text-[#4CAF50] animate-pulse">●</span> {suite.available} Suites Available
               </div>
             </div>
@@ -136,7 +139,7 @@ const SuiteCard = ({ suite }: SuiteCardProps) => {
               {suite.features.map((feature, i) => (
                 <div key={i} className="flex flex-row gap-[8px] items-center">
                   <Check size={14} color="var(--clr-gold)" className="flex-shrink-0" />
-                  <p className="font-['DM_Sans'] font-light text-[13px] text-[var(--clr-smoke)]">{feature}</p>
+                  <p className="font-['DM_Sans'] font-light text-[15px] text-[var(--clr-smoke)]">{feature}</p>
                 </div>
               ))}
             </div>
@@ -147,7 +150,7 @@ const SuiteCard = ({ suite }: SuiteCardProps) => {
 
                 {/* left */}
                 <div>
-                  <p className="font-['Jost'] text-[9px] text-[var(--clr-fog)] uppercase">Total per night</p>
+                  <p className="font-['Jost'] text-[12px] text-fog)] uppercase">Total per night</p>
                   <div className="flex items-baseline gap-[8px]">
                     <span className="font-['DM_Sans'] text-[18px] text-[var(--clr-gold)]">US$</span>
                     <span className="font-['Cormorant'] text-[64px] text-[var(--clr-gold)] font-light leading-none">{suite.basePrice}</span>
@@ -156,20 +159,20 @@ const SuiteCard = ({ suite }: SuiteCardProps) => {
               </div>
 
               <div className="mt-[16px] flex flex-col gap-[6px]">
-                <p className="font-['DM_Sans'] text-[12px] text-[var(--clr-smoke)] flex items-center">
-                  <span className="text-[var(--clr-gold)] mr-2">✓</span> Breakfast (BB) included
+                <p className="font-['DM_Sans'] text-[12px] text-smoke flex items-center">
+                  <span className="text-gold mr-2">✓</span> Breakfast (BB) included
                 </p>
               </div>
             </div>
 
             {/* btn row */}
             <div className="flex flex-col sm:flex-row gap-[16px]">
-              <a href={`/booking?suite=${suite.id}`} className="inline-block bg-[var(--clr-gold)] text-[var(--clr-void)] font-['Jost'] text-[12px] uppercase tracking-[0.15em] px-[36px] py-[16px] text-center hover:bg-[var(--clr-gold-light)] hover:scale-[1.02] transition-all duration-300">
+              <button onClick={() => navigate(`/booking?suite=${suite.id}`)} className="inline-block bg-[var(--clr-gold)] text-[var(--clr-void)] font-['Jost'] text-[12px] uppercase tracking-[0.15em] px-[36px] py-[16px] text-center hover:bg-[var(--clr-gold-light)] hover:scale-[1.02] transition-all duration-300">
                 Book This Suite &rarr;
-              </a>
-              <a href="/contact" className="inline-block bg-transparent border border-[rgba(184,150,90,0.4)] text-[var(--clr-gold)] font-['Jost'] text-[12px] uppercase px-[28px] py-[16px] text-center hover:border-[var(--clr-gold)] transition-colors duration-300">
+              </button>
+              <button onClick={() => navigate('/contact')} className="inline-block bg-transparent border border-[rgba(184,150,90,0.4)] text-[var(--clr-gold)] font-['Jost'] text-[12px] uppercase px-[28px] py-[16px] text-center hover:border-[var(--clr-gold)] transition-colors duration-300">
                 Enquire &rarr;
-              </a>
+              </button>
             </div>
           </div>
         </div>

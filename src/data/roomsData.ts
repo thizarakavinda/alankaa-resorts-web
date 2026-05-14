@@ -28,7 +28,7 @@ export const suites = [
     view: 'Views of 5 Provinces',
     available: 8,
     basePrice: 310,
-    image: '/images/sunrise room 1.jpg',
+    image: '/images/sunset room.jpg',
     features: [
       'Panoramic views of 5 provinces',
       'Private balcony',
@@ -56,14 +56,14 @@ export const suites = [
     tagline: 'Golden sunsets over the mountain horizon, every evening.',
     description: `Experience the magic of mountain sunsets 
       from your private balcony. These spacious 55 sq m suites 
-      combine elegant comfort with stunning natural vistas — 
+      combine elegant comfort with stunning natural vistas - 
       complete with a private jacuzzi and all the amenities 
       for a perfect highland retreat.`,
     size: '55 sq m',
     view: 'Sunset & Mountain View',
     available: 6,
     basePrice: 215,
-    image: '/images/sunset room.jpg',
+    image: '/images/sunrise room 1.jpg',
     features: [
       'Sunset & mountain panoramic views',
       'Private balcony',
@@ -91,7 +91,7 @@ export const suites = [
     tagline: 'Surrounded by lush tropical gardens in complete serenity.',
     description: `Our Garden View Suites offer a peaceful 
       sanctuary immersed in tropical greenery. Perfect for 
-      guests who seek tranquility — these comfortable 50 sq m 
+      guests who seek tranquility - these comfortable 50 sq m 
       suites include all essential amenities with the soothing 
       sounds of nature as your backdrop.`,
     size: '50 sq m',

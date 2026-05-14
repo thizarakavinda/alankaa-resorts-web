@@ -39,7 +39,7 @@ const RoomsFilterBar = ({ activeFilter, setActiveFilter, availableCount }: Rooms
       </div>
 
       <div>
-        <p className="font-['Jost'] text-[10px] text-[var(--clr-fog)] uppercase tracking-[0.2em]">
+        <p className="font-['Jost'] text-[12px] text-[var(--clr-gold)] uppercase tracking-[0.2em]">
           {availableCount} SUITES AVAILABLE
         </p>
       </div>
