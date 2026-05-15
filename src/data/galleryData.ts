@@ -131,7 +131,7 @@ const rawImages = [
   { src: '/images/ext 23.webp', category: 'Exterior' },
   { src: '/images/ext 24.webp', category: 'Exterior' },
   { src: '/images/ext 25.webp', category: 'Exterior' },
-  { src: '/images/ext 26.webp', category: 'Exterior' },
+
 ];
 
 export const MOCK_IMAGES: GalleryImageType[] = rawImages.map((img, i) => ({

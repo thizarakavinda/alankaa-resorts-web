@@ -34,7 +34,10 @@ const GalleryDrone = () => {
           pure perspective.
         </motion.h2>
 
-        <motion.button
+        <motion.a
+          href="https://youtu.be/iC9JmO_Ut_k?si=qHEu7ifSQ3OT5Ukw"
+          target="_blank"
+          rel="noopener noreferrer"
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
@@ -42,7 +45,7 @@ const GalleryDrone = () => {
           className="px-10 py-4 border border-[rgba(184,150,90,0.6)] text-gold font-dmSans text-[12px] uppercase tracking-widest hover:bg-gold hover:text-void transition-colors duration-300"
         >
           View Full Film
-        </motion.button>
+        </motion.a>
       </div>
     </section>
   );

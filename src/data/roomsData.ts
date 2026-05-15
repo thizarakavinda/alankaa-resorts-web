@@ -28,7 +28,7 @@ export const suites = [
     view: 'Views of 5 Provinces',
     available: 8,
     basePrice: 310,
-    image: '/images/sunset room.webp',
+    image: '/images/sunrise room.webp',
     features: [
       'Panoramic views of 5 provinces',
       'Private balcony',
@@ -63,7 +63,7 @@ export const suites = [
     view: 'Sunset & Mountain View',
     available: 6,
     basePrice: 215,
-    image: '/images/sunrise room 1.webp',
+    image: '/images/sunset room.webp',
     features: [
       'Sunset & mountain panoramic views',
       'Private balcony',
@@ -98,7 +98,7 @@ export const suites = [
     view: 'Lush Garden View',
     available: 6,
     basePrice: 175,
-    image: '/images/garden view.webp',
+    image: '/images/garden room.webp',
     features: [
       'Lush tropical garden views',
       'Hot water shower',
