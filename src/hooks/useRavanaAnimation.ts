@@ -85,7 +85,7 @@ export const useRavanaAnimation = (canvasRef: React.RefObject<HTMLCanvasElement 
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
-    
+
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
 
@@ -211,12 +211,12 @@ export const useRavanaAnimation = (canvasRef: React.RefObject<HTMLCanvasElement 
         for (let i = 1; i <= 8; i++) {
           const radius = m.size * (i / 8);
           ctx.beginPath();
-          
+
           for (let j = 0; j <= 12; j++) {
             const angle = (j / 12) * Math.PI * 2;
             const px = Math.cos(angle) * radius;
             const py = Math.sin(angle) * radius;
-            
+
             // Draw diamond
             const dSize = 4 + (i / 8) * 4;
             ctx.moveTo(px + dSize, py);
@@ -225,11 +225,11 @@ export const useRavanaAnimation = (canvasRef: React.RefObject<HTMLCanvasElement 
             ctx.lineTo(px, py - dSize);
             ctx.lineTo(px + dSize, py);
           }
-          
+
           let colorAlpha = 0.04;
           if (i <= 3) colorAlpha = 0.05;
           else if (i <= 6) colorAlpha = 0.03;
-          
+
           ctx.strokeStyle = `rgba(184, 150, 90, ${colorAlpha * mult})`;
           ctx.stroke();
 
@@ -258,20 +258,20 @@ export const useRavanaAnimation = (canvasRef: React.RefObject<HTMLCanvasElement 
           p.x = Math.random() * w;
         }
 
-        const currentOpacity = Math.max(0, (p.opacity / 0.4) * 0.25 * mult); 
+        const currentOpacity = Math.max(0, (p.opacity / 0.4) * 0.25 * mult);
         if (currentOpacity < 0.005) continue;
 
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
         ctx.fillStyle = `rgba(${p.colorRGB}, ${currentOpacity})`;
-        
+
         if (p.size > 2) {
           ctx.shadowColor = `rgba(201, 168, 76, ${0.3 * mult})`;
           ctx.shadowBlur = 6;
         } else {
           ctx.shadowBlur = 0;
         }
-        
+
         ctx.fill();
       }
       ctx.shadowBlur = 0; // reset
@@ -281,7 +281,7 @@ export const useRavanaAnimation = (canvasRef: React.RefObject<HTMLCanvasElement 
       const mult = themeMultiplierRef.current;
       for (const blob of mistBlobs) {
         blob.x += Math.sin(t * blob.speed + blob.phase) * 0.3;
-        
+
         const currentOpacity = blob.baseOpacity * mult * 0.05 / 0.06; // scaled to 0.05 max in dark
         if (currentOpacity < 0.005) continue;
 
@@ -301,20 +301,20 @@ export const useRavanaAnimation = (canvasRef: React.RefObject<HTMLCanvasElement 
       ctx.beginPath();
       switch (symbolType) {
         case 0: // Ancient Sinhala Om/Sacred
-          ctx.moveTo(-size/2, -size/2);
-          ctx.bezierCurveTo(size/2, -size/2, size/2, size/2, 0, size/2);
-          ctx.bezierCurveTo(-size/4, size/2, -size/4, 0, size/4, 0);
+          ctx.moveTo(-size / 2, -size / 2);
+          ctx.bezierCurveTo(size / 2, -size / 2, size / 2, size / 2, 0, size / 2);
+          ctx.bezierCurveTo(-size / 4, size / 2, -size / 4, 0, size / 4, 0);
           break;
         case 1: // Lotus Mandala
           for (let i = 0; i < 8; i++) {
             const angle = (i / 8) * Math.PI * 2;
             ctx.moveTo(0, 0);
             ctx.quadraticCurveTo(
-              Math.cos(angle - 0.2) * size/2, Math.sin(angle - 0.2) * size/2,
+              Math.cos(angle - 0.2) * size / 2, Math.sin(angle - 0.2) * size / 2,
               Math.cos(angle) * size, Math.sin(angle) * size
             );
             ctx.quadraticCurveTo(
-              Math.cos(angle + 0.2) * size/2, Math.sin(angle + 0.2) * size/2,
+              Math.cos(angle + 0.2) * size / 2, Math.sin(angle + 0.2) * size / 2,
               0, 0
             );
           }
@@ -322,21 +322,21 @@ export const useRavanaAnimation = (canvasRef: React.RefObject<HTMLCanvasElement 
         case 2: // Sword/Vel
           ctx.moveTo(0, -size);
           ctx.lineTo(0, size);
-          ctx.moveTo(-size/2, -size/4);
-          ctx.quadraticCurveTo(0, 0, size/2, -size/4);
+          ctx.moveTo(-size / 2, -size / 4);
+          ctx.quadraticCurveTo(0, 0, size / 2, -size / 4);
           break;
         case 3: // Diamond/Gem
-          ctx.moveTo(0, -size/2);
-          ctx.lineTo(size/3, 0);
-          ctx.lineTo(0, size/2);
-          ctx.lineTo(-size/3, 0);
+          ctx.moveTo(0, -size / 2);
+          ctx.lineTo(size / 3, 0);
+          ctx.lineTo(0, size / 2);
+          ctx.lineTo(-size / 3, 0);
           ctx.closePath();
           break;
         case 4: // Spiral
-          for(let i = 0; i < 40; i++) {
+          for (let i = 0; i < 40; i++) {
             const a = i * 0.3;
             const r = (i / 40) * size;
-            if (i === 0) ctx.moveTo(0,0);
+            if (i === 0) ctx.moveTo(0, 0);
             else ctx.lineTo(Math.cos(a) * r, Math.sin(a) * r);
           }
           break;

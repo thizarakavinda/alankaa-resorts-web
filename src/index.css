@@ -13,7 +13,7 @@
 }
 
 /* Allow RavanaBackground canvas to show through layout containers */
-main.bg-void, 
+main.bg-void,
 section.bg-void,
 footer.bg-void,
 div.bg-void[class*="min-h-"],
@@ -34,7 +34,7 @@ div.bg-obsidian[class*="min-h-"],
   background-color: rgba(237, 232, 222, 0.6) !important;
 }
 
-[data-theme='light'] main.bg-void, 
+[data-theme='light'] main.bg-void,
 [data-theme='light'] section.bg-void,
 [data-theme='light'] footer.bg-void,
 [data-theme='light'] div.bg-void[class*="min-h-"],
@@ -42,6 +42,7 @@ div.bg-obsidian[class*="min-h-"],
 [data-theme='light'] .section-void {
   background-color: transparent !important;
 }
+
 @layer utilities {
   @keyframes fadeIn {
     from {
