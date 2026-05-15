@@ -7,10 +7,10 @@ import { useNavigate } from 'react-router-dom';
 gsap.registerPlugin(ScrollTrigger);
 
 const locations = [
-  { num: "01", name: "Infinity Pool", img: "/images/pool new 1.jpg", tags: ["Wedding", "Pre-shoot", "Western", "Lifestyle"], desc: "Our infinity pool appears to dissolve into the mountain horizon. At golden hour, the water mirrors the sky — creating reflections that make every frame look like a painting.", reverse: false },
-  { num: "02", name: "Sunrise Viewpoint", img: "/images/sunrise view 1.jpg", tags: ["Kandyan", "Wedding", "Lifestyle", "Solo"], desc: "The most spectacular sunrise in Sri Lanka — witnessed from 1,200 metres. A private viewpoint accessible exclusively to A'Lankaa guests. Golden light. Misty valleys. Silence.", reverse: true, special: "BEST TIME:\n5:30 AM – 7:00 AM · Advance booking required" },
-  { num: "03", name: "Rock Formations", img: "/images/kandiyan 2.jpg", tags: ["Kandyan", "Wedding", "Western", "Editorial"], desc: "Perched upon ancient volcanic rock — A'Lankaa's natural terrain offers a raw, dramatic backdrop unlike any studio. Kandyan shoots here are utterly striking.", reverse: false },
-  { num: "04", name: "Heritage Gardens", img: "/images/kandiyan 3.jpg", tags: ["Kandyan", "Wedding", "Family", "Lifestyle"], desc: "Manicured gardens with tropical flora, gentle mist, and the mountains beyond. A natural stage that needs no artificial decoration.", reverse: true }
+  { num: "01", name: "Infinity Pool", img: "/images/pool new 1.webp", tags: ["Wedding", "Pre-shoot", "Western", "Lifestyle"], desc: "Our infinity pool appears to dissolve into the mountain horizon. At golden hour, the water mirrors the sky, creating reflections that make every frame look like a painting.", reverse: false },
+  { num: "02", name: "Sunrise Viewpoint", img: "/images/sunrise view 1.webp", tags: ["Kandyan", "Wedding", "Lifestyle", "Solo"], desc: "The most spectacular sunrise in Sri Lanka - witnessed from 1,200 metres. A private viewpoint accessible exclusively to A'Lankaa guests. Golden light. Misty valleys. Silence.", reverse: true, special: "BEST TIME:\n5:30 AM – 7:00 AM · Advance booking required" },
+  { num: "03", name: "The Carved Pavilion", img: "/images/kandiyan 2.webp", tags: ["Kandyan", "Wedding", "Western", "Editorial"], desc: "Step into a world of heritage craftsmanship - gilded woodwork, towering pillars, and warm chandelier light make this palatial interior the ultimate backdrop for Kandyan, Wedding, and Editorial shoots.", reverse: false },
+  { num: "04", name: "The Royal Sanctum", img: "/images/kandiyan 3.webp", tags: ["Kandyan", "Wedding", "Family", "Lifestyle"], desc: "A palatial hall of carved wood, stone guardians, and a grand chandelier - where heritage meets timeless elegance.", reverse: true }
 ];
 
 const LocationsSection = () => {

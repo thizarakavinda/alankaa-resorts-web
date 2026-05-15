@@ -2,11 +2,11 @@ import { useEffect, useState, useRef } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 
 const slides = [
-  { src: '/images/view 6.jpg', alt: 'Mountain View' },
-  { src: '/images/v1.jpg', alt: 'Resort Overview' },
-  { src: '/images/ext 3.jpg', alt: 'Resort Exterior' },
-  { src: '/images/ext 4.jpg', alt: 'Kandyan Suite' },
-  { src: '/images/pool new 1.jpg', alt: 'Infinity Pool' },
+  { src: '/images/view 6.webp', alt: 'Mountain View' },
+  { src: '/images/v1.webp', alt: 'Resort Overview' },
+  { src: '/images/ext 3.webp', alt: 'Resort Exterior' },
+  { src: '/images/ext 4.webp', alt: 'Kandyan Suite' },
+  { src: '/images/pool new 1.webp', alt: 'Infinity Pool' },
 ];
 
 const INTERVAL = 5500;

@@ -7,7 +7,7 @@ const PoolSunriseSection = () => {
     <section className="h-[200vh] md:h-[110vh] bg-void flex flex-col md:flex-row w-full overflow-hidden">
       {/* pool imgs split part */}
       <div className="relative h-[100vh] md:h-full flex-1 group hover:flex-[1.4] transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] cursor-pointer overflow-hidden border-r border-gold/20">
-        <img src="/images/infinity-pool-family.png" className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-[15s] opacity-70" alt="Infinity Pool" />
+        <img src="/images/infinity-pool-family.webp" className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-[15s] opacity-70" alt="Infinity Pool" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/10" />
 
         {/* center layout */}
@@ -39,7 +39,7 @@ const PoolSunriseSection = () => {
 
       {/* sunrise split */}
       <div className="relative h-[100vh] md:h-full flex-1 group hover:flex-[1.4] transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] cursor-pointer overflow-hidden">
-        <img src="/images/view 5.jpg" className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-[15s] opacity-70" alt="Sunrise Views" />
+        <img src="/images/view 5.webp" className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-[15s] opacity-70" alt="Sunrise Views" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/10" />
 
         {/* center layout */}

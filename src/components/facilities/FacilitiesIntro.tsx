@@ -93,7 +93,7 @@ const FacilitiesIntro = () => {
                         </div>
                         <div className="bg-[var(--clr-charcoal)] h-40 rounded-sm overflow-hidden">
                             <img
-                                src="/images/Pool 02.jpg"
+                                src="/images/Pool 02.webp"
                                 className="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity duration-500"
                                 alt="Pool Detail"
                             />
@@ -102,7 +102,7 @@ const FacilitiesIntro = () => {
                     <div className="flex flex-col gap-4 pb-12">
                         <div className="bg-[var(--clr-charcoal)] h-48 rounded-sm overflow-hidden">
                             <img
-                                src="/images/nature dining.jpg"
+                                src="/images/nature dining.webp"
                                 className="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity duration-500"
                                 alt="Dining Detail"
                             />

@@ -10,7 +10,7 @@ const shootCards = [
     name: "Kandyan Traditional",
     desc: "Celebrate Sri Lanka's rich cultural heritage draped in exquisite Kandyan attire against our breathtaking mountain vistas.",
     tags: "Heritage Gardens · Rock Formations",
-    img: "/images/kandiyan 4.jpg"
+    img: "/images/kandiyan 4.webp"
   },
   {
     badge: "CONTEMPORARY",
@@ -18,7 +18,7 @@ const shootCards = [
     name: "Western Style",
     desc: "Clean lines, modern fashion, and the world's most dramatic natural backdrop. Contemporary shoots with a soul.",
     tags: "Pool Deck · Mountain Overlook · Interiors",
-    img: "/images/western shoot 2.jpg"
+    img: "/images/western shoot 2.webp"
   },
    {
     badge: "MOST POPULAR",
@@ -26,7 +26,7 @@ const shootCards = [
     name: "Wedding Shoots",
     desc: "Say 'I do' with the misty mountains as your witness. Intimate, dramatic, and timelessly beautiful.",
     tags: "Infinity Pool · Sunrise Point · Gardens",
-    img: "/images/kandiyan 5.jpg"
+    img: "/images/kandiyan 5.webp"
   },
   {
     badge: "FOR EVERYONE",
@@ -34,7 +34,7 @@ const shootCards = [
     name: "Lifestyle Sessions",
     desc: "Candid, joyful, and real. Whether family portraits or solo travel content — our landscape elevates every frame.",
     tags: "Pool · Nature Trails · Sunrise Point",
-    img: "/images/western 6.jpg"
+    img: "/images/western 6.webp"
   }
 ];
 
@@ -49,22 +49,22 @@ const ShootCardsSection = () => {
             Every shoot, a masterpiece.
           </h2>
           <p className="font-dmSans text-[16px] text-smoke leading-relaxed mb-8" data-aos="fade-up" data-aos-delay="100">
-            From intimate wedding portraits to cultural celebrations and casual lifestyle sessions — A'Lankaa's dramatic landscape transforms every photograph into art.
+            From intimate wedding portraits to cultural celebrations and casual lifestyle sessions - A'Lankaa's dramatic landscape transforms every photograph into art.
           </p>
-          <button onClick={() => navigate('/booking')} className="border border-gold/50 text-gold font-jost text-[13px] uppercase tracking-widest px-8 py-4 hover:bg-gold hover:text-void transition-colors duration-300" data-aos="fade-up" data-aos-delay="200">
+          <button onClick={() => navigate('/contact')} className="border border-gold/50 text-gold font-jost text-[13px] uppercase tracking-widest px-8 py-4 hover:bg-gold hover:text-void transition-colors duration-300" data-aos="fade-up" data-aos-delay="200">
             Enquire About a Shoot
           </button>
         </div>
 
         <div className="hidden lg:flex gap-6 xl:gap-8 items-center mr-6 xl:mr-16 pointer-events-none absolute right-0 top-0">
           <motion.div animate={{ y: [0, -18, 0] }} transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut", delay: 0.2 }} className="mb-[30px] hidden xl:block">
-             <img src="/images/kandiyan 5.jpg" alt="Shoot" className="w-[150px] h-[200px] object-cover opacity-70" />
+             <img src="/images/kandiyan 5.webp" alt="Shoot" className="w-[150px] h-[200px] object-cover opacity-70" />
           </motion.div>
           <motion.div animate={{ y: [0, -15, 0] }} transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }} className="mt-[40px]">
-             <img src="/images/kandiyan 4.jpg" alt="Shoot" className="w-[180px] h-[240px] object-cover opacity-70" />
+             <img src="/images/kandiyan 4.webp" alt="Shoot" className="w-[180px] h-[240px] object-cover opacity-70" />
           </motion.div>
           <motion.div animate={{ y: [0, -20, 0] }} transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }} className="mb-[60px]">
-             <img src="/images/western shoot 2.jpg" alt="Shoot" className="w-[140px] h-[190px] object-cover opacity-70" />
+             <img src="/images/western shoot 2.webp" alt="Shoot" className="w-[140px] h-[190px] object-cover opacity-70" />
           </motion.div>
         </div>
       </div>
@@ -97,7 +97,7 @@ const ShootCardsSection = () => {
               <p className="card-text-on-image font-jost text-[10px] text-gold uppercase">{card.tags}</p>
 
               <div className="overflow-hidden mt-6 flex h-0 group-hover:h-[45px] transition-all duration-300">
-                <button onClick={() => navigate('/booking')} className="w-full bg-gold text-void font-jost text-[11px] uppercase tracking-widest py-3 flex items-center justify-center gap-2 hover:bg-ivory transition-colors">
+                <button onClick={() => navigate('/contact')} className="w-full bg-gold text-void font-jost text-[11px] uppercase tracking-widest py-3 flex items-center justify-center gap-2 hover:bg-ivory transition-colors">
                   Enquire Now <ArrowRight size={14} />
                 </button>
               </div>

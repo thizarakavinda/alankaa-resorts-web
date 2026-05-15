@@ -6,11 +6,42 @@
 
 @layer base {
   body {
-    @apply bg-void text-cream font-dmSans antialiased;
+    background-color: var(--clr-void) !important;
+    @apply text-cream font-dmSans antialiased;
     overflow-x: hidden;
   }
 }
 
+/* Allow RavanaBackground canvas to show through layout containers */
+main.bg-void, 
+section.bg-void,
+footer.bg-void,
+div.bg-void[class*="min-h-"],
+div.bg-void[class*="h-[20vh]"],
+.section-void {
+  background-color: transparent !important;
+}
+
+section.bg-obsidian,
+div.bg-obsidian[class*="min-h-"],
+.section-obsidian {
+  background-color: rgba(14, 14, 14, 0.4) !important;
+}
+
+[data-theme='light'] section.bg-obsidian,
+[data-theme='light'] div.bg-obsidian[class*="min-h-"],
+[data-theme='light'] .section-obsidian {
+  background-color: rgba(237, 232, 222, 0.6) !important;
+}
+
+[data-theme='light'] main.bg-void, 
+[data-theme='light'] section.bg-void,
+[data-theme='light'] footer.bg-void,
+[data-theme='light'] div.bg-void[class*="min-h-"],
+[data-theme='light'] div.bg-void[class*="h-[20vh]"],
+[data-theme='light'] .section-void {
+  background-color: transparent !important;
+}
 @layer utilities {
   @keyframes fadeIn {
     from {
@@ -22,6 +53,7 @@
     }
   }
 }
+
 
 /* === Lenis Smooth Scroll Overrides === */
 html.lenis,

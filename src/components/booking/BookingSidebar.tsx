@@ -15,7 +15,7 @@ const BookingSidebar = ({ state }: { state: BookingState }) => {
 
   return (
     <div className="bg-charcoal border border-[rgba(184,150,90,0.15)] rounded-[2px] overflow-hidden flex flex-col">
-      <div className="h-[200px] w-full bg-cover bg-center" style={{ backgroundImage: "url('/images/rock view 2.jpg')" }} />
+      <div className="h-[200px] w-full bg-cover bg-center" style={{ backgroundImage: "url('/images/rock view 2.webp')" }} />
 
       <div className="p-8">
         <h3 className="font-jost text-[16px] text-gold uppercase tracking-[0.3em] mb-4">
@@ -57,7 +57,7 @@ const BookingSidebar = ({ state }: { state: BookingState }) => {
 
           <div className="space-y-4">
             <a href="tel:+94707975975" className="font-dmSans text-[12px] text-smoke flex items-center gap-3 hover:text-gold transition-colors">
-              <Phone className="w-4 h-4 text-[#d94f87]" strokeWidth={2} /> +94 70 797 5975
+              <Phone className="w-4 h-4 text-[#e8e4fb]" strokeWidth={2} /> +94 70 797 5975
             </a>
             <a href="mailto:info@alankaaresorts.com" className="font-dmSans text-[12px] text-smoke flex items-center gap-3 hover:text-gold transition-colors">
               <Mail className="w-4 h-4 text-[#e8e4fb]" strokeWidth={2} /> info@alankaaresorts.com

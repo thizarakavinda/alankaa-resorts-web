@@ -45,7 +45,7 @@ const HeroSection = () => {
   return (
     <section ref={sectionRef} className="relative h-screen w-full overflow-hidden bg-void flex flex-col items-center justify-center">
       <div className="absolute inset-0 z-0 bg-obsidian">
-        <img src="/images/Sunrise View Suite 16.jpg" alt="A'Lankaa Resorts" className="w-full h-full object-cover opacity-80" />
+        <img src="/images/Sunrise View Suite 16.webp" alt="A'Lankaa Resorts" className="w-full h-full object-cover opacity-80" />
         <div className="absolute inset-0 bg-black/40" />
         <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: `url("${noiseSvg}")` }} />
       </div>

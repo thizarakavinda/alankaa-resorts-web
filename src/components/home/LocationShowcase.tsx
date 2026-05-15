@@ -52,7 +52,7 @@ const Part1Hero = () => {
       {/* back img */}
       <img
         ref={imageRef}
-        src="/images/view 6.jpg"
+        src="/images/view 6.webp"
         alt="A'Lankaa Resorts Aerial View"
         className="absolute inset-0 w-full h-[120%] object-cover object-center -top-[10%]"
       />
@@ -239,7 +239,7 @@ const Part2Attractions = () => {
       title: "Nine Arch Bridge",
       location: "Ella, Badulla District",
       desc: "One of Sri Lanka's most photographed landmarks. A colonial-era stone railway viaduct surrounded by jungle and mist.",
-      image: "/images/ninearch.png",
+      image: "/images/ninearch.webp",
       mapLink: "https://maps.app.goo.gl/SZx3xwdB453TvuY86"
     },
     {
@@ -248,7 +248,7 @@ const Part2Attractions = () => {
       title: "Horton Plains",
       location: "Nuwara Eliya District",
       desc: "A UNESCO World Heritage Site featuring dramatic cliffs, cloud forests, and Sri Lanka's highest plateau at 2,100m.",
-      image: "/images/hort.png",
+      image: "/images/hort.webp",
       mapLink: "https://maps.app.goo.gl/YvEwfA3QRAwnadkJ9"
     },
     {
@@ -257,7 +257,7 @@ const Part2Attractions = () => {
       title: "Bambarakanda Falls",
       location: "Kalupahana, Badulla",
       desc: "Sri Lanka's tallest waterfall at 263 metres, surrounded by pine forests and mist — a short scenic drive from A'Lankaa.",
-      image: "/images/bamba.png",
+      image: "/images/bamba.webp",
       mapLink: "https://maps.app.goo.gl/f4BWEa1JTeyRqjf7A"
     },
     {
@@ -266,7 +266,7 @@ const Part2Attractions = () => {
       title: "Ella Rock",
       location: "Ella, Badulla",
       desc: "One of Sri Lanka's finest hikes — rewarding trekkers with 360° views of tea country, jungle valleys, and the ocean on clear days.",
-      image: "/images/ella.png",
+      image: "/images/ella.webp",
       mapLink: "https://maps.app.goo.gl/6Ck6U84r7Kjs18Ap9"
     }
   ];

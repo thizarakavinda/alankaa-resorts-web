@@ -6,19 +6,19 @@ const teamMembers = [
     name: 'Ruwan Wijesinghe',
     title: 'General Manager',
     bio: 'Over two decades of luxury hospitality experience across Asia and the Middle East.',
-    image: '/images/western shoot 1.jpg'
+    image: '/images/western shoot 1.webp'
   },
   {
     name: 'Amaya Silva',
     title: 'Executive Chef',
     bio: 'Pioneering modern Sri Lankan cuisine, elevating local indigenous ingredients.',
-    image: '/images/kandiyan 1.jpg'
+    image: '/images/kandiyan 1.webp'
   },
   {
     name: 'Nithya Fernando',
     title: 'Spa Director',
     bio: 'Master of Ayurvedic therapies and holistic wellness practices from ancient traditions.',
-    image: '/images/western shoot 2.jpg'
+    image: '/images/western shoot 2.webp'
   }
 ];
 

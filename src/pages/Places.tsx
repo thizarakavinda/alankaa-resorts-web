@@ -8,7 +8,7 @@ const attractions = [
     title: "Nine Arch Bridge",
     location: "Ella, Badulla District",
     desc: "One of Sri Lanka's most photographed landmarks. A colonial-era stone railway viaduct surrounded by jungle and mist.",
-    image: "/images/ninearch.png",
+    image: "/images/ninearch.webp",
     mapLink: "https://maps.app.goo.gl/SZx3xwdB453TvuY86"
   },
   {
@@ -17,7 +17,7 @@ const attractions = [
     title: "Horton Plains",
     location: "Nuwara Eliya District",
     desc: "A UNESCO World Heritage Site featuring dramatic cliffs, cloud forests, and Sri Lanka's highest plateau at 2,100m.",
-    image: "/images/hort.png",
+    image: "/images/hort.webp",
     mapLink: "https://maps.app.goo.gl/YvEwfA3QRAwnadkJ9"
   },
   {
@@ -26,7 +26,7 @@ const attractions = [
     title: "Bambarakanda Falls",
     location: "Kalupahana, Badulla",
     desc: "Sri Lanka's tallest waterfall at 263 metres, surrounded by pine forests and mist — a short scenic drive from A'Lankaa.",
-    image: "/images/bamba.png",
+    image: "/images/bamba.webp",
     mapLink: "https://maps.app.goo.gl/f4BWEa1JTeyRqjf7A"
   },
   {
@@ -35,7 +35,7 @@ const attractions = [
     title: "Ella Rock",
     location: "Ella, Badulla",
     desc: "One of Sri Lanka's finest hikes — rewarding trekkers with 360° views of tea country, jungle valleys, and the ocean on clear days.",
-    image: "/images/ella.png",
+    image: "/images/ella.webp",
     mapLink: "https://maps.app.goo.gl/6Ck6U84r7Kjs18Ap9"
   },
   /*-------------------------------------------------------------------------------------------------*/
@@ -45,7 +45,7 @@ const attractions = [
     title: "Lipton's Seat",
     location: "Haputale, Badulla",
     desc: "A panoramic hilltop viewpoint where tea baron Sir Thomas Lipton once surveyed his empire. On clear mornings, the mist rolls across endless tea estates in every direction.",
-    image: "/images/lipton seat.png",
+    image: "/images/lipton seat.webp",
     mapLink: "https://maps.app.goo.gl/ksPzHQpsy9kiJNWEA"
   },
   {
@@ -54,7 +54,7 @@ const attractions = [
     title: "Diyaluma Waterfall",
     location: "Koslanda, Badulla",
     desc: "Sri Lanka's second tallest waterfall, plunging 220 metres into a rocky gorge. Natural infinity pools near the summit make it a reward worth every step of the climb.",
-    image: "/images/diyaluma.png",
+    image: "/images/diyaluma.webp",
     mapLink: "https://maps.app.goo.gl/bNHkrsNRSUNosqF59"
   },
   {
@@ -63,7 +63,7 @@ const attractions = [
     title: "Dambatenna Tea Factory",
     location: "Haputale, Badulla",
     desc: "A working tea factory founded by Sir Thomas Lipton in 1890. Step inside to witness the century-old art of transforming fresh leaves into Ceylon's finest brew.",
-    image: "/images/dambatenna.png",
+    image: "/images/dambatenna.webp",
     mapLink: "https://maps.app.goo.gl/Lx9eaSQrJ4bJMkC66"
   },
   {
@@ -72,7 +72,7 @@ const attractions = [
     title: "Adisham Bungalow",
     location: "Haputale, Badulla",
     desc: "A charming English-style manor built in 1931, now home to a Benedictine monastery. Its manicured gardens and stone façade feel like a corner of the English countryside dropped into the highlands.",
-    image: "/images/adisham.png",
+    image: "/images/adisham.webp",
     mapLink: "https://maps.app.goo.gl/LC3Hp6VtYj1sTrgFA"
   },
   {
@@ -81,7 +81,7 @@ const attractions = [
     title: "Dunhinda Waterfall",
     location: "Badulla",
     desc: "Bridal Veil of Sri Lanka, this powerful cascade tumbles 64 metres through dense jungle. The mist it creates nourishes a microworld of rare ferns and butterflies.",
-    image: "/images/dunhinda.png",
+    image: "/images/dunhinda.webp",
     mapLink: "https://maps.app.goo.gl/EaMEBou2ACEEmf9YA"
   },
   {
@@ -90,7 +90,7 @@ const attractions = [
     title: "Devil's Staircase",
     location: "Ohiya, Nuwara Eliya",
     desc: "A gruelling section of the historic Colombo–Badulla railway trail carved into a near-vertical hillside. A punishing yet unforgettable route through misty cloud forest and raw mountain terrain.",
-    image: "/images/devil.png",
+    image: "/images/devil.webp",
     mapLink: "https://maps.app.goo.gl/MLE8ERngsLwifhmH7"
   },
   {
@@ -99,7 +99,7 @@ const attractions = [
     title: "Idalgashinna",
     location: "Idalgashinna, Badulla",
     desc: "A quiet highland railway station lost in time, surrounded by rolling tea country and cool mountain air. Board the legendary Badulla train here for one of the most scenic rail journeys on the island.",
-    image: "/images/idalgashinna.png",
+    image: "/images/idalgashinna.webp",
     mapLink: "https://maps.app.goo.gl/EP4SuriZUxpwXm3e9"
   },
   {
@@ -108,7 +108,7 @@ const attractions = [
     title: "Bogoda Bridge",
     location: "Bogoda, Badulla",
     desc: "Sri Lanka's oldest surviving wooden bridge, believed to date back to the Kandyan Kingdom era. Sheltered by a traditional roof and set above a gentle stream, it stands as a quiet testament to a forgotten.",
-    image: "/images/bogoda.png",
+    image: "/images/bogoda.webp",
     mapLink: "https://maps.app.goo.gl/grCnFzXGk9mcnkWf7"
   },
   {
@@ -117,7 +117,7 @@ const attractions = [
     title: "Ravana Waterfall",
     location: "Ella, Badulla",
     desc: "One of Sri Lanka's widest falls, steeped in the mythology of the Ramayana epic. The broad, tiered cascade tumbles roadside through ancient rock, making it impossible to pass without stopping.",
-    image: "/images/ravana.png",
+    image: "/images/ravana.webp",
     mapLink: "https://maps.app.goo.gl/AJHicxhdcBLULYLj6"
   },
   {
@@ -126,7 +126,7 @@ const attractions = [
     title: "Wangedigala",
     location: "Kalupahana, Badulla",
     desc: "A rugged off-the-beaten-path summit rising above the Ella gap. The challenging trail rewards trekkers with sweeping views of the southern lowlands that stretch all the way to the horizon.",
-    image: "/images/wangedigala.png",
+    image: "/images/wangedigala.webp",
     mapLink: "https://maps.app.goo.gl/PDyJTsefM1JLM4Xh8"
   },
 

@@ -8,14 +8,14 @@ const videos = [
     title: "Resort Overview",
     duration: "1:29",
     embedId: "yrTdYGlEbFU",
-    thumbnail: "images/v1.jpg",
+    thumbnail: "images/v1.webp",
   },
   {
     id: 2,
     title: "A Peek into the Alankaa",
     duration: "7:06",
     embedId: "-p7IciY-jEc",
-    thumbnail: "images/infinity-pool-family.png",
+    thumbnail: "images/infinity-pool-family.webp",
   },
 ];
 

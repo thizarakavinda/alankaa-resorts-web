@@ -1,7 +1,10 @@
 import { Camera } from 'lucide-react';
 import { FaWhatsapp } from 'react-icons/fa';
+import { useNavigate } from 'react-router-dom';
 
 const CTASection = () => {
+  const navigate = useNavigate();
+
   return (
     <section className="bg-forest px-6 py-24 md:p-[120px_80px] border-t border-gold/15 relative overflow-hidden">
      
@@ -21,8 +24,8 @@ const CTASection = () => {
         </div>
 
         <div className="w-full md:w-[40%] flex flex-col gap-3 max-w-[400px] mx-auto" data-aos="fade-left" data-aos-delay="200">
-           <button className="w-full bg-gold text-void font-jost text-[11px] uppercase tracking-widest py-[18px] px-8 flex items-center justify-center gap-3 hover:bg-ivory hover:-translate-y-1 transition-all duration-300 font-medium">
-             <Camera size={16} /> Book a Photography Session
+           <button onClick={() => navigate('/contact')} className="w-full bg-gold text-void font-jost text-[11px] uppercase tracking-widest py-[18px] px-8 flex items-center justify-center gap-3 hover:bg-ivory hover:-translate-y-1 transition-all duration-300 font-medium">
+             <Camera size={16} /> Enquire About a Shoot
            </button>
            <button className="w-full bg-[#25D366]/10 border border-[#25D366]/40 text-[#25D366] font-jost text-[11px] uppercase tracking-widest py-[18px] px-8 flex items-center justify-center gap-3 hover:bg-[#25D366]/20 transition-colors duration-300 font-medium group">
              <FaWhatsapp size={16} className="group-hover:scale-110 transition-transform" /> Chat on WhatsApp

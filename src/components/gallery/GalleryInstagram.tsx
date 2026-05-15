@@ -3,12 +3,12 @@ import { FaInstagram } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 
 const instaPosts = [
-  { id: 1, src: "images/post4.png", likes: "1.2k" },
-  { id: 2, src: "images/post5.png", likes: "842" },
-  { id: 3, src: "images/post6.png", likes: "2.1k" },
-  { id: 4, src: "images/post2.png", likes: "956" },
-  { id: 5, src: "images/post3.png", likes: "3.4k" },
-  { id: 6, src: "images/post1.png", likes: "1.8k" },
+  { id: 1, src: "images/post4.webp", likes: "1.2k" },
+  { id: 2, src: "images/post5.webp", likes: "842" },
+  { id: 3, src: "images/post6.webp", likes: "2.1k" },
+  { id: 4, src: "images/post2.webp", likes: "956" },
+  { id: 5, src: "images/post3.webp", likes: "3.4k" },
+  { id: 6, src: "images/post1.webp", likes: "1.8k" },
 ];
 
 const GalleryInstagram = () => {

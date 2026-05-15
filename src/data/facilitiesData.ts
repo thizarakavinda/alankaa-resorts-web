@@ -46,7 +46,7 @@ export const facilitiesData: FacilityItem[] = [
             { text: "Poolside refreshments available", icon: createElement(Coffee, { size: 18 }) },
             { text: "Mountain panorama from every angle", icon: createElement(Mountain, { size: 18 }) },
         ],
-        img: "/images/pool 8.jpg",
+        img: "/images/pool 8.webp",
         reverse: false
     },
     {
@@ -77,7 +77,7 @@ export const facilitiesData: FacilityItem[] = [
             { text: "Full mountain panorama dining room", icon: createElement(Map, { size: 18 }) },
             { text: "Private dining experiences available", icon: createElement(PartyPopper, { size: 18 }) },
         ],
-        img: "/images/rock 1.jpeg",
+        img: "/images/rock 1.webp",
         reverse: false
     },
     {
@@ -118,7 +118,7 @@ export const facilitiesData: FacilityItem[] = [
                 icon: createElement(Baby, { size: 18 })
             },
         ],
-        img: "/images/infinity-pool-family.png",
+        img: "/images/infinity-pool-family.webp",
         reverse: false
     },
     {
@@ -134,7 +134,7 @@ export const facilitiesData: FacilityItem[] = [
             { text: "Waterfall day excursions (Bambarakanda)", icon: createElement(Droplets, { size: 18 }) },
             { text: "Day trips to Ella & Nine Arch Bridge", icon: createElement(Car, { size: 18 }) },
         ],
-        img: "/images/nature out.png",
+        img: "/images/nature out.webp",
         reverse: true
     }
 ];

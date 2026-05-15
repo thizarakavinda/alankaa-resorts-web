@@ -22,7 +22,7 @@ const RoomsHero = () => {
       <div className="absolute inset-0 z-0">
         <img
           ref={heroImageRef}
-          src="/images/room hero.png"
+          src="/images/room hero.webp"
           alt="Hero Background"
           className="w-full h-full object-cover"
         />

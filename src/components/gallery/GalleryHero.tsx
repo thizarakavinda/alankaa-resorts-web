@@ -1,11 +1,11 @@
 import { motion } from 'framer-motion';
 
 const images = [
-  "/images/pool view.jpg", // 0
-  "/images/sky view.jpg", // 1
-  "/images/infinity-pool-family.png", // 2
-  "/images/rock 2.jpg", // 3
-  "/images/kandiyan 2.jpg"  // 4
+  "/images/pool view.webp", // 0
+  "/images/sky view.webp", // 1
+  "/images/infinity-pool-family.webp", // 2
+  "/images/rock 2.webp", // 3
+  "/images/kandiyan 2.webp"  // 4
 ];
 
 const container: any = {

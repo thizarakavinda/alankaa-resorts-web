@@ -5,7 +5,7 @@ const BookingHero = () => {
     <section className="relative w-full h-[50vh] flex items-center justify-center">
       <div 
         className="absolute inset-0 w-full h-full bg-cover bg-center"
-        style={{ backgroundImage: "url('/images/book now cover.jpg')" }}
+        style={{ backgroundImage: "url('/images/book now cover.webp')" }}
       >
         <div className="absolute inset-0 bg-[#080808]/70" />
       </div>
