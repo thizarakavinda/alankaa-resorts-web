@@ -9,7 +9,7 @@ import { Footer } from './components/Footer';
 import { ScrollProgress } from './components/ScrollProgress';
 import { FloatingBookBtn } from './components/FloatingBookBtn';
 import BackgroundMusic from './components/BackgroundMusic';
-import RavanaBackground from './components/RavanaBackground';
+import { RavanaBackground } from './components/RavanaBackground';
 
 const Home = lazy(() => import('./pages/Home').then((m) => ({ default: m.Home })));
 const About = lazy(() => import('./pages/About').then((m) => ({ default: m.About })));
@@ -66,8 +66,8 @@ function App() {
     <ThemeProvider>
       <Router>
         <LoadingScreen />
-        <RavanaBackground />
         <BackgroundMusic />
+        <RavanaBackground />
 
         {enableEnhancedFx && <CustomCursor />}
         <ScrollProgress />
