@@ -22,7 +22,7 @@ const RoomsContact = () => {
         <div className="flex flex-col gap-[16px] mt-[32px]">
           <div className="flex items-center gap-[12px]">
             <Phone size={20} color="var(--clr-gold)" />
-            <span className="font-['DM_Sans'] font-medium text-[16px] text-[var(--clr-cream)]">+94 70 797 5975</span>
+            <span className="font-['DM_Sans'] font-medium text-[16px] text-[var(--clr-cream)]">+94 70 484 0840</span>
           </div>
           <div className="flex items-center gap-[12px]">
             <Mail size={20} color="var(--clr-gold)" />

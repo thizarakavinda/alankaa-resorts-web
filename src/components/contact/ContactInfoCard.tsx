@@ -23,8 +23,8 @@ const ContactInfoCard = () => {
 
           <div className="flex items-center gap-6">
             <Phone className="w-5 h-5 text-gold shrink-0" strokeWidth={1.5} />
-            <a href="tel:+94707975975" className="font-dmSans text-[14px] text-smoke hover:text-gold transition-colors">
-              +94 70 797 5975
+            <a href="tel:+94704840840" className="font-dmSans text-[14px] text-smoke hover:text-gold transition-colors">
+              +94 70 484 0840
             </a>
           </div>
 

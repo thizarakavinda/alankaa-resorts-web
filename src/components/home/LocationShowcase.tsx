@@ -142,13 +142,6 @@ const Part1Hero = () => {
 
           <div className="space-y-6 max-md:space-y-4">
             <div className="flex gap-4">
-              <Plane className="w-[18px] h-[18px] text-gold shrink-0 mt-1" />
-              <div>
-                <p className="card-heading-on-image font-dmSans font-medium text-[18px] text-cream">Nearest Airport</p>
-                <p className="card-text-on-image font-dmSans font-light text-[14px] text-smoke mt-1">Mattala Rajapaksa - 96km</p>
-              </div>
-            </div>
-            <div className="flex gap-4">
               <Car className="w-[18px] h-[18px] text-gold shrink-0 mt-1" />
               <div>
                 <p className="card-heading-on-image font-dmSans font-medium text-[18px] text-cream">Road from Colombo</p>
@@ -383,7 +376,7 @@ const Part3Timeline = () => {
   const steps = [
     { icon: Plane, title: "Bandaranaike Airport", detail: "Colombo, Sri Lanka", badge: "START" },
     { icon: Car, title: "Colombo to Badulla", detail: "Via A4 Highway", badge: "5 hours" },
-    { icon: MapPin, title: "Badulla City", detail: "Uva Province", badge: "32km left" },
+    { icon: MapPin, title: "Ella Town", detail: "Uva Province", badge: "32km left" },
     { icon: Star, title: "A'Lankaa Resorts & Spa", detail: "Haldummulla · 1,200m ASL", badge: "ARRIVED ✦", isFinal: true }
   ];
 

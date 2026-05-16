@@ -71,7 +71,7 @@ export const Footer = () => {
               </li>
               <li className="font-dmSans text-[14px] text-smoke flex items-center gap-2">
                 <Phone className="text-gold w-4 h-4 shrink-0" />
-                +94 70 797 5975
+                +94 70 484 0840
               </li>
               <li className="font-dmSans text-[14px] text-smoke flex items-center gap-2">
                 <Mail className="text-gold w-4 h-4 shrink-0" />

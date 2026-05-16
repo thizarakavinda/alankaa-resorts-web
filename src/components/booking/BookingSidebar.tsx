@@ -56,8 +56,8 @@ const BookingSidebar = ({ state }: { state: BookingState }) => {
           </a>
 
           <div className="space-y-4">
-            <a href="tel:+94707975975" className="font-dmSans text-[12px] text-smoke flex items-center gap-3 hover:text-gold transition-colors">
-              <Phone className="w-4 h-4 text-[#e8e4fb]" strokeWidth={2} /> +94 70 797 5975
+            <a href="tel:+94704840840" className="font-dmSans text-[12px] text-smoke flex items-center gap-3 hover:text-gold transition-colors">
+              <Phone className="w-4 h-4 text-[#e8e4fb]" strokeWidth={2} /> +94 70 484 0840
             </a>
             <a href="mailto:info@alankaaresorts.com" className="font-dmSans text-[12px] text-smoke flex items-center gap-3 hover:text-gold transition-colors">
               <Mail className="w-4 h-4 text-[#e8e4fb]" strokeWidth={2} /> info@alankaaresorts.com

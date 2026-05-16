@@ -123,7 +123,7 @@ const RoomsPricingCalculator = () => {
           Book This Suite &rarr;
         </button>
         <p className="font-['DM_Sans'] text-[15px] text-smoke text-center mt-[12px]">
-          or call us: +94 70 797 5975
+          or call us: +94 70 484 0840
         </p>
       </div>
     </section>

@@ -7,19 +7,19 @@ const reviews = [
     initials: 'SS',
     name: 'S. Skandakumar',
     title: 'Former Group Chairman George Steuarts • Former High Commissioner to Australia • Feb 2022',
-    text: '"We took the turn at a crowded Haldumulla junction. Within five minutes we arrived at A\u2019Lankaa Hotel, and walked into a truly different world ! Adorned by innovative architecture with a touch of Bali, a wide spacious foyer tastefully furnished, complimented by attentive and courteous staff, we then proceeded on a tour of the hotel."',
+    text: "We took the turn at a crowded Haldumulla junction. Within five minutes we arrived at A‘Lankaa Hotel, and walked into a truly different world ! Adorned by innovative architecture with a touch of Bali, a wide spacious foyer tastefully furnished, complimented by attentive and courteous staff, we then proceeded on a tour of the hotel. Breathtaking views from almost every angle made the choice of bedroom a difficult one. While some faced a glorious sun rise the rest brought twilight into the room with a lingering view of the sunset. Spacious and luxurious with all modern amenities, I said to myself “ A night stay is a must “ We were then hosted to a sumptuous Sri Lankan lunch of fresh vegetables, Fish and Chicken in a restaurant whose ambience was breathtaking and the view equally alluring. An equally well designed bar beckoned but we resisted the temptation ! Instead we shared a bottle of vintage red over lunch. Thank you Vasu, My friends Dr Nalaka and Kamini found it an experience to remember as I did. Good luck and many blessings",
   },
   {
     initials: 'NM',
     name: 'Nalaka and Kamini Mendis',
     title: 'Professors Emeritus, University of Colombo • Feb 2022',
-    text: '"Our impressions of the visit to A\u2019Lankaa Resort in Haldumulla. A friend took us to this resort on the 3rd February, and within minutes of entering the lobby of the hotel we confronted a breathtaking view of the Haldumulla valley with and expansive dense forest cover below and an array of southern hills in the far background stretching towards the southern coast."',
+    text: "A friend took us to this resort on the 3rd February, and within minutes of entering the lobby of the hotel we confronted a breathtaking view of the Haldumulla valley with and expansive dense forest cover below and an array of southern hills in the far background stretching towards the southern coast. The resort perched far above the valley has panoramic views of the Haptulae mountain range on the left, and a deep valley below leading into the uda walawe area and beyond to the Indian ocean. The building is designed to capture these great views at different levels from the restaurant, other open areas and the bed rooms. The bed rooms are tastefully designed for comfort, they are in fact mini suites equipped with every possible convenience including a jacuzzi bath in each. The staff, all of whom we found were locals, were exceptionally warm and friendly. We were hosted to a delicious lunch by the owner and if this was a taste of food in this hotel, it is yet another aspect that visitors could look forward to. The public areas are intricately designed with detailed carved wood work and an abundance of plants. A swimming pool and a fully equipped gymnasium are also features of this hotel. Discovering this magnificent hotel amidst the wilderness of Haldumulla was an exciting experience indeed, which we will remember for a long time to come. We recommend this resort to the discerning visitor looking for a peaceful, and pleasant stay in comfort, amidst spectacular scenery.",
   },
   {
-    initials: 'JN',
-    name: 'Bishop J. Alan Neal',
-    title: 'Germany • Aug 2019',
-    text: '"After travelling the World \u2014 this is clearly one of the most beautiful hotels I\'ve visited. God Bless."',
+    initials: 'SM',
+    name: 'S. Mascarenhas',
+    title: 'Chairman, Northern Tourism Bureau',
+    text: "If anyone is searching for heaven, this is where you should be. The clouds, mist & most of all rainy clouds come into the room & touches you. No where in Sri Lanka do you experience this. Also, the food, staff & amenities are exceptional. Thank you for the wonderful service. All the best Mr Vasu & hope to see you soon",
   },
   {
     initials: 'SH',
@@ -28,10 +28,10 @@ const reviews = [
     text: '"I didn\'t expect such a fantastic product in this remote area. As Secretary, Ministry of Tourism, I encourage this type of new visionary product and give our fullest support to enhance their visionary expectation."',
   },
   {
-    initials: 'SM',
-    name: 'S. Mascarenhas',
-    title: 'Chairman, Northern Tourism Bureau',
-    text: '"If anyone is searching for heaven, this is where you should be. The clouds, mist and most of all rainy clouds come into the room and touch you. Nowhere in Sri Lanka do you experience this. The food, staff and amenities are exceptional."',
+    initials: 'JN',
+    name: 'Bishop J. Alan Neal',
+    title: 'Germany • Aug 2019',
+    text: '"After travelling the World \u2014 this is clearly one of the most beautiful hotels I\'ve visited. God Bless."',
   },
 ];
 
@@ -108,7 +108,7 @@ export const ReviewsSection = () => {
                 >
                   <div className="bg-obsidian border border-white/5 hover:border-gold/30 p-8 md:p-10 md:px-12 relative group transition-all duration-500 rounded-sm flex flex-col h-full min-h-[320px]">
                     <Quote
-                      className="absolute top-8 right-8 w-10 h-10 text-white/5 group-hover:text-gold/10 transition-colors duration-500 -scale-x-100"
+                      className="absolute top-8 left-8 md:left-12 w-10 h-10 text-white/5 group-hover:text-gold/10 transition-colors duration-500"
                       strokeWidth={1}
                     />
 
@@ -186,34 +186,36 @@ export const ReviewsSection = () => {
               animate={{ scale: 1, y: 0, opacity: 1 }}
               exit={{ scale: 0.94, y: 24, opacity: 0 }}
               transition={{ duration: 0.4, ease: 'easeOut' }}
-              className="relative bg-obsidian border border-gold/20 rounded-sm p-10 md:p-14 max-w-2xl w-full shadow-2xl"
+              className="relative bg-obsidian border border-gold/20 rounded-sm max-w-2xl w-full max-h-[90vh] flex flex-col shadow-2xl"
               onClick={(e) => e.stopPropagation()}
             >
               {/* close */}
               <button
                 onClick={() => setActiveReview(null)}
-                className="absolute top-5 right-5 text-fog hover:text-gold transition-colors"
+                className="absolute top-5 right-5 z-20 text-fog hover:text-gold transition-colors bg-obsidian/80 backdrop-blur-sm rounded-full p-1"
                 aria-label="Close"
               >
                 <X className="w-6 h-6" strokeWidth={1.5} />
               </button>
 
-              <Quote
-                className="absolute top-10 right-12 w-10 h-10 text-gold/10 -scale-x-100"
-                strokeWidth={1}
-              />
+              <div className="p-10 md:p-14 overflow-y-auto relative w-full h-full custom-scrollbar">
+                <Quote
+                  className="absolute top-10 left-10 md:left-14 w-10 h-10 text-gold/10"
+                  strokeWidth={1}
+                />
 
-              <p className="font-cormorant italic text-[22px] md:text-[26px] text-cream leading-relaxed mb-10 pr-6">
-                {activeReview.text}
-              </p>
+                <p className="font-cormorant italic text-[18px] md:text-[20px] text-cream leading-relaxed mb-10 pt-10 md:pt-12 relative z-10">
+                  {activeReview.text}
+                </p>
 
-              <div className="flex items-center gap-5 border-t border-white/10 pt-6">
-                <div className="w-12 h-12 shrink-0 flex items-center justify-center font-jost font-medium text-[14px] bg-charcoal text-gold border border-gold/20 rounded-full">
-                  {activeReview.initials}
-                </div>
-                <div>
-                  <h3 className="font-dmSans font-medium text-ivory text-[16px] mb-1">{activeReview.name}</h3>
-                  <p className="font-jost text-[10px] text-smoke/70 uppercase tracking-widest leading-snug">{activeReview.title}</p>
+                <div className="flex items-center gap-5 border-t border-white/10 pt-6 relative z-10">
+                  <div className="w-12 h-12 shrink-0 flex items-center justify-center font-jost font-medium text-[14px] bg-charcoal text-gold border border-gold/20 rounded-full">
+                    {activeReview.initials}
+                  </div>
+                  <div>
+                    <h3 className="font-dmSans font-medium text-ivory text-[16px] mb-1">{activeReview.name}</h3>
+                    <p className="font-jost text-[10px] text-smoke/70 uppercase tracking-widest leading-snug">{activeReview.title}</p>
+                  </div>
                 </div>
               </div>
             </motion.div>
@@ -225,3 +227,7 @@ export const ReviewsSection = () => {
 };
 
 export default ReviewsSection;
+
+
+
+

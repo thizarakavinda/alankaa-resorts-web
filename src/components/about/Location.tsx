@@ -1,4 +1,4 @@
-import { CarFront, Train, Mountain, Plane } from 'lucide-react';
+import { CarFront, Train, Mountain } from 'lucide-react';
 
 export const Location = () => {
   return (
@@ -38,10 +38,6 @@ export const Location = () => {
             <div className="flex items-center gap-4 group cursor-default">
               <Mountain className="w-5 h-5 text-gold stroke-[1.5] transition-transform duration-500 group-hover:-translate-y-1" />
               <p className="font-dmSans font-light tracking-wide text-[15px] text-smoke/90">46km from Horton Plains National Park</p>
-            </div>
-            <div className="flex items-center gap-4 group cursor-default">
-              <Plane className="w-5 h-5 text-gold stroke-[1.5] transition-transform duration-500 group-hover:-translate-y-1" />
-              <p className="font-dmSans font-light tracking-wide text-[15px] text-smoke/90">60mi from Mattala Rajapaksa Airport</p>
             </div>
           </div>
 

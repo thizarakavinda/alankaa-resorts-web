@@ -17,10 +17,10 @@ const rawImages = [
   { src: '/images/garden view.webp', category: 'Rooms' },
   { src: '/images/view room.webp', category: 'Rooms' },
   { src: '/images/gr1.webp', category: 'Rooms' },
-  { src: '/images/gr2.webp', category: 'Rooms' },
+
   { src: '/images/gr3.webp', category: 'Rooms' },
   { src: '/images/gr4.webp', category: 'Rooms' },
-  { src: '/images/gr5.webp', category: 'Rooms' },
+
   { src: '/images/gr6.webp', category: 'Rooms' },
   { src: '/images/gr7.webp', category: 'Rooms' },
   { src: '/images/gr8.webp', category: 'Rooms' },
@@ -29,18 +29,18 @@ const rawImages = [
   { src: '/images/gr11.webp', category: 'Rooms' },
   { src: '/images/gr12.webp', category: 'Rooms' },
   { src: '/images/gr13.webp', category: 'Rooms' },
-  { src: '/images/gr14.webp', category: 'Rooms' },
+
   { src: '/images/gr15.webp', category: 'Rooms' },
   { src: '/images/gr16.webp', category: 'Rooms' },
   { src: '/images/gr17.webp', category: 'Rooms' },
   { src: '/images/gr18.webp', category: 'Rooms' },
-  { src: '/images/gr19.webp', category: 'Rooms' },
+
   { src: '/images/gr20.webp', category: 'Rooms' },
-  { src: '/images/gr21.webp', category: 'Rooms' },
+
   { src: '/images/gr22.webp', category: 'Rooms' },
   { src: '/images/gr23.webp', category: 'Rooms' },
-  { src: '/images/gr24.webp', category: 'Rooms' },
-  { src: '/images/gr25.webp', category: 'Rooms' },
+
+
   { src: '/images/gr26.webp', category: 'Rooms' },
   { src: '/images/gr27.webp', category: 'Rooms' },
 
@@ -73,14 +73,13 @@ const rawImages = [
   { src: '/images/din 3.webp', category: 'Dining' },
   { src: '/images/nature dining.webp', category: 'Dining' },
   { src: '/images/bar 1.webp', category: 'Dining' },
-  { src: '/images/gd1.webp', category: 'Dining' },
-  { src: '/images/gd2.webp', category: 'Dining' },
+
   { src: '/images/gd3.webp', category: 'Dining' },
   { src: '/images/gd4.webp', category: 'Dining' },
   { src: '/images/gd5.webp', category: 'Dining' },
   { src: '/images/gd6.webp', category: 'Dining' },
   { src: '/images/gd7.webp', category: 'Dining' },
-  { src: '/images/gd8.webp', category: 'Dining' },
+
   { src: '/images/gd9.webp', category: 'Dining' },
   { src: '/images/gd10.webp', category: 'Dining' },
   { src: '/images/gd11.webp', category: 'Dining' },
@@ -115,7 +114,7 @@ const rawImages = [
   { src: '/images/ext 3.webp', category: 'Exterior' },
   { src: '/images/ext 4.webp', category: 'Exterior' },
   { src: '/images/ext 5.webp', category: 'Exterior' },
-  { src: '/images/ext 7.webp', category: 'Exterior' },
+
   { src: '/images/ext 9.webp', category: 'Exterior' },
   { src: '/images/ext 10.webp', category: 'Exterior' },
   { src: '/images/ext 11.webp', category: 'Exterior' },

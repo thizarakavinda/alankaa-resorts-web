@@ -18,7 +18,7 @@ export const suites = [
     tag: 'SUNRISE · MOUNTAIN & VALLEY VIEW',
     name: 'Sunrise, Mountain & Valley View Suites',
     shortName: 'Sunrise Suite',
-    tagline: 'Wake up inside the most spectacular sunrise in Sri Lanka.',
+    tagline: 'Rise above the clouds and wake up inside the most spectacular sunrise in Sri Lanka.',
     description: `Perched at 1,200 metres above sea level, 
       our signature Sunrise Suites offer breathtaking views 
       spanning parts of five provinces. Floor-to-ceiling 
