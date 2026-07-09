@@ -11,7 +11,7 @@ export type GalleryImageType = {
 
 const rawImages = [
   // Rooms
-  { src: '/images/sunset room.webp', category: 'Rooms' },
+  
   { src: '/images/sunrise room 1.webp', category: 'Rooms' },
   { src: '/images/room hero.webp', category: 'Rooms' },
   { src: '/images/garden view.webp', category: 'Rooms' },

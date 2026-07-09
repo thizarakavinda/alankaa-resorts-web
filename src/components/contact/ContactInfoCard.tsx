@@ -21,11 +21,16 @@ const ContactInfoCard = () => {
             </p>
           </div>
 
-          <div className="flex items-center gap-6">
-            <Phone className="w-5 h-5 text-gold shrink-0" strokeWidth={1.5} />
-            <a href="tel:+94704840840" className="font-dmSans text-[14px] text-smoke hover:text-gold transition-colors">
-              +94 70 484 0840
-            </a>
+          <div className="flex items-start gap-6">
+            <Phone className="w-5 h-5 text-gold shrink-0 mt-1" strokeWidth={1.5} />
+            <div className="flex flex-col gap-2">
+              <a href="tel:+94707975975" className="font-dmSans text-[14px] text-smoke hover:text-gold transition-colors">
+                +94 70 797 5975
+              </a>
+              <a href="tel:+94572051664" className="font-dmSans text-[14px] text-smoke hover:text-gold transition-colors">
+                +94 57 205 1664
+              </a>
+            </div>
           </div>
 
           <div className="flex items-center gap-6">

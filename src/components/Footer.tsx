@@ -69,9 +69,12 @@ export const Footer = () => {
                 <MapPin className="text-gold mt-1 w-4 h-4 shrink-0" />
                 <span>Wattagamuwa, Haldummulla,<br />Badulla 90180, Sri Lanka</span>
               </li>
-              <li className="font-dmSans text-[14px] text-smoke flex items-center gap-2">
-                <Phone className="text-gold w-4 h-4 shrink-0" />
-                +94 70 484 0840
+              <li className="font-dmSans text-[14px] text-smoke flex items-start gap-2">
+                <Phone className="text-gold w-4 h-4 shrink-0 mt-1" />
+                <div className="flex flex-col gap-1">
+                  <span>+94 70 797 5975</span>
+                  <span>+94 57 205 1664</span>
+                </div>
               </li>
               <li className="font-dmSans text-[14px] text-smoke flex items-center gap-2">
                 <Mail className="text-gold w-4 h-4 shrink-0" />

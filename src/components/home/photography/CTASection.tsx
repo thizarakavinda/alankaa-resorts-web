@@ -27,9 +27,9 @@ const CTASection = () => {
            <button onClick={() => navigate('/contact')} className="w-full bg-gold text-void font-jost text-[11px] uppercase tracking-widest py-[18px] px-8 flex items-center justify-center gap-3 hover:bg-ivory hover:-translate-y-1 transition-all duration-300 font-medium">
              <Camera size={16} /> Enquire About a Shoot
            </button>
-           <button className="w-full bg-[#25D366]/10 border border-[#25D366]/40 text-[#25D366] font-jost text-[11px] uppercase tracking-widest py-[18px] px-8 flex items-center justify-center gap-3 hover:bg-[#25D366]/20 transition-colors duration-300 font-medium group">
+           <a href="https://wa.me/94707975975" target="_blank" rel="noopener noreferrer" className="w-full bg-[#25D366]/10 border border-[#25D366]/40 text-[#25D366] font-jost text-[11px] uppercase tracking-widest py-[18px] px-8 flex items-center justify-center gap-3 hover:bg-[#25D366]/20 transition-colors duration-300 font-medium group">
              <FaWhatsapp size={16} className="group-hover:scale-110 transition-transform" /> Chat on WhatsApp
-           </button>
+           </a>
           
         </div>
 

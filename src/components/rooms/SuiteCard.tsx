@@ -150,11 +150,15 @@ const SuiteCard = ({ suite, index }: SuiteCardProps) => {
 
                 {/* left */}
                 <div>
-                  <p className="font-['Jost'] text-[12px] text-fog)] uppercase">Total per night</p>
+                  <p className="font-['Jost'] text-[12px] text-[var(--clr-fog)] uppercase">Total per night</p>
                   <div className="flex items-baseline gap-[8px]">
                     <span className="font-['DM_Sans'] text-[18px] text-[var(--clr-gold)]">US$</span>
-                    <span className="font-['Cormorant'] text-[64px] text-[var(--clr-gold)] font-light leading-none">{suite.basePrice}</span>
+                    <span className="font-['Cormorant'] text-[64px] text-[var(--clr-gold)] font-light leading-none">{suite.basePrice}++</span>
                   </div>
+                  <p className="font-['DM_Sans'] text-[11px] text-[var(--clr-smoke)] mt-1.5 flex items-center gap-1.5">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#4CAF50]"></span>
+                    All Sri Lanka government taxes & service charges included
+                  </p>
                 </div>
               </div>
 

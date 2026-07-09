@@ -39,6 +39,10 @@ const BookingSidebar = ({ state }: { state: BookingState }) => {
           <div className="font-cormorant text-4xl text-gold mb-1">
             {estimatedTotal !== null ? `$${estimatedTotal}` : (state.roomPrice ? `$${state.roomPrice} / night` : '—')}
           </div>
+          <span className="font-dmSans text-[12px] text-[#4CAF50] block mt-1.5 mb-2 flex items-center gap-1.5">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#4CAF50]"></span>
+            All Sri Lanka government taxes & service charges included
+          </span>
           <span className="font-dmSans text-[13px] text-fog">Confirmed by our team minimum 24h prior</span>
         </div>
 
@@ -56,9 +60,17 @@ const BookingSidebar = ({ state }: { state: BookingState }) => {
           </a>
 
           <div className="space-y-4">
-            <a href="tel:+94704840840" className="font-dmSans text-[12px] text-smoke flex items-center gap-3 hover:text-gold transition-colors">
-              <Phone className="w-4 h-4 text-[#e8e4fb]" strokeWidth={2} /> +94 70 484 0840
-            </a>
+            <div className="flex items-start gap-3">
+              <Phone className="w-4 h-4 text-[#e8e4fb] mt-1 shrink-0" strokeWidth={2} />
+              <div className="flex flex-col gap-2">
+                <a href="tel:+94707975975" className="font-dmSans text-[12px] text-smoke hover:text-gold transition-colors">
+                  +94 70 797 5975
+                </a>
+                <a href="tel:+94572051664" className="font-dmSans text-[12px] text-smoke hover:text-gold transition-colors">
+                  +94 57 205 1664
+                </a>
+              </div>
+            </div>
             <a href="mailto:info@alankaaresorts.com" className="font-dmSans text-[12px] text-smoke flex items-center gap-3 hover:text-gold transition-colors">
               <Mail className="w-4 h-4 text-[#e8e4fb]" strokeWidth={2} /> info@alankaaresorts.com
             </a>

@@ -6,9 +6,9 @@ import { ref, push } from "firebase/database";
 import { database } from "../../config/firebaseConfig";
 import { getAvailableCount } from '../../utils/roomAvailability';
 const roomOptions = [
-  { id: 'sunrise', name: '🌅 Sunrise, Mountain & Valley View Suite', price: 230, maxRooms: 10 },
-  { id: 'sunset', name: '🌄 Sunset & Mountain View Suite', price: 160, maxRooms: 6 },
-  { id: 'garden', name: '🌿 Garden View Suite', price: 130, maxRooms: 6 },
+  { id: 'sunrise', name: '🌅 Sunrise, Mountain & Valley View Suite', price: 210, maxRooms: 10 },
+  { id: 'sunset', name: '🌄 Sunset & Mountain View Suite', price: 156, maxRooms: 6 },
+  { id: 'garden', name: '🌿 Garden View Suite', price: 145, maxRooms: 6 },
 ];
 
 type Props = {
@@ -436,6 +436,11 @@ const BookingForm = ({ state, setState }: Props) => {
                     </div>
                   </div>
                 </div>
+
+                <p className="font-dmSans text-[12px] text-[#4CAF50] mb-8 flex items-center gap-1.5">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#4CAF50]"></span>
+                  All Sri Lanka government taxes & service charges included
+                </p>
 
                 <div className="grid grid-cols-1 gap-8 mb-8">
                   <div className="relative flex flex-col">

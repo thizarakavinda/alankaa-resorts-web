@@ -30,15 +30,15 @@ const RoomsComparisonTable = () => {
               <th className="text-left font-['Jost'] text-[15px] text-gold uppercase p-[20px_32px] font-normal w-[25%] sticky left-0 bg-[var(--clr-charcoal)] z-10">FEATURE</th>
               <th className="font-['Jost'] text-[15px] text-[var(--clr-gold)] uppercase p-[20px_32px] font-normal w-[25%] text-center">
                 SUNRISE SUITE
-                <p className="font-['DM_Sans'] text-[14px] text-[var(--clr-smoke)] mt-1 normal-case">US$230+</p>
+                <p className="font-['DM_Sans'] text-[14px] text-[var(--clr-smoke)] mt-1 normal-case">US$210</p>
               </th>
               <th className="font-['Jost'] text-[15px] text-[var(--clr-gold)] uppercase p-[20px_32px] font-normal w-[25%] text-center bg-[rgba(184,150,90,0.06)] border-l border-r border-[rgba(184,150,90,0.2)]">
                 SUNSET SUITE
-                <p className="font-['DM_Sans'] text-[14px] text-[var(--clr-smoke)] mt-1 normal-case">US$160+</p>
+                <p className="font-['DM_Sans'] text-[14px] text-[var(--clr-smoke)] mt-1 normal-case">US$156</p>
               </th>
               <th className="font-['Jost'] text-[15px] text-[var(--clr-gold)] uppercase p-[20px_32px] font-normal w-[25%] text-center">
                 GARDEN SUITE
-                <p className="font-['DM_Sans'] text-[14px] text-[var(--clr-smoke)] mt-1 normal-case">US$130+</p>
+                <p className="font-['DM_Sans'] text-[14px] text-[var(--clr-smoke)] mt-1 normal-case">US$145</p>
               </th>
             </tr>
           </thead>
@@ -71,21 +71,24 @@ const RoomsComparisonTable = () => {
             <tr className="bg-[var(--clr-charcoal)] border-t border-[rgba(184,150,90,0.2)]">
               <td className="p-[20px_32px] font-['DM_Sans'] font-medium text-[14px] text-[var(--clr-cream)] sticky left-0 bg-[var(--clr-charcoal)] z-10">Starting From</td>
               <td className="p-[20px_32px] text-center">
-                <p className="font-['Cormorant'] text-[28px] text-[var(--clr-gold)] leading-none mb-4">US$310</p>
+                <p className="font-['Cormorant'] text-[28px] text-[var(--clr-gold)] leading-none mb-4">US$210</p>
                 <button onClick={() => navigate('/booking')} className="bg-[var(--clr-gold)] text-[var(--clr-void)] font-['Jost'] text-[10px] uppercase px-[20px] py-[8px] hover:bg-[var(--clr-gold-light)] transition-colors">Book Now</button>
               </td>
               <td className="p-[20px_32px] text-center bg-[rgba(184,150,90,0.06)] border-l border-r border-[rgba(184,150,90,0.2)]">
-                <p className="font-['Cormorant'] text-[28px] text-[var(--clr-gold)] leading-none mb-4">US$215</p>
+                <p className="font-['Cormorant'] text-[28px] text-[var(--clr-gold)] leading-none mb-4">US$156</p>
                 <button onClick={() => navigate('/booking')} className="bg-[var(--clr-gold)] text-[var(--clr-void)] font-['Jost'] text-[10px] uppercase px-[20px] py-[8px] hover:bg-[var(--clr-gold-light)] transition-colors">Book Now</button>
               </td>
               <td className="p-[20px_32px] text-center">
-                <p className="font-['Cormorant'] text-[28px] text-[var(--clr-gold)] leading-none mb-4">US$175</p>
+                <p className="font-['Cormorant'] text-[28px] text-[var(--clr-gold)] leading-none mb-4">US$145</p>
                 <button onClick={() => navigate('/booking')} className="bg-[var(--clr-gold)] text-[var(--clr-void)] font-['Jost'] text-[10px] uppercase px-[20px] py-[8px] hover:bg-[var(--clr-gold-light)] transition-colors">Book Now</button>
               </td>
             </tr>
           </tbody>
         </table>
       </div>
+      <p className="font-['DM_Sans'] text-[12px] text-[var(--clr-smoke)] mt-6 text-right italic">
+        * All prices are in USD and include all Sri Lanka government taxes & service charges.
+      </p>
     </section>
   );
 };
