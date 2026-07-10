@@ -1,15 +1,36 @@
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import type { Suite } from '../../data/roomsData';
 
-const suiteOptions = [
-  { value: 230, label: 'Sunrise Suite $230' },
-  { value: 160, label: 'Sunset Suite $160' },
-  { value: 130, label: 'Garden Suite $130' },
-];
+interface RoomsPricingCalculatorProps {
+  suites: Suite[];
+}
 
-const RoomsPricingCalculator = () => {
-  const [selectedCalcSuite, setSelectedCalcSuite] = useState(230);
+const RoomsPricingCalculator = ({ suites }: RoomsPricingCalculatorProps) => {
+  // Build the dropdown options from live suite data instead of a hardcoded array
+  const suiteOptions = useMemo(() => {
+    const shortLabel = (id: number) => {
+      if (id === 1) return 'Sunrise Suite';
+      if (id === 2) return 'Sunset Suite';
+      if (id === 3) return 'Garden Suite';
+      return 'Suite';
+    };
+    return suites.map((s) => ({
+      value: s.basePrice,
+      label: `${shortLabel(s.id)} $${s.basePrice}`,
+    }));
+  }, [suites]);
+
+  const [selectedCalcSuite, setSelectedCalcSuite] = useState(suiteOptions[0]?.value ?? 0);
   const [nights, setNights] = useState(3);
+
+  // Keep the selected price in sync if live prices change while the page is open
+  // (e.g. admin edits a price and this page is still loaded elsewhere)
+  useState(() => {
+    if (suiteOptions.length && !suiteOptions.some((o) => o.value === selectedCalcSuite)) {
+      setSelectedCalcSuite(suiteOptions[0].value);
+    }
+  });
 
   return (
     <section className="bg-[var(--clr-void)] px-[24px] py-[60px] lg:px-[80px] lg:py-[80px] border-t border-[rgba(184,150,90,0.08)]">

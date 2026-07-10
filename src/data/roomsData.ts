@@ -114,3 +114,6 @@ export const suites = [
     },
   },
 ];
+
+
+export type Suite = typeof suites[number];
