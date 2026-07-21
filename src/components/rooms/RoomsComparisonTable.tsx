@@ -1,5 +1,5 @@
 import { Check, X } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
+import type { Suite } from '../../data/roomsData';
 
 const comparisonRows = [
   { label: 'Floor Area', values: ['75 sq m', '55 sq m', '50 sq m'] },
@@ -14,11 +14,19 @@ const comparisonRows = [
   { label: 'Availability', values: ['8 Suites', '6 Suites', '6 Suites'] },
 ];
 
-const RoomsComparisonTable = () => {
-  const navigate = useNavigate();
+interface RoomsComparisonTableProps {
+  suites: Suite[];
+}
+
+const RoomsComparisonTable = ({ suites }: RoomsComparisonTableProps) => {
+  
+  const sunrise = suites.find((s) => s.id === 1);
+  const sunset = suites.find((s) => s.id === 2);
+  const garden = suites.find((s) => s.id === 3);
+
   return (
     <section className="bg-[var(--clr-obsidian)] px-[24px] py-[60px] lg:px-[80px] lg:py-[110px]">
-      <p className="font-['Jost'] text-[13px] text-[var(--clr-gold)] uppercase tracking-[0.4em] mb-2">COMPARE SUITES</p>
+      <p className="font-['Jost'] text-[10px] text-[var(--clr-gold)] uppercase tracking-[0.4em] mb-2">COMPARE SUITES</p>
       <h2 className="font-['Cormorant'] text-[clamp(36px,4vw,56px)] text-[var(--clr-ivory)] font-light mb-12">
         Find your perfect suite.
       </h2>
@@ -27,18 +35,18 @@ const RoomsComparisonTable = () => {
         <table className="w-full min-w-[800px] border-collapse border border-[rgba(184,150,90,0.1)] rounded-[2px] overflow-hidden">
           <thead>
             <tr className="bg-[var(--clr-charcoal)]">
-              <th className="text-left font-['Jost'] text-[15px] text-gold uppercase p-[20px_32px] font-normal w-[25%] sticky left-0 bg-[var(--clr-charcoal)] z-10">FEATURE</th>
-              <th className="font-['Jost'] text-[15px] text-[var(--clr-gold)] uppercase p-[20px_32px] font-normal w-[25%] text-center">
+              <th className="text-left font-['Jost'] text-[10px] text-[var(--clr-fog)] uppercase p-[20px_32px] font-normal w-[25%] sticky left-0 bg-[var(--clr-charcoal)] z-10">FEATURE</th>
+              <th className="font-['Jost'] text-[10px] text-[var(--clr-gold)] uppercase p-[20px_32px] font-normal w-[25%] text-center">
                 SUNRISE SUITE
-                <p className="font-['DM_Sans'] text-[14px] text-[var(--clr-smoke)] mt-1 normal-case">US$210</p>
+                <p className="font-['DM_Sans'] text-[12px] text-[var(--clr-smoke)] mt-1 normal-case">US${sunrise?.basePrice}+</p>
               </th>
-              <th className="font-['Jost'] text-[15px] text-[var(--clr-gold)] uppercase p-[20px_32px] font-normal w-[25%] text-center bg-[rgba(184,150,90,0.06)] border-l border-r border-[rgba(184,150,90,0.2)]">
+              <th className="font-['Jost'] text-[10px] text-[var(--clr-gold)] uppercase p-[20px_32px] font-normal w-[25%] text-center bg-[rgba(184,150,90,0.06)] border-l border-r border-[rgba(184,150,90,0.2)]">
                 SUNSET SUITE
-                <p className="font-['DM_Sans'] text-[14px] text-[var(--clr-smoke)] mt-1 normal-case">US$156</p>
+                <p className="font-['DM_Sans'] text-[12px] text-[var(--clr-smoke)] mt-1 normal-case">US${sunset?.basePrice}+</p>
               </th>
-              <th className="font-['Jost'] text-[15px] text-[var(--clr-gold)] uppercase p-[20px_32px] font-normal w-[25%] text-center">
+              <th className="font-['Jost'] text-[10px] text-[var(--clr-gold)] uppercase p-[20px_32px] font-normal w-[25%] text-center">
                 GARDEN SUITE
-                <p className="font-['DM_Sans'] text-[14px] text-[var(--clr-smoke)] mt-1 normal-case">US$145</p>
+                <p className="font-['DM_Sans'] text-[12px] text-[var(--clr-smoke)] mt-1 normal-case">US${garden?.basePrice}+</p>
               </th>
             </tr>
           </thead>
@@ -71,24 +79,21 @@ const RoomsComparisonTable = () => {
             <tr className="bg-[var(--clr-charcoal)] border-t border-[rgba(184,150,90,0.2)]">
               <td className="p-[20px_32px] font-['DM_Sans'] font-medium text-[14px] text-[var(--clr-cream)] sticky left-0 bg-[var(--clr-charcoal)] z-10">Starting From</td>
               <td className="p-[20px_32px] text-center">
-                <p className="font-['Cormorant'] text-[28px] text-[var(--clr-gold)] leading-none mb-4">US$210</p>
-                <button onClick={() => navigate('/booking')} className="bg-[var(--clr-gold)] text-[var(--clr-void)] font-['Jost'] text-[10px] uppercase px-[20px] py-[8px] hover:bg-[var(--clr-gold-light)] transition-colors">Book Now</button>
+                <p className="font-['Cormorant'] text-[28px] text-[var(--clr-gold)] leading-none mb-4">US${sunrise?.basePrice}</p>
+                <button className="bg-[var(--clr-gold)] text-[var(--clr-void)] font-['Jost'] text-[10px] uppercase px-[20px] py-[8px] hover:bg-[var(--clr-gold-light)] transition-colors">Book Now</button>
               </td>
               <td className="p-[20px_32px] text-center bg-[rgba(184,150,90,0.06)] border-l border-r border-[rgba(184,150,90,0.2)]">
-                <p className="font-['Cormorant'] text-[28px] text-[var(--clr-gold)] leading-none mb-4">US$156</p>
-                <button onClick={() => navigate('/booking')} className="bg-[var(--clr-gold)] text-[var(--clr-void)] font-['Jost'] text-[10px] uppercase px-[20px] py-[8px] hover:bg-[var(--clr-gold-light)] transition-colors">Book Now</button>
+                <p className="font-['Cormorant'] text-[28px] text-[var(--clr-gold)] leading-none mb-4">US${sunset?.basePrice}</p>
+                <button className="bg-[var(--clr-gold)] text-[var(--clr-void)] font-['Jost'] text-[10px] uppercase px-[20px] py-[8px] hover:bg-[var(--clr-gold-light)] transition-colors">Book Now</button>
               </td>
               <td className="p-[20px_32px] text-center">
-                <p className="font-['Cormorant'] text-[28px] text-[var(--clr-gold)] leading-none mb-4">US$145</p>
-                <button onClick={() => navigate('/booking')} className="bg-[var(--clr-gold)] text-[var(--clr-void)] font-['Jost'] text-[10px] uppercase px-[20px] py-[8px] hover:bg-[var(--clr-gold-light)] transition-colors">Book Now</button>
+                <p className="font-['Cormorant'] text-[28px] text-[var(--clr-gold)] leading-none mb-4">US${garden?.basePrice}</p>
+                <button className="bg-[var(--clr-gold)] text-[var(--clr-void)] font-['Jost'] text-[10px] uppercase px-[20px] py-[8px] hover:bg-[var(--clr-gold-light)] transition-colors">Book Now</button>
               </td>
             </tr>
           </tbody>
         </table>
       </div>
-      <p className="font-['DM_Sans'] text-[12px] text-[var(--clr-smoke)] mt-6 text-right italic">
-        * All prices are in USD and include all Sri Lanka government taxes & service charges.
-      </p>
     </section>
   );
 };

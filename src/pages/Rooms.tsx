@@ -12,16 +12,22 @@ import RoomsComparisonTable from '../components/rooms/RoomsComparisonTable';
 import RoomsPricingCalculator from '../components/rooms/RoomsPricingCalculator';
 import RoomsContact from '../components/rooms/RoomsContact';
 import { suites } from '../data/roomsData';
+import { useSuitePricing, SLUG_MAP } from '../hooks/useSuitePricing';
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Rooms = () => {
+  const livePrices = useSuitePricing();
   const [activeFilter, setActiveFilter] = useState('all');
+
+  const suitesWithLivePrice = suites.map((s) => ({
+    ...s,
+    basePrice: livePrices[SLUG_MAP[s.id]] ?? s.basePrice, // fallback while loading
+  }));
 
   useEffect(() => {
     AOS.init({ once: true });
     document.title = "Rooms & Suites | A'Lankaa Resorts & Spa";
-
 
     const suiteImages = document.querySelectorAll('.suite-image-reveal');
     suiteImages.forEach((img) => {
@@ -38,7 +44,6 @@ const Rooms = () => {
         }
       );
     });
-
 
     const lines = document.querySelectorAll('.gold-line-anim');
     lines.forEach((line) => {
@@ -64,7 +69,7 @@ const Rooms = () => {
     };
   }, []);
 
-  const filteredSuites = suites.filter(suite => {
+  const filteredSuites = suitesWithLivePrice.filter(suite => {
     if (activeFilter === 'all') return true;
     if (activeFilter === 'sunrise') return suite.id === 1;
     if (activeFilter === 'sunset') return suite.id === 2;
@@ -82,10 +87,10 @@ const Rooms = () => {
         setActiveFilter={setActiveFilter}
         availableCount={availableCount}
       />
-      <SuitesList activeFilter={activeFilter} />
+      <SuitesList activeFilter={activeFilter} suites={suitesWithLivePrice} />
       <RoomsInclusions />
-      <RoomsComparisonTable />
-      <RoomsPricingCalculator />
+      <RoomsComparisonTable suites={suitesWithLivePrice} />
+      <RoomsPricingCalculator suites={suitesWithLivePrice} />
       <RoomsContact />
     </div>
   );

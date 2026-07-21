@@ -1,3 +1,29 @@
+export interface SuiteSpec {
+  size: string;
+  bed: string;
+  guests: string;
+  view: string;
+}
+
+export interface Suite {
+  id: number;
+  number: string;
+  category: string;
+  badge: string | null;
+  tag: string;
+  name: string;
+  shortName: string;
+  tagline: string;
+  description: string;
+  size: string;
+  view: string;
+  available: number;
+  basePrice: number;
+  image: string;
+  features: string[];
+  specs: SuiteSpec;
+}
+
 export const calculateTotal = (baseUSD: number) => {
   const total = baseUSD;
   return {
@@ -9,7 +35,7 @@ export const calculateTotal = (baseUSD: number) => {
 };
 
 // Suite Data Array
-export const suites = [
+export const suites: Suite[] = [
   {
     id: 1,
     number: '01',
@@ -18,7 +44,7 @@ export const suites = [
     tag: 'SUNRISE · MOUNTAIN & VALLEY VIEW',
     name: 'Sunrise, Mountain & Valley View Suites',
     shortName: 'Sunrise Suite',
-    tagline: 'Rise above the clouds and wake up inside the most spectacular sunrise in Sri Lanka.',
+    tagline: 'Wake up inside the most spectacular sunrise in Sri Lanka.',
     description: `Perched at 1,200 metres above sea level, 
       our signature Sunrise Suites offer breathtaking views 
       spanning parts of five provinces. Floor-to-ceiling 
@@ -27,7 +53,7 @@ export const suites = [
     size: '75 sq m',
     view: 'Views of 5 Provinces',
     available: 8,
-    basePrice: 210,
+    basePrice: 310,
     image: '/images/sunrise room.webp',
     features: [
       'Panoramic views of 5 provinces',
@@ -56,13 +82,13 @@ export const suites = [
     tagline: 'Golden sunsets over the mountain horizon, every evening.',
     description: `Experience the magic of mountain sunsets 
       from your private balcony. These spacious 55 sq m suites 
-      combine elegant comfort with stunning natural vistas - 
+      combine elegant comfort with stunning natural vistas — 
       complete with a private jacuzzi and all the amenities 
       for a perfect highland retreat.`,
     size: '55 sq m',
     view: 'Sunset & Mountain View',
     available: 6,
-    basePrice: 156,
+    basePrice: 215,
     image: '/images/sunset room.webp',
     features: [
       'Sunset & mountain panoramic views',
@@ -91,13 +117,13 @@ export const suites = [
     tagline: 'Surrounded by lush tropical gardens in complete serenity.',
     description: `Our Garden View Suites offer a peaceful 
       sanctuary immersed in tropical greenery. Perfect for 
-      guests who seek tranquility - these comfortable 50 sq m 
+      guests who seek tranquility — these comfortable 50 sq m 
       suites include all essential amenities with the soothing 
       sounds of nature as your backdrop.`,
     size: '50 sq m',
     view: 'Lush Garden View',
     available: 6,
-    basePrice: 145,
+    basePrice: 175,
     image: '/images/garden room.webp',
     features: [
       'Lush tropical garden views',

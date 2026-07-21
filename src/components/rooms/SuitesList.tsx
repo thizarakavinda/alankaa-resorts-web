@@ -1,12 +1,13 @@
 import { AnimatePresence } from 'framer-motion';
 import SuiteCard from './SuiteCard';
-import { suites } from '../../data/roomsData';
+import type { Suite } from '../../data/roomsData';
 
 interface SuitesListProps {
   activeFilter: string;
+  suites: Suite[];
 }
 
-const SuitesList = ({ activeFilter }: SuitesListProps) => {
+const SuitesList = ({ activeFilter, suites }: SuitesListProps) => {
   const filteredSuites = suites.filter(suite => {
     if (activeFilter === 'all') return true;
     if (activeFilter === 'sunrise') return suite.id === 1;
@@ -19,7 +20,11 @@ const SuitesList = ({ activeFilter }: SuitesListProps) => {
     <section className="bg-[var(--clr-void)]">
       <AnimatePresence>
         {filteredSuites.map((suite, index) => (
-          <SuiteCard key={suite.id} suite={suite} index={index} />
+          <SuiteCard
+            key={suite.id}
+            suite={suite}
+            index={index}
+          />
         ))}
       </AnimatePresence>
     </section>

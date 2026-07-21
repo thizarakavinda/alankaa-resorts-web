@@ -1,22 +1,35 @@
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { useNavigate } from 'react-router-dom';
+import type { Suite } from '../../data/roomsData';
 
-const suiteOptions = [
-  { value: 210, label: 'Sunrise Suite $210' },
-  { value: 156, label: 'Sunset Suite $156' },
-  { value: 145, label: 'Garden Suite $145' },
-];
+interface RoomsPricingCalculatorProps {
+  suites: Suite[];
+}
 
-const RoomsPricingCalculator = () => {
-  const navigate = useNavigate();
-  const [selectedCalcSuite, setSelectedCalcSuite] = useState(210);
+const RoomsPricingCalculator = ({ suites }: RoomsPricingCalculatorProps) => {
+  // Build the dropdown options from live suite data instead of a hardcoded array
+  const suiteOptions = useMemo(() => {
+    const shortLabel = (id: number) => {
+      if (id === 1) return 'Sunrise Suite';
+      if (id === 2) return 'Sunset Suite';
+      if (id === 3) return 'Garden Suite';
+      return 'Suite';
+    };
+    return suites.map((s) => ({
+      value: s.basePrice,
+      label: `${shortLabel(s.id)} $${s.basePrice}`,
+    }));
+  }, [suites]);
+
+  const [selectedCalcSuite, setSelectedCalcSuite] = useState(suiteOptions[0]?.value ?? 0);
   const [nights, setNights] = useState(3);
 
-  const subtotal = selectedCalcSuite * nights;
-  const netBase = subtotal / 1.33;
-  const taxAmount = netBase * 0.23;
-  const serviceAmount = netBase * 0.10;
+  
+  useState(() => {
+    if (suiteOptions.length && !suiteOptions.some((o) => o.value === selectedCalcSuite)) {
+      setSelectedCalcSuite(suiteOptions[0].value);
+    }
+  });
 
   return (
     <section className="bg-[var(--clr-void)] px-[24px] py-[60px] lg:px-[80px] lg:py-[80px] border-t border-[rgba(184,150,90,0.08)]">
@@ -25,9 +38,9 @@ const RoomsPricingCalculator = () => {
         <h2 className="font-['Cormorant'] text-[clamp(32px,4vw,52px)] text-[var(--clr-ivory)] font-light leading-tight">
           Know exactly what you'll pay.
         </h2>
-        <p className="font-['DM_Sans'] text-[16px] text-[var(--clr-smoke)] mt-[12px]">
+        <p className="font-['DM_Sans'] text-[14px] text-[var(--clr-smoke)] mt-[12px]">
           All rates include 23% government tax and 10% service charge.<br />
-          <span className="italic">Subject to current exchange rates</span>
+          <span className="italic">*Subject to current exchange rates*</span>
         </p>
       </div>
 
@@ -81,24 +94,24 @@ const RoomsPricingCalculator = () => {
           <div className="flex justify-between items-center py-[12px] border-b border-[rgba(255,255,255,0.04)]">
             <span className="font-['DM_Sans'] text-[14px] text-[var(--clr-ivory)]">× {nights} Night{nights > 1 ? 's' : ''}</span>
             <AnimatePresence mode="wait">
-              <motion.span key={subtotal} initial={{ opacity: 0, y: -5 }} animate={{ opacity: 1, y: 0 }} className="font-['DM_Sans'] text-[14px] text-[var(--clr-ivory)]">
-                US${subtotal.toFixed(2)}
+              <motion.span key={selectedCalcSuite * nights} initial={{ opacity: 0, y: -5 }} animate={{ opacity: 1, y: 0 }} className="font-['DM_Sans'] text-[14px] text-[var(--clr-ivory)]">
+                US${(selectedCalcSuite * nights).toFixed(2)}
               </motion.span>
             </AnimatePresence>
           </div>
           <div className="flex justify-between items-center py-[12px] border-b border-[rgba(255,255,255,0.04)]">
-            <span className="font-['DM_Sans'] text-[14px] text-[var(--clr-smoke)]">Government Tax (23% Included)</span>
+            <span className="font-['DM_Sans'] text-[14px] text-[var(--clr-smoke)]">Government Tax (23%)</span>
             <AnimatePresence mode="wait">
-              <motion.span key={taxAmount} initial={{ opacity: 0, y: -5 }} animate={{ opacity: 1, y: 0 }} className="font-['DM_Sans'] text-[14px] text-[var(--clr-smoke)]">
-                US${taxAmount.toFixed(2)}
+              <motion.span key={selectedCalcSuite * nights * 0.23} initial={{ opacity: 0, y: -5 }} animate={{ opacity: 1, y: 0 }} className="font-['DM_Sans'] text-[14px] text-[var(--clr-smoke)]">
+                US${(selectedCalcSuite * nights * 0.23).toFixed(2)}
               </motion.span>
             </AnimatePresence>
           </div>
           <div className="flex justify-between items-center py-[12px] border-b border-[rgba(255,255,255,0.04)]">
-            <span className="font-['DM_Sans'] text-[14px] text-[var(--clr-smoke)]">Service Charge (10% Included)</span>
+            <span className="font-['DM_Sans'] text-[14px] text-[var(--clr-smoke)]">Service Charge (10%)</span>
             <AnimatePresence mode="wait">
-              <motion.span key={serviceAmount} initial={{ opacity: 0, y: -5 }} animate={{ opacity: 1, y: 0 }} className="font-['DM_Sans'] text-[14px] text-[var(--clr-smoke)]">
-                US${serviceAmount.toFixed(2)}
+              <motion.span key={selectedCalcSuite * nights * 0.1} initial={{ opacity: 0, y: -5 }} animate={{ opacity: 1, y: 0 }} className="font-['DM_Sans'] text-[14px] text-[var(--clr-smoke)]">
+                US${(selectedCalcSuite * nights * 0.10).toFixed(2)}
               </motion.span>
             </AnimatePresence>
           </div>
@@ -111,24 +124,24 @@ const RoomsPricingCalculator = () => {
           </p>
           <AnimatePresence mode="wait">
             <motion.p
-              key={subtotal}
+              key={selectedCalcSuite * nights * 1.33}
               initial={{ opacity: 0, scale: 0.98 }}
               animate={{ opacity: 1, scale: 1 }}
               className="font-['Cormorant'] text-[48px] text-[var(--clr-gold)] font-light leading-none"
             >
-              US${subtotal.toFixed(2)}
+              US${Math.round(selectedCalcSuite * nights * 1.33).toFixed(2)}
             </motion.p>
           </AnimatePresence>
-          <p className="font-['DM_Sans'] text-[14px] text-[var(--clr-fog)] mt-[4px]">
+          <p className="font-['DM_Sans'] text-[11px] text-[var(--clr-fog)] mt-[4px]">
             Inclusive of all taxes and charges
           </p>
         </div>
 
-        <button onClick={() => navigate('/booking')} className="w-full bg-[var(--clr-gold)] text-[var(--clr-void)] font-['Jost'] text-[12px] uppercase py-[16px] tracking-[0.15em] hover:bg-[var(--clr-gold-light)] transition-colors mt-[24px]">
+        <button className="w-full bg-[var(--clr-gold)] text-[var(--clr-void)] font-['Jost'] text-[12px] uppercase py-[16px] tracking-[0.15em] hover:bg-[var(--clr-gold-light)] transition-colors mt-[24px]">
           Book This Suite &rarr;
         </button>
-        <p className="font-['DM_Sans'] text-[15px] text-smoke text-center mt-[12px]">
-          or call us: +94 70 797 5975 | +94 57 205 1664
+        <p className="font-['DM_Sans'] text-[12px] text-[var(--clr-fog)] text-center mt-[12px]">
+          or call us: 070 797 5975
         </p>
       </div>
     </section>

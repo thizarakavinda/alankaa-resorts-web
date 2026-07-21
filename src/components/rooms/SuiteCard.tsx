@@ -1,32 +1,7 @@
 import { motion } from 'framer-motion';
 import { Check, BedDouble, Users, Eye, LayoutGrid } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
-
-interface SuiteSpec {
-  size: string;
-  bed: string;
-  guests: string;
-  view: string;
-}
-
-interface Suite {
-  id: number;
-  number: string;
-  category: string;
-  badge: string | null;
-  tag: string;
-  name: string;
-  shortName: string;
-  tagline: string;
-  description: string;
-  size: string;
-  view: string;
-  available: number;
-  basePrice: number;
-  image: string;
-  features: string[];
-  specs: SuiteSpec;
-}
+import type { Suite } from '../../data/roomsData';
 
 interface SuiteCardProps {
   suite: Suite;
