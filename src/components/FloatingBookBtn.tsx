@@ -24,7 +24,7 @@ export const FloatingBookBtn = () => {
           animate={{ y: 0, opacity: 1 }}
           exit={{ y: 20, opacity: 0 }}
           transition={{ duration: 0.4 }}
-          className="fixed bottom-10 right-10 z-[998] flex flex-col items-center gap-4 group"
+          className="fixed bottom-10 right-10 z-[998] flex flex-col items-center gap-4 group socials"
         >
           {/* WhatsApp Button */}
           <a

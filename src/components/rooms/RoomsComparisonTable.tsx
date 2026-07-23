@@ -1,5 +1,6 @@
 import { Check, X } from 'lucide-react';
 import type { Suite } from '../../data/roomsData';
+import { useNavigate } from 'react-router-dom';
 
 const comparisonRows = [
   { label: 'Floor Area', values: ['75 sq m', '55 sq m', '50 sq m'] },
@@ -19,7 +20,7 @@ interface RoomsComparisonTableProps {
 }
 
 const RoomsComparisonTable = ({ suites }: RoomsComparisonTableProps) => {
-  
+  const navigate = useNavigate();
   const sunrise = suites.find((s) => s.id === 1);
   const sunset = suites.find((s) => s.id === 2);
   const garden = suites.find((s) => s.id === 3);
@@ -80,15 +81,15 @@ const RoomsComparisonTable = ({ suites }: RoomsComparisonTableProps) => {
               <td className="p-[20px_32px] font-['DM_Sans'] font-medium text-[14px] text-[var(--clr-cream)] sticky left-0 bg-[var(--clr-charcoal)] z-10">Starting From</td>
               <td className="p-[20px_32px] text-center">
                 <p className="font-['Cormorant'] text-[28px] text-[var(--clr-gold)] leading-none mb-4">US${sunrise?.basePrice}</p>
-                <button className="bg-[var(--clr-gold)] text-[var(--clr-void)] font-['Jost'] text-[10px] uppercase px-[20px] py-[8px] hover:bg-[var(--clr-gold-light)] transition-colors">Book Now</button>
+                <button onClick={() => navigate(`/booking?room-type=`)} className="bg-[var(--clr-gold)] text-[var(--clr-void)] font-['Jost'] text-[10px] uppercase px-[20px] py-[8px] hover:bg-[var(--clr-gold-light)] transition-colors">Book Now</button>
               </td>
               <td className="p-[20px_32px] text-center bg-[rgba(184,150,90,0.06)] border-l border-r border-[rgba(184,150,90,0.2)]">
                 <p className="font-['Cormorant'] text-[28px] text-[var(--clr-gold)] leading-none mb-4">US${sunset?.basePrice}</p>
-                <button className="bg-[var(--clr-gold)] text-[var(--clr-void)] font-['Jost'] text-[10px] uppercase px-[20px] py-[8px] hover:bg-[var(--clr-gold-light)] transition-colors">Book Now</button>
+                <button onClick={() => navigate(`/booking?room-type=`)} className="bg-[var(--clr-gold)] text-[var(--clr-void)] font-['Jost'] text-[10px] uppercase px-[20px] py-[8px] hover:bg-[var(--clr-gold-light)] transition-colors">Book Now</button>
               </td>
               <td className="p-[20px_32px] text-center">
                 <p className="font-['Cormorant'] text-[28px] text-[var(--clr-gold)] leading-none mb-4">US${garden?.basePrice}</p>
-                <button className="bg-[var(--clr-gold)] text-[var(--clr-void)] font-['Jost'] text-[10px] uppercase px-[20px] py-[8px] hover:bg-[var(--clr-gold-light)] transition-colors">Book Now</button>
+                <button onClick={() => navigate(`/booking?room-type=`)} className="bg-[var(--clr-gold)] text-[var(--clr-void)] font-['Jost'] text-[10px] uppercase px-[20px] py-[8px] hover:bg-[var(--clr-gold-light)] transition-colors">Book Now</button>
               </td>
             </tr>
           </tbody>

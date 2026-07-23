@@ -6,6 +6,7 @@ import { Timeline } from '../components/about/Timeline';
 
 import { Awards } from '../components/about/Awards';
 import { Location } from '../components/about/Location';
+import BeSearchFormMobile from "../components/beForms/BeSearchFormMobile.tsx";
 
 export const About = () => {
   return (
@@ -17,6 +18,7 @@ export const About = () => {
       className="bg-void min-h-screen" 
     >
       <Hero />
+      <BeSearchFormMobile />
       <OriginStory />
       <Philosophy />
       <Timeline />

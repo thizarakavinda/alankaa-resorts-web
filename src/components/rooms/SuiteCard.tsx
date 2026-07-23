@@ -146,10 +146,10 @@ const SuiteCard = ({ suite, index }: SuiteCardProps) => {
 
             {/* btn row */}
             <div className="flex flex-col sm:flex-row gap-[16px]">
-              <button onClick={() => navigate(`/booking?suite=${suite.id}`)} className="inline-block bg-[var(--clr-gold)] text-[var(--clr-void)] font-['Jost'] text-[12px] uppercase tracking-[0.15em] px-[36px] py-[16px] text-center hover:bg-[var(--clr-gold-light)] hover:scale-[1.02] transition-all duration-300">
+              <button onClick={() => navigate(`/booking?room-type=`)} className="inline-block bg-[var(--clr-gold)] text-[var(--clr-void)] font-['Jost'] text-[12px] uppercase tracking-[0.15em] px-[36px] py-[16px] text-center hover:bg-[var(--clr-gold-light)] hover:scale-[1.02] transition-all duration-300">
                 Book This Suite &rarr;
               </button>
-              <button onClick={() => navigate('/contact')} className="inline-block bg-transparent border border-[rgba(184,150,90,0.4)] text-[var(--clr-gold)] font-['Jost'] text-[12px] uppercase px-[28px] py-[16px] text-center hover:border-[var(--clr-gold)] transition-colors duration-300">
+              <button onClick={() => navigate('/booking?room-type=')} className="inline-block bg-transparent border border-[rgba(184,150,90,0.4)] text-[var(--clr-gold)] font-['Jost'] text-[12px] uppercase px-[28px] py-[16px] text-center hover:border-[var(--clr-gold)] transition-colors duration-300">
                 Enquire &rarr;
               </button>
             </div>

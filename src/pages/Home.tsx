@@ -10,6 +10,7 @@ import 'aos/dist/aos.css';
 import { LocationShowcase } from '../components/home/LocationShowcase';
 import MistCanvas from '../components/MistCanvas';
 import ReviewsSection from '../components/home/ReviewsSection';
+import BeSearchFormMobile from "../components/beForms/BeSearchFormMobile.tsx";
 
 export const Home = () => {
   const navigate = useNavigate();
@@ -26,6 +27,11 @@ export const Home = () => {
     currentTarget.style.setProperty('--mouse-x', `${x}px`);
     currentTarget.style.setProperty('--mouse-y', `${y}px`);
   };
+
+  useEffect(() => {
+    document.body.classList.add('is-front');
+    return () => document.body.classList.remove('is-front');
+  }, []);
 
   useEffect(() => {
     AOS.init({ once: true });
@@ -112,7 +118,7 @@ export const Home = () => {
           </button>
         </div>
       </section>
-
+      <BeSearchFormMobile />
       {/* info sec */}
       <section
         className="py-32 px-6 md:px-20 relative bg-obsidian overflow-hidden group"

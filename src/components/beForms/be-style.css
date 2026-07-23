@@ -1,0 +1,85 @@
+#be-booking-form {
+    width: 100%;
+    max-width: 1410px;
+    padding: 0 5px;
+    margin: 10px auto;
+}
+
+#tl-booking-cart {
+    z-index: 1 !important;
+}
+
+#block-search,
+#block-search * {
+    box-sizing: border-box;
+}
+
+#block-search {
+    position: absolute;
+    top: 80px;
+    width: 100%;
+    z-index: 11;
+    background: rgba(22, 22, 22, 0.49);
+}
+
+#block-search.block-search--light {
+    border: 1px solid #9D988D;
+}
+
+#block-search.block-search--main {
+    background: rgba(22, 22, 22, 0.3);
+    border: none;
+}
+
+#block-search.block-search--mobile {
+    display: none;
+}
+
+#block-search.block-search--places {
+    display: block;
+    position: static;
+    background: #33312E;
+    margin: 0 auto 30px auto;
+}
+
+.be-container {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+body:has(#be-booking-form) .socials {
+    display: none;
+}
+
+body:has(#be-booking-form) .music-wrapper {
+    position: absolute;
+    bottom: auto;
+    top: 100px;
+}
+
+iframe[id*='tlFrame'] {
+    pointer-events: all !important;
+}
+
+@media screen and (max-height: 860px) {
+    body:not(.is-front) #block-search {
+        display: none;
+    }
+    body:not(.is-front) #block-search.block-search--mobile {
+        display: block;
+        position: static;
+        background: #33312E;
+    }
+}
+
+@media screen and (max-width: 1279px), screen and (max-height: 599px) {
+    .is-front #block-search.block-search--main {
+        display: none;
+    }
+    .is-front #block-search.block-search--mobile {
+        display: block;
+        position: static;
+        background: #33312E;
+    }
+}

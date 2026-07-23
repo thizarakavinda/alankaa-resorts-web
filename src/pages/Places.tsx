@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { motion } from 'framer-motion';
+import BeSearchForm from "../components/beForms/BeSearchForm.tsx";
 
 const attractions = [
   {
@@ -141,6 +142,7 @@ export const Places = () => {
 
   return (
     <div className="bg-obsidian min-h-screen pt-32 pb-24">
+      <BeSearchForm />
       <div className="max-w-[1440px] mx-auto px-[32px] lg:px-[80px]">
 
         {/* Header */}

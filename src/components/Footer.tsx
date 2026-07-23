@@ -28,11 +28,11 @@ export const Footer = () => {
               "Where the clouds kiss the mountains, and luxury finds its home."
             </p>
             <div className="flex items-center gap-4">
-              <a href="https://www.facebook.com/ALankaaResortsandSpa/" className="text-fog hover:text-gold transition-colors hoverable"><FaFacebook size={24} /></a>
-              <a href="https://www.instagram.com/alankaa_resorts" className="text-fog hover:text-gold transition-colors hoverable"><FaInstagram size={24} /></a>
-              <a href="https://www.tiktok.com/@alankaaresorts" className="text-fog hover:text-gold transition-colors hoverable"><FaTiktok size={24} /></a>
-              <a href="https://www.pinterest.com/alankaa_resorts/" className="text-fog hover:text-gold transition-colors hoverable"><FaPinterest size={24} /></a>
-              <a href="https://www.tripadvisor.com/Hotel_Review-g27110123-d18397208-Reviews-A_lankaa_Resorts-Watagamuwa_Uva_Province.html" className="text-fog hover:text-gold transition-colors hoverable"><FaTripadvisor size={24} /></a>
+              <a href="https://www.facebook.com/ALankaaResortsandSpa/" className="text-fog hover:text-gold transition-colors hoverable socials"><FaFacebook size={24} /></a>
+              <a href="https://www.instagram.com/alankaa_resorts" className="text-fog hover:text-gold transition-colors hoverable socials"><FaInstagram size={24} /></a>
+              <a href="https://www.tiktok.com/@alankaaresorts" className="text-fog hover:text-gold transition-colors hoverable socials"><FaTiktok size={24} /></a>
+              <a href="https://www.pinterest.com/alankaa_resorts/" className="text-fog hover:text-gold transition-colors hoverable socials"><FaPinterest size={24} /></a>
+              <a href="https://www.tripadvisor.com/Hotel_Review-g27110123-d18397208-Reviews-A_lankaa_Resorts-Watagamuwa_Uva_Province.html" className="text-fog hover:text-gold transition-colors hoverable socials"><FaTripadvisor size={24} /></a>
             </div>
           </div>
 
@@ -88,7 +88,7 @@ export const Footer = () => {
           </div>
 
           {/* col 4 */}
-          <div className="flex flex-col">
+          <div className="flex flex-col socials">
             <h3 className="font-jost text-[10px] text-gold uppercase tracking-[0.2em] mb-2">Stay Connected</h3>
             <p className="font-dmSans text-[14px] text-smoke mb-6">Exclusive offers and resort stories.</p>
             <form className="flex flex-col gap-4" onSubmit={(e) => e.preventDefault()}>
