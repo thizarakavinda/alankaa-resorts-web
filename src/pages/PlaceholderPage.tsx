@@ -1,6 +1,11 @@
 import { motion } from 'framer-motion';
+import {useEffect} from "react";
 
 export const PlaceholderPage = ({ title }: { title: string }) => {
+  useEffect(() => {
+    document.body.classList.add('page-404');
+    return () => document.body.classList.remove('page-404');
+  }, []);
   return (
     <motion.main
       initial={{ opacity: 0 }}

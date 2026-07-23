@@ -48,7 +48,8 @@
     padding: 0 30px;
 }
 
-body:has(#be-booking-form) .socials {
+body:has(#be-booking-form) .socials,
+.page-404 #block-search {
     display: none;
 }
 
@@ -63,6 +64,17 @@ iframe[id*='tlFrame'] {
 }
 
 @media screen and (max-height: 860px) {
+    body:not(.is-front) #block-search {
+        display: none;
+    }
+    body:not(.is-front) #block-search.block-search--mobile {
+        display: block;
+        position: static;
+        background: #33312E;
+    }
+}
+
+@media screen and (max-width: 1200px) {
     body:not(.is-front) #block-search {
         display: none;
     }
