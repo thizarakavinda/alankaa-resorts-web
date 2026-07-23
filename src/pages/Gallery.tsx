@@ -8,6 +8,7 @@ import GalleryVideos from '../components/gallery/GalleryVideos';
 import GalleryDrone from '../components/gallery/GalleryDrone';
 import GalleryInstagram from '../components/gallery/GalleryInstagram';
 import { CATEGORIES, MOCK_IMAGES } from '../data/galleryData';
+import BeSearchFormMobile from "../components/beForms/BeSearchFormMobile.tsx";
 
 const Gallery = () => {
   const [activeCategory, setActiveCategory] = useState<string>(CATEGORIES[0]);
@@ -29,6 +30,7 @@ const Gallery = () => {
   return (
     <main className="min-h-screen bg-void w-full overflow-hidden">
       <GalleryHero />
+      <BeSearchFormMobile />
       <GalleryFilter
         categories={CATEGORIES}
         activeTab={activeCategory}

@@ -4,12 +4,14 @@ import { Menu, X } from 'lucide-react';
 import { AnimatePresence, motion } from 'framer-motion';
 import ThemeToggle from './ThemeToggle';
 import { useTheme } from '../context/ThemeContext';
+import BeSearchForm from "./beForms/BeSearchForm.tsx";
 
 export const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
   const { isDark } = useTheme();
+  const isPlacesPage = location.pathname === "/places";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -159,6 +161,8 @@ export const Navbar = () => {
           </button>
         </div>
       </nav>
+
+      {!isPlacesPage && <BeSearchForm />}
 
       {/* Mobile menu */}
       <AnimatePresence>

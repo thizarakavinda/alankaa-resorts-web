@@ -13,6 +13,7 @@ import RoomsPricingCalculator from '../components/rooms/RoomsPricingCalculator';
 import RoomsContact from '../components/rooms/RoomsContact';
 import { suites } from '../data/roomsData';
 import { useSuitePricing, SLUG_MAP } from '../hooks/useSuitePricing';
+import BeSearchFormMobile from "../components/beForms/BeSearchFormMobile.tsx";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -82,6 +83,7 @@ const Rooms = () => {
   return (
     <div className="bg-[var(--clr-void)] min-h-screen">
       <RoomsHero />
+      <BeSearchFormMobile />
       <RoomsFilterBar
         activeFilter={activeFilter}
         setActiveFilter={setActiveFilter}

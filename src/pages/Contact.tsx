@@ -5,6 +5,7 @@ import ContactForm from '../components/contact/ContactForm';
 import ContactInfoCard from '../components/contact/ContactInfoCard';
 import ContactMapSection from '../components/contact/ContactMapSection';
 import ContactFAQ from '../components/contact/ContactFAQ';
+import BeSearchFormMobile from "../components/beForms/BeSearchFormMobile.tsx";
 
 const Contact = () => {
   useEffect(() => {
@@ -21,7 +22,7 @@ const Contact = () => {
       className="bg-void min-h-screen"
     >
       <ContactHero />
-      
+      <BeSearchFormMobile />
       {/* cont layout */}
       <section className="bg-obsidian py-[120px] px-[80px] max-lg:px-12 max-md:px-6 max-md:py-20">
         <div className="max-w-[1400px] mx-auto grid grid-cols-[58%_42%] gap-16 max-lg:grid-cols-1">

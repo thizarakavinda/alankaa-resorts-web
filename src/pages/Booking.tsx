@@ -1,13 +1,11 @@
 import { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import BookingHero from '../components/booking/BookingHero';
-import BookingInterface from '../components/booking/BookingInterface';
-import BookingBenefits from '../components/booking/BookingBenefits';
-import BookingAmenities from '../components/booking/BookingAmenities';
+import BeBookingForm from "../components/beForms/BeBookingForm.tsx";
 
 const Booking = () => {
   useEffect(() => {
-    document.title = "Reservations | A'Lankaa Resorts & Spa";
+    document.title = "Online reservation A'Lankaa Resorts & Spa, Badulla - Official site";
     window.scrollTo(0, 0);
   }, []);
 
@@ -20,9 +18,7 @@ const Booking = () => {
       className="bg-void min-h-screen"
     >
       <BookingHero />
-      <BookingInterface />
-      <BookingBenefits />
-      <BookingAmenities />
+      <BeBookingForm />
     </motion.main>
   );
 };
